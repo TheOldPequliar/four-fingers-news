@@ -1753,13 +1753,13 @@ async function fetchGolfWeather() {
 function initPracticalFinance() {
   // These are harder to get via free APIs, so we use realistic current estimates
   // that can be replaced with API calls later
-  document.getElementById('mortgageRate').textContent = '6.67%';
-  document.getElementById('tenYear').textContent = '4.25%';
-  document.getElementById('homePrice').textContent = '$875,000';
-  document.getElementById('gasPrice').textContent = '$3.42';
-  document.getElementById('fearGreed').textContent = '58 &#8212; NEUTRAL';
-  document.getElementById('vixValue').textContent = '16.8';
-  document.getElementById('fedRate').textContent = '4.25 - 4.50%';
+  document.getElementById('mortgageRate').innerHTML = '6.67%';
+  document.getElementById('tenYear').innerHTML = '4.25%';
+  document.getElementById('homePrice').innerHTML = '$875,000';
+  document.getElementById('gasPrice').innerHTML = '$3.42';
+  document.getElementById('fearGreed').innerHTML = '58 &#8212; NEUTRAL';
+  document.getElementById('vixValue').innerHTML = '16.8';
+  document.getElementById('fedRate').innerHTML = '4.25 - 4.50%';
 }
 
 // &#9552;&#9552;&#9552; IRAN / GEOPOLITICAL &#9552;&#9552;&#9552;
@@ -1848,11 +1848,11 @@ async function fetchIranData() {
   `;
 
   // Conflict-sensitive commodity data
-  document.getElementById('oilPrice').textContent = '$78.42 &#9650;';
-  document.getElementById('brentPrice').textContent = '$82.15 &#9650;';
-  document.getElementById('defenseETF').textContent = '$142.80 &#9650; 2.3%';
-  document.getElementById('goldPrice').textContent = '$2,945 &#9650;';
-  document.getElementById('usdEur').textContent = '0.917';
+  document.getElementById('oilPrice').innerHTML = '$78.42 &#9650;';
+  document.getElementById('brentPrice').innerHTML = '$82.15 &#9650;';
+  document.getElementById('defenseETF').innerHTML = '$142.80 &#9650; 2.3%';
+  document.getElementById('goldPrice').innerHTML = '$2,945 &#9650;';
+  document.getElementById('usdEur').innerHTML = '0.917';
 }
 
 // &#9552;&#9552;&#9552; REFRESH TIMESTAMP &#9552;&#9552;&#9552;
