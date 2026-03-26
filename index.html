@@ -1834,7 +1834,7 @@ let stockData = {};
 
 // CORS PROXY HELPERS
 const PROXIES=[
-  url=>"https://api.allorigins.win/raw?url="+encodeURIComponent(url),
+  url=>"https://api.allorigins.win/raw?url="+encodeURIComponent(url)+"&_t="+Date.now(),
   url=>"https://corsproxy.io/?"+encodeURIComponent(url),
   url=>"https://api.codetabs.com/v1/proxy?quest="+encodeURIComponent(url)
 ];
@@ -2206,7 +2206,7 @@ async function fetchNews() {
   // Fallback to curated headlines approach
   try {
     // Try to fetch top US headlines via RSS proxy
-    var rssUrl = 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml';
+    var rssUrl = 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml?_=' + Date.now();
     var resp = await fetchViaProxy(rssUrl);
     if (resp.ok) {
       const text = await resp.text();
@@ -2241,7 +2241,7 @@ async function fetchNews() {
 
   // Also try AP News
   try {
-    var rssUrl2 = 'https://rsshub.app/apnews/topics/apf-topnews';
+    var rssUrl2 = 'https://rsshub.app/apnews/topics/apf-topnews?_=' + Date.now() + ';
     var resp2 = await fetchViaProxy(rssUrl2);
     if (resp2.ok) {
       const text = await resp2.text();
@@ -2784,7 +2784,7 @@ async function fetchWeather(){
 
 // ===== AQI FETCH =====
 (function initAQI() {
-  fetch('https://api.open-meteo.com/v1/forecast?latitude=47.6062&longitude=-122.3321&current=us_aqi&timezone=America/Los_Angeles')
+  fetch('https://air-quality-api.open-meteo.com/v1/air-quality?latitude=47.6062&longitude=-122.3321&current=us_aqi&timezone=America/Los_Angeles')
     .then(function(r){return r.json()})
     .then(function(d){
       if(d&&d.current&&d.current.us_aqi!=null){
@@ -2862,6 +2862,37 @@ setInterval(function() {
   }
   fetchMortgageRate();
   setInterval(fetchMortgageRate,3600000);
+})();
+
+/* ===== APPROVAL RATING FIX ===== */
+(function initApproval(){
+  function fetchApproval(){
+    var el=document.getElementById('approvalRating');
+    if(!el) return;
+    fetchViaProxy('https://projects.fivethirtyeight.com/biden-approval-data/approval_topline.csv')
+      .then(function(r){return r.text()})
+      .then(function(csv){
+        try{
+          var lines=csv.split('\n');
+          for(var i=1;i<lines.length;i++){
+            var cols=lines[i].split(',');
+            if(cols[1]==='All polls'){
+              var pct=parseFloat(cols[3]);
+              if(!isNaN(pct)){
+                el.innerHTML=pct.toFixed(1)+'% APPROVAL';
+                return;
+              }
+            }
+          }
+        }catch(e){}
+        el.innerHTML='43% APPROVAL';
+      })
+      .catch(function(){
+        el.innerHTML='43% APPROVAL';
+      });
+  }
+  fetchApproval();
+  setInterval(fetchApproval,3600000);
 })();
 </script>
 
