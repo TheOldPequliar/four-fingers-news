@@ -956,6 +956,33 @@
 .predict-pct{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:900;color:var(--green)}
 .predict-label{font-size:7px;color:var(--text-muted)}
 
+/* ===== HOUSING MARKET SENTIMENT ===== */
+.housing-section{margin:30px auto;max-width:900px;padding:0 16px}
+.housing-title{text-align:center;font-size:9px;letter-spacing:6px;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px;font-family:"JetBrains Mono",monospace}
+.housing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.housing-grid{grid-template-columns:1fr}}
+.housing-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;position:relative;overflow:hidden;transition:border-color 0.3s}
+.housing-card:hover{border-color:var(--accent)}
+.housing-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--green))}
+.housing-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.housing-city{font-size:14px;font-weight:700;color:var(--text);letter-spacing:1px}
+.housing-badge{font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;border-radius:4px;font-family:"JetBrains Mono",monospace;font-weight:700}
+.badge-buyer{background:rgba(0,230,138,0.15);color:var(--green)}
+.badge-seller{background:rgba(255,77,106,0.15);color:var(--red)}
+.badge-neutral{background:rgba(255,184,0,0.15);color:var(--amber)}
+.housing-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.housing-stat{text-align:center}
+.housing-stat-value{font-size:16px;font-weight:900;color:var(--accent);font-family:"JetBrains Mono",monospace}
+.housing-stat-label{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
+.housing-meter{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:10px}
+.housing-meter-fill{height:100%;border-radius:3px;transition:width 1s ease}
+.housing-insight{font-size:10px;color:var(--text-dim);line-height:1.5;font-style:italic}
+.housing-footer{text-align:center;margin-top:16px;font-size:7px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);font-family:"JetBrains Mono",monospace}
+.housing-rate-strip{display:flex;justify-content:center;gap:24px;margin-top:12px;padding:10px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+.housing-rate-item{text-align:center}
+.housing-rate-val{font-size:14px;font-weight:900;color:var(--amber);font-family:"JetBrains Mono",monospace}
+.housing-rate-lbl{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
+
 /* ===== EASTER EGG ===== */
 .easter-egg{margin-top:60px;padding:20px;text-align:center;opacity:0.15;transition:opacity 0.5s}
 .easter-egg:hover{opacity:0.6}
@@ -1636,7 +1663,85 @@ body.light-mode .curtis-mini { background: var(--surface); border-color: rgba(0,
     <div class="agi-note" id="whatIfNote">$1000 of NVDA on David's 30th birthday (03/28/2016)</div>
   </div>
 
-  <!-- EASTER EGG -->
+  
+  <!-- HOUSING MARKET SENTIMENT -->
+  <div class="housing-section">
+    <div class="housing-title">&#127968; Housing Market Sentiment Index</div>
+    <div class="housing-grid">
+      <!-- Seattle / Eastside -->
+      <div class="housing-card">
+        <div class="housing-card-header">
+          <div class="housing-city">Seattle / Eastside</div>
+          <div class="housing-badge badge-buyer" id="seattleBadge">SHIFTING TO BUYERS</div>
+        </div>
+        <div class="housing-stats">
+          <div class="housing-stat">
+            <div class="housing-stat-value" id="seattleMedian">$1.4M</div>
+            <div class="housing-stat-label">Eastside Median</div>
+          </div>
+          <div class="housing-stat">
+            <div class="housing-stat-value" id="seattleInventory">+58%</div>
+            <div class="housing-stat-label">Inventory YoY</div>
+          </div>
+          <div class="housing-stat">
+            <div class="housing-stat-value" id="seattleDays">24</div>
+            <div class="housing-stat-label">Median DOM</div>
+          </div>
+        </div>
+        <div class="housing-meter">
+          <div class="housing-meter-fill" id="seattleMeter" style="width:40%;background:linear-gradient(90deg,var(--green),var(--amber))"></div>
+        </div>
+        <div class="housing-insight" id="seattleInsight">Listings surging but buyers cautious &mdash; Eastside down 7% from peak. Best negotiating power since 2019. Inventory at 58% above last year.</div>
+      </div>
+      <!-- Boise -->
+      <div class="housing-card">
+        <div class="housing-card-header">
+          <div class="housing-city">Boise, ID &#129311;</div>
+          <div class="housing-badge badge-buyer" id="boiseBadge">BUYER FRIENDLY</div>
+        </div>
+        <div class="housing-stats">
+          <div class="housing-stat">
+            <div class="housing-stat-value" id="boiseMedian">$502K</div>
+            <div class="housing-stat-label">Median Price</div>
+          </div>
+          <div class="housing-stat">
+            <div class="housing-stat-value" id="boiseChange">+0.8%</div>
+            <div class="housing-stat-label">Price YoY</div>
+          </div>
+          <div class="housing-stat">
+            <div class="housing-stat-value" id="boiseDays">38</div>
+            <div class="housing-stat-label">Median DOM</div>
+          </div>
+        </div>
+        <div class="housing-meter">
+          <div class="housing-meter-fill" id="boiseMeter" style="width:35%;background:linear-gradient(90deg,var(--green),var(--accent))"></div>
+        </div>
+        <div class="housing-insight" id="boiseInsight">First time under 30% affordability threshold since 2022. Prices flat after pandemic surge. Builder incentives at 64%. Kellan &mdash; the window is open.</div>
+      </div>
+    </div>
+    <!-- National Rate Strip -->
+    <div class="housing-rate-strip">
+      <div class="housing-rate-item">
+        <div class="housing-rate-val" id="mortgageRate">6.48%</div>
+        <div class="housing-rate-lbl">30-Yr Fixed</div>
+      </div>
+      <div class="housing-rate-item">
+        <div class="housing-rate-val" id="nahbIndex">38</div>
+        <div class="housing-rate-lbl">NAHB HMI</div>
+      </div>
+      <div class="housing-rate-item">
+        <div class="housing-rate-val" id="builderCuts">37%</div>
+        <div class="housing-rate-lbl">Builders Cutting</div>
+      </div>
+      <div class="housing-rate-item">
+        <div class="housing-rate-val" id="fedFunds">4.25%</div>
+        <div class="housing-rate-lbl">Fed Funds Rate</div>
+      </div>
+    </div>
+    <div class="housing-footer">Data as of March 2026 &mdash; Sources: Zillow, NAHB, Freddie Mac, Redfin</div>
+  </div>
+
+<!-- EASTER EGG -->
   <div class="easter-egg">
     <div class="easter-egg-title">BOOKS THAT MADE ME FEEL THINGS BEFORE THE WORLD ENDS</div>
     <div class="easter-egg-book" id="easterBook1">&#8220;Consciousness &mdash; Pay Attention!&#8221;</div>
@@ -2727,6 +2832,37 @@ applyAutoTheme();
 setInterval(function() {
   if (!localStorage.getItem('themeOverride')) applyAutoTheme();
 }, 600000);
+
+/* ===== HOUSING MARKET PULSE ===== */
+(function initHousing(){
+  function animateMeters(){
+    var sm=document.getElementById('seattleMeter');
+    var bm=document.getElementById('boiseMeter');
+    if(sm)sm.style.width='40%';
+    if(bm)bm.style.width='35%';
+  }
+  setTimeout(animateMeters,500);
+  
+  /* Attempt live mortgage rate from MND proxy */
+  function fetchMortgageRate(){
+    var el=document.getElementById('mortgageRate');
+    if(el){
+      /* Try Yahoo Finance for TNX (10yr) as proxy indicator */
+      fetch('https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=1d&interval=1d')
+        .then(function(r){return r.json()})
+        .then(function(d){
+          try{
+            var tenYr=d.chart.result[0].meta.regularMarketPrice;
+            /* Rough 30yr mortgage ~ 10yr + 1.7-2.0 spread */
+            var est30=(tenYr+1.85).toFixed(2);
+            el.innerHTML=est30+'%';
+          }catch(e){}
+        }).catch(function(){});
+    }
+  }
+  fetchMortgageRate();
+  setInterval(fetchMortgageRate,3600000);
+})();
 </script>
 
 
