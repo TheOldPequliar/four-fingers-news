@@ -1126,59 +1126,56 @@ const STOCKS = [
 let stockData = {};
 
 // Attempt Yahoo Finance via AllOrigins proxy
+
+// CORS PROXY HELPERS
+const PROXIES=[
+  url=>"https://api.allorigins.win/raw?url="+encodeURIComponent(url),
+  url=>"https://corsproxy.io/?"+encodeURIComponent(url),
+  url=>"https://api.codetabs.com/v1/proxy?quest="+encodeURIComponent(url)
+];
+async function fetchViaProxy(url,timeoutMs=6000){
+  for(const proxy of PROXIES){try{
+    const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),timeoutMs);
+    const resp=await fetch(proxy(url),{signal:ctrl.signal});clearTimeout(timer);
+    if(resp.ok)return resp;
+  }catch(e){}}
+  return null;
+}
+
+
+async function fetchESPNRaw(path){
+  var url="https://site.api.espn.com/apis/site/v2/sports/"+path;
+  try{var ctrl=new AbortController();var timer=setTimeout(function(){ctrl.abort();},5000);
+    var resp=await fetch(url,{signal:ctrl.signal});clearTimeout(timer);
+    if(resp.ok)return resp;
+  }catch(e){}
+  return await fetchViaProxy(url);
+}
+
+async function fetchESPN(path){
+  const url="https://site.api.espn.com/apis/site/v2/sports/"+path;
+  try{const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),5000);
+    const resp=await fetch(url,{signal:ctrl.signal});clearTimeout(timer);
+    if(resp.ok)return resp.json();
+  }catch(e){}
+  const r2=await fetchViaProxy(url);
+  if(r2)return r2.json();
+  return null;
+}
+
 async function fetchStockData() {
-  const symbols = STOCKS.map(s => s.symbol).join(',');
-  try {
-    const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols}`;
-    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-    const resp = await fetch(proxyUrl);
-    if (!resp.ok) throw new Error('Proxy failed');
-    const data = await resp.json();
-    if (data.quoteResponse && data.quoteResponse.result) {
-      data.quoteResponse.result.forEach(q => {
-        stockData[q.symbol] = {
-          price: q.regularMarketPrice,
-          change: q.regularMarketChangePercent,
-          prevClose: q.regularMarketPreviousClose,
-          name: q.shortName || q.longName || q.symbol,
-        };
-      });
-      renderStocks();
-      renderTicker();
-      return;
-    }
-  } catch (e) {
-    console.log('Yahoo Finance fetch failed, trying fallback...', e);
-  }
-
-  // Fallback: try finnhub free tier (no key needed for basic)
-  try {
-    for (const s of STOCKS) {
-      if (s.symbol === 'BTC-USD') continue;
-      const resp = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`https://finnhub.io/api/v1/quote?symbol=${s.symbol}&token=demo`)}`);
-      if (resp.ok) {
-        const d = await resp.json();
-        if (d.c && d.c > 0) {
-          stockData[s.symbol] = {
-            price: d.c,
-            change: ((d.c - d.pc) / d.pc) * 100,
-            prevClose: d.pc,
-            name: s.name,
-          };
-        }
-      }
-    }
-    if (Object.keys(stockData).length > 0) {
-      renderStocks();
-      renderTicker();
-      return;
-    }
-  } catch (e) {
-    console.log('Finnhub also failed, using simulated data', e);
-  }
-
-  // Final fallback: realistic simulated data
-  useSimulatedStocks();
+  let fetched=0;
+  for(const s of STOCKS){try{const sym=s.symbol;let resp=null;
+  try{const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),4000);
+  resp=await fetch("https://query1.finance.yahoo.com/v8/finance/chart/"+sym+"?interval=1d&range=2d",{signal:ctrl.signal});
+  clearTimeout(timer);if(!resp.ok)resp=null;}catch(e){resp=null;}
+  if(!resp)resp=await fetchViaProxy("https://query1.finance.yahoo.com/v8/finance/chart/"+sym+"?interval=1d&range=2d");
+  if(resp){const data=await resp.json();const meta=data&&data.chart&&data.chart.result&&data.chart.result[0]&&data.chart.result[0].meta;
+  if(meta&&meta.regularMarketPrice){stockData[sym]={price:meta.regularMarketPrice,
+  change:meta.previousClose?((meta.regularMarketPrice-meta.previousClose)/meta.previousClose)*100:0,
+  prevClose:meta.previousClose||meta.regularMarketPrice,name:s.name};fetched++;}}}catch(e){console.log("Stock "+s.symbol+" failed",e);}}
+  if(fetched>0){renderStocks();renderTicker();return;}
+  useSimulatedStocks();renderStocks();renderTicker();
 }
 
 function useSimulatedStocks() {
@@ -1323,7 +1320,7 @@ async function fetchSportsData() {
 
   // Seahawks
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/26');
+    const resp = await fetchESPN('football/nfl/teams/26');
     if (resp.ok) {
       const data = await resp.json();
       const team = data.team;
@@ -1336,7 +1333,7 @@ async function fetchSportsData() {
 
   // Also try scoreboard for next game
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/26/schedule');
+    const resp = await fetchESPNRaw('football/nfl/teams/26/schedule');
     if (resp.ok) {
       const data = await resp.json();
       const events = data.events || [];
@@ -1355,7 +1352,7 @@ async function fetchSportsData() {
 
   // Mariners
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/12');
+    const resp = await fetchESPN('baseball/mlb/teams/12');
     if (resp.ok) {
       const data = await resp.json();
       const team = data.team;
@@ -1370,7 +1367,7 @@ async function fetchSportsData() {
   }
 
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard');
+    const resp = await fetchESPNRaw('baseball/mlb/scoreboard');
     if (resp.ok) {
       const data = await resp.json();
       const marGame = data.events?.find(e =>
@@ -1387,7 +1384,7 @@ async function fetchSportsData() {
 
   // Kraken
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/24');
+    const resp = await fetchESPN('hockey/nhl/teams/24');
     if (resp.ok) {
       const data = await resp.json();
       const team = data.team;
@@ -1399,7 +1396,7 @@ async function fetchSportsData() {
   } catch (e) { console.log('Kraken fetch failed', e); }
 
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard');
+    const resp = await fetchESPNRaw('hockey/nhl/scoreboard');
     if (resp.ok) {
       const data = await resp.json();
       const krkGame = data.events?.find(e =>
@@ -1414,7 +1411,7 @@ async function fetchSportsData() {
 
   // UW Football
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/264');
+    const resp = await fetchESPN('football/college-football/teams/264');
     if (resp.ok) {
       const data = await resp.json();
       const team = data.team;
@@ -1464,7 +1461,7 @@ function initGolf() {
 
 async function fetchPGALeaderboard() {
   try {
-    const resp = await fetch('https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard');
+    const resp = await fetchESPNRaw('golf/pga/scoreboard');
     if (resp.ok) {
       const data = await resp.json();
       const event = data.events?.[0];
@@ -1511,9 +1508,9 @@ async function fetchNews() {
   // Fallback to curated headlines approach
   try {
     // Try to fetch top US headlines via RSS proxy
-    const rssUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml');
-    const resp = await fetch(rssUrl);
-    if (resp.ok) {
+    const rssUrl = 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml';
+    const resp = await fetchViaProxy(rssUrl);
+      if (resp && resp.ok) {
       const text = await resp.text();
       const parser = new DOMParser();
       const xml = parser.parseFromString(text, 'text/xml');
@@ -1546,9 +1543,9 @@ async function fetchNews() {
 
   // Also try AP News
   try {
-    const rssUrl2 = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://rsshub.app/apnews/topics/apf-topnews');
-    const resp2 = await fetch(rssUrl2);
-    if (resp2.ok) {
+    const rssUrl2 = 'https://rsshub.app/apnews/topics/apf-topnews';
+    const resp2 = await fetchViaProxy(rssUrl2);
+      if (resp2 && resp2.ok) {
       const text = await resp2.text();
       const parser = new DOMParser();
       const xml = parser.parseFromString(text, 'text/xml');
@@ -1645,9 +1642,9 @@ async function fetchIranData() {
   let iranHeadlines = [];
 
   try {
-    const rssUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://news.google.com/rss/search?q=Iran+war+military+strikes&hl=en-US&gl=US&ceid=US:en');
-    const resp = await fetch(rssUrl);
-    if (resp.ok) {
+    const rssUrl = 'https://news.google.com/rss/search?q=Iran+war+military+strikes&hl=en-US&gl=US&ceid=US:en';
+    const resp = await fetchViaProxy(rssUrl);
+      if (resp && resp.ok) {
       const text = await resp.text();
       const parser = new DOMParser();
       const xml = parser.parseFromString(text, 'text/xml');
@@ -1668,9 +1665,9 @@ async function fetchIranData() {
 
   // Also try Reuters/AP feeds for Iran
   try {
-    const rssUrl2 = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://news.google.com/rss/search?q=Iran+conflict+Middle+East+military&hl=en-US&gl=US&ceid=US:en');
-    const resp2 = await fetch(rssUrl2);
-    if (resp2.ok) {
+    const rssUrl2 = 'https://news.google.com/rss/search?q=Iran+conflict+Middle+East+military&hl=en-US&gl=US&ceid=US:en';
+    const resp2 = await fetchViaProxy(rssUrl2);
+      if (resp2 && resp2.ok) {
       const text = await resp2.text();
       const parser = new DOMParser();
       const xml = parser.parseFromString(text, 'text/xml');
