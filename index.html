@@ -822,6 +822,32 @@
   .weather-label-left { font-size:9px; font-weight:700; letter-spacing:3px; color:var(--text-dim); }
   .weather-label-right { font-size:8px; color:var(--text-muted); font-style:italic; }
 
+  
+
+  /* Top Row + Curtis Mini */
+  .top-row { display:flex; gap:12px; margin-bottom:12px; align-items:stretch; }
+  .top-row .birthday-banner { flex:1; margin-bottom:0; }
+  .curtis-mini {
+    width:160px; min-width:160px;
+    background:var(--surface);
+    border:1px solid rgba(0,230,138,0.2);
+    border-radius:8px;
+    padding:10px 8px;
+    text-align:center;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    position:relative; overflow:hidden;
+  }
+  .curtis-mini::before {
+    content:""; position:absolute; top:0; left:0; width:100%; height:2px;
+    background:linear-gradient(90deg,var(--green),var(--amber));
+  }
+  .curtis-mini-label { font-size:7px; letter-spacing:2px; color:var(--green); font-weight:700; margin-bottom:2px; }
+  .curtis-mini-counter { font-family:"JetBrains Mono",monospace; font-size:32px; font-weight:900; color:var(--green); line-height:1; }
+  .curtis-mini-sublabel { font-family:"JetBrains Mono",monospace; font-size:8px; color:var(--text-dim); letter-spacing:1px; margin-top:2px; line-height:1.3; }
+  .curtis-mini-title { font-size:7px; color:var(--amber); font-weight:700; letter-spacing:1px; margin-top:6px; }
+  .curtis-mini-quip { font-size:7px; color:var(--text-muted); font-style:italic; margin-top:2px; }
+  @media(max-width:600px){ .top-row{flex-direction:column;} .curtis-mini{width:100%;min-width:100%;} }
+
   </style>
 </head>
 <body>
