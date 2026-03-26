@@ -1818,8 +1818,7 @@ function updateRefreshTime() {
   document.getElementById('lastRefresh').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' PT';
 }
 
-// âââ INIT âââ
-(async 
+
     // PACK ADDICTS NW - CARD MARKET
     var TRENDING_CARDS = [
       {name:"2024 Panini Prizm Jayden Daniels RC PSA 10",est:85},
@@ -1886,9 +1885,12 @@ function updateRefreshTime() {
       });
     }
 
-function init() {
-      fetchCardMarket();
 
+// âââ INIT âââ
+(async 
+    function init() {
+      fetchCardMarket();
+      
   initPracticalFinance();
   initGolf();
   updateRefreshTime();
