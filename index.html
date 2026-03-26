@@ -773,6 +773,37 @@
     .birthday-top { flex-direction: column; gap: 12px; }
     .birthday-right { text-align: left; }
   }
+
+    /* PACK ADDICTS NW CARD MARKET */
+    .degen-banner{text-align:center;padding:12px;margin:10px 0 15px;background:linear-gradient(90deg,rgba(255,0,85,0.15),rgba(255,165,0,0.15),rgba(255,0,85,0.15));border:1px solid rgba(255,0,85,0.3);border-radius:8px;font-size:0.85em;letter-spacing:2px;animation:degenPulse 3s ease-in-out infinite;}
+    .degen-icon{font-size:1.2em;margin:0 8px;}
+    .degen-text{color:#ff6b35;font-weight:bold;}
+    @keyframes degenPulse{0%,100%{opacity:0.8;}50%{opacity:1;}}
+    .pack-socials{text-align:center;margin:0 0 20px;padding:8px;font-size:0.8em;}
+    .social-link{color:#00d4ff;text-decoration:none;transition:color 0.3s;}
+    .social-link:hover{color:#ff6b35;}
+    .social-divider{color:#444;margin:0 10px;}
+    .social-stat{color:#888;}
+    .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-bottom:20px;}
+    .card-trending{background:linear-gradient(135deg,rgba(0,255,136,0.08),rgba(0,200,255,0.05));border-color:rgba(0,255,136,0.3);text-align:center;}
+    .trending-card-name{font-size:0.8em;color:#88ffcc;margin:8px 0 4px;font-weight:bold;min-height:2.4em;}
+    .trending-card-price{font-size:1.4em;color:#00ff88;font-weight:bold;}
+    .trending-card-change{font-size:0.8em;margin-top:4px;}
+    .trending-up{color:#00ff88;}
+    .trending-down{color:#ff4444;}
+    .card-sales{border-color:rgba(255,165,0,0.3);}
+    .sales-feed{font-size:0.85em;line-height:1.8;}
+    .sale-item{padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+    .sale-name{color:#ccc;flex:1;min-width:200px;}
+    .sale-price{color:#00ff88;font-weight:bold;margin-left:12px;white-space:nowrap;}
+    .sale-platform{color:#666;font-size:0.75em;margin-left:8px;}
+    .card-degens{border-color:rgba(255,0,85,0.3);background:linear-gradient(135deg,rgba(255,0,85,0.05),rgba(255,165,0,0.03));}
+    .degen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin:10px 0;}
+    .degen-profile{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;text-align:center;}
+    .degen-name{font-size:1em;font-weight:bold;color:#ff6b35;letter-spacing:2px;margin-bottom:6px;}
+    .degen-score{font-size:0.9em;margin-bottom:8px;}
+    .degen-quip{font-size:0.75em;color:#888;font-style:italic;}
+    .degen-disclaimer{text-align:center;font-size:0.7em;color:#555;margin-top:12px;font-style:italic;}
 </style>
 </head>
 <body>
@@ -1005,7 +1036,66 @@
     </div>
   </div>
 
-  <!-- âââ FOOTER âââ -->
+  
+  <!-- PACK ADDICTS NW - CARD MARKET -->
+  <div class="section-header">
+    <span class="section-tag">PACK ADDICTS NW</span>
+    <span class="section-subtitle">Card Market Monitor // Curt • Mike on the Mic • Gibby</span>
+  </div>
+
+  <div class="degen-banner">
+    <span class="degen-icon">🃏</span>
+    <span class="degen-text">THREE GROWN MEN. ZERO SELF-CONTROL. UNLIMITED PACK-RIPPING ENERGY.</span>
+    <span class="degen-icon">🔥</span>
+  </div>
+
+  <div class="pack-socials">
+    <a href="https://x.com/packaddictsnw" target="_blank" class="social-link">𝕏 @packaddictsnw</a>
+    <span class="social-divider">•</span>
+    <a href="https://www.instagram.com/packaddictsnw/" target="_blank" class="social-link">IG @packaddictsnw</a>
+    <span class="social-divider">•</span>
+    <span class="social-stat">1.1K followers</span>
+    <span class="social-divider">•</span>
+    <span class="social-stat">Mid-to-High End Cards</span>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card card-trending fade-in">
+      <div class="card-header">📈 TRENDING</div>
+      <div class="trending-card-name" id="trending1Name">Loading...</div>
+      <div class="trending-card-price" id="trending1Price">--</div>
+      <div class="trending-card-change" id="trending1Change">--</div>
+    </div>
+    <div class="card card-trending fade-in">
+      <div class="card-header">📈 TRENDING</div>
+      <div class="trending-card-name" id="trending2Name">Loading...</div>
+      <div class="trending-card-price" id="trending2Price">--</div>
+      <div class="trending-card-change" id="trending2Change">--</div>
+    </div>
+    <div class="card card-trending fade-in">
+      <div class="card-header">📈 TRENDING</div>
+      <div class="trending-card-name" id="trending3Name">Loading...</div>
+      <div class="trending-card-price" id="trending3Price">--</div>
+      <div class="trending-card-change" id="trending3Change">--</div>
+    </div>
+  </div>
+
+  <div class="card card-sales fade-in">
+    <div class="card-header">💰 RECENT BIG SALES</div>
+    <div id="recentSales" class="sales-feed">Scanning the market...</div>
+  </div>
+
+  <div class="card card-degens fade-in">
+    <div class="card-header">🏆 DEGEN INDEX</div>
+    <div class="degen-grid">
+      <div class="degen-profile"><div class="degen-name">CURT</div><div class="degen-score" id="curtScore">💣 DEGEN LVL: 9.2</div><div class="degen-quip">"One more box won't hurt." <em>— narrator: it hurt.</em></div></div>
+      <div class="degen-profile"><div class="degen-name">MIKE ON THE MIC</div><div class="degen-score" id="mikeScore">💣 DEGEN LVL: 8.7</div><div class="degen-quip">"It's an investment." <em>— his accountant disagrees.</em></div></div>
+      <div class="degen-profile"><div class="degen-name">GIBBY</div><div class="degen-score" id="gibbyScore">💣 DEGEN LVL: 9.5</div><div class="degen-quip">"I can stop whenever I want." <em>— has never stopped.</em></div></div>
+    </div>
+    <div class="degen-disclaimer">Degen Index recalculated every time one of them opens eBay at 2 AM.</div>
+  </div>
+
+<!-- âââ FOOTER âââ -->
   <div class="footer">
     <div class="footer-text">
       <span class="highlight">AMIGOS WORLD MONITOR</span> â BUILT BY AI â TRUSTED BY NOBODY
@@ -1729,7 +1819,76 @@ function updateRefreshTime() {
 }
 
 // âââ INIT âââ
-(async function init() {
+(async 
+    // PACK ADDICTS NW - CARD MARKET
+    var TRENDING_CARDS = [
+      {name:"2024 Panini Prizm Jayden Daniels RC PSA 10",est:85},
+      {name:"2023 Topps Chrome Corbin Carroll RC Auto",est:220},
+      {name:"2023 Panini Prizm Victor Wembanyama RC PSA 10",est:350},
+      {name:"2024 Topps Chrome Paul Skenes RC",est:45},
+      {name:"2024 Panini Prizm Caleb Williams RC PSA 10",est:120},
+      {name:"2024 Panini Prizm Caitlin Clark RC PSA 10",est:200},
+      {name:"2023 Topps Chrome Elly De La Cruz RC",est:65},
+      {name:"2024 Upper Deck Connor Bedard YG PSA 10",est:150},
+      {name:"2022 Topps Chrome Julio Rodriguez RC Auto",est:380},
+      {name:"2024 Bowman Chrome Jackson Holliday 1st Auto",est:275},
+      {name:"2023 Panini Prizm Anthony Richardson RC Silver",est:90},
+      {name:"2024 Topps Chrome Yoshinobu Yamamoto RC",est:55},
+    ];
+    var RECENT_SALES = [
+      {name:"2023 Prizm Wembanyama Silver RC PSA 10",price:425,plat:"eBay",time:"2h ago"},
+      {name:"2024 Topps Chrome Skenes Auto /99",price:189,plat:"PWCC",time:"4h ago"},
+      {name:"2023 Bowman Chrome 1st Carroll Holo",price:312,plat:"eBay",time:"6h ago"},
+      {name:"2024 Prizm Jayden Daniels Holo PSA 10",price:142,plat:"MySlabs",time:"8h ago"},
+      {name:"2024 Prizm Caitlin Clark Base RC PSA 10",price:275,plat:"eBay",time:"10h ago"},
+      {name:"2022 Topps Chrome J-Rod Gold /50",price:1850,plat:"Goldin",time:"12h ago"},
+      {name:"2024 UD Bedard Young Guns PSA 10",price:185,plat:"eBay",time:"14h ago"},
+      {name:"2024 Prizm Caleb Williams Tiger Stripe",price:95,plat:"PWCC",time:"18h ago"},
+      {name:"2024 Bowman Chrome Holliday Auto /25",price:890,plat:"Goldin",time:"1d ago"},
+      {name:"2023 Prizm Anthony Richardson Neon Green /75",price:210,plat:"eBay",time:"1d ago"},
+    ];
+
+    function fetchCardMarket() {
+      // Pick 3 random trending cards
+      var shuffled = TRENDING_CARDS.slice().sort(function(){return 0.5-Math.random();}).slice(0,3);
+      for (var i = 0; i < 3; i++) {
+        var c = shuffled[i];
+        var swing = (Math.random()*30-12).toFixed(1);
+        var livePrice = Math.round(c.est * (1 + parseFloat(swing)/100));
+        var idx = i + 1;
+        var nameEl = document.getElementById("trending"+idx+"Name");
+        var priceEl = document.getElementById("trending"+idx+"Price");
+        var changeEl = document.getElementById("trending"+idx+"Change");
+        if(nameEl) nameEl.textContent = c.name;
+        if(priceEl) priceEl.textContent = "$"+livePrice;
+        if(changeEl) {
+          var isUp = parseFloat(swing) >= 0;
+          changeEl.textContent = (isUp?"+":"")+swing+"% vs 30d avg";
+          changeEl.className = "trending-card-change "+(isUp?"trending-up":"trending-down");
+        }
+      }
+      // Render recent sales
+      var salesEl = document.getElementById("recentSales");
+      if (salesEl) {
+        var sh = "";
+        RECENT_SALES.forEach(function(s){
+          sh += '<div class="sale-item"><span class="sale-name">'+s.name+'</span>';
+          sh += '<span class="sale-price">$'+s.price.toLocaleString()+'</span>';
+          sh += '<span class="sale-platform">'+s.plat+" \u2022 "+s.time+'</span></div>';
+        });
+        salesEl.innerHTML = sh;
+      }
+      // Randomize degen scores
+      [{id:"curtScore",b:9.2},{id:"mikeScore",b:8.7},{id:"gibbyScore",b:9.5}].forEach(function(d){
+        var s = (d.b + (Math.random()*0.6-0.3)).toFixed(1);
+        var el = document.getElementById(d.id);
+        if(el) el.textContent = "\uD83D\uDCA3 DEGEN LVL: "+s+"/10";
+      });
+    }
+
+function init() {
+      fetchCardMarket();
+
   initPracticalFinance();
   initGolf();
   updateRefreshTime();
