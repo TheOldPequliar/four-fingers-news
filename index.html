@@ -705,12 +705,6 @@
   }
 
   /* &#9472;&#9472; Golf Section &#9472;&#9472; */
-  .golf-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
   .countdown-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -940,7 +934,7 @@
   /* &#9472;&#9472; Responsive &#9472;&#9472; */
   @media (max-width: 900px) {
     .cards-row { grid-template-columns: repeat(2, 1fr); }
-    .golf-grid { grid-template-columns: 1fr; }
+    .golf-grid { grid-template-columns: repeat(3, 1fr); }
     .cards-row-3 { grid-template-columns: 1fr 1fr; }
   }
 
