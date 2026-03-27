@@ -1188,54 +1188,75 @@
 
 /* ===== LIGHT / DAY MODE ===== */
 body.light-mode {
-  --bg: #f5f7f4;
-  --surface: #fafbf9;
-  --surface-hover: #f0f3ed;
-  --border: #d4dcd5;
-  --border-glow: #bac5ba;
+  --bg: #f0f4ee;
+  --surface: #ffffff;
+  --surface-hover: #e8efe5;
+  --border: #c2d1c4;
+  --border-glow: #9bb3a0;
   --text: #1a2a1e;
-  --text-dim: #4a6a55;
-  --text-muted: #7a8f80;
-  --accent: #2d6d52;
-  --accent-glow: rgba(45, 109, 82, 0.1);
-  --forest-dark: #0f3a1f;
-  --forest-light: #4da878;
-  --mountain-blue: #2a4a65;
-  --mountain-slate: #506d85;
-  --green: #4da878;
-  --red: #c85a5a;
-  --amber: #b8853a;
+  --text-dim: #3a5a45;
+  --text-muted: #5e7a68;
+  --accent: #1a6b45;
+  --accent-glow: rgba(26, 107, 69, 0.12);
+  --forest-dark: #0a3018;
+  --forest-light: #1a6b45;
+  --mountain-blue: #1e3d5a;
+  --mountain-slate: #3a5a75;
+  --green: #1a8a50;
+  --red: #c0392b;
+  --amber: #b5720a;
 }
 body.light-mode { background: var(--bg); color: var(--text); }
 body.light-mode .main { background: var(--bg); }
-body.light-mode header { background: linear-gradient(135deg, #e8eaf0, #f0f1f5); border-bottom-color: var(--border); }
+body.light-mode .header-title { background: linear-gradient(90deg, #0c2c56, #1a6b45); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+body.light-mode .header-subtitle { color: #3a5a45; }
+body.light-mode .live-indicator { color: #1a8a50; }
+body.light-mode .live-dot { background: #1a8a50; }
+body.light-mode .section-tag { color: #1a6b45; border-color: rgba(26,107,69,0.35); background: rgba(26,107,69,0.08); }
 body.light-mode .section-header { color: var(--text-dim); }
-body.light-mode .gcal-container { background: var(--surface); }
-body.light-mode .gcal-event { background: rgba(0,0,0,0.02); }
-body.light-mode .gcal-event-home { background: rgba(0,92,92,0.04); }
-body.light-mode .gcal-event-personal { background: rgba(255,184,0,0.06); }
-body.light-mode .gameday-banner { background: linear-gradient(135deg, rgba(0,44,89,0.08), rgba(0,91,50,0.05)); border-color: rgba(0,91,50,0.2); }
-body.light-mode .gameday-stat { background: rgba(0,0,0,0.03); }
-body.light-mode .bingo-cell { background: #fafafe; border-color: var(--border); color: var(--text-dim); }
-body.light-mode .bingo-header { background: rgba(0,44,89,0.1); color: #0c2c56; }
-body.light-mode .bingo-cell.stamped { background: rgba(0,153,77,0.1); color: var(--green); }
-body.light-mode .world-card { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-body.light-mode .fg-gauge { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-body.light-mode .fg-needle { background: #333; }
-body.light-mode .agi-strip { background: linear-gradient(135deg, rgba(155,89,182,0.05), rgba(0,119,204,0.03)); }
-body.light-mode .predict-card { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-body.light-mode .predict-bar { background: rgba(0,0,0,0.06); }
-body.light-mode .daily-strip { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+body.light-mode .gcal-container { background: var(--surface); border-color: var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+body.light-mode .gcal-event { background: rgba(0,0,0,0.025); }
+body.light-mode .gcal-event-home { background: rgba(0,92,92,0.06); }
+body.light-mode .gcal-event-personal { background: rgba(255,160,0,0.08); }
+body.light-mode .gameday-banner { background: linear-gradient(135deg, #e6f0fa, #e0f5ec); border-color: #1a6b45; border-width: 2px; }
+body.light-mode .gameday-banner::before { background: linear-gradient(90deg, #1a6b45, #0c2c56, #1a6b45); }
+body.light-mode .gameday-title { color: #0c2c56; }
+body.light-mode .gameday-headline { color: #0c2c56; }
+body.light-mode .gameday-sub { color: #3a5a45; }
+body.light-mode .gameday-countdown { color: #1a6b45; }
+body.light-mode .gameday-matchup { background: rgba(12,44,86,0.07); }
+body.light-mode .gameday-team-name { color: #1a2a1e; }
+body.light-mode .gameday-stat { background: rgba(12,44,86,0.05); }
+body.light-mode .gameday-stat-value { color: #0c2c56; }
+body.light-mode .gameday-stat-label { color: #5e7a68; }
+body.light-mode .gameday-stat-detail { color: #3a5a45; }
+body.light-mode .gameday-hype { color: #b5720a; }
+body.light-mode .gameday-vs { color: #5e7a68; }
+body.light-mode .mariners-color { color: #0c2c56; }
+body.light-mode .guardians-color { color: #c0392b; }
+body.light-mode .bingo-cell { background: #f8fbf8; border-color: var(--border); color: #3a5a45; }
+body.light-mode .bingo-header { background: rgba(12,44,86,0.12); color: #0c2c56; }
+body.light-mode .bingo-cell.stamped { background: rgba(26,138,80,0.12); color: #1a6b45; }
+body.light-mode .world-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); border-color: var(--border); }
+body.light-mode .fg-gauge { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .fg-needle { background: #1a2a1e; }
+body.light-mode .agi-strip { background: linear-gradient(135deg, rgba(120,60,170,0.07), rgba(0,100,190,0.05)); }
+body.light-mode .predict-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .predict-bar { background: rgba(0,0,0,0.08); }
+body.light-mode .daily-strip { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .easter-egg { opacity: 0.08; }
 body.light-mode .easter-egg:hover { opacity: 0.35; }
 body.light-mode .ticker-wrap { background: var(--surface); border-color: var(--border); }
 body.light-mode .golf-cell { background: var(--surface); }
-body.light-mode .golf-pedersen { background: rgba(204,153,0,0.06); }
+body.light-mode .golf-pedersen { background: rgba(181,114,10,0.08); }
 body.light-mode .weather-city { background: var(--surface); }
-body.light-mode .weather-boise { background: rgba(204,80,30,0.04); }
-body.light-mode .birthday-banner { background: linear-gradient(135deg, rgba(204,119,0,0.06), rgba(204,34,68,0.06), rgba(0,119,204,0.06)); }
-body.light-mode .curtis-mini { background: var(--surface); border-color: rgba(0,153,77,0.15); }
+body.light-mode .weather-boise { background: rgba(204,80,30,0.06); }
+body.light-mode .birthday-banner { background: linear-gradient(135deg, rgba(204,119,0,0.08), rgba(204,34,68,0.08), rgba(0,100,190,0.08)); }
+body.light-mode .curtis-mini { background: var(--surface); border-color: rgba(26,107,69,0.25); }
+body.light-mode .ms-hype-card { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+body.light-mode .ms-hype-stat { color: #0c2c56; }
+body.light-mode .ms-hype-name { color: #3a5a45; }
 /* Theme toggle */
 .theme-toggle { position:fixed; bottom:16px; right:16px; z-index:999; background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:6px 12px; cursor:pointer; font-size:14px; transition:all 0.3s; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
 .theme-toggle:hover { transform:scale(1.1); }
@@ -1278,7 +1299,7 @@ body.light-mode .curtis-mini { background: var(--surface); border-color: rgba(0,
   margin-right: 8px;
   vertical-align: middle;
 }
-body.light-mode .chyron { background: linear-gradient(90deg, #1a3a2a, #2d5040); }
+body.light-mode .chyron { background: linear-gradient(90deg, #0c2c56, #1a5040); }
 
 /* ── PNW Mountain Banner ── */
 .mountain-banner {
@@ -1289,7 +1310,7 @@ body.light-mode .chyron { background: linear-gradient(90deg, #1a3a2a, #2d5040); 
   opacity: 0.7;
   display: block;
 }
-body.light-mode .mountain-banner { opacity: 0.5; }
+body.light-mode .mountain-banner { opacity: 0.65; }
 </style>
 </head>
 <body>
@@ -1360,7 +1381,7 @@ body.light-mode .mountain-banner { opacity: 0.5; }
   <!-- &#9552;&#9552;&#9552; HEADER &#9552;&#9552;&#9552; -->
   <header class="header">
     <div class="header-left">
-      <div class="logo-icon">&#127794;</div>
+      <!-- logo icon removed -->
       <div>
         <div class="header-title">AMIGOS WORLD MONITOR</div>
         <div class="header-subtitle">EVERYTHING THAT MATTERS. MOST OF IT DOESN'T.</div>
