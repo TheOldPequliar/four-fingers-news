@@ -1663,12 +1663,12 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="gameday-matchup">
       <div class="gameday-team">
         <div class="gameday-team-name" style="color:#e31937">&#9918; CLEVELAND</div>
-        <div class="gameday-team-record">2025: 92&ndash;70 &bull; AL Central Champs</div>
+        <div class="gameday-team-record" id="clevRecord">2026: 0&ndash;0</div>
       </div>
       <div class="gameday-vs">VS</div>
       <div class="gameday-team">
         <div class="gameday-team-name" style="color:#005C5C">&#9918; SEATTLE</div>
-        <div class="gameday-team-record">2025: 90&ndash;72 &bull; ALCS Game 7</div>
+        <div class="gameday-team-record" id="seaRecord">2026: 0&ndash;0</div>
       </div>
     </div>
     <div class="gameday-grid">
@@ -2639,6 +2639,26 @@ async function fetchSportsData() {
     document.getElementById('marinersRecord').innerHTML = 'Spring Training';
     document.getElementById('marinersDetail').innerHTML = 'Hope springs eternal';
   }
+
+  // Opening Weekend banner records - Seattle (12) and Cleveland (5)
+  try {
+    const seaResp = await fetchESPNRaw('baseball/mlb/teams/12');
+    if (seaResp.ok) {
+      const d = await seaResp.json();
+      const r = d.team?.record?.items?.[0]?.summary || '0-0';
+      var seaEl = document.getElementById('seaRecord');
+      if (seaEl) seaEl.innerHTML = '2026: ' + r;
+    }
+  } catch(e){}
+  try {
+    const clevResp = await fetchESPNRaw('baseball/mlb/teams/5');
+    if (clevResp.ok) {
+      const d = await clevResp.json();
+      const r = d.team?.record?.items?.[0]?.summary || '0-0';
+      var clevEl = document.getElementById('clevRecord');
+      if (clevEl) clevEl.innerHTML = '2026: ' + r;
+    }
+  } catch(e){}
 
   try {
     const resp = await fetchESPNRaw('baseball/mlb/scoreboard');
