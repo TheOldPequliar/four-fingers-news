@@ -785,62 +785,62 @@
   .countdown-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: 10px;
+    padding: 14px;
     text-align: center;
   }
 
   .countdown-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 8px;
     color: var(--text-dim);
     letter-spacing: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   .countdown-value {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 900;
     color: #fff;
     line-height: 1;
   }
 
   .countdown-unit {
-    font-size: 14px;
+    font-size: 10px;
     color: var(--text-dim);
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .countdown-sub {
-    font-size: 12px;
+    font-size: 9px;
     color: var(--green);
-    margin-top: 10px;
+    margin-top: 4px;
     font-weight: 500;
   }
 
   .leaderboard-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 12px 14px;
   }
 
   .leaderboard-title {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 600;
     letter-spacing: 2px;
     color: var(--text-dim);
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   .lb-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 0;
+    padding: 3px 0;
     border-bottom: 1px solid var(--border);
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .lb-row:last-child { border-bottom: none; }
@@ -1101,21 +1101,21 @@
 
   
 /* Golf Info Row (Next Major + Leaderboard) */
-.golf-info-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
-@media(max-width:600px){ .golf-info-row{grid-template-columns:1fr;} }
+.golf-info-row { display:grid; grid-template-columns:120px 1fr 1fr; gap:12px; margin-bottom:16px; align-items:start; }
+@media(max-width:700px){ .golf-info-row{grid-template-columns:1fr;} }
 
 /* Golf Handicap Grid */
 .golf-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:0; border-radius:10px; overflow:hidden; border:1px solid var(--border); background:var(--surface); margin-bottom:16px; }
-.golf-cell { text-align:center; padding:10px 6px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); transition:background 0.3s; }
+.golf-cell { text-align:center; padding:8px 4px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); transition:background 0.3s; }
 .golf-cell:nth-child(6n) { border-right:none; }
 .golf-cell:nth-last-child(-n+6) { border-bottom:none; }
 .golf-cell:hover { background:rgba(0,212,255,0.05); }
 .golf-name { font-size:9px; font-weight:700; letter-spacing:2px; color:var(--text-dim); margin-bottom:4px; }
-.golf-hi { font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:900; color:var(--accent); line-height:1; }
+.golf-hi { font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:900; color:var(--accent); line-height:1; }
 .golf-club { font-size:7px; color:var(--text-muted); margin-top:3px; letter-spacing:1px; }
 .golf-low { font-size:7px; color:var(--text-muted); margin-top:2px; font-style:italic; }
 .golf-pedersen { background:rgba(255,215,0,0.06); }
-.golf-pedersen .golf-hi { color:#ffd700; font-size:28px; }
+.golf-pedersen .golf-hi { color:#ffd700; font-size:22px; }
 .golf-pedersen .golf-name { color:#ffd700; }
 .golf-curtis { background:rgba(0,230,138,0.04); }
 .golf-curtis .golf-hi { color:var(--green); font-size:14px; font-weight:400; font-style:italic; }
@@ -1860,7 +1860,7 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
 
   <!-- TRUMP GREATEST HITS -->
   <div class="trump-quotes-strip">
-    <div class="trump-quotes-label">&#128483; LIBERATION DAY GREATEST HITS</div>
+    <div class="trump-quotes-label">&#128483; TRUMP GREATEST HITS &mdash; THE WORDS OF A VERY STABLE GENIUS</div>
     <div class="trump-quote-text" id="trumpQuote">Loading quote...</div>
     <div class="trump-quote-meta" id="trumpQuoteMeta"></div>
   </div>
@@ -2513,6 +2513,125 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     </div>
   </div>
 
+  <!-- EPSTEIN FILES CORNER -->
+  <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128270; THE EPSTEIN FILES &mdash; NOTHING TO SEE HERE</span></div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1a1a1a,#8B0000,#1a1a1a);"></div>
+
+    <!-- Stats Strip -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px;">
+      <div style="background:rgba(139,0,0,0.08);border:1px solid rgba(139,0,0,0.2);border-radius:8px;padding:10px;text-align:center;">
+        <div style="font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700;">DOJ DOCS RELEASED</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:900;color:var(--red);">3M+</div>
+        <div style="font-size:7px;color:var(--text-muted);">pages, videos, images</div>
+      </div>
+      <div style="background:rgba(139,0,0,0.08);border:1px solid rgba(139,0,0,0.2);border-radius:8px;padding:10px;text-align:center;">
+        <div style="font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700;">PROMINENT NAMES</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:900;color:var(--amber);">100+</div>
+        <div style="font-size:7px;color:var(--text-muted);">identified by DOJ to Congress</div>
+      </div>
+      <div style="background:rgba(139,0,0,0.08);border:1px solid rgba(139,0,0,0.2);border-radius:8px;padding:10px;text-align:center;">
+        <div style="font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700;">ARRESTS (2026)</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:900;color:var(--green);">3</div>
+        <div style="font-size:7px;color:var(--text-muted);">Jagland, Andrew, Mandelson</div>
+      </div>
+      <div style="background:rgba(139,0,0,0.08);border:1px solid rgba(139,0,0,0.2);border-radius:8px;padding:10px;text-align:center;">
+        <div style="font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700;">CONVICTED FOR CRIMES</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:900;color:var(--red);">0</div>
+        <div style="font-size:7px;color:var(--text-muted);">besides Epstein &amp; Maxwell</div>
+      </div>
+    </div>
+
+    <!-- Two columns: Recent Drops + Conspiracy Board -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+      <!-- Recent Drops -->
+      <div style="background:rgba(0,0,0,0.15);border:1px solid rgba(139,0,0,0.15);border-radius:8px;padding:12px;">
+        <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:8px;">&#128196; LATEST DROPS (Jan&ndash;Feb 2026)</div>
+        <div style="font-size:8px;color:var(--text);line-height:1.7;">
+          <div style="margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="font-weight:900;color:var(--amber);">MUSK:</span> Email revealed requesting invite to &ldquo;wild&rdquo; party on the island. Denies ever going. &#128064;
+          </div>
+          <div style="margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="font-weight:900;color:var(--amber);">BANNON:</span> Text messages show deep relationship with Epstein. Trump&rsquo;s closest first-term advisor.
+          </div>
+          <div style="margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="font-weight:900;color:var(--amber);">RUEMMLER:</span> Obama WH counsel called him &ldquo;Uncle Jeffrey.&rdquo; Got $9K purse as gift. Coached him on dodging questions.
+          </div>
+          <div style="margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="font-weight:900;color:var(--amber);">SUMMERS:</span> Former Treasury Sec &amp; Harvard pres. Resigned all Harvard positions after revelations.
+          </div>
+          <div style="margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04);">
+            <span style="font-weight:900;color:var(--amber);">PRINCE ANDREW:</span> New photo released. UK PM Starmer called on him to appear before Congress. &#128064;
+          </div>
+          <div>
+            <span style="font-weight:900;color:var(--amber);">LUTNICK:</span> Commerce Secretary Howard Lutnick&rsquo;s name appears in email correspondence. Awkward.
+          </div>
+        </div>
+      </div>
+
+      <!-- Conspiracy Board -->
+      <div style="background:rgba(0,0,0,0.15);border:1px solid rgba(139,0,0,0.15);border-radius:8px;padding:12px;">
+        <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--amber);margin-bottom:8px;">&#128373; CONSPIRACY CORNER &mdash; UNRESOLVED QUESTIONS</div>
+        <div style="font-size:8px;color:var(--text);line-height:1.7;">
+          <div style="margin-bottom:6px;padding-left:10px;border-left:2px solid rgba(139,0,0,0.4);">
+            <span style="font-weight:900;">THE MONEY:</span> How did a college dropout become a billionaire? No clear legitimate source of wealth has ever been established. &#129300;
+          </div>
+          <div style="margin-bottom:6px;padding-left:10px;border-left:2px solid rgba(139,0,0,0.4);">
+            <span style="font-weight:900;">MOSSAD THEORY:</span> Persistent theory he was an intelligence asset. Robert Maxwell (Ghislaine&rsquo;s father) had confirmed Mossad ties. &#127470;&#127473;
+          </div>
+          <div style="margin-bottom:6px;padding-left:10px;border-left:2px solid rgba(139,0,0,0.4);">
+            <span style="font-weight:900;">THE &ldquo;SUICIDE&rdquo;:</span> Two cameras malfunctioned simultaneously. Guards falsified records. Hyoid bone broken. Metropolitan Correctional Center. &#128128;
+          </div>
+          <div style="margin-bottom:6px;padding-left:10px;border-left:2px solid rgba(139,0,0,0.4);">
+            <span style="font-weight:900;">THE CLIENT LIST:</span> DOJ/FBI say no evidence of a &ldquo;client list.&rdquo; But 2,000+ videos were found in his safe. What are they of? &#128247;
+          </div>
+          <div style="margin-bottom:6px;padding-left:10px;border-left:2px solid rgba(139,0,0,0.4);">
+            <span style="font-weight:900;">ACOSTA DEAL:</span> Why did future Labor Secretary give Epstein the sweetheart plea deal in 2008? &ldquo;I was told he belonged to intelligence.&rdquo; &#128065;
+          </div>
+          <div style="padding-left:10px;border-left:2px solid rgba(139,0,0,0.4);">
+            <span style="font-weight:900;">THE ISLAND:</span> Temple on Little St. James. Underground tunnels confirmed by drone footage. Guest logs still heavily redacted. &#127963;&#65039;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Named Names Ticker -->
+    <div style="background:rgba(139,0,0,0.06);border:1px solid rgba(139,0,0,0.15);border-radius:6px;padding:8px 12px;margin-bottom:10px;">
+      <div style="font-size:7px;font-weight:900;letter-spacing:2px;color:var(--text-muted);margin-bottom:6px;">NAMED IN FILES (being named &#8800; being guilty of anything)</div>
+      <div style="font-size:8px;color:var(--text);line-height:1.8;display:flex;flex-wrap:wrap;gap:4px 12px;">
+        <span>Bill Clinton</span><span>&#8226;</span>
+        <span>Donald Trump</span><span>&#8226;</span>
+        <span>Prince Andrew</span><span>&#8226;</span>
+        <span>Bill Gates</span><span>&#8226;</span>
+        <span>Elon Musk</span><span>&#8226;</span>
+        <span>Stephen Hawking</span><span>&#8226;</span>
+        <span>Lawrence Summers</span><span>&#8226;</span>
+        <span>Alan Dershowitz</span><span>&#8226;</span>
+        <span>Les Wexner</span><span>&#8226;</span>
+        <span>Steve Bannon</span><span>&#8226;</span>
+        <span>Howard Lutnick</span><span>&#8226;</span>
+        <span>Richard Branson</span><span>&#8226;</span>
+        <span>Peter Mandelson</span><span>&#8226;</span>
+        <span>Thorbjorn Jagland</span><span>&#8226;</span>
+        <span>Kathryn Ruemmler</span><span>&#8226;</span>
+        <span>Jean-Luc Brunel</span><span>&#8226;</span>
+        <span>Ehud Barak</span><span>&#8226;</span>
+        <span style="color:var(--text-muted);font-style:italic;">+ hundreds more</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align:center;">
+      <div style="font-size:9px;color:var(--red);font-weight:900;letter-spacing:1px;">DAYS SINCE EPSTEIN &ldquo;KILLED HIMSELF&rdquo;: <span id="epsteinDays" style="font-family:'JetBrains Mono',monospace;font-size:12px;">--</span></div>
+      <div style="font-size:7px;color:var(--text-muted);margin-top:4px;font-style:italic;">
+        &ldquo;Epstein didn&rsquo;t kill himself&rdquo; &mdash; The Internet, unanimously
+      </div>
+      <div style="font-size:7px;color:var(--text-muted);margin-top:2px;letter-spacing:1px;">
+        Sources: DOJ Epstein Library, court filings, congressional testimony &bull; Being named in files does not imply guilt
+      </div>
+    </div>
+  </div>
+
   <!-- AGI COUNTER -->
   <div class="agi-strip">
     <div class="agi-label">&#128337; DAYS UNTIL AGI</div>
@@ -2753,31 +2872,25 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
   </div>
 
   <div class="golf-info-row">
-    <div class="countdown-card">
-      <div class="countdown-label">NEXT MAJOR</div>
-      <div class="countdown-value" id="majorCountdown">--</div>
-      <div class="countdown-unit" id="majorName">--</div>
-      <div class="countdown-sub" id="majorVenue">--</div>
-      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);">
-        <div class="countdown-label">BEAR CREEK CC &#8212; WOODINVILLE, WA</div>
-        <div style="font-size: 13px; color: var(--text-dim); margin-top: 6px;">
-          Current Conditions: <span id="golfWeather" style="color: var(--green);">--</span>
-        </div>
-        <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px; font-style: italic;">
-          "David's second home. His first home filed for emotional neglect. Current index: 0.4. Low: 0.1. USGA-verified menace."
-        </div>
+    <!-- Compact countdown -->
+    <div class="countdown-card" style="padding:14px 10px;">
+      <div class="countdown-label" style="font-size:7px;margin-bottom:6px;">NEXT MAJOR</div>
+      <div class="countdown-value" id="majorCountdown" style="font-size:36px;">--</div>
+      <div class="countdown-unit" id="majorName" style="font-size:9px;margin-top:2px;">--</div>
+      <div class="countdown-sub" id="majorVenue" style="font-size:8px;margin-top:4px;">--</div>
+      <div id="golfWeather" style="display:none;">--</div>
+    </div>
+    <!-- Leaderboard -->
+    <div class="leaderboard-card" style="padding:12px 14px;">
+      <div class="leaderboard-title" style="font-size:8px;margin-bottom:6px;">PGA TOUR &#8212; LATEST LEADERBOARD</div>
+      <div id="pgaLeaderboard" style="font-size:11px;">
+        <div class="lb-row" style="padding:3px 0;"><span class="lb-pos">--</span><span class="lb-name">Loading...</span><span class="lb-score">--</span></div>
       </div>
     </div>
-
-    <div class="leaderboard-card">
-      <div class="leaderboard-title">PGA TOUR &#8212; LATEST LEADERBOARD</div>
-      <div id="pgaLeaderboard">
-        <div class="lb-row"><span class="lb-pos">--</span><span class="lb-name">Loading...</span><span class="lb-score">--</span></div>
-      </div>
-      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);">
-        <div class="leaderboard-title">UPCOMING MAJORS 2026</div>
-        <div id="majorsSchedule"></div>
-      </div>
+    <!-- Majors schedule -->
+    <div class="leaderboard-card" style="padding:12px 14px;">
+      <div class="leaderboard-title" style="font-size:8px;margin-bottom:6px;">UPCOMING MAJORS 2026</div>
+      <div id="majorsSchedule"></div>
     </div>
   </div>
 
@@ -4361,6 +4474,16 @@ async function fetchWorldCards() {
       if (el) el.innerHTML = days + ' days';
     }
   }, 1800000);
+})();
+
+// ===== EPSTEIN DAY COUNTER =====
+(function(){
+  // Epstein died August 10, 2019
+  var deathDate = new Date(2019, 7, 10);
+  var now = new Date();
+  var days = Math.floor((now - deathDate) / 86400000);
+  var el = document.getElementById('epsteinDays');
+  if(el) el.innerHTML = days.toLocaleString();
 })();
 
 
