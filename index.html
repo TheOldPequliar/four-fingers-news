@@ -1244,6 +1244,18 @@
 .er-tag.spectacle{background:rgba(231,76,60,0.15);color:#e74c3c}
 .er-tag.policy{background:rgba(52,152,219,0.15);color:#3498db}
 
+/* ===== WAR COMPARISON ===== */
+.war-compare-grid{display:flex;flex-direction:column;gap:0}
+.war-row{display:grid;grid-template-columns:140px 180px 1fr;gap:12px;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,0.04);align-items:center}
+@media(max-width:700px){.war-row{grid-template-columns:100px 120px 1fr;font-size:9px}}
+.war-row.header-row{border-bottom:2px solid var(--border);margin-bottom:4px}
+.war-row.header-row .war-name,.war-row.header-row .war-duration,.war-row.header-row .war-context{font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700}
+.war-row.highlight-row{background:rgba(255,184,0,0.08);border-radius:6px;border:1px solid rgba(255,184,0,0.2)}
+.war-name{font-size:11px;font-weight:700;color:var(--text)}
+.war-duration{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--accent)}
+.war-note{font-size:8px;color:var(--text-muted);font-weight:400}
+.war-funny{font-size:10px;color:var(--text-dim);font-style:italic}
+
 .trump-quotes-strip{background:linear-gradient(135deg,rgba(180,40,40,0.08),rgba(0,40,104,0.08));border:1px solid rgba(180,40,40,0.25);border-left:3px solid rgba(180,40,40,0.5);border-radius:10px;padding:14px 18px;margin-bottom:16px;position:relative;overflow:hidden}
 .trump-quotes-label{font-size:7px;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:8px}
 .trump-quote-text{font-size:14px;color:var(--text);line-height:1.6;font-style:italic;font-weight:500}
@@ -1826,6 +1838,60 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="er-event"><div class="er-date">DEC 2025</div><div class="er-desc">Christmas party where he roasted half his own cabinet</div><div class="er-tag spectacle">SPECTACLE</div></div>
       <div class="er-event"><div class="er-date">JAN 2026</div><div class="er-desc">State of the Union &mdash; 97 minutes of stream of consciousness</div><div class="er-tag policy">ADDRESS</div></div>
       <div class="er-event"><div class="er-date">MAR 2026</div><div class="er-desc">Easter event &mdash; Somali rant, slurred speech, total chaos</div><div class="er-tag spectacle">EASTER 2026</div></div>
+      <div class="er-event"><div class="er-date">APR 1, 2026</div><div class="er-desc">Primetime address &mdash; war history lecture, compared Iran to every US conflict</div><div class="er-tag policy">PRIMETIME</div></div>
+    </div>
+  </div>
+
+  <!-- WAR DURATION COMPARISON -->
+  <div class="objectives-panel" style="border-left:3px solid var(--amber);">
+    <div class="objectives-header">
+      <div class="objectives-title">&#9201; TRUMP&rsquo;S WAR DURATION COMPARISON (Primetime Address, April 1)</div>
+      <div class="objectives-sub">He listed every US war to justify the Iran campaign. We added context.</div>
+    </div>
+    <div class="war-compare-grid">
+      <div class="war-row header-row">
+        <div class="war-name">CONFLICT</div>
+        <div class="war-duration">DURATION</div>
+        <div class="war-context">FOR COMPARISON</div>
+      </div>
+      <div class="war-row">
+        <div class="war-name">World War I</div>
+        <div class="war-duration">1 yr 7 mo <span class="war-note">(US involvement)</span></div>
+        <div class="war-context war-funny">Shorter than a Tesla Cybertruck lease</div>
+      </div>
+      <div class="war-row">
+        <div class="war-name">World War II</div>
+        <div class="war-duration">3 yr 8 mo <span class="war-note">(US involvement)</span></div>
+        <div class="war-context war-funny">About as long as Trump&rsquo;s attention span on infrastructure week</div>
+      </div>
+      <div class="war-row">
+        <div class="war-name">Korean War</div>
+        <div class="war-duration">3 years</div>
+        <div class="war-context war-funny">Same length as the average DOGE employee tenure</div>
+      </div>
+      <div class="war-row">
+        <div class="war-name">Vietnam War</div>
+        <div class="war-duration">~10 years <span class="war-note">(US combat)</span></div>
+        <div class="war-context war-funny">Trump got out of this one with bone spurs</div>
+      </div>
+      <div class="war-row">
+        <div class="war-name">Iraq War</div>
+        <div class="war-duration">~8 years</div>
+        <div class="war-context war-funny">Mission Accomplished banner went up after 6 weeks</div>
+      </div>
+      <div class="war-row">
+        <div class="war-name">Afghanistan</div>
+        <div class="war-duration">20 years</div>
+        <div class="war-context war-funny">Longer than most Americans&rsquo; mortgages</div>
+      </div>
+      <div class="war-row highlight-row">
+        <div class="war-name">Iran (current)</div>
+        <div class="war-duration" id="iranDuration">~1 week</div>
+        <div class="war-context war-funny" style="color:var(--amber);">&ldquo;It will be quick &mdash; days, not weeks&rdquo; &#128064;</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:9px;color:var(--text-muted);font-style:italic;margin-top:12px;">
+      &ldquo;We studied all these wars very carefully and decided to do another one&rdquo;
     </div>
   </div>
 
