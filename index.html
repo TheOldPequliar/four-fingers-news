@@ -1216,6 +1216,34 @@
 .daily-strip{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:16px}
 .daily-label{font-size:7px;letter-spacing:3px;color:var(--text-dim);margin-bottom:6px}
 .daily-quote{font-size:12px;color:var(--text);line-height:1.5;font-style:italic}
+/* ===== OBJECTIVES TRACKER ===== */
+.objectives-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:16px;position:relative;overflow:hidden}
+.objectives-panel::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e74c3c,#e67e22,#f1c40f,#3498db)}
+.objectives-header{margin-bottom:14px}
+.objectives-title{font-size:14px;font-weight:900;color:var(--text);letter-spacing:2px;margin-bottom:4px}
+.objectives-sub{font-size:9px;color:var(--text-muted);font-style:italic}
+.objectives-by-person{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:700px){.objectives-by-person{grid-template-columns:repeat(2,1fr)}}
+.obj-person-col{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:12px}
+.obj-person-name{font-size:10px;font-weight:900;letter-spacing:2px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.obj-quote{font-size:9px;color:var(--text-dim);line-height:1.5;padding:4px 0;border-bottom:1px dashed rgba(255,255,255,0.05);font-style:italic}
+.obj-quote:last-child{border-bottom:none}
+/* ===== EAST ROOM TRACKER ===== */
+.eastroom-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:16px;position:relative;overflow:hidden}
+.eastroom-panel::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#002868,#bf0a30,#002868)}
+.eastroom-header{margin-bottom:14px}
+.eastroom-title{font-size:14px;font-weight:900;color:var(--text);letter-spacing:2px;margin-bottom:4px}
+.eastroom-sub{font-size:9px;color:var(--text-muted);font-style:italic}
+.eastroom-timeline{display:flex;flex-direction:column;gap:6px}
+.er-event{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:6px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);transition:background 0.2s}
+.er-event:hover{background:rgba(255,255,255,0.05)}
+.er-date{font-family:"JetBrains Mono",monospace;font-size:8px;font-weight:700;color:var(--text-muted);letter-spacing:1px;min-width:75px;flex-shrink:0}
+.er-desc{font-size:10px;color:var(--text-dim);flex:1;line-height:1.4}
+.er-tag{font-size:7px;font-weight:700;letter-spacing:2px;padding:3px 8px;border-radius:4px;flex-shrink:0}
+.er-tag.trade{background:rgba(230,126,34,0.15);color:#e67e22}
+.er-tag.spectacle{background:rgba(231,76,60,0.15);color:#e74c3c}
+.er-tag.policy{background:rgba(52,152,219,0.15);color:#3498db}
+
 .trump-quotes-strip{background:linear-gradient(135deg,rgba(180,40,40,0.08),rgba(0,40,104,0.08));border:1px solid rgba(180,40,40,0.25);border-left:3px solid rgba(180,40,40,0.5);border-radius:10px;padding:14px 18px;margin-bottom:16px;position:relative;overflow:hidden}
 .trump-quotes-label{font-size:7px;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:8px}
 .trump-quote-text{font-size:14px;color:var(--text);line-height:1.6;font-style:italic;font-weight:500}
@@ -1363,6 +1391,12 @@ body.light-mode .predict-card { background: var(--surface); box-shadow: 0 1px 4p
 body.light-mode .predict-bar { background: rgba(0,0,0,0.08); }
 body.light-mode .daily-strip { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .trump-quotes-strip { background: linear-gradient(135deg, rgba(180,40,40,0.06), rgba(0,40,104,0.06)); border-color: rgba(180,40,40,0.2); box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+body.light-mode .objectives-panel { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .obj-person-col { background: rgba(0,0,0,0.02); }
+body.light-mode .obj-quote { color: #3a5a45; border-bottom-color: rgba(0,0,0,0.06); }
+body.light-mode .eastroom-panel { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .er-event { background: rgba(0,0,0,0.02); border-color: rgba(0,0,0,0.05); }
+body.light-mode .er-event:hover { background: rgba(0,0,0,0.04); }
 body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .easter-egg { opacity: 0.08; }
 body.light-mode .easter-egg:hover { opacity: 0.35; }
@@ -1725,6 +1759,74 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="trump-quotes-label">&#128483; LIBERATION DAY GREATEST HITS</div>
     <div class="trump-quote-text" id="trumpQuote">Loading quote...</div>
     <div class="trump-quote-meta" id="trumpQuoteMeta"></div>
+  </div>
+
+  <!-- THE OBJECTIVES ARE CLEAR -->
+  <div class="objectives-panel">
+    <div class="objectives-header">
+      <div class="objectives-title">&#127919; THE OBJECTIVES ARE CLEAR!</div>
+      <div class="objectives-sub">Every stated objective of the Iran military operation &mdash; updated as the goalposts move</div>
+    </div>
+    <div class="objectives-by-person">
+      <div class="obj-person-col">
+        <div class="obj-person-name" style="color:#e74c3c">&#127464;&#127470;&#127464; TRUMP</div>
+        <div class="obj-quote">&ldquo;Prevent Iran from getting a nuclear weapon&rdquo;</div>
+        <div class="obj-quote">&ldquo;It will be quick &mdash; days, not weeks&rdquo;</div>
+        <div class="obj-quote">&ldquo;Oil prices will come down, trust me&rdquo;</div>
+        <div class="obj-quote">&ldquo;Eliminate the Houthi threat&rdquo;</div>
+        <div class="obj-quote">&ldquo;Iran should have made a deal&rdquo;</div>
+        <div class="obj-quote">&ldquo;This will be the most beautiful operation&rdquo;</div>
+      </div>
+      <div class="obj-person-col">
+        <div class="obj-person-name" style="color:#3498db">&#127963; RUBIO</div>
+        <div class="obj-quote">&ldquo;Protect Israel from existential threat&rdquo;</div>
+        <div class="obj-quote">&ldquo;Regime change is NOT the objective&rdquo;</div>
+        <div class="obj-quote">&ldquo;Full support of our allies&rdquo;</div>
+        <div class="obj-quote">&ldquo;Civilian casualties minimized&rdquo;</div>
+        <div class="obj-quote">&ldquo;Diplomatic channels remain open&rdquo;</div>
+        <div class="obj-quote">&ldquo;The objectives are clear&rdquo;</div>
+      </div>
+      <div class="obj-person-col">
+        <div class="obj-person-name" style="color:#9b59b6">&#128188; VANCE</div>
+        <div class="obj-quote">&ldquo;The objectives are very clear to everybody&rdquo;</div>
+        <div class="obj-quote">&ldquo;Send a message to adversaries worldwide&rdquo;</div>
+        <div class="obj-quote">&ldquo;The world is safer because of this&rdquo;</div>
+        <div class="obj-quote">&ldquo;We&rsquo;re standing up for American interests&rdquo;</div>
+        <div class="obj-quote">&ldquo;I won&rsquo;t get into specifics on TV&rdquo;</div>
+        <div class="obj-quote">&ldquo;The objectives are clear&rdquo;</div>
+      </div>
+      <div class="obj-person-col">
+        <div class="obj-person-name" style="color:#e67e22">&#128170; HEGSETH</div>
+        <div class="obj-quote">&ldquo;Destroy nuclear enrichment facilities&rdquo;</div>
+        <div class="obj-quote">&ldquo;No boots on the ground, air campaign only&rdquo;</div>
+        <div class="obj-quote">&ldquo;Degrade Iran&rsquo;s military infrastructure&rdquo;</div>
+        <div class="obj-quote">&ldquo;Peace through strength&rdquo;</div>
+        <div class="obj-quote">&ldquo;This is what a strong America looks like&rdquo;</div>
+        <div class="obj-quote">&ldquo;The objectives are clear&rdquo;</div>
+      </div>
+    </div>
+    <div class="objectives-footer" style="text-align:center;font-size:9px;color:var(--amber);font-style:italic;margin-top:10px;">
+      Everyone agrees the objectives are clear. Nobody agrees on what they are.
+    </div>
+  </div>
+
+  <!-- EAST ROOM TRACKER -->
+  <div class="eastroom-panel">
+    <div class="eastroom-header">
+      <div class="eastroom-title">&#127963; WHITE HOUSE EAST ROOM TRACKER</div>
+      <div class="eastroom-sub">Notable events from the most televised room in America</div>
+    </div>
+    <div class="eastroom-timeline" id="eastroomTimeline">
+      <div class="er-event"><div class="er-date">APR 2, 2025</div><div class="er-desc">Liberation Day tariff announcement &mdash; the Rose Garden spectacle</div><div class="er-tag trade">TARIFFS</div></div>
+      <div class="er-event"><div class="er-date">APR 9, 2025</div><div class="er-desc">90-day tariff pause announced after market meltdown</div><div class="er-tag trade">REVERSAL</div></div>
+      <div class="er-event"><div class="er-date">MAY 2025</div><div class="er-desc">Tech CEO summit &mdash; forced handshakes and loyalty pledges</div><div class="er-tag spectacle">SPECTACLE</div></div>
+      <div class="er-event"><div class="er-date">JUN 2025</div><div class="er-desc">Crypto executive order signing ceremony</div><div class="er-tag policy">POLICY</div></div>
+      <div class="er-event"><div class="er-date">AUG 2025</div><div class="er-desc">Greenland purchase discussion &mdash; yes, again</div><div class="er-tag spectacle">SPECTACLE</div></div>
+      <div class="er-event"><div class="er-date">OCT 2025</div><div class="er-desc">Hurricane response press conference goes off the rails</div><div class="er-tag spectacle">SPECTACLE</div></div>
+      <div class="er-event"><div class="er-date">DEC 2025</div><div class="er-desc">Christmas party where he roasted half his own cabinet</div><div class="er-tag spectacle">SPECTACLE</div></div>
+      <div class="er-event"><div class="er-date">JAN 2026</div><div class="er-desc">State of the Union &mdash; 97 minutes of stream of consciousness</div><div class="er-tag policy">ADDRESS</div></div>
+      <div class="er-event"><div class="er-date">MAR 2026</div><div class="er-desc">Easter event &mdash; Somali rant, slurred speech, total chaos</div><div class="er-tag spectacle">EASTER 2026</div></div>
+    </div>
   </div>
 
   <!-- WORLD MONITOR GRID -->
