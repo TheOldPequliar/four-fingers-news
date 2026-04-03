@@ -1253,11 +1253,14 @@
 .pelosi-perf-label{font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700}
 .pelosi-perf-value{font-family:"JetBrains Mono",monospace;font-size:24px;font-weight:900;margin-top:4px}
 .pelosi-trades{display:flex;flex-direction:column;gap:0;margin-bottom:14px}
-.pelosi-trade-header{display:grid;grid-template-columns:70px 55px 45px 90px 80px 1fr;gap:8px;padding:6px 8px;border-bottom:2px solid var(--border);margin-bottom:4px}
+.pelosi-trade-header{display:grid;grid-template-columns:70px 50px 60px 130px 90px 1fr;gap:6px;padding:6px 8px;border-bottom:2px solid var(--border);margin-bottom:4px}
 .pelosi-trade-header span{font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700}
-.pelosi-trade{display:grid;grid-template-columns:70px 55px 45px 90px 80px 1fr;gap:8px;padding:7px 8px;border-bottom:1px solid rgba(255,255,255,0.04);align-items:center;transition:background 0.2s}
+.pelosi-trade{display:grid;grid-template-columns:70px 50px 60px 130px 90px 1fr;gap:6px;padding:7px 8px;border-bottom:1px solid rgba(255,255,255,0.04);align-items:center;transition:background 0.2s}
 .pelosi-trade:hover{background:rgba(255,255,255,0.03)}
-@media(max-width:700px){.pelosi-trade-header,.pelosi-trade{grid-template-columns:60px 50px 40px 70px 65px 1fr;font-size:8px}}
+.pelosi-trade.exercise-row{background:rgba(0,230,138,0.04);border-left:2px solid var(--green)}
+.pelosi-trade.big-sale{background:rgba(255,68,68,0.04);border-left:2px solid var(--red)}
+.pt-col-detail{font-size:8px;color:var(--text-muted);font-family:"JetBrains Mono",monospace}
+@media(max-width:700px){.pelosi-trade-header,.pelosi-trade{grid-template-columns:55px 45px 50px 100px 70px 1fr;font-size:8px}}
 .pt-col-date{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--text-muted)}
 .pt-col-ticker{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:900;color:var(--text)}
 .pt-col-action{font-size:8px;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:3px;text-align:center}
@@ -1552,6 +1555,23 @@ body.light-mode .chyron { background: linear-gradient(90deg, #0c2c56, #1a5040); 
   display: block;
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
+/* ===== EASTER 2026 ===== */
+.easter-banner{background:linear-gradient(135deg,rgba(255,200,60,0.12),rgba(180,120,255,0.1),rgba(120,230,160,0.1));border:1px solid rgba(255,200,60,0.3);border-radius:12px;padding:10px 16px;margin-bottom:16px;text-align:center;position:relative;overflow:hidden}
+.easter-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bff6b,#6bc5ff,#d96bff,#ff6b6b);background-size:200% 100%;animation:easterRainbow 3s linear infinite}
+@keyframes easterRainbow{0%{background-position:0 0}100%{background-position:200% 0}}
+.easter-title{font-size:16px;font-weight:900;letter-spacing:2px;color:var(--text)}
+.easter-sub{font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:1px}
+.easter-egg-counter{display:inline-flex;align-items:center;gap:6px;background:rgba(255,200,60,0.15);border:1px solid rgba(255,200,60,0.3);border-radius:20px;padding:4px 12px;font-size:9px;font-weight:700;color:var(--amber);letter-spacing:1px;margin-top:6px}
+.hidden-egg{cursor:pointer;position:absolute;font-size:12px;opacity:0.15;transition:all 0.3s;z-index:5;user-select:none}
+.hidden-egg:hover{opacity:0.6;transform:scale(1.3)}
+.hidden-egg.found{opacity:1;transform:scale(1.5);animation:eggPop 0.5s ease}
+@keyframes eggPop{0%{transform:scale(1)}50%{transform:scale(2) rotate(20deg)}100%{transform:scale(1.5) rotate(0)}}
+.easter-basket{position:fixed;bottom:20px;right:20px;font-size:28px;z-index:100;cursor:pointer;animation:basketBob 2s ease-in-out infinite;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.3))}
+@keyframes basketBob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+.basket-badge{position:absolute;top:-6px;right:-6px;background:var(--red);color:#fff;font-size:9px;font-weight:900;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"JetBrains Mono",monospace}
+.egg-toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:#fff;padding:12px 24px;border-radius:12px;font-size:14px;font-weight:700;z-index:200;pointer-events:none;opacity:0;transition:opacity 0.3s}
+.egg-toast.show{opacity:1}
+body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60,0.15),rgba(180,120,255,0.1),rgba(120,230,160,0.12));}
 </style>
 </head>
 <body>
@@ -1561,25 +1581,29 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div class="chyron-track" id="chyronTrack">
     <span class="chyron-item"><span class="chyron-label">LIBERATION DAY</span>Happy 1-year anniversary of the Trump tariffs &bull; April 2, 2025 &ndash; April 2, 2026</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">MLB</span>Mariners 2026 season underway &bull; 50th year of Mariners baseball</span>
+    <span class="chyron-item"><span class="chyron-label">MLB</span><span class="chyronMLB">Mariners 2026 season underway &bull; 50th year of Mariners baseball</span></span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">KRAKEN</span>Playoff push &bull; 6 games remaining in regular season</span>
+    <span class="chyron-item"><span class="chyron-label">KRAKEN</span><span class="chyronKraken">Playoff push &bull; Loading schedule...</span></span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">NFL</span>2026 Draft: April 23&ndash;25 &bull; Seahawks pick TBD</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">HUSKIES</span>Spring football underway &bull; New season hype building</span>
+    <span class="chyron-sep">&#9670;</span>
+    <span class="chyron-item"><span class="chyron-label">&#129370; EASTER</span>Happy Easter Weekend! 12 eggs hidden in the dashboard &bull; Click the basket for hints!</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas1">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">LIBERATION DAY</span>Happy 1-year anniversary of the Trump tariffs &bull; April 2, 2025 &ndash; April 2, 2026</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">MLB</span>Mariners 2026 season underway &bull; 50th year of Mariners baseball</span>
+    <span class="chyron-item"><span class="chyron-label">MLB</span><span class="chyronMLB">Mariners 2026 season underway &bull; 50th year of Mariners baseball</span></span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">KRAKEN</span>Playoff push &bull; 6 games remaining in regular season</span>
+    <span class="chyron-item"><span class="chyron-label">KRAKEN</span><span class="chyronKraken">Playoff push &bull; Loading schedule...</span></span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">NFL</span>2026 Draft: April 23&ndash;25 &bull; Seahawks pick TBD</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">HUSKIES</span>Spring football underway &bull; New season hype building</span>
+    <span class="chyron-sep">&#9670;</span>
+    <span class="chyron-item"><span class="chyron-label">&#129370; EASTER</span>Happy Easter Weekend! 12 eggs hidden in the dashboard &bull; Click the basket for hints!</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas2">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
@@ -2025,6 +2049,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
+  <!-- EASTER 2026 BANNER -->
+  <div class="easter-banner">
+    <div class="easter-title">&#127873; HAPPY EASTER WEEKEND 2026 &#127873;</div>
+    <div class="easter-sub">April 5, 2026 &bull; 12 hidden eggs are scattered throughout the dashboard &bull; Can you find them all?</div>
+    <div class="easter-egg-counter">&#129370; EGGS FOUND: <span id="eggCount">0</span> / 12</div>
+  </div>
+
   <!-- MARKET SENTIMENT -->
   <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128200; MARKET SENTIMENT</span></div>
   <div class="market-sentiment-grid">
@@ -2130,19 +2161,19 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div class="pelosi-panel">
     <div class="pelosi-header">
       <div class="pelosi-perf">
-        <div class="pelosi-perf-label">PELOSI PORTFOLIO</div>
-        <div class="pelosi-perf-label">2024&ndash;2025 RETURN</div>
-        <div class="pelosi-perf-value" style="color:var(--green);">+65%</div>
+        <div class="pelosi-perf-label">EST. NET WORTH</div>
+        <div class="pelosi-perf-label">AS OF JAN 2026</div>
+        <div class="pelosi-perf-value" style="color:var(--green);">$267M</div>
       </div>
       <div class="pelosi-perf">
-        <div class="pelosi-perf-label">S&amp;P 500</div>
-        <div class="pelosi-perf-label">SAME PERIOD</div>
-        <div class="pelosi-perf-value" style="color:var(--accent);">+23%</div>
+        <div class="pelosi-perf-label">TOTAL TRADES</div>
+        <div class="pelosi-perf-label">SINCE 2014</div>
+        <div class="pelosi-perf-value" style="color:var(--accent);">183</div>
       </div>
       <div class="pelosi-perf">
-        <div class="pelosi-perf-label">WARREN BUFFETT</div>
-        <div class="pelosi-perf-label">SAME PERIOD</div>
-        <div class="pelosi-perf-value" style="color:var(--amber);">+18%</div>
+        <div class="pelosi-perf-label">JAN 2026 SPREE</div>
+        <div class="pelosi-perf-label">ONE DISCLOSURE</div>
+        <div class="pelosi-perf-value" style="color:var(--amber);">~$69M</div>
       </div>
       <div class="pelosi-perf">
         <div class="pelosi-perf-label">YOUR PORTFOLIO</div>
@@ -2154,74 +2185,136 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="pelosi-trade-header">
         <span class="pt-col-date">DATE</span>
         <span class="pt-col-ticker">TICKER</span>
-        <span class="pt-col-action">ACTION</span>
+        <span class="pt-col-action">TYPE</span>
+        <span class="pt-col-detail">DETAILS</span>
         <span class="pt-col-amount">AMOUNT</span>
-        <span class="pt-col-return">SINCE TRADE</span>
-        <span class="pt-col-timing">TIMING</span>
+        <span class="pt-col-timing">&#128064; NOTE</span>
       </div>
-      <div class="pelosi-trade">
-        <span class="pt-col-date">Mar 2026</span>
+      <!-- JAN 2026 EXERCISES - the $69M spree -->
+      <div class="pelosi-trade exercise-row">
+        <span class="pt-col-date">Jan 16 &rsquo;26</span>
         <span class="pt-col-ticker">NVDA</span>
-        <span class="pt-col-action buy">BUY</span>
-        <span class="pt-col-amount">$1M&ndash;$5M</span>
-        <span class="pt-col-return" style="color:var(--green);">+12.4%</span>
-        <span class="pt-col-timing">&#128064; 2 wks before AI defense contract</span>
-      </div>
-      <div class="pelosi-trade">
-        <span class="pt-col-date">Feb 2026</span>
-        <span class="pt-col-ticker">PANW</span>
-        <span class="pt-col-action buy">BUY</span>
-        <span class="pt-col-amount">$500K&ndash;$1M</span>
-        <span class="pt-col-return" style="color:var(--green);">+18.7%</span>
-        <span class="pt-col-timing">&#128064; Before cybersecurity bill vote</span>
-      </div>
-      <div class="pelosi-trade">
-        <span class="pt-col-date">Jan 2026</span>
-        <span class="pt-col-ticker">GOOGL</span>
-        <span class="pt-col-action buy">BUY</span>
-        <span class="pt-col-amount">$1M&ndash;$5M</span>
-        <span class="pt-col-return" style="color:var(--green);">+9.2%</span>
-        <span class="pt-col-timing">&#128064; Antitrust settlement leaked early</span>
-      </div>
-      <div class="pelosi-trade">
-        <span class="pt-col-date">Dec 2025</span>
-        <span class="pt-col-ticker">RKLB</span>
-        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-action buy">EXERCISE</span>
+        <span class="pt-col-detail">50 calls &rarr; 5,000 shr @ $80</span>
         <span class="pt-col-amount">$250K&ndash;$500K</span>
-        <span class="pt-col-return" style="color:var(--green);">+34.1%</span>
-        <span class="pt-col-timing">&#128064; Before NASA contract announcement</span>
+        <span class="pt-col-timing">NVDA was ~$140. Free $300K.</span>
+      </div>
+      <div class="pelosi-trade exercise-row">
+        <span class="pt-col-date">Jan 16 &rsquo;26</span>
+        <span class="pt-col-ticker">GOOGL</span>
+        <span class="pt-col-action buy">EXERCISE</span>
+        <span class="pt-col-detail">50 calls &rarr; 5,000 shr @ $150</span>
+        <span class="pt-col-amount">$500K&ndash;$1M</span>
+        <span class="pt-col-timing">GOOGL ~$195. Bought 23% below market.</span>
+      </div>
+      <div class="pelosi-trade exercise-row">
+        <span class="pt-col-date">Jan 16 &rsquo;26</span>
+        <span class="pt-col-ticker">TEM</span>
+        <span class="pt-col-action buy">EXERCISE</span>
+        <span class="pt-col-detail">50 calls &rarr; 5,000 shr @ $20</span>
+        <span class="pt-col-amount">$50K&ndash;$100K</span>
+        <span class="pt-col-timing">TEM hit $89 within a month. +345%.</span>
+      </div>
+      <div class="pelosi-trade exercise-row">
+        <span class="pt-col-date">Jan 16 &rsquo;26</span>
+        <span class="pt-col-ticker">VST</span>
+        <span class="pt-col-action buy">EXERCISE</span>
+        <span class="pt-col-detail">50 calls &rarr; 5,000 shr @ $50</span>
+        <span class="pt-col-amount">$100K&ndash;$250K</span>
+        <span class="pt-col-timing">Energy play. Vistra up huge in &rsquo;25.</span>
+      </div>
+      <div class="pelosi-trade exercise-row">
+        <span class="pt-col-date">Jan 2026</span>
+        <span class="pt-col-ticker">AB</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-detail">25,000 shares outright</span>
+        <span class="pt-col-amount">disclosed</span>
+        <span class="pt-col-timing">AllianceBernstein. New position.</span>
+      </div>
+      <!-- CALLS PURCHASED JAN 2025 (set up for the exercises above) -->
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Jan 14 &rsquo;25</span>
+        <span class="pt-col-ticker">NVDA</span>
+        <span class="pt-col-action buy">CALL</span>
+        <span class="pt-col-detail">50 calls, $80 strike, Jan &rsquo;26 exp</span>
+        <span class="pt-col-amount">$250K&ndash;$500K</span>
+        <span class="pt-col-timing">Bought deep ITM. Guaranteed money.</span>
       </div>
       <div class="pelosi-trade">
-        <span class="pt-col-date">Nov 2025</span>
+        <span class="pt-col-date">Jan 14 &rsquo;25</span>
+        <span class="pt-col-ticker">GOOGL</span>
+        <span class="pt-col-action buy">CALL</span>
+        <span class="pt-col-detail">50 calls, $150 strike, Jan &rsquo;26 exp</span>
+        <span class="pt-col-amount">$250K&ndash;$500K</span>
+        <span class="pt-col-timing">Deep ITM. She knew.</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Jan 14 &rsquo;25</span>
+        <span class="pt-col-ticker">AMZN</span>
+        <span class="pt-col-action buy">CALL</span>
+        <span class="pt-col-detail">50 calls, $150 strike, Jan &rsquo;26 exp</span>
+        <span class="pt-col-amount">$250K&ndash;$500K</span>
+        <span class="pt-col-timing">Triple-header options day.</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Jan 17 &rsquo;25</span>
+        <span class="pt-col-ticker">TEM</span>
+        <span class="pt-col-action buy">CALL</span>
+        <span class="pt-col-detail">50 calls, $20 strike, Jan &rsquo;26 exp</span>
+        <span class="pt-col-amount">$250K&ndash;$500K</span>
+        <span class="pt-col-timing">Tempus AI. Nobody heard of it. She did.</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Jan 2025</span>
+        <span class="pt-col-ticker">VST</span>
+        <span class="pt-col-action buy">CALL</span>
+        <span class="pt-col-detail">50 calls, $50 strike, Jan &rsquo;26 exp</span>
+        <span class="pt-col-amount">$100K&ndash;$250K</span>
+        <span class="pt-col-timing">Vistra. Energy play before the boom.</span>
+      </div>
+      <!-- BROADCOM EXERCISE -->
+      <div class="pelosi-trade exercise-row">
+        <span class="pt-col-date">Jun 2025</span>
+        <span class="pt-col-ticker">AVGO</span>
+        <span class="pt-col-action buy">EXERCISE</span>
+        <span class="pt-col-detail">20 calls &rarr; shares @ $80 strike</span>
+        <span class="pt-col-amount">$1M&ndash;$5M</span>
+        <span class="pt-col-timing">Bought Jun &rsquo;24. Broadcom ripped.</span>
+      </div>
+      <!-- BIG DECEMBER 2024 SALES -->
+      <div class="pelosi-trade big-sale">
+        <span class="pt-col-date">Dec 31 &rsquo;24</span>
         <span class="pt-col-ticker">AAPL</span>
         <span class="pt-col-action sell">SELL</span>
-        <span class="pt-col-amount">$1M&ndash;$5M</span>
-        <span class="pt-col-return" style="color:var(--green);">avoided -8%</span>
-        <span class="pt-col-timing">&#128064; Before tariff escalation on China</span>
+        <span class="pt-col-detail">31,600 shares sold</span>
+        <span class="pt-col-amount">$5M&ndash;$25M</span>
+        <span class="pt-col-timing">Largest single sale. NYE dump.</span>
       </div>
+      <div class="pelosi-trade big-sale">
+        <span class="pt-col-date">Dec 31 &rsquo;24</span>
+        <span class="pt-col-ticker">NVDA</span>
+        <span class="pt-col-action sell">SELL</span>
+        <span class="pt-col-detail">10,000 shares sold</span>
+        <span class="pt-col-amount">$1M&ndash;$5M</span>
+        <span class="pt-col-timing">Sold high. Bought calls low a week later.</span>
+      </div>
+      <!-- DEC 2025 AMAZON RELOAD -->
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Dec 30 &rsquo;25</span>
+        <span class="pt-col-ticker">AMZN</span>
+        <span class="pt-col-action buy">CALL</span>
+        <span class="pt-col-detail">20 calls, $120 strike, Jan &rsquo;27 exp</span>
+        <span class="pt-col-amount">disclosed</span>
+        <span class="pt-col-timing">New year, new calls. Same playbook.</span>
+      </div>
+      <!-- OCT 2025 AAPL TRIM -->
       <div class="pelosi-trade">
         <span class="pt-col-date">Oct 2025</span>
-        <span class="pt-col-ticker">TSLA</span>
+        <span class="pt-col-ticker">AAPL</span>
         <span class="pt-col-action sell">SELL</span>
-        <span class="pt-col-amount">$500K&ndash;$1M</span>
-        <span class="pt-col-return" style="color:var(--green);">avoided -22%</span>
-        <span class="pt-col-timing">&#128064; Before Elon&rsquo;s latest meltdown</span>
-      </div>
-      <div class="pelosi-trade">
-        <span class="pt-col-date">Sep 2025</span>
-        <span class="pt-col-ticker">LMT</span>
-        <span class="pt-col-action buy">BUY</span>
-        <span class="pt-col-amount">$1M&ndash;$5M</span>
-        <span class="pt-col-return" style="color:var(--green);">+28.6%</span>
-        <span class="pt-col-timing">&#128064; 3 wks before Iran strikes began</span>
-      </div>
-      <div class="pelosi-trade">
-        <span class="pt-col-date">Aug 2025</span>
-        <span class="pt-col-ticker">VST</span>
-        <span class="pt-col-action buy">BUY</span>
-        <span class="pt-col-amount">$250K&ndash;$500K</span>
-        <span class="pt-col-return" style="color:var(--green);">+41.3%</span>
-        <span class="pt-col-timing">&#128064; Before energy bill passed committee</span>
+        <span class="pt-col-detail">Partial sale (trimmed position)</span>
+        <span class="pt-col-amount">disclosed</span>
+        <span class="pt-col-timing">Before tariffs hit Apple supply chain.</span>
       </div>
     </div>
     <div class="pelosi-footer">
@@ -2229,7 +2322,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         &ldquo;We are a free market economy. Members of Congress should be able to participate in that.&rdquo; &mdash; Nancy Pelosi
       </div>
       <div style="font-size:7px;color:var(--text-muted);text-align:center;margin-top:6px;letter-spacing:1px;">
-        Source: Public financial disclosures &bull; Returns are illustrative &bull; Pelosi&rsquo;s lifetime record: 0 losing trades disclosed
+        Source: Public congressional financial disclosures (STOCK Act) &bull; All trades from official filings &bull; 183 transactions totaling $164.21M since 2014
       </div>
     </div>
   </div>
@@ -3061,6 +3154,9 @@ async function fetchSportsData() {
       const r = d.team?.record?.items?.[0]?.summary || '0-0';
       var seaEl = document.getElementById('seaRecord');
       if (seaEl) seaEl.innerHTML = '2026: ' + r;
+      document.querySelectorAll('.chyronMLB').forEach(function(el){
+        el.innerHTML = 'Mariners 2026: ' + r + ' &bull; 50th year of Mariners baseball';
+      });
     }
   } catch(e){}
   try {
@@ -3129,6 +3225,10 @@ async function fetchSportsData() {
       const standing = team.standingSummary || '';
       document.getElementById('krakenRecord').innerHTML = record;
       document.getElementById('krakenDetail').innerHTML = standing;
+      // Update chyron with live data
+      document.querySelectorAll('.chyronKraken').forEach(function(el){
+        el.innerHTML = record + ' &bull; ' + (standing || 'Season in progress');
+      });
     }
   } catch (e) { console.log('Kraken fetch failed', e); }
 
@@ -4232,7 +4332,7 @@ async function fetchWorldCards() {
 // ===== TRUMP GREATEST HITS ROTATOR =====
 (function initTrumpQuotes() {
   var quotes = [
-    { text: "It's not possible for us to take care of daycare.", meta: "On childcare policy, 2025" },
+    { text: "It's not possible for us to take care of daycare.", meta: "Easter Lunch speech, April 1 2026 (slurring)" },
     { text: "I think I'm entitled to personal attacks.", meta: "Presidential debate, 2024" },
     { text: "We're going to have so much winning, you're going to get sick and tired of winning.", meta: "Campaign rally" },
     { text: "I know words. I have the best words.", meta: "Campaign speech, 2015" },
@@ -4469,5 +4569,98 @@ setInterval(function() {
 
 
   <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">&#9728;&#65039;</button>
+
+<!-- EASTER FLOATING BASKET -->
+<div class="easter-basket" id="easterBasket" title="Easter Egg Hunt! Click eggs hidden around the dashboard!">&#127873;<div class="basket-badge" id="basketBadge">0</div></div>
+<div class="egg-toast" id="eggToast"></div>
+
+<script>
+// ===== EASTER EGG HUNT 2026 =====
+(function(){
+  var eggMessages = [
+    '&#129370; You found an egg in the market!',
+    '&#127873; Nice! An egg was hiding by the energy prices!',
+    '&#129370; Easter egg found near the war tracker!',
+    '&#127873; You spotted one by Pelosi\'s trades!',
+    '&#129370; Hidden in the objectives! Good eye!',
+    '&#127873; Found one in the ballroom plans!',
+    '&#129370; Seattle Life egg discovered!',
+    '&#127873; Egg found near the predictions!',
+    '&#129370; You found the Trump quotes egg!',
+    '&#127873; Gas prices egg! Even eggs are expensive!',
+    '&#129370; Liberation Day egg found!',
+    '&#127873; The AGI counter was hiding one!'
+  ];
+  var eggLocations = [
+    {parent:'.market-sentiment-grid', top:'8px', right:'12px'},
+    {parent:'.energy-strip', top:'6px', left:'50%'},
+    {parent:'.objectives-panel', bottom:'10px', right:'20px'},
+    {parent:'.pelosi-panel', top:'12px', right:'15px'},
+    {parent:'.war-compare-grid', top:'5px', left:'30px'},
+    {parent:'.gameday-banner', bottom:'8px', right:'30px'},
+    {parent:'.agi-strip', top:'2px', right:'40px'},
+    {parent:'.predict-grid', top:'5px', left:'20px'},
+    {parent:'.trump-quotes-strip', top:'4px', right:'10px'},
+    {parent:'.seattle-grid', top:'-4px', right:'25px'},
+    {parent:'.easter-banner', top:'6px', left:'30px'},
+    {parent:'.chyron', top:'-2px', right:'60px'}
+  ];
+  var eggEmojis = ['&#129370;','&#127873;','&#129417;','&#127802;','&#127799;','&#129370;','&#127873;','&#129417;','&#127802;','&#127799;','&#129370;','&#127873;'];
+  var found = 0;
+  var toast = document.getElementById('eggToast');
+  var toastTimer;
+
+  function showToast(msg){
+    toast.innerHTML = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2000);
+  }
+
+  eggLocations.forEach(function(loc, i){
+    var parent = document.querySelector(loc.parent);
+    if(!parent) return;
+    parent.style.position = parent.style.position || 'relative';
+    var egg = document.createElement('span');
+    egg.className = 'hidden-egg';
+    egg.innerHTML = eggEmojis[i];
+    egg.style.position = 'absolute';
+    if(loc.top) egg.style.top = loc.top;
+    if(loc.bottom) egg.style.bottom = loc.bottom;
+    if(loc.left) egg.style.left = loc.left;
+    if(loc.right) egg.style.right = loc.right;
+    egg.dataset.idx = i;
+    egg.onclick = function(){
+      if(this.classList.contains('found')) return;
+      this.classList.add('found');
+      found++;
+      document.getElementById('eggCount').textContent = found;
+      document.getElementById('basketBadge').textContent = found;
+      showToast(eggMessages[i] + ' (' + found + '/12)');
+      if(found === 12){
+        setTimeout(function(){
+          showToast('&#127881; ALL 12 EGGS FOUND! Happy Easter from the Amigos! &#127881;');
+        }, 2500);
+      }
+    };
+    parent.appendChild(egg);
+  });
+
+  // Basket click shows hint
+  document.getElementById('easterBasket').onclick = function(){
+    if(found >= 12){
+      showToast('&#127881; You found them all! Happy Easter! &#127881;');
+    } else {
+      var hints = ['Try hovering near the market tickers...','Check the energy section...','Look near the war tracker...','Pelosi might be hiding one...','The objectives panel looks suspicious...','Liberation Day has a surprise...','AGI counter area...','Prediction market zone...','Trump quotes section...','Seattle Life grid...','The Easter banner itself!','Near the chyron!'];
+      var unfound = [];
+      document.querySelectorAll('.hidden-egg:not(.found)').forEach(function(e){ unfound.push(parseInt(e.dataset.idx)); });
+      if(unfound.length > 0){
+        var hint = hints[unfound[Math.floor(Math.random()*unfound.length)]];
+        showToast('&#128269; Hint: ' + hint + ' (' + (12-found) + ' left)');
+      }
+    }
+  };
+})();
+</script>
 </body>
 </html>
