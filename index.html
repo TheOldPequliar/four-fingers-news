@@ -1980,75 +1980,6 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     </div>
   </div>
 
-  <!-- WORLD MONITOR GRID -->
-  <div style="margin-bottom:6px;padding:0 4px;display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#127758; WORLD MONITOR</span>
-    <span style="font-size:8px;color:var(--text-muted);font-style:italic"><span class="refresh-pulse"></span>Auto-updating</span>
-  </div>
-  <div class="world-grid">
-    <div class="world-card politics">
-      <div class="world-card-icon">&#127963;&#65039;</div>
-      <div class="world-card-title">US POLITICS</div>
-      <div class="world-card-value" id="approvalRating">--% APPROVAL</div>
-      <div class="world-card-detail" id="politicsDetail">Presidential approval aggregate</div>
-    </div>
-    <div class="world-card ai-tech">
-      <div class="world-card-icon">&#129302;</div>
-      <div class="world-card-title">AI & TECHNOLOGY</div>
-      <div class="world-card-value" id="aiHeadline">FRONTIER MODELS</div>
-      <div class="world-card-detail" id="aiDetail">Claude, GPT-5, Gemini 2.0 racing. Agentic AI entering clinical care workflows. Robotics demos weekly.</div>
-    </div>
-    <div class="world-card medicine">
-      <div class="world-card-icon">&#129657;</div>
-      <div class="world-card-title">MEDICINE</div>
-      <div class="world-card-value" id="medHeadline">BREAKTHROUGHS</div>
-      <div class="world-card-detail" id="medDetail">CRISPR gene editing approvals expanding. GLP-1 drugs reshaping obesity treatment. AI diagnostics matching specialists.</div>
-    </div>
-    <div class="world-card conflict">
-      <div class="world-card-icon">&#128161;</div>
-      <div class="world-card-title">GLOBAL CONFLICT</div>
-      <div class="world-card-value" id="conflictStatus">ELEVATED</div>
-      <div class="world-card-detail" id="conflictDetail">Ukraine, Middle East, Taiwan Strait tensions. Iran nuclear program under monitoring.</div>
-    </div>
-    <div class="world-card climate">
-      <div class="world-card-icon">&#127757;</div>
-      <div class="world-card-title">CLIMATE & ENVIRONMENT</div>
-      <div class="world-card-value" id="aqiValue">AQI: --</div>
-      <div class="world-card-detail" id="climateDetail">Seattle air quality &bull; Wildfire season monitoring &bull; Cascades snowpack tracking</div>
-    </div>
-    <div class="world-card space">
-      <div class="world-card-icon">&#128640;</div>
-      <div class="world-card-title">SPACE & EXPLORATION</div>
-      <div class="world-card-value" id="spaceHeadline">STARSHIP ERA</div>
-      <div class="world-card-detail" id="spaceDetail">SpaceX Starship operational. Artemis program targeting lunar surface. Mars sample return under review.</div>
-    </div>
-  </div>
-
-
-  <!-- COUNTDOWN STRIP -->
-  <div class="countdown-strip">
-    <div class="countdown-mini">
-      <div class="countdown-mini-label">NFL DRAFT</div>
-      <div class="countdown-mini-val" id="draftCountdown">--</div>
-      <div class="countdown-mini-unit">DAYS</div>
-    </div>
-    <div class="countdown-mini">
-      <div class="countdown-mini-label">MIDTERMS 2026</div>
-      <div class="countdown-mini-val" id="midtermCountdown">--</div>
-      <div class="countdown-mini-unit">DAYS</div>
-    </div>
-    <div class="countdown-mini">
-      <div class="countdown-mini-label">NEXT FOMC</div>
-      <div class="countdown-mini-val" id="fomcCountdown">--</div>
-      <div class="countdown-mini-unit">DAYS</div>
-    </div>
-    <div class="countdown-mini">
-      <div class="countdown-mini-label">NEXT SPACEX</div>
-      <div class="countdown-mini-val" id="spacexCountdown">--</div>
-      <div class="countdown-mini-unit">LAUNCH</div>
-    </div>
-  </div>
-
   <!-- EASTER 2026 BANNER -->
   <div class="easter-banner">
     <div class="easter-title">&#127873; HAPPY EASTER WEEKEND 2026 &#127873;</div>
@@ -2100,6 +2031,12 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
         <div class="ticker-price" id="tnxPrice">--</div>
         <div class="ticker-change flat" id="tnxChange">--</div>
         <div class="ticker-label">YIELD</div>
+      </div>
+      <div class="ticker-card down" id="tickerFNKO" style="border-color:rgba(255,68,68,0.3);background:linear-gradient(135deg,rgba(255,68,68,0.06),var(--surface));">
+        <div class="ticker-symbol" style="color:var(--red);">FNKO &#128128;</div>
+        <div class="ticker-price" id="fnkoPrice">--</div>
+        <div class="ticker-change down" id="fnkoChange">--</div>
+        <div class="ticker-label" id="fnkoLabel" style="color:var(--red);font-style:italic;">Trevor&rsquo;s employer. Pray for him.</div>
       </div>
     </div>
   </div>
@@ -2856,6 +2793,74 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
       </div>
     </div>
     <div class="housing-footer">Data as of March 2026 &mdash; Sources: Zillow, NAHB, Freddie Mac, Redfin</div>
+  </div>
+
+  <!-- WORLD MONITOR GRID -->
+  <div style="margin-bottom:6px;padding:0 4px;display:flex;justify-content:space-between;align-items:center">
+    <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#127758; WORLD MONITOR</span>
+    <span style="font-size:8px;color:var(--text-muted);font-style:italic"><span class="refresh-pulse"></span>Auto-updating</span>
+  </div>
+  <div class="world-grid">
+    <div class="world-card politics">
+      <div class="world-card-icon">&#127963;&#65039;</div>
+      <div class="world-card-title">US POLITICS</div>
+      <div class="world-card-value" id="approvalRating">--% APPROVAL</div>
+      <div class="world-card-detail" id="politicsDetail">Presidential approval aggregate</div>
+    </div>
+    <div class="world-card ai-tech">
+      <div class="world-card-icon">&#129302;</div>
+      <div class="world-card-title">AI & TECHNOLOGY</div>
+      <div class="world-card-value" id="aiHeadline">FRONTIER MODELS</div>
+      <div class="world-card-detail" id="aiDetail">Claude, GPT-5, Gemini 2.0 racing. Agentic AI entering clinical care workflows. Robotics demos weekly.</div>
+    </div>
+    <div class="world-card medicine">
+      <div class="world-card-icon">&#129657;</div>
+      <div class="world-card-title">MEDICINE</div>
+      <div class="world-card-value" id="medHeadline">BREAKTHROUGHS</div>
+      <div class="world-card-detail" id="medDetail">CRISPR gene editing approvals expanding. GLP-1 drugs reshaping obesity treatment. AI diagnostics matching specialists.</div>
+    </div>
+    <div class="world-card conflict">
+      <div class="world-card-icon">&#128161;</div>
+      <div class="world-card-title">GLOBAL CONFLICT</div>
+      <div class="world-card-value" id="conflictStatus">ELEVATED</div>
+      <div class="world-card-detail" id="conflictDetail">Ukraine, Middle East, Taiwan Strait tensions. Iran nuclear program under monitoring.</div>
+    </div>
+    <div class="world-card climate">
+      <div class="world-card-icon">&#127757;</div>
+      <div class="world-card-title">CLIMATE & ENVIRONMENT</div>
+      <div class="world-card-value" id="aqiValue">AQI: --</div>
+      <div class="world-card-detail" id="climateDetail">Seattle air quality &bull; Wildfire season monitoring &bull; Cascades snowpack tracking</div>
+    </div>
+    <div class="world-card space">
+      <div class="world-card-icon">&#128640;</div>
+      <div class="world-card-title">SPACE & EXPLORATION</div>
+      <div class="world-card-value" id="spaceHeadline">STARSHIP ERA</div>
+      <div class="world-card-detail" id="spaceDetail">SpaceX Starship operational. Artemis program targeting lunar surface. Mars sample return under review.</div>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN STRIP -->
+  <div class="countdown-strip">
+    <div class="countdown-mini">
+      <div class="countdown-mini-label">NFL DRAFT</div>
+      <div class="countdown-mini-val" id="draftCountdown">--</div>
+      <div class="countdown-mini-unit">DAYS</div>
+    </div>
+    <div class="countdown-mini">
+      <div class="countdown-mini-label">MIDTERMS 2026</div>
+      <div class="countdown-mini-val" id="midtermCountdown">--</div>
+      <div class="countdown-mini-unit">DAYS</div>
+    </div>
+    <div class="countdown-mini">
+      <div class="countdown-mini-label">NEXT FOMC</div>
+      <div class="countdown-mini-val" id="fomcCountdown">--</div>
+      <div class="countdown-mini-unit">DAYS</div>
+    </div>
+    <div class="countdown-mini">
+      <div class="countdown-mini-label">NEXT SPACEX</div>
+      <div class="countdown-mini-val" id="spacexCountdown">--</div>
+      <div class="countdown-mini-unit">LAUNCH</div>
+    </div>
   </div>
 
 <!-- EASTER EGG -->
@@ -4178,12 +4183,12 @@ async function fetchWorldCards() {
     if (cardEl) { cardEl.className = 'ticker-card ' + dir; }
   }
   // Fetch from Yahoo Finance v8 via CORS proxy
-  var symbols = ['^GSPC','^IXIC','^VIX','BTC-USD','GC=F','^TNX'];
-  var names = ['spPrice','ndxPrice','vixPrice','btcPrice','goldPrice','tnxPrice'];
-  var changes = ['spChange','ndxChange','vixChange','btcChange','goldChange','tnxChange'];
-  var cards = ['tickerSP','tickerNDX','tickerVIX','tickerBTC','tickerGold','tickerTNX'];
-  var prefixes = ['','','','$','$',''];
-  var suffixes = ['','','','','','%'];
+  var symbols = ['^GSPC','^IXIC','^VIX','BTC-USD','GC=F','^TNX','FNKO'];
+  var names = ['spPrice','ndxPrice','vixPrice','btcPrice','goldPrice','tnxPrice','fnkoPrice'];
+  var changes = ['spChange','ndxChange','vixChange','btcChange','goldChange','tnxChange','fnkoChange'];
+  var cards = ['tickerSP','tickerNDX','tickerVIX','tickerBTC','tickerGold','tickerTNX','tickerFNKO'];
+  var prefixes = ['','','','$','$','','$'];
+  var suffixes = ['','','','','','%',''];
   try {
     var joined = symbols.join(',');
     var url = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + encodeURIComponent(joined) + '&fields=regularMarketPrice,regularMarketChangePercent';
@@ -4210,12 +4215,34 @@ async function fetchWorldCards() {
       {p:(16+seed(3)*8).toFixed(1), pct:seed(3)*12},
       {p:Math.round(87500+seed(4)*5000), pct:seed(4)*4},
       {p:Math.round(3050+seed(5)*100), pct:seed(5)*1.5},
-      {p:(4.15+seed(6)*0.3).toFixed(2), pct:seed(6)*3}
+      {p:(4.15+seed(6)*0.3).toFixed(2), pct:seed(6)*3},
+      {p:(5.80+seed(7)*1.5).toFixed(2), pct:-(Math.abs(seed(7))*8+2)}
     ];
     sims.forEach(function(s,i){
       var display = typeof s.p === 'string' ? s.p : s.p > 10000 ? s.p.toLocaleString() : s.p.toString();
       setTicker(names[i], changes[i], cards[i], display, s.pct, prefixes[i], suffixes[i]);
     });
+  }
+  // FNKO quip rotator
+  var fnkoQuips = [
+    "Trevor's employer. Pray for him.",
+    "Pop! goes the stock price.",
+    "At least the bobbleheads are happy.",
+    "Collectible losses since 2022.",
+    "Your 401k is also a collectible now.",
+    "Vinyl figures worth more than shares.",
+    "The rarest Funko: a green candle.",
+    "Not even Pelosi would touch this.",
+    "Bag holder's anonymous, table for Trevor.",
+    "The Pop! that keeps on dropping."
+  ];
+  var fnkoLabel = document.getElementById('fnkoLabel');
+  if(fnkoLabel){
+    var fnkoIdx = 0;
+    setInterval(function(){
+      fnkoIdx = (fnkoIdx + 1) % fnkoQuips.length;
+      fnkoLabel.innerHTML = fnkoQuips[fnkoIdx];
+    }, 8000);
   }
 })();
 
