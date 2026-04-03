@@ -1555,6 +1555,43 @@ body.light-mode .chyron { background: linear-gradient(90deg, #0c2c56, #1a5040); 
   display: block;
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
+/* ===== ARTEMIS 2 TRACKER ===== */
+.artemis-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;position:relative;overflow:hidden}
+.artemis-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1a1a2e,#16213e,#0f3460,#e94560,#ff6b35,#ffd700)}
+.artemis-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;flex-wrap:wrap;gap:12px}
+.artemis-title-block{flex:1}
+.artemis-badge{display:inline-block;background:linear-gradient(135deg,#0f3460,#1a1a6e);color:#ffd700;font-size:7px;font-weight:900;letter-spacing:3px;padding:3px 10px;border-radius:4px;margin-bottom:6px}
+.artemis-title{font-size:18px;font-weight:900;letter-spacing:1px;color:var(--text)}
+.artemis-subtitle{font-size:9px;color:var(--green);letter-spacing:1px;margin-top:3px;font-weight:700}
+.artemis-live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#e94560;margin-right:4px;animation:artemisPulse 1.5s ease infinite}
+@keyframes artemisPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(233,69,96,0.5)}50%{opacity:0.7;box-shadow:0 0 0 6px rgba(233,69,96,0)}}
+.artemis-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.artemis-stat{background:linear-gradient(135deg,rgba(15,52,96,0.1),rgba(26,26,46,0.08));border:1px solid rgba(15,52,96,0.2);border-radius:8px;padding:10px;text-align:center}
+.artemis-stat-label{font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700;margin-bottom:4px}
+.artemis-stat-value{font-family:"JetBrains Mono",monospace;font-size:16px;font-weight:900;color:var(--text)}
+.artemis-stat-sub{font-size:7px;color:var(--text-muted);margin-top:2px}
+.artemis-crew{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.artemis-crew-card{background:rgba(15,52,96,0.06);border:1px solid rgba(15,52,96,0.15);border-radius:8px;padding:10px;text-align:center}
+.artemis-crew-emoji{font-size:24px;margin-bottom:4px}
+.artemis-crew-name{font-size:9px;font-weight:900;color:var(--text);letter-spacing:1px}
+.artemis-crew-role{font-size:7px;color:var(--text-muted);letter-spacing:1px;margin-top:2px}
+.artemis-crew-agency{font-size:7px;color:var(--accent);margin-top:2px}
+.artemis-timeline{position:relative;padding:0 8px;margin-bottom:12px}
+.artemis-tl-track{position:relative;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;margin-bottom:12px;overflow:visible}
+.artemis-tl-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#e94560,#ff6b35,#ffd700);transition:width 0.5s ease;position:relative}
+.artemis-tl-fill::after{content:'&#128640;';position:absolute;right:-10px;top:-8px;font-size:16px}
+.artemis-tl-days{display:grid;grid-template-columns:repeat(10,1fr);gap:2px}
+.artemis-tl-day{text-align:center;padding:6px 2px;border-radius:6px;font-size:7px;border:1px solid rgba(255,255,255,0.04)}
+.artemis-tl-day .tl-date{font-family:"JetBrains Mono",monospace;font-weight:900;color:var(--text);font-size:8px}
+.artemis-tl-day .tl-event{color:var(--text-muted);margin-top:3px;line-height:1.3}
+.artemis-tl-day.past{background:rgba(46,204,113,0.08);border-color:rgba(46,204,113,0.2)}
+.artemis-tl-day.today{background:rgba(233,69,96,0.1);border-color:rgba(233,69,96,0.3);box-shadow:0 0 8px rgba(233,69,96,0.15)}
+.artemis-tl-day.today .tl-date{color:var(--red)}
+.artemis-tl-day.future{opacity:0.5}
+.artemis-tl-day.highlight{border-color:rgba(255,215,0,0.3);background:rgba(255,215,0,0.06)}
+@media(max-width:700px){.artemis-stats,.artemis-crew{grid-template-columns:repeat(2,1fr)}.artemis-tl-days{grid-template-columns:repeat(5,1fr)}}
+body.light-mode .artemis-panel{background:#fff;border-color:#ddd}
+body.light-mode .artemis-stat{background:linear-gradient(135deg,rgba(15,52,96,0.05),rgba(26,26,46,0.03));border-color:rgba(15,52,96,0.12)}
 /* ===== EASTER 2026 ===== */
 .easter-banner{background:linear-gradient(135deg,rgba(255,200,60,0.12),rgba(180,120,255,0.1),rgba(120,230,160,0.1));border:1px solid rgba(255,200,60,0.3);border-radius:12px;padding:10px 16px;margin-bottom:16px;text-align:center;position:relative;overflow:hidden}
 .easter-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bff6b,#6bc5ff,#d96bff,#ff6b6b);background-size:200% 100%;animation:easterRainbow 3s linear infinite}
@@ -1591,6 +1628,8 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#129370; EASTER</span>Happy Easter Weekend! 12 eggs hidden in the dashboard &bull; Click the basket for hints!</span>
     <span class="chyron-sep">&#9670;</span>
+    <span class="chyron-item"><span class="chyron-label">&#128640; ARTEMIS II</span>MISSION IS LIVE &bull; First humans to the Moon since 1972 &bull; Lunar flyby Apr 6 &bull; Splashdown Apr 10</span>
+    <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas1">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">LIBERATION DAY</span>Happy 1-year anniversary of the Trump tariffs &bull; April 2, 2025 &ndash; April 2, 2026</span>
@@ -1604,6 +1643,8 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <span class="chyron-item"><span class="chyron-label">HUSKIES</span>Spring football underway &bull; New season hype building</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#129370; EASTER</span>Happy Easter Weekend! 12 eggs hidden in the dashboard &bull; Click the basket for hints!</span>
+    <span class="chyron-sep">&#9670;</span>
+    <span class="chyron-item"><span class="chyron-label">&#128640; ARTEMIS II</span>MISSION IS LIVE &bull; First humans to the Moon since 1972 &bull; Lunar flyby Apr 6 &bull; Splashdown Apr 10</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas2">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
@@ -2067,6 +2108,132 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <div class="easter-title">&#127873; HAPPY EASTER WEEKEND 2026 &#127873;</div>
     <div class="easter-sub">April 5, 2026 &bull; 12 hidden eggs are scattered throughout the dashboard &bull; Can you find them all?</div>
     <div class="easter-egg-counter">&#129370; EGGS FOUND: <span id="eggCount">0</span> / 12</div>
+  </div>
+
+  <!-- ARTEMIS 2 MISSION TRACKER -->
+  <div class="artemis-panel" id="artemisTracker">
+    <div class="artemis-header">
+      <div class="artemis-title-block">
+        <div class="artemis-badge">NASA &bull; ARTEMIS CAMPAIGN</div>
+        <div class="artemis-title">&#127765; ARTEMIS II &mdash; RETURN TO THE MOON</div>
+        <div class="artemis-subtitle"><span class="artemis-live-dot"></span>MISSION IS LIVE &mdash; <span id="artemisMissionStatus">IN TRANSIT TO THE MOON</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:7px;color:var(--text-muted);letter-spacing:2px;font-weight:700;">MISSION ELAPSED TIME</div>
+        <div id="artemisMET" style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:900;color:var(--green);">--:--:--:--</div>
+        <div style="font-size:7px;color:var(--text-muted);margin-top:2px;">DAYS : HRS : MIN : SEC</div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="artemis-stats">
+      <div class="artemis-stat">
+        <div class="artemis-stat-label">MISSION DAY</div>
+        <div class="artemis-stat-value" id="artemisDayNum">--</div>
+        <div class="artemis-stat-sub">of 10</div>
+      </div>
+      <div class="artemis-stat">
+        <div class="artemis-stat-label">MAX DISTANCE</div>
+        <div class="artemis-stat-value">252K</div>
+        <div class="artemis-stat-sub">miles from Earth (target)</div>
+      </div>
+      <div class="artemis-stat">
+        <div class="artemis-stat-label">LUNAR CLOSEST</div>
+        <div class="artemis-stat-value">4,100</div>
+        <div class="artemis-stat-sub">miles from Moon surface</div>
+      </div>
+      <div class="artemis-stat">
+        <div class="artemis-stat-label">SPLASHDOWN</div>
+        <div class="artemis-stat-value" id="artemisSplashdown">Apr 10</div>
+        <div class="artemis-stat-sub">Pacific Ocean, off San Diego</div>
+      </div>
+    </div>
+
+    <!-- Crew -->
+    <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--text-muted);margin-bottom:8px;">&#128105;&#8205;&#128640; CREW</div>
+    <div class="artemis-crew">
+      <div class="artemis-crew-card">
+        <div class="artemis-crew-emoji">&#128110;</div>
+        <div class="artemis-crew-name">REID WISEMAN</div>
+        <div class="artemis-crew-role">COMMANDER</div>
+        <div class="artemis-crew-agency">NASA</div>
+      </div>
+      <div class="artemis-crew-card">
+        <div class="artemis-crew-emoji">&#128104;&#8205;&#9992;&#65039;</div>
+        <div class="artemis-crew-name">VICTOR GLOVER</div>
+        <div class="artemis-crew-role">PILOT</div>
+        <div class="artemis-crew-agency">NASA</div>
+      </div>
+      <div class="artemis-crew-card">
+        <div class="artemis-crew-emoji">&#128105;&#8205;&#128300;</div>
+        <div class="artemis-crew-name">CHRISTINA KOCH</div>
+        <div class="artemis-crew-role">MISSION SPECIALIST</div>
+        <div class="artemis-crew-agency">NASA</div>
+      </div>
+      <div class="artemis-crew-card">
+        <div class="artemis-crew-emoji">&#127464;&#127462;</div>
+        <div class="artemis-crew-name">JEREMY HANSEN</div>
+        <div class="artemis-crew-role">MISSION SPECIALIST</div>
+        <div class="artemis-crew-agency">Canadian Space Agency</div>
+      </div>
+    </div>
+
+    <!-- Timeline Progress -->
+    <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--text-muted);margin-bottom:8px;">&#128197; MISSION TIMELINE</div>
+    <div class="artemis-timeline">
+      <div class="artemis-tl-track">
+        <div class="artemis-tl-fill" id="artemisTlFill" style="width:15%"></div>
+      </div>
+      <div class="artemis-tl-days" id="artemisTlDays">
+        <div class="artemis-tl-day past">
+          <div class="tl-date">Apr 1</div>
+          <div class="tl-event">&#128640; LAUNCH<br/>6:35pm EDT</div>
+        </div>
+        <div class="artemis-tl-day today">
+          <div class="tl-date">Apr 2</div>
+          <div class="tl-event">&#127774; TLI BURN<br/>Moon-bound!</div>
+        </div>
+        <div class="artemis-tl-day future">
+          <div class="tl-date">Apr 3</div>
+          <div class="tl-event">Lunar flyby prep &amp; safety drills</div>
+        </div>
+        <div class="artemis-tl-day future">
+          <div class="tl-date">Apr 4</div>
+          <div class="tl-event">Deep space coast &amp; systems check</div>
+        </div>
+        <div class="artemis-tl-day future highlight">
+          <div class="tl-date">Apr 5</div>
+          <div class="tl-event">Enter Moon&rsquo;s gravity sphere</div>
+        </div>
+        <div class="artemis-tl-day future highlight">
+          <div class="tl-date">Apr 6</div>
+          <div class="tl-event">&#127765; LUNAR FLYBY<br/>4,100 mi closest</div>
+        </div>
+        <div class="artemis-tl-day future">
+          <div class="tl-date">Apr 7</div>
+          <div class="tl-event">Free-return trajectory begins</div>
+        </div>
+        <div class="artemis-tl-day future">
+          <div class="tl-date">Apr 8</div>
+          <div class="tl-event">Deep-space science &amp; medical</div>
+        </div>
+        <div class="artemis-tl-day future">
+          <div class="tl-date">Apr 9</div>
+          <div class="tl-event">Re-entry prep &amp; stow</div>
+        </div>
+        <div class="artemis-tl-day future highlight">
+          <div class="tl-date">Apr 10</div>
+          <div class="tl-event">&#127754; SPLASHDOWN<br/>Pacific Ocean</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Good News Footer -->
+    <div style="background:linear-gradient(135deg,rgba(46,204,113,0.08),rgba(255,215,0,0.06));border:1px solid rgba(46,204,113,0.2);border-radius:8px;padding:10px;text-align:center;margin-top:4px;">
+      <div style="font-size:10px;font-weight:900;color:var(--green);letter-spacing:1px;">&#127775; THE GOOD NEWS SECTION &#127775;</div>
+      <div style="font-size:8px;color:var(--text);margin-top:4px;">First humans past low Earth orbit since Apollo 17 in 1972. Farthest any human has ever traveled from Earth. First Canadian bound for deep space. First woman on a lunar trajectory. Humanity at its best &mdash; for once.</div>
+      <div style="font-size:7px;color:var(--text-muted);margin-top:6px;font-style:italic;">&ldquo;Unless they die or blow up&rdquo; &mdash; The Amigos, keeping expectations measured</div>
+    </div>
   </div>
 
   <!-- MARKET SENTIMENT -->
@@ -2916,8 +3083,8 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <div class="world-card space">
       <div class="world-card-icon">&#128640;</div>
       <div class="world-card-title">SPACE & EXPLORATION</div>
-      <div class="world-card-value" id="spaceHeadline">STARSHIP ERA</div>
-      <div class="world-card-detail" id="spaceDetail">SpaceX Starship operational. Artemis program targeting lunar surface. Mars sample return under review.</div>
+      <div class="world-card-value" id="spaceHeadline">ARTEMIS II LIVE</div>
+      <div class="world-card-detail" id="spaceDetail">&#128640; Artemis II in flight! 4 astronauts en route to the Moon. First crewed lunar mission since Apollo 17 (1972). Flyby Apr 6, splashdown Apr 10.</div>
     </div>
   </div>
 
@@ -4369,6 +4536,92 @@ async function fetchWorldCards() {
       fnkoLabel.innerHTML = fnkoQuips[fnkoIdx];
     }, 8000);
   }
+})();
+
+// ===== ARTEMIS 2 MISSION TRACKER =====
+(function initArtemis(){
+  // Launch: April 1, 2026, 6:35 PM EDT (22:35 UTC)
+  var launchUTC = new Date(Date.UTC(2026, 3, 1, 22, 35, 0));
+  // Splashdown: ~April 10, 2026
+  var splashUTC = new Date(Date.UTC(2026, 3, 10, 18, 0, 0));
+  var missionDays = 10;
+
+  // Timeline dates (Apr 1 = day 1, Apr 10 = day 10)
+  var dayDates = [];
+  for(var i=0;i<10;i++){
+    dayDates.push(new Date(Date.UTC(2026,3,1+i)));
+  }
+
+  // Day-by-day status descriptions
+  var dayStatuses = [
+    'LAUNCHED - Orion in high Earth orbit',
+    'TLI BURN COMPLETE - En route to Moon',
+    'Lunar flyby prep & safety drills',
+    'Deep space coast & systems check',
+    'Entering Moon\'s gravitational sphere',
+    'LUNAR FLYBY - Closest approach',
+    'Free-return trajectory, heading home',
+    'Deep-space science & medical monitoring',
+    'Re-entry preparation & stow',
+    'SPLASHDOWN - Welcome home!'
+  ];
+
+  function updateArtemis(){
+    var now = new Date();
+    var elapsed = now - launchUTC;
+    if(elapsed < 0) elapsed = 0;
+
+    // MET clock
+    var totalSec = Math.floor(elapsed / 1000);
+    var days = Math.floor(totalSec / 86400);
+    var hrs = Math.floor((totalSec % 86400) / 3600);
+    var mins = Math.floor((totalSec % 3600) / 60);
+    var secs = totalSec % 60;
+    var pad = function(n){ return n < 10 ? '0'+n : n; };
+    var metEl = document.getElementById('artemisMET');
+    if(metEl) metEl.innerHTML = pad(days) + ':' + pad(hrs) + ':' + pad(mins) + ':' + pad(secs);
+
+    // Mission day (1-indexed)
+    var missionDay = Math.min(days + 1, 10);
+    var dayEl = document.getElementById('artemisDayNum');
+    if(dayEl) dayEl.innerHTML = missionDay;
+
+    // Status
+    var statusEl = document.getElementById('artemisMissionStatus');
+    if(statusEl && missionDay >= 1 && missionDay <= 10){
+      statusEl.innerHTML = dayStatuses[missionDay - 1];
+    }
+
+    // Progress bar
+    var progress = Math.min((elapsed / (splashUTC - launchUTC)) * 100, 100);
+    var fillEl = document.getElementById('artemisTlFill');
+    if(fillEl) fillEl.style.width = progress.toFixed(1) + '%';
+
+    // Timeline day highlights
+    var tlDays = document.querySelectorAll('.artemis-tl-day');
+    var todayUTC = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+    tlDays.forEach(function(el, idx){
+      el.classList.remove('past','today','future');
+      var dayDate = dayDates[idx];
+      if(todayUTC > dayDate){
+        el.classList.add('past');
+      } else if(todayUTC.getTime() === dayDate.getTime()){
+        el.classList.add('today');
+      } else {
+        el.classList.add('future');
+      }
+    });
+
+    // After splashdown
+    if(now > splashUTC){
+      if(statusEl) statusEl.innerHTML = 'MISSION COMPLETE - Crew safely home!';
+      var subtitle = document.querySelector('.artemis-subtitle');
+      if(subtitle) subtitle.innerHTML = '<span class="artemis-live-dot" style="background:var(--green);"></span>MISSION COMPLETE';
+    }
+  }
+
+  updateArtemis();
+  setInterval(updateArtemis, 1000);
 })();
 
 // ===== ENERGY MONITOR =====
