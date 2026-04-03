@@ -1216,6 +1216,10 @@
 .daily-strip{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:16px}
 .daily-label{font-size:7px;letter-spacing:3px;color:var(--text-dim);margin-bottom:6px}
 .daily-quote{font-size:12px;color:var(--text);line-height:1.5;font-style:italic}
+.trump-quotes-strip{background:linear-gradient(135deg,rgba(180,40,40,0.08),rgba(0,40,104,0.08));border:1px solid rgba(180,40,40,0.25);border-left:3px solid rgba(180,40,40,0.5);border-radius:10px;padding:14px 18px;margin-bottom:16px;position:relative;overflow:hidden}
+.trump-quotes-label{font-size:7px;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:8px}
+.trump-quote-text{font-size:14px;color:var(--text);line-height:1.6;font-style:italic;font-weight:500}
+.trump-quote-meta{font-size:8px;color:var(--text-muted);margin-top:6px;letter-spacing:1px}
 .daily-source{font-size:8px;color:var(--text-muted);margin-top:4px;text-align:right}
 
 /* ===== SEATTLE LIFE ===== */
@@ -1358,6 +1362,7 @@ body.light-mode .agi-strip { background: linear-gradient(135deg, rgba(120,60,170
 body.light-mode .predict-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .predict-bar { background: rgba(0,0,0,0.08); }
 body.light-mode .daily-strip { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .trump-quotes-strip { background: linear-gradient(135deg, rgba(180,40,40,0.06), rgba(0,40,104,0.06)); border-color: rgba(180,40,40,0.2); box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
 body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .easter-egg { opacity: 0.08; }
 body.light-mode .easter-egg:hover { opacity: 0.35; }
@@ -1713,6 +1718,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
     <div class="gameday-hype">&#127881; One year liberated. How&rsquo;s your wallet feeling? &#127881;</div>
+  </div>
+
+  <!-- TRUMP GREATEST HITS -->
+  <div class="trump-quotes-strip">
+    <div class="trump-quotes-label">&#128483; LIBERATION DAY GREATEST HITS</div>
+    <div class="trump-quote-text" id="trumpQuote">Loading quote...</div>
+    <div class="trump-quote-meta" id="trumpQuoteMeta"></div>
   </div>
 
   <!-- WORLD MONITOR GRID -->
@@ -3855,6 +3867,40 @@ async function fetchWorldCards() {
   setInterval(tryFetch,1800000);
 })();
 
+
+// ===== TRUMP GREATEST HITS ROTATOR =====
+(function initTrumpQuotes() {
+  var quotes = [
+    { text: "It's not possible for us to take care of daycare.", meta: "On childcare policy, 2025" },
+    { text: "I think I'm entitled to personal attacks.", meta: "Presidential debate, 2024" },
+    { text: "We're going to have so much winning, you're going to get sick and tired of winning.", meta: "Campaign rally" },
+    { text: "I know words. I have the best words.", meta: "Campaign speech, 2015" },
+    { text: "Trade wars are good, and easy to win.", meta: "March 2018, pre-Liberation Day" },
+    { text: "Tariffs are the greatest thing ever invented.", meta: "White House remarks" },
+    { text: "I alone can fix it.", meta: "RNC acceptance speech, 2016" },
+    { text: "I'm a very stable genius.", meta: "Twitter, 2018" },
+    { text: "Nobody knows more about taxes than I do, maybe in the history of the world.", meta: "Interview, 2016" },
+    { text: "I could stand in the middle of Fifth Avenue and shoot somebody, and I wouldn't lose any voters.", meta: "Campaign rally, 2016" },
+    { text: "The concept of global warming was created by and for the Chinese.", meta: "Twitter, 2012" },
+    { text: "I will build a great, great wall on our southern border, and I will have Mexico pay for that wall.", meta: "Campaign announcement, 2015" },
+    { text: "We're putting a 10% tariff on the whole world. Happy Liberation Day!", meta: "April 2, 2025" },
+    { text: "I think I am, actually humble. I think I'm much more humble than you would understand.", meta: "60 Minutes interview" },
+    { text: "Nobody has better respect for intelligence than Donald Trump.", meta: "Campaign event, 2015" }
+  ];
+  var idx = 0;
+  function show() {
+    var q = quotes[idx];
+    var el = document.getElementById('trumpQuote');
+    var meta = document.getElementById('trumpQuoteMeta');
+    if (el) el.innerHTML = '&ldquo;' + q.text + '&rdquo;';
+    if (meta) meta.innerHTML = '&mdash; Donald J. Trump &bull; ' + q.meta;
+    idx = (idx + 1) % quotes.length;
+  }
+  // Shuffle start based on time
+  idx = Math.floor(Date.now() / 1000) % quotes.length;
+  show();
+  setInterval(show, 12000); // rotate every 12 seconds
+})();
 
 // ===== LIBERATION DAY SCOREBOARD =====
 (function initLiberation() {
