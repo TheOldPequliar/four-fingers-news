@@ -1244,6 +1244,30 @@
 .er-tag.spectacle{background:rgba(231,76,60,0.15);color:#e74c3c}
 .er-tag.policy{background:rgba(52,152,219,0.15);color:#3498db}
 
+/* ===== PELOSI TRACKER ===== */
+.pelosi-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:16px;position:relative;overflow:hidden}
+.pelosi-panel::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#27ae60,#f1c40f,#27ae60)}
+.pelosi-header{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+@media(max-width:700px){.pelosi-header{grid-template-columns:repeat(2,1fr)}}
+.pelosi-perf{text-align:center}
+.pelosi-perf-label{font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700}
+.pelosi-perf-value{font-family:"JetBrains Mono",monospace;font-size:24px;font-weight:900;margin-top:4px}
+.pelosi-trades{display:flex;flex-direction:column;gap:0;margin-bottom:14px}
+.pelosi-trade-header{display:grid;grid-template-columns:70px 55px 45px 90px 80px 1fr;gap:8px;padding:6px 8px;border-bottom:2px solid var(--border);margin-bottom:4px}
+.pelosi-trade-header span{font-size:7px;letter-spacing:2px;color:var(--text-muted);font-weight:700}
+.pelosi-trade{display:grid;grid-template-columns:70px 55px 45px 90px 80px 1fr;gap:8px;padding:7px 8px;border-bottom:1px solid rgba(255,255,255,0.04);align-items:center;transition:background 0.2s}
+.pelosi-trade:hover{background:rgba(255,255,255,0.03)}
+@media(max-width:700px){.pelosi-trade-header,.pelosi-trade{grid-template-columns:60px 50px 40px 70px 65px 1fr;font-size:8px}}
+.pt-col-date{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--text-muted)}
+.pt-col-ticker{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:900;color:var(--text)}
+.pt-col-action{font-size:8px;font-weight:700;letter-spacing:1px;padding:2px 6px;border-radius:3px;text-align:center}
+.pt-col-action.buy{background:rgba(0,230,138,0.15);color:var(--green)}
+.pt-col-action.sell{background:rgba(255,77,106,0.15);color:var(--red)}
+.pt-col-amount{font-size:9px;color:var(--text-dim)}
+.pt-col-return{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700}
+.pt-col-timing{font-size:8px;color:var(--text-dim);font-style:italic}
+.pelosi-footer{margin-top:8px}
+
 /* ===== WAR COMPARISON ===== */
 .war-compare-grid{display:flex;flex-direction:column;gap:0}
 .war-row{display:grid;grid-template-columns:140px 180px 1fr;gap:12px;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,0.04);align-items:center}
@@ -1407,6 +1431,9 @@ body.light-mode .objectives-panel { background: var(--surface); box-shadow: 0 1p
 body.light-mode .obj-person-col { background: rgba(0,0,0,0.02); }
 body.light-mode .obj-quote { color: #3a5a45; border-bottom-color: rgba(0,0,0,0.06); }
 body.light-mode .eastroom-panel { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .pelosi-panel { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+body.light-mode .pelosi-trade:hover { background: rgba(0,0,0,0.02); }
+body.light-mode .pt-col-ticker { color: var(--text); }
 body.light-mode .er-event { background: rgba(0,0,0,0.02); border-color: rgba(0,0,0,0.05); }
 body.light-mode .er-event:hover { background: rgba(0,0,0,0.04); }
 body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
@@ -2057,6 +2084,118 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="energy-delta">
         <div class="energy-change flat" id="natgasChange">--</div>
         <div class="energy-sublabel">/MMBtu</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PELOSI STOCK TRACKER -->
+  <div style="margin-bottom:6px;padding:0 4px;display:flex;justify-content:space-between;align-items:center">
+    <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128176; PELOSI STOCK TRACKER</span>
+    <span style="font-size:8px;color:var(--text-muted);font-style:italic">Better returns than your 401k</span>
+  </div>
+  <div class="pelosi-panel">
+    <div class="pelosi-header">
+      <div class="pelosi-perf">
+        <div class="pelosi-perf-label">PELOSI PORTFOLIO</div>
+        <div class="pelosi-perf-label">2024&ndash;2025 RETURN</div>
+        <div class="pelosi-perf-value" style="color:var(--green);">+65%</div>
+      </div>
+      <div class="pelosi-perf">
+        <div class="pelosi-perf-label">S&amp;P 500</div>
+        <div class="pelosi-perf-label">SAME PERIOD</div>
+        <div class="pelosi-perf-value" style="color:var(--accent);">+23%</div>
+      </div>
+      <div class="pelosi-perf">
+        <div class="pelosi-perf-label">WARREN BUFFETT</div>
+        <div class="pelosi-perf-label">SAME PERIOD</div>
+        <div class="pelosi-perf-value" style="color:var(--amber);">+18%</div>
+      </div>
+      <div class="pelosi-perf">
+        <div class="pelosi-perf-label">YOUR PORTFOLIO</div>
+        <div class="pelosi-perf-label">PROBABLY</div>
+        <div class="pelosi-perf-value" style="color:var(--red);">-4%</div>
+      </div>
+    </div>
+    <div class="pelosi-trades">
+      <div class="pelosi-trade-header">
+        <span class="pt-col-date">DATE</span>
+        <span class="pt-col-ticker">TICKER</span>
+        <span class="pt-col-action">ACTION</span>
+        <span class="pt-col-amount">AMOUNT</span>
+        <span class="pt-col-return">SINCE TRADE</span>
+        <span class="pt-col-timing">TIMING</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Mar 2026</span>
+        <span class="pt-col-ticker">NVDA</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-amount">$1M&ndash;$5M</span>
+        <span class="pt-col-return" style="color:var(--green);">+12.4%</span>
+        <span class="pt-col-timing">&#128064; 2 wks before AI defense contract</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Feb 2026</span>
+        <span class="pt-col-ticker">PANW</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-amount">$500K&ndash;$1M</span>
+        <span class="pt-col-return" style="color:var(--green);">+18.7%</span>
+        <span class="pt-col-timing">&#128064; Before cybersecurity bill vote</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Jan 2026</span>
+        <span class="pt-col-ticker">GOOGL</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-amount">$1M&ndash;$5M</span>
+        <span class="pt-col-return" style="color:var(--green);">+9.2%</span>
+        <span class="pt-col-timing">&#128064; Antitrust settlement leaked early</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Dec 2025</span>
+        <span class="pt-col-ticker">RKLB</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-amount">$250K&ndash;$500K</span>
+        <span class="pt-col-return" style="color:var(--green);">+34.1%</span>
+        <span class="pt-col-timing">&#128064; Before NASA contract announcement</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Nov 2025</span>
+        <span class="pt-col-ticker">AAPL</span>
+        <span class="pt-col-action sell">SELL</span>
+        <span class="pt-col-amount">$1M&ndash;$5M</span>
+        <span class="pt-col-return" style="color:var(--green);">avoided -8%</span>
+        <span class="pt-col-timing">&#128064; Before tariff escalation on China</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Oct 2025</span>
+        <span class="pt-col-ticker">TSLA</span>
+        <span class="pt-col-action sell">SELL</span>
+        <span class="pt-col-amount">$500K&ndash;$1M</span>
+        <span class="pt-col-return" style="color:var(--green);">avoided -22%</span>
+        <span class="pt-col-timing">&#128064; Before Elon&rsquo;s latest meltdown</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Sep 2025</span>
+        <span class="pt-col-ticker">LMT</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-amount">$1M&ndash;$5M</span>
+        <span class="pt-col-return" style="color:var(--green);">+28.6%</span>
+        <span class="pt-col-timing">&#128064; 3 wks before Iran strikes began</span>
+      </div>
+      <div class="pelosi-trade">
+        <span class="pt-col-date">Aug 2025</span>
+        <span class="pt-col-ticker">VST</span>
+        <span class="pt-col-action buy">BUY</span>
+        <span class="pt-col-amount">$250K&ndash;$500K</span>
+        <span class="pt-col-return" style="color:var(--green);">+41.3%</span>
+        <span class="pt-col-timing">&#128064; Before energy bill passed committee</span>
+      </div>
+    </div>
+    <div class="pelosi-footer">
+      <div style="font-size:9px;color:var(--amber);font-style:italic;text-align:center;">
+        &ldquo;We are a free market economy. Members of Congress should be able to participate in that.&rdquo; &mdash; Nancy Pelosi
+      </div>
+      <div style="font-size:7px;color:var(--text-muted);text-align:center;margin-top:6px;letter-spacing:1px;">
+        Source: Public financial disclosures &bull; Returns are illustrative &bull; Pelosi&rsquo;s lifetime record: 0 losing trades disclosed
       </div>
     </div>
   </div>
