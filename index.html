@@ -1315,8 +1315,8 @@ body.light-mode .gcal-agenda-evt { background: rgba(0,0,0,0.03); border-color: v
 body.light-mode .gcal-agenda-evt-home { border-color: rgba(0,92,92,0.3); background: rgba(0,92,92,0.06); }
 body.light-mode .gcal-agenda-evt-personal { border-color: rgba(200,140,0,0.3); background: rgba(200,140,0,0.06); }
 body.light-mode .gcal-agenda-date-today { color: #1a6b45; }
-body.light-mode .gameday-banner { background: linear-gradient(135deg, #e6f0fa, #e0f5ec); border-color: #1a6b45; border-width: 2px; }
-body.light-mode .gameday-banner::before { background: linear-gradient(90deg, #1a6b45, #0c2c56, #1a6b45); }
+body.light-mode .gameday-banner { background: linear-gradient(135deg, #fae6e6, #e6eefa); border-color: #8b2020; border-width: 2px; }
+body.light-mode .gameday-banner::before { background: linear-gradient(90deg, #b42828, #002868, #b42828); }
 body.light-mode .gameday-title { color: #0c2c56; }
 body.light-mode .gameday-headline { color: #0c2c56; }
 body.light-mode .gameday-sub { color: #3a5a45; }
@@ -1466,11 +1466,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 <!-- &#9552;&#9552;&#9552; CHYRON TICKER &#9552;&#9552;&#9552; -->
 <div class="chyron" id="chyronBar">
   <div class="chyron-track" id="chyronTrack">
-    <span class="chyron-item"><span class="chyron-label">OPENING DAY</span>Mariners vs Guardians &bull; 6:45 PM &bull; T-Mobile Park &bull; Apple TV+</span>
+    <span class="chyron-item"><span class="chyron-label">LIBERATION DAY</span>Happy 1-year anniversary of the Trump tariffs &bull; April 2, 2025 &ndash; April 2, 2026</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">PITCHING</span>Luis Castillo (13&ndash;9, 3.34) vs Tanner Bibee (12&ndash;8, 3.52)</span>
-    <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">MLB</span>2026 Season begins &mdash; 50th year of Mariners baseball</span>
+    <span class="chyron-item"><span class="chyron-label">MLB</span>Mariners 2026 season underway &bull; 50th year of Mariners baseball</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">KRAKEN</span>Playoff push &bull; 6 games remaining in regular season</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1480,11 +1478,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas1">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">OPENING DAY</span>Mariners vs Guardians &bull; 6:45 PM &bull; T-Mobile Park &bull; Apple TV+</span>
+    <span class="chyron-item"><span class="chyron-label">LIBERATION DAY</span>Happy 1-year anniversary of the Trump tariffs &bull; April 2, 2025 &ndash; April 2, 2026</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">PITCHING</span>Luis Castillo (13&ndash;9, 3.34) vs Tanner Bibee (12&ndash;8, 3.52)</span>
-    <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">MLB</span>2026 Season begins &mdash; 50th year of Mariners baseball</span>
+    <span class="chyron-item"><span class="chyron-label">MLB</span>Mariners 2026 season underway &bull; 50th year of Mariners baseball</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">KRAKEN</span>Playoff push &bull; 6 games remaining in regular season</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1658,61 +1654,50 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </header>
 
-  <!-- OPENING WEEKEND 2026 - GAME DAY WAR ROOM -->
-  <div class="gameday-banner" id="gamedayBanner">
-    <div class="gameday-title">&#9918; OPENING WEEKEND 2026 &#9918;</div>
-    <div class="gameday-headline">GUARDIANS vs MARINERS</div>
-    <div class="gameday-sub">March 27&ndash;29 &bull; T-Mobile Park &bull; The 50th season begins now</div>
-    <div class="gameday-countdown-label">TIME TO FIRST PITCH</div>
-    <div class="gameday-countdown" id="gamedayCountdown">--:--:--:--</div>
-    <div class="gameday-matchup">
-      <div class="gameday-team">
-        <div class="gameday-team-name" style="color:#e31937">&#9918; CLEVELAND</div>
-        <div class="gameday-team-record" id="clevRecord">2026: 0&ndash;0</div>
-      </div>
-      <div class="gameday-vs">VS</div>
-      <div class="gameday-team">
-        <div class="gameday-team-name" style="color:#005C5C">&#9918; SEATTLE</div>
-        <div class="gameday-team-record" id="seaRecord">2026: 0&ndash;0</div>
-      </div>
-    </div>
-    <div class="gameday-grid">
+  <!-- LIBERATION DAY BANNER -->
+  <div class="gameday-banner" id="liberationBanner" style="background:linear-gradient(135deg,rgba(180,40,40,0.2),rgba(0,40,104,0.25));border-color:rgba(180,40,40,0.5);">
+    <div class="gameday-title" style="letter-spacing:5px;">&#127482;&#127480; APRIL 2, 2026 &#127482;&#127480;</div>
+    <div class="gameday-headline" style="font-size:24px;">HAPPY LIBERATION DAY!</div>
+    <div class="gameday-sub">One year anniversary of the Trump tariffs</div>
+    <div class="gameday-grid" style="margin-top:12px;">
       <div class="gameday-stat">
-        <div class="gameday-stat-label">TONIGHT&rsquo;S PITCHING</div>
-        <div class="gameday-stat-value">Castillo vs Bibee</div>
-        <div class="gameday-stat-detail">Luis Castillo (13&ndash;9, 3.34 ERA) vs Tanner Bibee (12&ndash;8, 3.52 ERA)</div>
+        <div class="gameday-stat-label">ANNOUNCED</div>
+        <div class="gameday-stat-value">April 2, 2025</div>
+        <div class="gameday-stat-detail">&ldquo;Liberation Day&rdquo; reciprocal tariffs declared</div>
       </div>
       <div class="gameday-stat">
-        <div class="gameday-stat-label">MONEY LINE</div>
-        <div class="gameday-stat-value" id="mlOdds">--</div>
-        <div class="gameday-stat-detail" id="mlDetail">Loading odds...</div>
+        <div class="gameday-stat-label">ELAPSED</div>
+        <div class="gameday-stat-value" id="liberationDays">365</div>
+        <div class="gameday-stat-detail">days of liberation</div>
       </div>
       <div class="gameday-stat">
-        <div class="gameday-stat-label">RUN LINE</div>
-        <div class="gameday-stat-value" id="rlOdds">--</div>
-        <div class="gameday-stat-detail" id="rlDetail">Loading line...</div>
+        <div class="gameday-stat-label">GAS PRICE THEN</div>
+        <div class="gameday-stat-value">$3.35/gal</div>
+        <div class="gameday-stat-detail">National avg, April 2025</div>
       </div>
     </div>
-    <!-- WHERE TO WATCH -->
-    <div style="margin-top:16px;border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;">
-      <div style="font-size:9px;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:10px;text-align:center;">&#128250; WHERE TO WATCH</div>
-      <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;">
+    <div style="margin-top:14px;border-top:1px solid rgba(255,255,255,0.08);padding-top:12px;">
+      <div style="font-size:9px;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:10px;text-align:center;">&#128200; ONE YEAR SCOREBOARD</div>
+      <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
         <div style="text-align:center;">
-          <div style="font-size:11px;font-weight:700;color:var(--text);letter-spacing:1px;">TONIGHT</div>
-          <div style="font-size:10px;color:var(--text-dim);">6:45 PM &bull; Apple TV+</div>
+          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">S&amp;P 500</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:900;color:var(--red);" id="libSP">--</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-size:11px;font-weight:700;color:var(--text);letter-spacing:1px;">TOMORROW</div>
-          <div style="font-size:10px;color:var(--text-dim);">6:40 PM &bull; ROOT Sports</div>
+          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">CONSUMER PRICES</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:900;color:var(--amber);" id="libCPI">--</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-size:11px;font-weight:700;color:var(--text);letter-spacing:1px;">SUNDAY</div>
-          <div style="font-size:10px;color:var(--text-dim);">4:20 PM &bull; Peacock</div>
+          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">TRADE DEFICIT</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:900;color:var(--red);" id="libTrade">--</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">GAS NOW (SEA)</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:900;color:var(--red);" id="libGas">--</div>
         </div>
       </div>
-      <div style="font-size:8px;color:var(--text-muted);text-align:center;margin-top:8px;letter-spacing:1px;">ALL GAMES ON SEATTLE SPORTS 710</div>
     </div>
-    <div class="gameday-hype">&#9734; 50th season. Zero World Series appearances. 9 outs away last October. This is the year. &#9734;</div>
+    <div class="gameday-hype">&#127881; One year liberated. How&rsquo;s your wallet feeling? &#127881;</div>
   </div>
 
   <!-- WORLD MONITOR GRID -->
@@ -3759,6 +3744,39 @@ async function fetchWorldCards() {
   setInterval(tryFetch,1800000);
 })();
 
+
+// ===== LIBERATION DAY SCOREBOARD =====
+(function initLiberation() {
+  var libDate = new Date(2025, 3, 2); // April 2, 2025
+  var now = new Date();
+  var elapsed = Math.floor((now - libDate) / 86400000);
+  var el = document.getElementById('liberationDays');
+  if (el) el.innerHTML = elapsed.toLocaleString();
+  // Populate scoreboard with context
+  var spEl = document.getElementById('libSP');
+  var cpiEl = document.getElementById('libCPI');
+  var tradeEl = document.getElementById('libTrade');
+  var gasEl = document.getElementById('libGas');
+  // S&P was ~5670 on April 2 2025, use current ticker if available
+  setTimeout(function() {
+    var spNow = document.getElementById('spPrice');
+    if (spEl && spNow && spNow.textContent !== '--') {
+      var current = parseFloat(spNow.textContent.replace(/,/g,''));
+      var pct = ((current - 5670) / 5670 * 100).toFixed(1);
+      spEl.innerHTML = (pct >= 0 ? '+' : '') + pct + '%';
+      spEl.style.color = pct >= 0 ? 'var(--green)' : 'var(--red)';
+    } else if (spEl) { spEl.innerHTML = 'TBD'; }
+    // Gas: link to gas price tracker
+    var gpNow = document.getElementById('gasPrice');
+    if (gasEl && gpNow && gpNow.textContent !== '--') {
+      gasEl.innerHTML = gpNow.textContent;
+    } else if (gasEl) { gasEl.innerHTML = '~$5.75'; }
+    // CPI: consumer prices up since tariffs
+    if (cpiEl) cpiEl.innerHTML = '+3.8%';
+    // Trade deficit
+    if (tradeEl) tradeEl.innerHTML = 'WIDER';
+  }, 5000);
+})();
 
 // ===== GAS PRICES (Seattle Area) =====
 (function initGasPrices() {
