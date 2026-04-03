@@ -1804,7 +1804,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div class="objectives-panel">
     <div class="objectives-header">
       <div class="objectives-title">&#127919; THE OBJECTIVES ARE CLEAR!</div>
-      <div class="objectives-sub">Every stated objective of the Iran military operation &mdash; updated as the goalposts move</div>
+      <div class="objectives-sub">Operation Epic Fury began Feb 28, 2026. Day <span id="iranWarDay">--</span>. Every stated objective &mdash; updated as the goalposts move.</div>
     </div>
     <div class="objectives-by-person">
       <div class="obj-person-col">
@@ -1947,7 +1947,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
       <div class="war-row highlight-row">
         <div class="war-name">Iran (current)</div>
-        <div class="war-duration" id="iranDuration">~1 week</div>
+        <div class="war-duration" id="iranDuration">Day --</div>
         <div class="war-context war-funny" style="color:var(--amber);">&ldquo;It will be quick &mdash; days, not weeks&rdquo; &#128064;</div>
       </div>
     </div>
@@ -4208,6 +4208,26 @@ async function fetchWorldCards() {
   setInterval(tryFetch,1800000);
 })();
 
+
+// ===== IRAN WAR LIVE COUNTER =====
+(function initIranCounter() {
+  // Operation Epic Fury began Feb 28, 2026
+  var warStart = new Date(2026, 1, 28); // Feb 28, 2026
+  function update() {
+    var now = new Date();
+    var dayNum = Math.floor((now - warStart) / 86400000) + 1;
+    var label = dayNum <= 7 ? 'days, not weeks (so far)' :
+                dayNum <= 30 ? dayNum + ' days... so much for "quick"' :
+                dayNum <= 60 ? dayNum + ' days. It was supposed to be days, not weeks.' :
+                dayNum + ' days. This is looking familiar.';
+    var el1 = document.getElementById('iranWarDay');
+    var el2 = document.getElementById('iranDuration');
+    if (el1) el1.innerHTML = dayNum;
+    if (el2) el2.innerHTML = 'DAY ' + dayNum;
+  }
+  update();
+  setInterval(update, 60000); // update every minute
+})();
 
 // ===== TRUMP GREATEST HITS ROTATOR =====
 (function initTrumpQuotes() {
