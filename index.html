@@ -1363,12 +1363,6 @@
 .housing-rate-val{font-size:14px;font-weight:900;color:var(--amber);font-family:"JetBrains Mono",monospace}
 .housing-rate-lbl{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
 
-/* ===== EASTER EGG ===== */
-.easter-egg{margin-top:60px;padding:20px;text-align:center;opacity:0.15;transition:opacity 0.5s}
-.easter-egg:hover{opacity:0.6}
-.easter-egg-title{font-size:8px;letter-spacing:4px;color:var(--text-muted);margin-bottom:12px}
-.easter-egg-book{font-size:9px;color:var(--text-dim);margin:4px 0;font-style:italic}
-
 /* ===== AGI COUNTER ===== */
 .agi-strip{background:linear-gradient(135deg,rgba(155,89,182,0.08),rgba(0,212,255,0.05));border:1px solid rgba(155,89,182,0.2);border-radius:8px;padding:8px 12px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
 .agi-label{font-size:8px;letter-spacing:2px;color:rgba(155,89,182,0.7)}
@@ -1469,8 +1463,6 @@ body.light-mode .pt-col-ticker { color: var(--text); }
 body.light-mode .er-event { background: rgba(0,0,0,0.02); border-color: rgba(0,0,0,0.05); }
 body.light-mode .er-event:hover { background: rgba(0,0,0,0.04); }
 body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
-body.light-mode .easter-egg { opacity: 0.08; }
-body.light-mode .easter-egg:hover { opacity: 0.35; }
 body.light-mode .ticker-wrap { background: var(--surface); border-color: var(--border); }
 body.light-mode .golf-cell { background: var(--surface); }
 body.light-mode .golf-pedersen { background: rgba(181,114,10,0.08); }
@@ -1585,23 +1577,6 @@ body.light-mode .chyron { background: linear-gradient(90deg, #0c2c56, #1a5040); 
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
 /* Artemis 2 tracker CSS removed — mission complete */
-/* ===== EASTER 2026 ===== */
-.easter-banner{background:linear-gradient(135deg,rgba(255,200,60,0.12),rgba(180,120,255,0.1),rgba(120,230,160,0.1));border:1px solid rgba(255,200,60,0.3);border-radius:12px;padding:10px 16px;margin-bottom:16px;text-align:center;position:relative;overflow:hidden}
-.easter-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bff6b,#6bc5ff,#d96bff,#ff6b6b);background-size:200% 100%;animation:easterRainbow 3s linear infinite}
-@keyframes easterRainbow{0%{background-position:0 0}100%{background-position:200% 0}}
-.easter-title{font-size:16px;font-weight:900;letter-spacing:2px;color:var(--text)}
-.easter-sub{font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:1px}
-.easter-egg-counter{display:inline-flex;align-items:center;gap:6px;background:rgba(255,200,60,0.15);border:1px solid rgba(255,200,60,0.3);border-radius:20px;padding:4px 12px;font-size:9px;font-weight:700;color:var(--amber);letter-spacing:1px;margin-top:6px}
-.hidden-egg{cursor:pointer;position:absolute;font-size:12px;opacity:0.15;transition:all 0.3s;z-index:5;user-select:none}
-.hidden-egg:hover{opacity:0.6;transform:scale(1.3)}
-.hidden-egg.found{opacity:1;transform:scale(1.5);animation:eggPop 0.5s ease}
-@keyframes eggPop{0%{transform:scale(1)}50%{transform:scale(2) rotate(20deg)}100%{transform:scale(1.5) rotate(0)}}
-.easter-basket{position:fixed;bottom:20px;right:20px;font-size:28px;z-index:100;cursor:pointer;animation:basketBob 2s ease-in-out infinite;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.3))}
-@keyframes basketBob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
-.basket-badge{position:absolute;top:-6px;right:-6px;background:var(--red);color:#fff;font-size:9px;font-weight:900;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"JetBrains Mono",monospace}
-.egg-toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:#fff;padding:12px 24px;border-radius:12px;font-size:14px;font-weight:700;z-index:200;pointer-events:none;opacity:0;transition:opacity 0.3s}
-.egg-toast.show{opacity:1}
-body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60,0.15),rgba(180,120,255,0.1),rgba(120,230,160,0.12));}
 </style>
 </head>
 <body>
@@ -1619,8 +1594,6 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">HUSKIES</span>Spring football underway &bull; New season hype building</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#129370; EASTER</span>Happy Easter Weekend! 12 eggs hidden in the dashboard &bull; Click the basket for hints!</span>
-    <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128308; HORMUZ</span>Strait effectively closed &bull; Iran charging $1M+ tolls &bull; US mine-clearing ops underway &bull; Global fuel crisis deepening</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas1">Seattle avg: loading...</span></span>
@@ -1634,8 +1607,6 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <span class="chyron-item"><span class="chyron-label">NFL</span>2026 Draft: April 23&ndash;25 &bull; Seahawks pick TBD</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">HUSKIES</span>Spring football underway &bull; New season hype building</span>
-    <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#129370; EASTER</span>Happy Easter Weekend! 12 eggs hidden in the dashboard &bull; Click the basket for hints!</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128308; HORMUZ</span>Strait effectively closed &bull; Iran charging $1M+ tolls &bull; US mine-clearing ops underway &bull; Global fuel crisis deepening</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1810,6 +1781,7 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0505,#e94560,#ff4444,#ffa500,#e94560,#1a0505);background-size:200% 100%;animation:iranStripe 3s linear infinite;"></div>
     <style>
       @keyframes iranStripe{0%{background-position:0% 0}100%{background-position:200% 0}}
+      @keyframes priceRainbow{0%{background-position:0% 0}100%{background-position:200% 0}}
       @keyframes iranPulse{0%,100%{opacity:1}50%{opacity:0.6}}
       @keyframes noDeakFlash{0%,100%{text-shadow:0 0 10px rgba(255,60,60,0.4)}50%{text-shadow:0 0 30px rgba(255,60,60,0.8),0 0 60px rgba(255,165,0,0.3)}}
       .iran-flash{animation:noDeakFlash 2s ease-in-out infinite}
@@ -2121,13 +2093,6 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     <div style="text-align:center;font-size:7px;color:var(--text-muted);margin-top:4px;letter-spacing:1px;">
       Sources: EIA, World Bank, FAO, WRI Aqueduct &bull; Reserves as of 2025 estimates
     </div>
-  </div>
-
-  <!-- EASTER 2026 BANNER -->
-  <div class="easter-banner">
-    <div class="easter-title">&#127873; HAPPY EASTER WEEKEND 2026 &#127873;</div>
-    <div class="easter-sub">April 5, 2026 &bull; 12 hidden eggs are scattered throughout the dashboard &bull; Can you find them all?</div>
-    <div class="easter-egg-counter">&#129370; EGGS FOUND: <span id="eggCount">0</span> / 12</div>
   </div>
 
   <!-- Artemis II tracker removed — mission complete, splashed down Apr 10 -->
@@ -2634,7 +2599,6 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
           </div>
         </div>
         <div style="font-size:8px;color:var(--text);line-height:1.7;">
-          <div style="margin-bottom:4px;">&#128197; <b>Passover/Easter 2026:</b> Some predict rapture Apr 4&ndash;5. (They always predict.) <a href="https://www.raptureready.com/" target="_blank" style="color:var(--amber);font-size:7px;">[RR]</a></div>
           <div style="margin-bottom:4px;">&#127759; <b>Iran war:</b> Seen as fulfillment of Ezekiel 38/Gog-Magog prophecy by evangelicals. <a href="https://www.gotquestions.org/Battle-of-Gog-and-Magog.html" target="_blank" style="color:var(--amber);font-size:7px;">[Study]</a></div>
           <div style="margin-bottom:4px;">&#128338; <b>Doomsday Clock:</b> 89 seconds to midnight (closest ever, Jan 2025). <a href="https://thebulletin.org/doomsday-clock/" target="_blank" style="color:var(--amber);font-size:7px;">[Bulletin]</a></div>
           <div>&#128302; <b>AI as Beast System:</b> Growing movement sees AI as the &ldquo;image of the beast&rdquo; from Revelation 13. <a href="https://www.biblegateway.com/passage/?search=Revelation+13&version=NIV" target="_blank" style="color:var(--amber);font-size:7px;">[Rev 13]</a></div>
@@ -2692,7 +2656,7 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
   <!-- AMIGOS PRICE IS RIGHT -->
   <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#127911; AMIGOS PRICE IS RIGHT &mdash; LOCK IN YOUR PICKS</span></div>
   <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;position:relative;overflow:hidden;" id="priceGamePanel">
-    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ffd700,#e94560,#00d4ff,#00e68a,#ffd700);background-size:200% 100%;animation:easterRainbow 3s linear infinite;"></div>
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#ffd700,#e94560,#00d4ff,#00e68a,#ffd700);background-size:200% 100%;animation:priceRainbow 3s linear infinite;"></div>
 
     <!-- Player Select -->
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
@@ -3296,14 +3260,6 @@ body.light-mode .easter-banner{background:linear-gradient(135deg,rgba(255,200,60
     </div>
   </div>
 
-<!-- EASTER EGG -->
-  <div class="easter-egg">
-    <div class="easter-egg-title">BOOKS THAT MADE ME FEEL THINGS BEFORE THE WORLD ENDS</div>
-    <div class="easter-egg-book" id="easterBook1">&#8220;Consciousness &mdash; Pay Attention!&#8221;</div>
-    <div class="easter-egg-book" id="easterBook2" style="opacity:0.4">[ more coming ]</div>
-    <div style="margin-top:16px;font-size:7px;color:var(--text-muted);letter-spacing:2px">THE WORLD IS BURNING ITSELF DOWN JUST FINE.</div>
-    <div style="font-size:7px;color:var(--text-muted);letter-spacing:1px;margin-top:2px;opacity:0.5">THIS IS ABOUT DECIDING WHAT'S WORTH CARRYING WITH YOU INTO THE CHARRED SOIL WHEN THE WORLD IS OUT OF OXYGEN.</div>
-  </div>
 
   <!-- PUSHEEN -->
   <div style="text-align:center;margin:24px 0 16px;opacity:0.7;">
@@ -5422,97 +5378,5 @@ setInterval(function() {
 
   <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">&#9728;&#65039;</button>
 
-<!-- EASTER FLOATING BASKET -->
-<div class="easter-basket" id="easterBasket" title="Easter Egg Hunt! Click eggs hidden around the dashboard!">&#127873;<div class="basket-badge" id="basketBadge">0</div></div>
-<div class="egg-toast" id="eggToast"></div>
-
-<script>
-// ===== EASTER EGG HUNT 2026 =====
-(function(){
-  var eggMessages = [
-    '&#129370; You found an egg in the market!',
-    '&#127873; Nice! An egg was hiding by the energy prices!',
-    '&#129370; Easter egg found near the war tracker!',
-    '&#127873; You spotted one by Pelosi\'s trades!',
-    '&#129370; Hidden in the objectives! Good eye!',
-    '&#127873; Found one in the ballroom plans!',
-    '&#129370; Seattle Life egg discovered!',
-    '&#127873; Egg found near the predictions!',
-    '&#129370; You found the Trump quotes egg!',
-    '&#127873; Gas prices egg! Even eggs are expensive!',
-    '&#129370; Liberation Day egg found!',
-    '&#127873; The AGI counter was hiding one!'
-  ];
-  var eggLocations = [
-    {parent:'.market-sentiment-grid', top:'8px', right:'12px'},
-    {parent:'.energy-strip', top:'6px', left:'50%'},
-    {parent:'.objectives-panel', bottom:'10px', right:'20px'},
-    {parent:'.pelosi-panel', top:'12px', right:'15px'},
-    {parent:'.war-compare-grid', top:'5px', left:'30px'},
-    {parent:'.gameday-banner', bottom:'8px', right:'30px'},
-    {parent:'.agi-strip', top:'2px', right:'40px'},
-    {parent:'.predict-grid', top:'5px', left:'20px'},
-    {parent:'.trump-quotes-strip', top:'4px', right:'10px'},
-    {parent:'.seattle-grid', top:'-4px', right:'25px'},
-    {parent:'.easter-banner', top:'6px', left:'30px'},
-    {parent:'.chyron', top:'-2px', right:'60px'}
-  ];
-  var eggEmojis = ['&#129370;','&#127873;','&#129417;','&#127802;','&#127799;','&#129370;','&#127873;','&#129417;','&#127802;','&#127799;','&#129370;','&#127873;'];
-  var found = 0;
-  var toast = document.getElementById('eggToast');
-  var toastTimer;
-
-  function showToast(msg){
-    toast.innerHTML = msg;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2000);
-  }
-
-  eggLocations.forEach(function(loc, i){
-    var parent = document.querySelector(loc.parent);
-    if(!parent) return;
-    parent.style.position = parent.style.position || 'relative';
-    var egg = document.createElement('span');
-    egg.className = 'hidden-egg';
-    egg.innerHTML = eggEmojis[i];
-    egg.style.position = 'absolute';
-    if(loc.top) egg.style.top = loc.top;
-    if(loc.bottom) egg.style.bottom = loc.bottom;
-    if(loc.left) egg.style.left = loc.left;
-    if(loc.right) egg.style.right = loc.right;
-    egg.dataset.idx = i;
-    egg.onclick = function(){
-      if(this.classList.contains('found')) return;
-      this.classList.add('found');
-      found++;
-      document.getElementById('eggCount').textContent = found;
-      document.getElementById('basketBadge').textContent = found;
-      showToast(eggMessages[i] + ' (' + found + '/12)');
-      if(found === 12){
-        setTimeout(function(){
-          showToast('&#127881; ALL 12 EGGS FOUND! Happy Easter from the Amigos! &#127881;');
-        }, 2500);
-      }
-    };
-    parent.appendChild(egg);
-  });
-
-  // Basket click shows hint
-  document.getElementById('easterBasket').onclick = function(){
-    if(found >= 12){
-      showToast('&#127881; You found them all! Happy Easter! &#127881;');
-    } else {
-      var hints = ['Try hovering near the market tickers...','Check the energy section...','Look near the war tracker...','Pelosi might be hiding one...','The objectives panel looks suspicious...','Liberation Day has a surprise...','AGI counter area...','Prediction market zone...','Trump quotes section...','Seattle Life grid...','The Easter banner itself!','Near the chyron!'];
-      var unfound = [];
-      document.querySelectorAll('.hidden-egg:not(.found)').forEach(function(e){ unfound.push(parseInt(e.dataset.idx)); });
-      if(unfound.length > 0){
-        var hint = hints[unfound[Math.floor(Math.random()*unfound.length)]];
-        showToast('&#128269; Hint: ' + hint + ' (' + (12-found) + ' left)');
-      }
-    }
-  };
-})();
-</script>
 </body>
 </html>
