@@ -1822,26 +1822,83 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
   <!-- ═══ THE RUN DOWN — DAILY MORNING BRIEFING ═══ -->
   <!-- AUTO-UPDATED BY: the-run-down scheduled task (daily 7am local) -->
-  <!-- EDIT TARGETS: #runDownUpdated, #runDownList (li items) -->
-  <div id="theRunDown" style="background:linear-gradient(135deg,rgba(111,184,150,0.10),rgba(12,44,86,0.25));border:1px solid rgba(111,184,150,0.35);border-left:3px solid #6fb896;border-radius:12px;padding:18px 22px;margin-bottom:18px;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6fb896,#ffd700,#e94560,#6fb896);background-size:200% 100%;animation:priceRainbow 6s linear infinite;"></div>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+  <!-- EDIT TARGETS: #runDownUpdated, #runDownList (<article> items) -->
+  <style>
+    #theRunDown{background:linear-gradient(135deg,rgba(111,184,150,0.10),rgba(12,44,86,0.25));border:1px solid rgba(111,184,150,0.35);border-left:3px solid #6fb896;border-radius:12px;padding:18px 22px;margin-bottom:18px;position:relative;overflow:hidden;font-family:Georgia,'Times New Roman',serif;}
+    #theRunDown::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6fb896,#ffd700,#e94560,#6fb896);background-size:200% 100%;animation:priceRainbow 6s linear infinite;}
+    #theRunDown .rd-masthead{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:10px;margin-bottom:14px;border-bottom:2px double rgba(111,184,150,0.35);flex-wrap:wrap;gap:8px;}
+    #theRunDown .rd-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:900;letter-spacing:1px;color:#6fb896;line-height:1;font-variant:small-caps;}
+    #theRunDown .rd-sub{font-size:10px;letter-spacing:2px;color:var(--text-muted);font-style:italic;margin-top:4px;font-family:Georgia,serif;}
+    #theRunDown .rd-dateline{font-size:9px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;font-family:'JetBrains Mono',monospace;}
+    #runDownList{display:grid;grid-template-columns:repeat(3,1fr);gap:0;list-style:none;margin:0;padding:0;}
+    #runDownList article{padding:4px 14px 10px 14px;border-right:1px solid rgba(111,184,150,0.15);break-inside:avoid;}
+    #runDownList article:nth-child(3n){border-right:none;}
+    #runDownList article:nth-child(n+4){padding-top:14px;border-top:1px solid rgba(111,184,150,0.15);}
+    #runDownList .rd-kicker{font-size:8px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#6fb896;font-family:'JetBrains Mono',monospace;margin-bottom:4px;display:block;}
+    #runDownList .rd-kicker.urgent{color:var(--red);}
+    #runDownList .rd-head{font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:900;line-height:1.2;color:var(--text);margin:0 0 6px 0;letter-spacing:-0.2px;}
+    #runDownList .rd-dek{font-family:Georgia,'Times New Roman',serif;font-size:11px;line-height:1.45;color:var(--text-muted);margin:0;}
+    #runDownList article.lead{grid-column:span 2;grid-row:span 2;padding-bottom:14px;}
+    #runDownList article.lead .rd-head{font-size:22px;line-height:1.15;color:var(--text);}
+    #runDownList article.lead .rd-dek{font-size:13px;line-height:1.55;color:var(--text);}
+    #runDownList article.lead .rd-kicker{font-size:9px;}
+    @media (max-width:900px){
+      #runDownList{grid-template-columns:repeat(2,1fr);}
+      #runDownList article{border-right:1px solid rgba(111,184,150,0.15);}
+      #runDownList article:nth-child(3n){border-right:1px solid rgba(111,184,150,0.15);}
+      #runDownList article:nth-child(2n){border-right:none;}
+      #runDownList article.lead{grid-column:span 2;grid-row:auto;}
+    }
+    @media (max-width:560px){
+      #runDownList{grid-template-columns:1fr;}
+      #runDownList article,#runDownList article.lead{grid-column:auto;grid-row:auto;border-right:none;border-bottom:1px solid rgba(111,184,150,0.15);padding:12px 4px;}
+    }
+  </style>
+  <div id="theRunDown">
+    <div class="rd-masthead">
       <div>
-        <div style="font-size:13px;font-weight:900;letter-spacing:4px;color:#6fb896;">&#9749; THE RUN DOWN</div>
-        <div style="font-size:9px;letter-spacing:2px;color:var(--text-muted);font-style:italic;margin-top:2px;">The most pressing stories and information for the Amigos crew</div>
+        <div class="rd-title">The Run Down</div>
+        <div class="rd-sub">&ldquo;All the news the Amigos need to know&rdquo;</div>
       </div>
-      <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;">Updated: <span id="runDownUpdated">Tue Apr 14 &middot; Evening</span></div>
+      <div class="rd-dateline">Updated: <span id="runDownUpdated">Tue Apr 14 &middot; Evening</span></div>
     </div>
-    <ol id="runDownList" style="margin:0;padding-left:22px;font-size:12px;line-height:1.65;color:var(--text);">
-      <li style="margin-bottom:6px;">&#9878;&#65039; <b>Fed judge TOSSES Trump&rsquo;s WSJ lawsuit</b> over Epstein 50th-birthday letter reporting &mdash; court says Trump came &ldquo;nowhere close&rdquo; to the &ldquo;actual malice&rdquo; bar. Fourth news cycle for that letter.</li>
-      <li style="margin-bottom:6px;">&#9888;&#65039; <b>Round 2 Iran talks back on the table.</b> White House openly says it&rsquo;s &ldquo;open to further talks&rdquo; after Pakistan round collapsed. Hormuz blockade Day 2. Ceasefire expires Apr 21 (7 days).</li>
-      <li style="margin-bottom:6px;">&#128200; <b>Oil cratered ~6% below ~$96/bbl</b> on deal hopes + cooler March wholesale inflation. S&amp;P 500 closed ~6,906 (+0.3%). JPM, Citi, Wells, BofA all report Q1 this week.</li>
-      <li style="margin-bottom:6px;"><span style="color:var(--red);font-weight:700;">URGENT:</span> <b>Tax Day is TOMORROW (Wed Apr 15).</b> File federal + WA state extensions if needed. March CPI just printed 3.3% (up from 2.4% in Feb) &mdash; war-driven.</li>
-      <li style="margin-bottom:6px;">&#9971; <b>Rory did it.</b> Back-to-back Masters. Beat Scheffler by 1. Fourth repeat champion in Augusta history, first since Tiger &rsquo;01&ndash;&rsquo;02. Career Grand Slam x2.</li>
-      <li style="margin-bottom:6px;">&#9918; <b>Mariners are 9-9 and vibing.</b> Swept Houston 4-game set (finished 6-2 behind Naylor 2 HR/5 RBI, Kirby 7.2 IP). 5-game win streak. Padres series starts Wednesday.</li>
-      <li style="margin-bottom:6px;">&#128760; <b>UAP video deadline is today.</b> Rep. Luna&rsquo;s Apr 14 cutoff for Pentagon to release 46 military UAP videos &mdash; DOD dragging its feet, Trump EO ordered full release. FAA also just authorized military lasers to shoot down drones in US airspace.</li>
-      <li style="margin-bottom:6px;">&#128176; <b>Polymarket insider probe widening.</b> 50+ accounts under investigation after $200M+ traded on Iran war markets with bets placed hours before the ceasefire. Congress demanding answers.</li>
-    </ol>
+    <div id="runDownList">
+      <article class="lead">
+        <span class="rd-kicker">&#9888;&#65039; Iran War &middot; Day 45</span>
+        <h3 class="rd-head">Round 2 Iran Talks Back On The Table As Hormuz Blockade Hits Day 2</h3>
+        <p class="rd-dek">White House says it&rsquo;s &ldquo;open to further talks&rdquo; after the Pakistan marathon round collapsed. Iran defiant, calling the blockade &ldquo;piracy,&rdquo; but 14 non-Iranian ships have transited since the order. Ceasefire expires Apr 21 &mdash; seven days to find a deal before the whole thing catches fire again.</p>
+      </article>
+      <article>
+        <span class="rd-kicker">&#9878;&#65039; Epstein Files</span>
+        <h3 class="rd-head">Fed Judge Tosses Trump&rsquo;s WSJ Lawsuit</h3>
+        <p class="rd-dek">Court rules Trump came &ldquo;nowhere close&rdquo; to the &ldquo;actual malice&rdquo; standard over reporting on the 50th-birthday Epstein letter. Fourth news cycle for that letter.</p>
+      </article>
+      <article>
+        <span class="rd-kicker urgent">&#128680; Tomorrow</span>
+        <h3 class="rd-head">Tax Day Is Wednesday &mdash; File Or Extend</h3>
+        <p class="rd-dek">March CPI just printed 3.3% (up from 2.4% in Feb) &mdash; war-driven inflation biting. IRS still wants its cut by midnight Wed.</p>
+      </article>
+      <article>
+        <span class="rd-kicker">&#128200; Markets</span>
+        <h3 class="rd-head">WTI Down ~6% Below $96 On Deal Hopes</h3>
+        <p class="rd-dek">Worst WTI day in weeks, erasing most of the blockade spike toward $105. S&amp;P 500 closed ~6,906 (+0.3%). JPM, Citi, Wells, BofA all report Q1 this week.</p>
+      </article>
+      <article>
+        <span class="rd-kicker">&#9971; Masters</span>
+        <h3 class="rd-head">Rory Wins Back-To-Back At Augusta</h3>
+        <p class="rd-dek">Beat Scheffler by 1 at -12. Fourth repeat champion in Masters history, first since Tiger &rsquo;01&ndash;&rsquo;02. Career Grand Slam x2. Legend cemented.</p>
+      </article>
+      <article>
+        <span class="rd-kicker">&#9918; Mariners</span>
+        <h3 class="rd-head">Sweep Of Houston Pushes Mariners Back To .500</h3>
+        <p class="rd-dek">9-9 with a 5-game win streak. Tuesday cap: 6-2 behind Naylor (2 HR, 5 RBI) and Kirby (7.2 IP). Padres series opens Wednesday in San Diego.</p>
+      </article>
+      <article>
+        <span class="rd-kicker">&#128176; Scandal</span>
+        <h3 class="rd-head">Polymarket Insider Probe Widens To 50+ Accounts</h3>
+        <p class="rd-dek">$200M+ traded on Iran war markets, with bets placed hours before the ceasefire. Congress demanding an investigation.</p>
+      </article>
+    </div>
   </div>
 
   <!-- IRAN WAR — NO DEAL BANNER -->
