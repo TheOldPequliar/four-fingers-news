@@ -1820,6 +1820,23 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </header>
 
+  <!-- ═══ THE RUN DOWN — DAILY MORNING BRIEFING ═══ -->
+  <!-- AUTO-UPDATED BY: the-run-down scheduled task (daily 7am local) -->
+  <!-- EDIT TARGETS: #runDownUpdated, #runDownList (li items) -->
+  <div id="theRunDown" style="background:linear-gradient(135deg,rgba(111,184,150,0.10),rgba(12,44,86,0.25));border:1px solid rgba(111,184,150,0.35);border-left:3px solid #6fb896;border-radius:12px;padding:18px 22px;margin-bottom:18px;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6fb896,#ffd700,#e94560,#6fb896);background-size:200% 100%;animation:priceRainbow 6s linear infinite;"></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+      <div>
+        <div style="font-size:13px;font-weight:900;letter-spacing:4px;color:#6fb896;">&#9749; THE RUN DOWN</div>
+        <div style="font-size:9px;letter-spacing:2px;color:var(--text-muted);font-style:italic;margin-top:2px;">The most pressing stories and information for the Amigos crew</div>
+      </div>
+      <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase;">Updated: <span id="runDownUpdated">pending first run</span></div>
+    </div>
+    <ol id="runDownList" style="margin:0;padding-left:22px;font-size:12px;line-height:1.65;color:var(--text);">
+      <li style="margin-bottom:6px;color:var(--text-muted);font-style:italic;">The Run Down populates every morning at 7am local. Check back after the next run.</li>
+    </ol>
+  </div>
+
   <!-- IRAN WAR — NO DEAL BANNER -->
   <div class="gameday-banner" id="iranWarBanner" style="background:linear-gradient(135deg,rgba(80,10,10,0.3),rgba(180,40,40,0.12),rgba(30,10,10,0.25));border-color:rgba(255,60,60,0.6);position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0505,#e94560,#ff4444,#ffa500,#e94560,#1a0505);background-size:200% 100%;animation:iranStripe 3s linear infinite;"></div>
