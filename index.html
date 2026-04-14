@@ -1854,6 +1854,14 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       #runDownList article,#runDownList article.lead{grid-column:auto;grid-row:auto;border-right:none;border-bottom:1px solid rgba(111,184,150,0.15);padding:12px 4px;}
     }
   </style>
+  <style>
+    .top-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px;align-items:start;}
+    .top-split > #theRunDown{grid-column:1;grid-row:1;margin-bottom:0;}
+    .top-split > #iranWarBanner{grid-column:2;grid-row:1;margin-bottom:0;}
+    .top-split > #trackTroops{grid-column:1 / -1;grid-row:2;margin-bottom:0;}
+    @media (max-width:900px){.top-split{grid-template-columns:1fr;}.top-split > #theRunDown,.top-split > #iranWarBanner,.top-split > #trackTroops{grid-column:1;grid-row:auto;}}
+  </style>
+  <div class="top-split">
   <div id="theRunDown">
     <div class="rd-masthead">
       <div>
@@ -2131,6 +2139,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
     <div class="gameday-hype" style="color:var(--red);font-size:10px;">&#128308; BLOCKADE DAY 2 &mdash; TUESDAY PM &bull; WH now openly signals &ldquo;open to further talks&rdquo; &mdash; second round of US-Iran direct talks under active discussion &bull; WTI SETTLED ~$91/bbl (&darr;~8%) &mdash; closed below $92, biggest down day in weeks &bull; S&amp;P 500 +0.3% to ~6,906 on cooler wholesale inflation + deal hopes &bull; Trump proposed 20-yr enrichment pause Sat, Iran countered 5 years, US rejected &bull; Ship-tracking: 14 vessels have crossed Hormuz since the blockade order &mdash; non-Iranian transit is allowed &bull; Iran mine-clearing ops underway &bull; Iran calls the blockade &ldquo;piracy,&rdquo; thousands protest in Tehran &bull; China: &ldquo;dangerous and irresponsible&rdquo; &bull; VP Vance: Iran guilty of &ldquo;economic terrorism&rdquo; &bull; Rubio hosted Israel &amp; Lebanon direct peace talks at State Dept today (11 AM ET) &bull; 5,000+ deaths across Iran+Lebanon since Feb 28 &bull; 13 US KIA &bull; 373+ US wounded &bull; Ceasefire expires Apr 21 (7 days) &bull; Italian PM Meloni calls Trump&rsquo;s Pope attacks &ldquo;unacceptable&rdquo; &bull; WA avg gas $5.39/gal &#128308;</div>
   </div>
+  </div><!-- /top-split -->
 
   <!-- ═══ LIVE NEWS & VIDEO ═══ -->
   <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE NEWS &amp; VIDEO</span></div>
