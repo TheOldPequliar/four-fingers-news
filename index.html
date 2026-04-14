@@ -1918,6 +1918,15 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     #trackTroops td{padding:7px 8px;border-bottom:1px solid #d8cfa8;color:#1a1a1a;vertical-align:top;}
     #trackTroops tr:hover td{background:#ece7d0;}
     #trackTroops .tt-unit{font-weight:700;color:#3d4a1a;white-space:nowrap;}
+    #trackTroops .tt-branch{display:inline-block;font-size:9px;font-weight:900;padding:1px 5px;border-radius:2px;margin-right:5px;letter-spacing:1px;vertical-align:1px;}
+    #trackTroops .tt-branch.navy{background:#1e3a5f;color:#e8e3cf;}
+    #trackTroops .tt-branch.air{background:#4a5568;color:#e8e3cf;}
+    #trackTroops .tt-branch.ground{background:#b32424;color:#fff8e7;box-shadow:0 0 0 2px #ffd700;}
+    #trackTroops tr.ground td{background:#fff3d4;}
+    #trackTroops tr.ground:hover td{background:#ffe8a8;}
+    #trackTroops tr.ground td:first-child{border-left:4px solid #b32424;}
+    #trackTroops .tt-pers{font-weight:700;color:#1a1a1a;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+    #trackTroops tr.ground .tt-pers{color:#b32424;font-weight:900;}
     #trackTroops .tt-loc{color:#1a1a1a;}
     #trackTroops .tt-status{font-size:10px;font-weight:700;color:#5a5a4a;}
     #trackTroops .tt-status.active{color:#b32424;}
@@ -1953,6 +1962,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <thead>
         <tr>
           <th>ASSET</th>
+          <th>PERSONNEL</th>
           <th>LOCATION</th>
           <th>STATUS</th>
           <th>LAST SEEN</th>
@@ -1961,79 +1971,94 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </thead>
       <tbody id="trackTroopsRows">
         <tr>
-          <td class="tt-unit">CVN-78 Ford / CSG-12</td>
+          <td class="tt-unit"><span class="tt-branch navy">NAVY</span>CVN-78 Ford / CSG-12</td>
+          <td class="tt-pers">~7,500</td>
           <td class="tt-loc">E. Med &middot; SW of Cyprus</td>
           <td class="tt-status active">ON STATION</td>
           <td class="tt-obs">Apr 13 (9+ mo deployed)</td>
           <td class="tt-src"><a href="https://news.usni.org/2026/04/13/usni-news-fleet-and-marine-tracker-april-13-2026" target="_blank">USNI 4/13</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">CVN-77 GHW Bush / CSG-10</td>
+          <td class="tt-unit"><span class="tt-branch navy">NAVY</span>CVN-77 GHW Bush / CSG-10</td>
+          <td class="tt-pers">~7,500</td>
           <td class="tt-loc">Transited Gibraltar &middot; rtg via Horn of Africa</td>
           <td class="tt-status enroute">RELIEVING FORD</td>
           <td class="tt-obs">Apr 12</td>
           <td class="tt-src"><a href="https://www.twz.com/sea/carrier-tracker-as-of-april-12-2026" target="_blank">TWZ 4/12</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">3rd CSG (unnamed)</td>
+          <td class="tt-unit"><span class="tt-branch navy">NAVY</span>3rd CSG (unnamed)</td>
+          <td class="tt-pers">~7,500</td>
           <td class="tt-loc">Steaming toward CENTCOM AOR</td>
           <td class="tt-status enroute">EN ROUTE</td>
           <td class="tt-obs">Apr 13</td>
           <td class="tt-src"><a href="https://news.usni.org/2026/04/13/usni-news-fleet-and-marine-tracker-april-13-2026" target="_blank">USNI 4/13</a></td>
         </tr>
-        <tr>
-          <td class="tt-unit">Tripoli ARG / 31st MEU</td>
+        <tr class="ground">
+          <td class="tt-unit"><span class="tt-branch ground">GROUND</span>Tripoli ARG / 31st MEU (USMC)</td>
+          <td class="tt-pers">~4,500</td>
           <td class="tt-loc">CENTCOM AOR &middot; LHA-7 + LPD-18 New Orleans</td>
           <td class="tt-status station">ON STATION</td>
           <td class="tt-obs">Apr 13</td>
           <td class="tt-src"><a href="https://news.usni.org/category/fleet-tracker" target="_blank">USNI</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">B-2 Spirit &times; 6</td>
+          <td class="tt-unit"><span class="tt-branch air">AIR</span>B-2 Spirit &times; 6</td>
+          <td class="tt-pers">~300</td>
           <td class="tt-loc">Diego Garcia (NKW) &middot; Indian Ocean</td>
           <td class="tt-status active">FWD DEPLOYED</td>
           <td class="tt-obs">Apr 11 (sat imagery)</td>
           <td class="tt-src"><a href="https://www.twz.com/air/b-52s-join-b-2s-on-diego-garcia10-bombers-now-on-indian-ocean-island" target="_blank">TWZ</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">B-52H Stratofortress &times; 4</td>
+          <td class="tt-unit"><span class="tt-branch air">AIR</span>B-52H Stratofortress &times; 4</td>
+          <td class="tt-pers">~200</td>
           <td class="tt-loc">Diego Garcia (NKW)</td>
           <td class="tt-status active">FWD DEPLOYED</td>
           <td class="tt-obs">Apr 11 (sat imagery)</td>
           <td class="tt-src"><a href="https://www.airandspaceforces.com/b-52-bombers-diego-garcia/" target="_blank">A&amp;SF</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">F-22 Raptor &times; 12</td>
+          <td class="tt-unit"><span class="tt-branch air">AIR</span>F-22 Raptor &times; 12</td>
+          <td class="tt-pers">~250</td>
           <td class="tt-loc">Al Udeid AB, Qatar</td>
           <td class="tt-status station">ON STATION</td>
           <td class="tt-obs">Apr 9</td>
           <td class="tt-src"><a href="https://x.com/CivMilAir" target="_blank">@CivMilAir</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">KC-135 / KC-46 tanker surge</td>
+          <td class="tt-unit"><span class="tt-branch air">AIR</span>KC-135 / KC-46 tanker surge</td>
+          <td class="tt-pers">~400</td>
           <td class="tt-loc">Al Udeid &middot; Al Dhafra &middot; Prince Sultan</td>
           <td class="tt-status active">SURGE OPS</td>
           <td class="tt-obs">Apr 13</td>
           <td class="tt-src"><a href="https://globe.adsbexchange.com/" target="_blank">ADS-B Ex</a></td>
         </tr>
-        <tr>
-          <td class="tt-unit">THAAD + Patriot batteries</td>
+        <tr class="ground">
+          <td class="tt-unit"><span class="tt-branch ground">GROUND</span>THAAD + Patriot batteries (US Army)</td>
+          <td class="tt-pers">~900</td>
           <td class="tt-loc">Israel, Jordan, Saudi, UAE</td>
           <td class="tt-status station">EMPLACED</td>
           <td class="tt-obs">Apr 8</td>
           <td class="tt-src"><a href="https://apnews.com/hub/military" target="_blank">AP</a></td>
         </tr>
         <tr>
-          <td class="tt-unit">Mine Countermeasures Sqn 5</td>
+          <td class="tt-unit"><span class="tt-branch navy">NAVY</span>Mine Countermeasures Sqn 5</td>
+          <td class="tt-pers">~400</td>
           <td class="tt-loc">Strait of Hormuz &middot; blockade enforcement</td>
           <td class="tt-status active">CLEARING</td>
           <td class="tt-obs">Apr 13</td>
           <td class="tt-src"><a href="https://news.usni.org/category/fleet-tracker" target="_blank">USNI</a></td>
         </tr>
+        <tr style="border-top:2px solid #5a6b2a;background:#e8e3cf;">
+          <td class="tt-unit" style="color:#3d4a1a;font-weight:900;">TOTAL PERSONNEL</td>
+          <td class="tt-pers" style="color:#3d4a1a;font-weight:900;font-size:12px;">~29,450</td>
+          <td class="tt-loc" colspan="4" style="font-size:10px;color:#5a5a4a;">of which <b style="color:#b32424;">~5,400 ground/Marine</b> (escalation tripwire) &middot; ~22,900 naval &middot; ~1,150 air</td>
+        </tr>
       </tbody>
     </table>
     <div id="trackTroopsNotes" class="tt-notes">
-      <b>SAY vs. DO:</b> WH publicly floats &ldquo;open to Round 2&rdquo; talks &mdash; meanwhile the receipts: Ford CSG still on station E. Med past 9-month mark, Bush CSG transited Gibraltar taking the LONG way around the Horn (avoiding Suez choke), a 3rd CSG steaming toward AOR, 10 heavy bombers (6 B-2 + 4 B-52) parked on Diego Garcia per satellite imagery, Tripoli ARG + 31st MEU forward, MCM Sqn 5 actively enforcing the Hormuz blockade. Eisenhower &amp; Truman in maintenance. Posture &mdash; bombers plus three-carrier surge &mdash; is consistent with a multi-month strike option being kept warm, not a drawdown.
+      <b>SAY vs. DO:</b> WH publicly floats &ldquo;open to Round 2&rdquo; talks &mdash; meanwhile the receipts: Ford CSG still on station E. Med past 9-month mark, Bush CSG transited Gibraltar taking the LONG way around the Horn (avoiding Suez choke), a 3rd CSG steaming toward AOR, 10 heavy bombers (6 B-2 + 4 B-52) parked on Diego Garcia, MCM Sqn 5 enforcing the Hormuz blockade. Eisenhower &amp; Truman in maintenance. <b style="color:#b32424;">GROUND TRIPWIRE:</b> ~5,400 boots on the ground/afloat &mdash; 31st MEU (USMC) forward in CENTCOM plus Army ADA batteries at four host nations. <b>No new infantry BCT or airborne alert orders yet</b> &mdash; that&rsquo;s the line to watch. If the 82nd Airborne IRF or an additional MEU surges, the rhetoric is cover; until then the posture is strike-capable but not occupation-capable.
     </div>
     <div class="tt-footer">
       <div>SOURCES:
