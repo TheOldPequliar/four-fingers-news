@@ -1311,7 +1311,12 @@
 .truth-item{border-bottom:1px solid rgba(255,255,255,0.05);padding:10px 0;position:relative}
 .truth-item:last-child{border-bottom:none}
 .truth-item-time{font-size:8px;letter-spacing:1px;color:var(--text-dim);font-weight:600;margin-bottom:4px}
-.truth-item-text{font-size:12px;color:var(--text);line-height:1.55}
+.truth-item-text{font-size:14px;color:var(--text);line-height:1.6}
+.truth-item-time{font-size:10px !important;}
+/* MAGA Tears readable-size override — bump inline 8px to real font sizes */
+.maga-tears-box div[style*="font-size:8px;font-weight:900"]{font-size:11px !important;}
+.maga-tears-box div[style*="font-size:8px;color:var(--text)"]{font-size:13px !important;line-height:1.65 !important;}
+.maga-tears-box div[style*="font-size:7px"]{font-size:10px !important;}
 .truth-item-text a{color:var(--cyan);text-decoration:none}
 .truth-item-engagement{font-size:8px;color:var(--text-muted);margin-top:5px;display:flex;gap:12px}
 .truth-item-engagement span{display:inline-flex;align-items:center;gap:3px}
@@ -1577,6 +1582,29 @@ body.light-mode .chyron { background: linear-gradient(90deg, #0c2c56, #1a5040); 
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
 /* Artemis 2 tracker CSS removed — mission complete */
+
+/* ═══ NYT-STYLE SECTION NAV + MASTHEADS ═══ */
+/* ═══ LAN PARTY NAV — Halo / GoldenEye / N64-era HUD aesthetic ═══ */
+.section-nav{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(4,10,18,0.98),rgba(8,18,30,0.96));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #00d4ff;border-bottom:1px solid rgba(0,212,255,0.3);box-shadow:0 0 24px rgba(0,212,255,0.15),inset 0 -1px 0 rgba(0,212,255,0.4);margin:0 0 20px 0;font-family:'JetBrains Mono','Courier New',monospace;}
+.section-nav::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,212,255,0.03) 2px 3px);pointer-events:none;}
+.section-nav-inner{display:flex;justify-content:center;align-items:stretch;max-width:1400px;margin:0 auto;flex-wrap:wrap;position:relative;}
+.section-nav a{display:block;padding:14px 22px 12px 22px;font-size:10px;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#00d4ff;text-decoration:none;border-right:1px solid rgba(0,212,255,0.18);transition:all 0.12s ease;position:relative;text-shadow:0 0 8px rgba(0,212,255,0.4);clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);margin-right:-10px;}
+.section-nav a:first-child{border-left:1px solid rgba(0,212,255,0.18);margin-left:10px;}
+.section-nav a:last-child{margin-right:0;}
+.section-nav a::before{content:"&gt; ";opacity:0.5;}
+.section-nav a:hover{color:#fff;background:rgba(0,212,255,0.12);text-shadow:0 0 12px #00d4ff;}
+.section-nav a.active{color:#ff8c00;text-shadow:0 0 10px rgba(255,140,0,0.6);background:rgba(255,140,0,0.08);}
+.section-nav a.active::after{content:"";position:absolute;bottom:-1px;left:10px;right:10px;height:2px;background:#ff8c00;box-shadow:0 0 8px #ff8c00;}
+@media (max-width:700px){.section-nav a{padding:10px 12px;font-size:9px;letter-spacing:1.5px;clip-path:none;margin:0;}.section-nav a:first-child{margin-left:0;}}
+/* ═══ Section masthead — Cortana-briefing style ═══ */
+.lan-masthead{margin:32px 0 14px 0;padding:12px 18px 10px 18px;position:relative;background:linear-gradient(90deg,rgba(0,212,255,0.12),rgba(0,212,255,0.02) 70%,transparent);border-left:4px solid #00d4ff;border-top:1px solid rgba(0,212,255,0.3);border-bottom:1px solid rgba(0,212,255,0.3);font-family:'JetBrains Mono','Courier New',monospace;overflow:hidden;}
+.lan-masthead::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,212,255,0.04) 2px 3px);pointer-events:none;}
+.lan-masthead::after{content:"";position:absolute;top:0;right:0;width:140px;height:100%;background:linear-gradient(90deg,transparent,rgba(255,140,0,0.08));pointer-events:none;}
+.lan-masthead .lm-tag{font-size:8px;font-weight:900;letter-spacing:2px;color:#ff8c00;text-transform:uppercase;margin-bottom:2px;text-shadow:0 0 6px rgba(255,140,0,0.4);}
+.lan-masthead .lm-name{font-size:20px;font-weight:900;letter-spacing:3px;color:#00d4ff;text-transform:uppercase;line-height:1.1;text-shadow:0 0 10px rgba(0,212,255,0.5);}
+.lan-masthead .lm-kicker{font-size:10px;font-style:italic;color:#e8e8e8;letter-spacing:0.5px;margin-top:4px;opacity:0.82;}
+.lan-masthead .lm-kicker::before{content:"// ";color:#ff8c00;font-style:normal;opacity:0.7;}
+.section-anchor{scroll-margin-top:70px;}
 </style>
 </head>
 <body>
@@ -1789,12 +1817,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     }
   </style>
   <style>
-    .top-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px;align-items:start;}
-    .top-split > #theRunDown{grid-column:1;grid-row:1;margin-bottom:0;display:flex;flex-direction:column;overflow:hidden;}
-    .top-split > #iranWarBanner{grid-column:2;grid-row:1;margin-bottom:0;}
-    .top-split > #theRunDown #runDownList{flex:1 1 auto;align-content:start;overflow:hidden;}
-    .top-split > #trackTroops{grid-column:1 / -1;grid-row:2;margin-bottom:0;}
-    @media (max-width:900px){.top-split{grid-template-columns:1fr;}.top-split > #theRunDown,.top-split > #iranWarBanner,.top-split > #trackTroops{grid-column:1;grid-row:auto;height:auto;overflow:visible;}.top-split > #theRunDown #runDownList{overflow:visible;}}
+    .top-split{margin-bottom:18px;}
+    .top-split > #theRunDown{margin-bottom:0;}
+    /* grid split disabled — Run Down is now full-width above section nav; Iran War moved into World section */
   </style>
   <script>
     // Lock The Run Down height to match the US-Iran War banner's natural height.
@@ -1910,6 +1935,24 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         </div>
       </article>
     </div>
+  </div>
+  </div><!-- /top-split -->
+
+  <!-- ═══ LAN PARTY SECTION NAV ═══ -->
+  <nav class="section-nav">
+    <div class="section-nav-inner">
+      <a href="#section-world">World &amp; Geo</a>
+      <a href="#section-politics">Propaganda</a>
+      <a href="#section-markets">Econ Watch</a>
+      <a href="#section-sports">Frag Party</a>
+    </div>
+  </nav>
+
+  <div class="section-anchor" id="section-world"></div>
+  <div class="lan-masthead">
+    <div class="lm-tag">&#9632; MISSION BRIEFING &middot; CLEARANCE: CIVILIAN-WITH-WIFI</div>
+    <div class="lm-name">WORLD &amp; GEOPOLITICS</div>
+    <div class="lm-kicker">The Empire Strikes Hot &mdash; carrier strike groups, ceasefire vibes, and whatever Netanyahu tweeted at 3am.</div>
   </div>
 
   <!-- ═══ TRACK THE TROOPS — OSINT SITREP ═══ -->
@@ -2155,7 +2198,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
   </div>
-  </div><!-- /top-split -->
 
   <style>
     /* ── Dual-grid: flow all children into a 2-column magazine layout ──
@@ -2168,6 +2210,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     .dual-grid > div[style*="margin-bottom:6px"],
     .dual-grid > .section-header{break-after:avoid;page-break-after:avoid;-webkit-column-break-after:avoid;margin-bottom:6px !important;}
     /* Sections that should span BOTH columns full-width */
+    .dual-grid > .lan-masthead,
+    .dual-grid > .section-anchor,
     .dual-grid > .dg-full,
     .dual-grid > .news-map-split,
     .dual-grid > .objectives-panel,
@@ -2218,6 +2262,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
+  <div class="section-anchor" id="section-politics"></div>
+  <div class="lan-masthead">
+    <div class="lm-tag">&#9632; CHANNEL 2 &middot; PROPAGANDA &amp; CIRCUS DESK</div>
+    <div class="lm-name">POLITICS &amp; TRUMP WATCH</div>
+    <div class="lm-kicker">Truth Social is the new Rumor Mill &mdash; we read the tweets so you don&rsquo;t have to un-grayscale your feed.</div>
+  </div>
+
   <!-- TRUMP GREATEST HITS -->
   <div class="trump-quotes-strip">
     <div class="trump-quotes-label">&#128483; TRUMP GREATEST HITS &mdash; THE WORDS OF A VERY STABLE GENIUS</div>
@@ -2240,7 +2291,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
   <!-- MAGA TEARS -->
-  <div style="background:linear-gradient(135deg,rgba(180,40,40,0.06),rgba(30,60,120,0.06));border:1px solid rgba(180,40,40,0.2);border-left:3px solid rgba(255,60,60,0.5);border-radius:10px;padding:14px 18px;margin-bottom:16px;position:relative;overflow:hidden;">
+  <div class="maga-tears-box" style="background:linear-gradient(135deg,rgba(180,40,40,0.06),rgba(30,60,120,0.06));border:1px solid rgba(180,40,40,0.2);border-left:3px solid rgba(255,60,60,0.5);border-radius:10px;padding:14px 18px;margin-bottom:16px;position:relative;overflow:hidden;">
     <div style="font-size:9px;font-weight:900;letter-spacing:3px;color:var(--red);margin-bottom:10px;">&#128557; MAGA TEARS &mdash; THE COPE IS REAL</div>
     <div style="display:flex;flex-direction:column;gap:8px;">
       <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px 12px;border:1px solid rgba(255,255,255,0.05);">
@@ -2506,6 +2557,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
   <!-- Artemis II tracker removed — mission complete, splashed down Apr 10 -->
+
+  <div class="section-anchor" id="section-markets"></div>
+  <div class="lan-masthead">
+    <div class="lm-tag">&#9632; Q BRANCH &middot; MONEY, MONEY, MONEY</div>
+    <div class="lm-name">MARKETS &amp; ECONOMY</div>
+    <div class="lm-kicker">Charts go up, charts go down &mdash; Pelosi already knew either way. This is financial entertainment, not advice.</div>
+  </div>
 
   <!-- MARKET SENTIMENT -->
   <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128200; MARKET SENTIMENT</span></div>
@@ -3210,6 +3268,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
   </div><!-- /dual-grid (pre-Seattle Sports) -->
+
+  <div class="section-anchor" id="section-sports"></div>
+  <div class="lan-masthead">
+    <div class="lm-tag">&#9632; FRAG PARTY &middot; COUCH CO-OP &middot; LOCAL NETWORK</div>
+    <div class="lm-name">SPORTS, SEATTLE &amp; PACKS</div>
+    <div class="lm-kicker">Scoreboards, weather, the Mariners Meter&trade;, Masters week, and the card market where every hobby-box is a Klobb.</div>
+  </div>
 
   <!-- &#9552;&#9552;&#9552; SEATTLE SPORTS &#9552;&#9552;&#9552; -->
   <!-- WEATHER STRIP -->
