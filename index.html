@@ -1764,10 +1764,18 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     #runDownList .rd-src{margin-top:3px;font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:1px;text-transform:uppercase;}
     #runDownList .rd-src a{color:#6fb896;text-decoration:none;border-bottom:1px dotted rgba(111,184,150,0.5);margin-right:5px;}
     #runDownList .rd-src a:hover{color:#ffd700;border-bottom-color:#ffd700;}
-    #runDownList article.lead{grid-column:span 2;grid-row:span 2;padding-bottom:8px;}
+    #runDownList article.lead{grid-column:span 2;grid-row:span 2;padding-bottom:8px;display:flex;flex-direction:column;}
     #runDownList article.lead .rd-head{font-size:16px;line-height:1.15;color:var(--text);}
     #runDownList article.lead .rd-dek{font-size:11px;line-height:1.45;color:var(--text);}
     #runDownList article.lead .rd-kicker{font-size:8px;}
+    #runDownList article.lead .rd-factbox{margin-top:8px;padding:8px 10px;border-top:1px dashed rgba(111,184,150,0.35);border-bottom:1px dashed rgba(111,184,150,0.35);background:rgba(12,44,86,0.18);}
+    #runDownList article.lead .rd-factbox-title{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:900;letter-spacing:2px;color:#ffd700;margin-bottom:4px;}
+    #runDownList article.lead .rd-factbox ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;}
+    #runDownList article.lead .rd-factbox li{font-family:Georgia,'Times New Roman',serif;font-size:10px;line-height:1.35;color:var(--text);padding-left:10px;position:relative;}
+    #runDownList article.lead .rd-factbox li::before{content:"\25B6";position:absolute;left:0;top:0;color:#e94560;font-size:7px;}
+    #runDownList article.lead .rd-factbox li b{color:#ffd700;font-weight:900;}
+    #runDownList article.lead .rd-pullquote{margin-top:8px;padding:6px 12px;border-left:3px solid #e94560;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:11px;line-height:1.4;color:var(--text-dim);}
+    #runDownList article.lead .rd-pullquote cite{display:block;margin-top:3px;font-style:normal;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);font-family:'JetBrains Mono',monospace;}
     @media (max-width:900px){
       #runDownList{grid-template-columns:repeat(2,1fr);}
       #runDownList article{border-right:1px solid rgba(111,184,150,0.15);}
@@ -1821,10 +1829,26 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         <span class="rd-kicker">&#9888;&#65039; Iran War &middot; Day 45</span>
         <h3 class="rd-head">Round 2 Iran Talks Back On The Table As Hormuz Blockade Hits Day 2</h3>
         <p class="rd-dek">White House says it&rsquo;s &ldquo;open to further talks&rdquo; after the Pakistan marathon round collapsed. Iran defiant, calling the blockade &ldquo;piracy,&rdquo; but 14 non-Iranian ships have transited since the order. Ceasefire expires Apr 21 &mdash; seven days to find a deal before the whole thing catches fire again.</p>
+        <div class="rd-factbox">
+          <div class="rd-factbox-title">&#9733; BY THE NUMBERS</div>
+          <ul>
+            <li><b>46</b> days of war (since Feb 28)</li>
+            <li><b>7 days</b> until ceasefire expires</li>
+            <li><b>14</b> ships thru Hormuz since blockade</li>
+            <li><b>~29,450</b> US personnel in CENTCOM AOR</li>
+            <li><b>$91</b> WTI crude (&darr;8% on deal hopes)</li>
+            <li><b>5,000+</b> dead (IR + Lebanon, documented)</li>
+          </ul>
+        </div>
+        <div class="rd-pullquote">
+          &ldquo;The Strait of Hormuz is not a bargaining chip. It is the artery of the world economy, and piracy will not reopen it.&rdquo;
+          <cite>&mdash; Iran Foreign Ministry, Apr 14</cite>
+        </div>
         <div class="rd-src">
           <a href="https://www.reuters.com/world/middle-east/" target="_blank" rel="noopener">Reuters</a>
           <a href="https://apnews.com/hub/iran" target="_blank" rel="noopener">AP</a>
           <a href="https://www.aljazeera.com/tag/iran/" target="_blank" rel="noopener">Al Jazeera</a>
+          <a href="https://www.bbc.com/news/world/middle_east" target="_blank" rel="noopener">BBC</a>
         </div>
       </article>
       <article>
