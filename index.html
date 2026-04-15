@@ -2157,6 +2157,26 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
   </div><!-- /top-split -->
 
+  <style>
+    /* ── Dual-grid: flow all children into a 2-column magazine layout ──
+       Uses CSS multi-column so each panel stays intact (break-inside:avoid)
+       and little label strips stay glued to their following content panel
+       (break-after:avoid on the label selectors). */
+    .dual-grid{column-count:2;column-gap:18px;margin-bottom:18px;}
+    .dual-grid > *{break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:18px !important;display:block;width:100%;}
+    /* Keep small label strips attached to the next panel (no break after) */
+    .dual-grid > div[style*="margin-bottom:6px"],
+    .dual-grid > .section-header{break-after:avoid;page-break-after:avoid;-webkit-column-break-after:avoid;margin-bottom:6px !important;}
+    /* Sections that should span BOTH columns full-width */
+    .dual-grid > .dg-full,
+    .dual-grid > .news-map-split,
+    .dual-grid > .objectives-panel,
+    .dual-grid > .pelosi-panel,
+    .dual-grid > .fv-row,
+    .dual-grid > .gcal-container{column-span:all;-webkit-column-span:all;margin-bottom:18px !important;}
+    @media (max-width:900px){.dual-grid{column-count:1;}}
+  </style>
+  <div class="dual-grid">
   <!-- ═══ LIVE NEWS & VIDEO + LIVE WORLD MAP ═══ -->
   <style>
     .news-map-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;align-items:stretch;}
@@ -3194,6 +3214,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
+  </div><!-- /dual-grid (pre-Seattle Sports) -->
+
   <!-- &#9552;&#9552;&#9552; SEATTLE SPORTS &#9552;&#9552;&#9552; -->
   <!-- WEATHER STRIP -->
   <div class="weather-label">
@@ -3298,6 +3320,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
+  <div class="dual-grid">
   <!-- ═══ GROUP CALENDAR ═══ -->
   <div class="section-header">
     <span class="section-tag" style="border-color: rgba(77, 153, 112, 0.3); color: var(--forest-light); background: rgba(77, 153, 112, 0.06);">GROUP CALENDAR</span>
@@ -3534,6 +3557,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
     <div class="suggest-note">Form coming soon — Trevor is still setting up the Google Form.</div>
   </div>
+
+  </div><!-- /dual-grid (post-Seattle Sports) -->
 
 <!-- ═══ FOOTER ═══ -->
   <div class="footer">
