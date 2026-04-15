@@ -2085,14 +2085,14 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       @keyframes priceRainbow{0%{background-position:0% 0}100%{background-position:200% 0}}
       @keyframes iranPulse{0%,100%{opacity:1}50%{opacity:0.6}}
       @keyframes noDeakFlash{0%,100%{text-shadow:0 0 10px rgba(255,60,60,0.4)}50%{text-shadow:0 0 30px rgba(255,60,60,0.8),0 0 60px rgba(255,165,0,0.3)}}
-      .iran-flash{animation:noDeakFlash 2s ease-in-out infinite}
-      .iran-pulse{animation:iranPulse 1.5s ease-in-out infinite}
+      .iran-flash{/* flash disabled — newsprint mode */}
+      .iran-pulse{/* pulse disabled — newsprint mode */}
     </style>
     <style>
       #iranWarBanner .iw-title{letter-spacing:4px;color:var(--red);font-size:11px;font-weight:900;text-align:center;margin-bottom:6px;}
-      #iranWarBanner .iw-headline{font-size:22px;color:#ff4444;font-weight:900;letter-spacing:1px;text-align:center;line-height:1.2;margin-bottom:14px;}
+      #iranWarBanner .iw-headline{font-size:22px;color:var(--red);font-weight:900;letter-spacing:0.5px;text-align:center;line-height:1.2;margin-bottom:14px;}
       #iranWarBanner .iw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
-      #iranWarBanner .iw-stat{background:rgba(0,0,0,0.35);border:1px solid rgba(255,60,60,0.2);border-radius:6px;padding:8px 6px;text-align:center;}
+      #iranWarBanner .iw-stat{background:#f5f5f5;border:1px solid var(--border);border-top:2px solid var(--red);border-radius:2px;padding:10px 6px;text-align:center;}
       #iranWarBanner .iw-stat-icon{font-size:20px;line-height:1;margin-bottom:4px;}
       #iranWarBanner .iw-stat-val{font-size:18px;font-weight:900;line-height:1.1;}
       #iranWarBanner .iw-stat-lbl{font-size:7px;letter-spacing:1.5px;color:var(--text-muted);margin-top:3px;}
@@ -2111,12 +2111,12 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="iw-stats">
       <div class="iw-stat">
         <div class="iw-stat-icon">&#128165;</div>
-        <div class="iw-stat-val iran-pulse" style="color:#ff4444;" id="iranDayCount">--</div>
+        <div class="iw-stat-val" style="color:var(--red);" id="iranDayCount">--</div>
         <div class="iw-stat-lbl">DAYS OF WAR</div>
       </div>
       <div class="iw-stat">
         <div class="iw-stat-icon">&#9981;&#65039;</div>
-        <div class="iw-stat-val" style="color:#6fb896;">$91</div>
+        <div class="iw-stat-val" style="color:#2d7a3e;">$91</div>
         <div class="iw-stat-lbl">WTI &darr;8%</div>
       </div>
       <div class="iw-stat">
@@ -2126,7 +2126,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
       <div class="iw-stat">
         <div class="iw-stat-icon">&#9760;&#65039;</div>
-        <div class="iw-stat-val" style="color:#ff4444;">5,000+</div>
+        <div class="iw-stat-val" style="color:var(--red);">5,000+</div>
         <div class="iw-stat-lbl">DEAD (IR+LB)</div>
       </div>
     </div>
