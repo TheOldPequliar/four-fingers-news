@@ -2091,53 +2091,66 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       .iran-flash{animation:noDeakFlash 2s ease-in-out infinite}
       .iran-pulse{animation:iranPulse 1.5s ease-in-out infinite}
     </style>
-    <div class="gameday-title" style="letter-spacing:5px;color:var(--red);">&#9888;&#65039; DAY <span class="iran-day-count">--</span> &mdash; US-IRAN WAR &#9888;&#65039;</div>
-    <div class="gameday-headline iran-flash" style="font-size:28px;color:#ff4444;font-weight:900;letter-spacing:2px;">BLOCKADE DAY 2 &mdash; OIL CRATERS AS ROUND 2 TALKS BACK ON TABLE</div>
-    <div class="gameday-sub" style="font-size:12px;color:var(--text);max-width:800px;margin:0 auto;">TUESDAY PM: WH now publicly signals it&rsquo;s &ldquo;open to further talks&rdquo; with Iran &mdash; a SECOND ROUND of direct negotiations is under active discussion &bull; Markets read it as a de-escalation: WTI settled ~$91/bbl (&darr;~8%) Tuesday &mdash; closed below $92 for first time since blockade order, erasing Monday&rsquo;s spike toward $105 &bull; Cooler March wholesale inflation print helped stocks &mdash; S&amp;P 500 +0.3% to ~6,906 &bull; Trump floated a 20-year Iranian enrichment suspension Saturday &mdash; Iran countered with 5 years, US rejected &bull; Ship-tracking: 14 vessels have transited Hormuz since the order &mdash; blockade is porous &bull; Iran calls it &ldquo;piracy,&rdquo; thousands protest in Tehran &bull; China: &ldquo;dangerous and irresponsible&rdquo; &bull; VP Vance: Iran guilty of &ldquo;economic terrorism&rdquo; &bull; Rubio hosted Israel &amp; Lebanon direct peace talks at State Dept today &bull; CENTCOM enforcing impartially; non-Iranian transit allowed &bull; 5,000+ dead Iran+Lebanon since Feb 28 (3,375 Iran, 2,089 Lebanon) &bull; Ceasefire expires Apr 21 (7 days)</div>
-    <div class="gameday-grid" style="margin-top:14px;">
-      <div class="gameday-stat">
-        <div class="gameday-stat-label" style="color:var(--red);">CONFLICT DAY</div>
-        <div class="gameday-stat-value iran-pulse" style="font-size:28px;color:#ff4444;font-weight:900;" id="iranDayCount">--</div>
-        <div class="gameday-stat-detail">Since Feb 28, 2026</div>
+    <style>
+      #iranWarBanner .iw-title{letter-spacing:4px;color:var(--red);font-size:11px;font-weight:900;text-align:center;margin-bottom:6px;}
+      #iranWarBanner .iw-headline{font-size:22px;color:#ff4444;font-weight:900;letter-spacing:1px;text-align:center;line-height:1.2;margin-bottom:14px;}
+      #iranWarBanner .iw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
+      #iranWarBanner .iw-stat{background:rgba(0,0,0,0.35);border:1px solid rgba(255,60,60,0.2);border-radius:6px;padding:8px 6px;text-align:center;}
+      #iranWarBanner .iw-stat-icon{font-size:20px;line-height:1;margin-bottom:4px;}
+      #iranWarBanner .iw-stat-val{font-size:18px;font-weight:900;line-height:1.1;}
+      #iranWarBanner .iw-stat-lbl{font-size:7px;letter-spacing:1.5px;color:var(--text-muted);margin-top:3px;}
+      #iranWarBanner .iw-bullets{list-style:none;padding:0;margin:0 0 12px 0;}
+      #iranWarBanner .iw-bullets li{font-size:11px;line-height:1.5;color:var(--text);padding:5px 0 5px 24px;position:relative;border-bottom:1px dashed rgba(255,60,60,0.12);}
+      #iranWarBanner .iw-bullets li:last-child{border-bottom:none;}
+      #iranWarBanner .iw-bullets li::before{content:attr(data-icon);position:absolute;left:2px;top:4px;font-size:14px;}
+      #iranWarBanner .iw-delegations{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:9px;border-top:1px solid rgba(255,60,60,0.2);padding-top:10px;}
+      #iranWarBanner .iw-del-box{text-align:center;}
+      #iranWarBanner .iw-del-lbl{font-size:7px;letter-spacing:2px;color:var(--text-muted);margin-bottom:3px;}
+      #iranWarBanner .iw-del-val{font-size:10px;font-weight:700;color:var(--text);}
+      @media (max-width:600px){#iranWarBanner .iw-stats{grid-template-columns:repeat(2,1fr);}}
+    </style>
+    <div class="iw-title">&#9888;&#65039; DAY <span class="iran-day-count">--</span> &middot; US-IRAN WAR &#9888;&#65039;</div>
+    <div class="iw-headline iran-flash">BLOCKADE DAY 2 &mdash; OIL CRATERS, ROUND 2 ON TABLE</div>
+    <div class="iw-stats">
+      <div class="iw-stat">
+        <div class="iw-stat-icon">&#128165;</div>
+        <div class="iw-stat-val iran-pulse" style="color:#ff4444;" id="iranDayCount">--</div>
+        <div class="iw-stat-lbl">DAYS OF WAR</div>
       </div>
-      <div class="gameday-stat">
-        <div class="gameday-stat-label" style="color:var(--amber);">CEASEFIRE STATUS</div>
-        <div class="gameday-stat-value" style="font-size:16px;color:var(--amber);">FRAGILE</div>
-        <div class="gameday-stat-detail">Expires Apr 21 &bull; Lebanon NOT included per Israel</div>
+      <div class="iw-stat">
+        <div class="iw-stat-icon">&#9981;&#65039;</div>
+        <div class="iw-stat-val" style="color:#6fb896;">$91</div>
+        <div class="iw-stat-lbl">WTI &darr;8%</div>
       </div>
-      <div class="gameday-stat">
-        <div class="gameday-stat-label" style="color:var(--red);">STRAIT OF HORMUZ</div>
-        <div class="gameday-stat-value" style="font-size:16px;color:var(--red);">BLOCKADE + SINK THREAT</div>
-        <div class="gameday-stat-detail">CENTCOM blockade Day 2 &bull; Non-Iranian transit allowed; 14 ships have crossed Hormuz since the order &bull; Iranian ports mostly empty &bull; Iran: &ldquo;piracy&rdquo; &bull; China: &ldquo;dangerous and irresponsible&rdquo; &bull; WTI down ~8% Tuesday to ~$91/bbl on talks hopes &bull; Iran mine-clearing ops underway</div>
+      <div class="iw-stat">
+        <div class="iw-stat-icon">&#9203;</div>
+        <div class="iw-stat-val" style="color:var(--amber);">7d</div>
+        <div class="iw-stat-lbl">CEASEFIRE LEFT</div>
       </div>
-      <div class="gameday-stat">
-        <div class="gameday-stat-label" style="color:var(--red);">OIL (WTI)</div>
-        <div class="gameday-stat-value" style="font-size:18px;color:var(--green);">~$91/bbl &darr;8%</div>
-        <div class="gameday-stat-detail">WTI SETTLED ~$91/bbl (&darr;~8%) &mdash; biggest down day in weeks, closed below $92 for the first time since the blockade order &bull; Erasing Monday&rsquo;s blockade spike toward $105 &bull; Brent tumbled in tandem &bull; Trigger: WH signals openness to second-round Iran talks + cooler March wholesale inflation print &bull; Still above pre-war levels &bull; WA state avg gas $5.39/gal &bull; Seattle metro $5.68/gal &mdash; 38% above national avg</div>
-      </div>
-    </div>
-    <div style="margin-top:14px;border-top:1px solid rgba(255,60,60,0.15);padding-top:12px;">
-      <div style="font-size:9px;letter-spacing:3px;color:var(--text-dim);font-weight:700;margin-bottom:10px;text-align:center;">&#127760; PAKISTAN TALKS FAILED &mdash; BLOCKADE DAY 2 ACTIVE &mdash; CEASEFIRE EXPIRES APR 21 &mdash; ROUND 2 UNDER DISCUSSION</div>
-      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-        <div style="text-align:center;">
-          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">US DELEGATION</div>
-          <div style="font-size:11px;font-weight:700;color:var(--text);">Vance &bull; Witkoff &bull; Kushner</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">IRAN DELEGATION</div>
-          <div style="font-size:11px;font-weight:700;color:var(--text);">Ghalibaf &bull; Araghchi</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">KEY STICKING POINTS</div>
-          <div style="font-size:11px;font-weight:700;color:var(--red);">Nuclear enrichment &bull; Hormuz control &bull; Sanctions relief</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);">&#128680; ESCALATION</div>
-          <div style="font-size:11px;font-weight:700;color:var(--red);">Round 2 talks under discussion &bull; 14 ships transiting Hormuz anyway &bull; China condemns blockade &bull; Iran mine-clearing ops &bull; Rubio hosts Israel/Lebanon talks TODAY</div>
-        </div>
+      <div class="iw-stat">
+        <div class="iw-stat-icon">&#9760;&#65039;</div>
+        <div class="iw-stat-val" style="color:#ff4444;">5,000+</div>
+        <div class="iw-stat-lbl">DEAD (IR+LB)</div>
       </div>
     </div>
-    <div class="gameday-hype" style="color:var(--red);font-size:10px;">&#128308; BLOCKADE DAY 2 &mdash; TUESDAY PM &bull; WH now openly signals &ldquo;open to further talks&rdquo; &mdash; second round of US-Iran direct talks under active discussion &bull; WTI SETTLED ~$91/bbl (&darr;~8%) &mdash; closed below $92, biggest down day in weeks &bull; S&amp;P 500 +0.3% to ~6,906 on cooler wholesale inflation + deal hopes &bull; Trump proposed 20-yr enrichment pause Sat, Iran countered 5 years, US rejected &bull; Ship-tracking: 14 vessels have crossed Hormuz since the blockade order &mdash; non-Iranian transit is allowed &bull; Iran mine-clearing ops underway &bull; Iran calls the blockade &ldquo;piracy,&rdquo; thousands protest in Tehran &bull; China: &ldquo;dangerous and irresponsible&rdquo; &bull; VP Vance: Iran guilty of &ldquo;economic terrorism&rdquo; &bull; Rubio hosted Israel &amp; Lebanon direct peace talks at State Dept today (11 AM ET) &bull; 5,000+ deaths across Iran+Lebanon since Feb 28 &bull; 13 US KIA &bull; 373+ US wounded &bull; Ceasefire expires Apr 21 (7 days) &bull; Italian PM Meloni calls Trump&rsquo;s Pope attacks &ldquo;unacceptable&rdquo; &bull; WA avg gas $5.39/gal &#128308;</div>
+    <ul class="iw-bullets">
+      <li data-icon="&#128172;"><b>Round 2 back on table.</b> WH signals openness to a second round of direct talks.</li>
+      <li data-icon="&#128674;"><b>Hormuz blockade porous.</b> 14 non-Iranian ships transited since the order; MCM Sqn 5 clearing mines.</li>
+      <li data-icon="&#9881;&#65039;"><b>Nuclear offer rejected.</b> Trump proposed 20yr enrichment pause; Iran countered 5; US said no.</li>
+      <li data-icon="&#127464;&#127475;"><b>China: &ldquo;dangerous and irresponsible.&rdquo;</b> Iran calls it piracy; Tehran protests.</li>
+      <li data-icon="&#127462;&#127464;"><b>Rubio hosting Israel + Lebanon</b> in direct peace talks at State today.</li>
+      <li data-icon="&#128680;"><b>US casualties:</b> 13 KIA &middot; 373+ WIA.</li>
+    </ul>
+    <div class="iw-delegations">
+      <div class="iw-del-box">
+        <div class="iw-del-lbl">&#127482;&#127480; US DELEGATION</div>
+        <div class="iw-del-val">Vance &middot; Witkoff &middot; Kushner</div>
+      </div>
+      <div class="iw-del-box">
+        <div class="iw-del-lbl">&#127470;&#127479; IRAN DELEGATION</div>
+        <div class="iw-del-val">Ghalibaf &middot; Araghchi</div>
+      </div>
+    </div>
   </div>
   </div><!-- /top-split -->
 
