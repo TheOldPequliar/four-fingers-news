@@ -1768,26 +1768,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     .top-split > #theRunDown{margin-bottom:0;}
     /* grid split disabled — Run Down is now full-width above section nav; Iran War moved into World section */
   </style>
-  <script>
-    // Lock The Run Down height to match the US-Iran War banner's natural height.
-    (function(){
-      function matchRunDown(){
-        var rd = document.getElementById('theRunDown');
-        var iw = document.getElementById('iranWarBanner');
-        if(!rd || !iw) return;
-        if(window.innerWidth > 900){
-          rd.style.height = iw.offsetHeight + 'px';
-        } else {
-          rd.style.height = '';
-        }
-      }
-      window.addEventListener('load', matchRunDown);
-      window.addEventListener('resize', matchRunDown);
-      if(document.readyState !== 'loading') setTimeout(matchRunDown, 0);
-      else document.addEventListener('DOMContentLoaded', matchRunDown);
-    })();
-  </script>
-  <div class="top-split">
+    <div class="top-split">
   <div id="theRunDown">
     <div class="rd-masthead">
       <div>
