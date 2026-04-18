@@ -635,19 +635,7 @@
   }
 
   /* &#9472;&#9472; Cards Grid &#9472;&#9472; */
-  /* MarinersMeter Panel */
-  .mm-panel{background:linear-gradient(135deg,rgba(0,90,92,0.08),rgba(0,56,82,0.12));border:1px solid rgba(0,90,92,0.25);border-left:3px solid var(--mariners-teal,#005c5c);border-radius:10px;padding:16px 20px;margin-bottom:16px;position:relative}
-  .mm-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-  .mm-title{font-size:7px;letter-spacing:3px;color:var(--text-dim);font-weight:700}
-  .mm-credit{opacity:0.7}
-  .mm-desc{font-size:10px;color:var(--text-muted);margin-bottom:12px;letter-spacing:1px}
-  .mm-iframe-wrap{border-radius:8px;overflow:hidden;border:1px solid rgba(0,90,92,0.15);margin-bottom:10px}
-  .mm-controls{display:flex;gap:8px;justify-content:center}
-  .mm-btn{background:rgba(0,90,92,0.15);border:1px solid rgba(0,90,92,0.3);color:var(--mariners-teal,#005c5c);font-size:8px;letter-spacing:2px;padding:5px 14px;border-radius:4px;cursor:pointer;font-weight:600;transition:all 0.2s}
-  .mm-btn:hover{background:rgba(0,90,92,0.3);border-color:rgba(0,90,92,0.5)}
-  body.light-mode .mm-panel{background:linear-gradient(135deg,rgba(0,90,92,0.04),rgba(0,56,82,0.06));border-color:rgba(0,90,92,0.15);box-shadow:0 1px 4px rgba(0,0,0,0.05)}
-
-  .cards-row {
+    .cards-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
@@ -1498,7 +1486,6 @@ body.light-mode .chyron { background: #0a0a0a; color: #ffffff; }
   display: block;
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
-/* Artemis 2 tracker CSS removed — mission complete */
 
 /* ═══ NEWSPRINT SECTION NAV + MASTHEADS ═══ */
 .section-nav{position:sticky;top:0;z-index:100;background:#ffffff;border-top:2px solid #1a1611;border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04);margin:0 0 20px 0;font-family:Georgia,'Playfair Display',serif;}
@@ -1535,7 +1522,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">NFL</span>2026 Draft: April 23&ndash;25 in Pittsburgh &bull; 7 DAYS AWAY &bull; Seahawks pick #32 &bull; Need RB, EDGE, CB &bull; Mel Kiper mock: Seattle takes Notre Dame RB Jadarian Price at #32 &bull; Only 4 picks total (#32, #64, #96, #188) &bull; Lost Walker, Mafe, Woolen in FA &bull; Schneider hunting a trade-back</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#128640; ARTEMIS II</span>Crew home safe! Splashed down Apr 10 &bull; 10-day lunar mission complete &bull; First humans to see far side of Moon with naked eye &bull; 252,756-mi record</span>
+    
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128176; POLYMARKET</span>$200M+ traded on Iran war markets &bull; 50+ accounts under insider probe &bull; Congress demanding investigation &bull; Bets placed hours before ceasefire</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1577,7 +1564,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">NFL</span>2026 Draft: April 23&ndash;25 in Pittsburgh &bull; 7 DAYS AWAY &bull; Seahawks pick #32 &bull; Need RB, EDGE, CB &bull; Mel Kiper mock: Seattle takes Notre Dame RB Jadarian Price at #32 &bull; Only 4 picks total (#32, #64, #96, #188) &bull; Lost Walker, Mafe, Woolen in FA &bull; Schneider hunting a trade-back</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#128640; ARTEMIS II</span>Crew home safe! Splashed down Apr 10 &bull; 10-day lunar mission complete &bull; First humans to see far side of Moon with naked eye &bull; 252,756-mi record</span>
+    
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128176; POLYMARKET</span>$200M+ traded on Iran war markets &bull; 50+ accounts under insider probe &bull; Congress demanding investigation &bull; Bets placed hours before ceasefire</span>
     <span class="chyron-sep">&#9670;</span>
@@ -2073,7 +2060,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0505,#e94560,#ff4444,#ffa500,#e94560,#1a0505);background-size:200% 100%;animation:iranStripe 3s linear infinite;"></div>
     <style>
       @keyframes iranStripe{0%{background-position:0% 0}100%{background-position:200% 0}}
-      @keyframes priceRainbow{0%{background-position:0% 0}100%{background-position:200% 0}}
+      100%{background-position:200% 0}}
       @keyframes iranPulse{0%,100%{opacity:1}50%{opacity:0.6}}
       @keyframes noDeakFlash{0%,100%{text-shadow:0 0 10px rgba(255,60,60,0.4)}50%{text-shadow:0 0 30px rgba(255,60,60,0.8),0 0 60px rgba(255,165,0,0.3)}}
       .iran-flash{/* flash disabled — newsprint mode */}
@@ -2497,8 +2484,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- Artemis II tracker removed — mission complete, splashed down Apr 10 -->
-
+  
   <div class="section-anchor" id="section-markets"></div>
   <div class="lan-masthead">
     <div class="lm-tag">&#9632; Q BRANCH &middot; MONEY, MONEY, MONEY</div>
@@ -2973,28 +2959,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- AMIGOS PRICE IS RIGHT -->
-  <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#127911; AMIGOS PRICE IS RIGHT &mdash; LOCK IN YOUR PICKS</span></div>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px;position:relative;overflow:hidden;" id="priceGamePanel">
-    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#d4af37,#b87333,#d4af37,transparent);background-size:200% 100%;animation:priceRainbow 6s linear infinite;"></div>
-
-    <!-- Player Select -->
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
-      <div style="font-size:9px;font-weight:900;letter-spacing:2px;color:var(--text-muted);">PLAYING AS:</div>
-      <div id="playerBtns" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
-    </div>
-
-    <!-- Category Cards -->
-    <div id="priceGameGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;"></div>
-
-    <!-- Leaderboard -->
-    <div style="background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:8px;padding:12px;">
-      <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--amber);margin-bottom:8px;">&#127942; LEADERBOARD &mdash; CLOSEST TO ACTUAL PRICE WINS</div>
-      <div id="priceLeaderboard" style="font-size:9px;color:var(--text);"></div>
-      <div style="font-size:7px;color:var(--text-muted);margin-top:6px;font-style:italic;">Picks are saved per browser. Talk trash in the group chat. Leaderboard updates when live prices load.</div>
-    </div>
-  </div>
-
   <!-- &#9552;&#9552;&#9552; STOCK TICKER &#9552;&#9552;&#9552; -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker"></div>
@@ -3312,7 +3276,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div class="lan-masthead">
     <div class="lm-tag">&#9632; FRAG PARTY &middot; COUCH CO-OP &middot; LOCAL NETWORK</div>
     <div class="lm-name">SPORTS, SEATTLE &amp; PACKS</div>
-    <div class="lm-kicker">Scoreboards, weather, the Mariners Meter&trade;, post-Masters Rory hangover, and the card market where every hobby-box is a Klobb.</div>
+    <div class="lm-kicker">Scoreboards, weather, post-Masters Rory hangover, and the card market where every hobby-box is a Klobb.</div>
   </div>
 
   <!-- ═══ SEATTLE TEAMS &mdash; the four horsemen of mild disappointment ═══ -->
@@ -3536,22 +3500,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
     <div style="text-align:center;margin-top:8px;font-size:7px;color:var(--text-muted);">
       <a href="https://www.masters.com/en_US/scores/index.html" target="_blank" style="color:#2ecc71;text-decoration:underline;">Open Full Leaderboard &#8599;</a> &bull; Apr 9&ndash;12 &bull; Rory McIlroy champion
-    </div>
-  </div>
-
-  <!-- ═══ MARINERS METER ═══ -->
-  <div class="mm-panel" id="marinersMeterPanel">
-    <div class="mm-header">
-      <div class="mm-title">&#9918; MARINERS METER</div>
-      <div class="mm-credit"><a href="https://github.com/jeremyperonto/MarinersMeter" target="_blank" style="color:var(--mariners-teal);text-decoration:none;font-size:8px;letter-spacing:2px;">BY JEREMY PERONTO</a></div>
-    </div>
-    <div class="mm-desc">Interactive season timeline &bull; AL West standings &bull; Fan mood tracker &bull; Game-by-game results</div>
-    <div class="mm-iframe-wrap">
-      <iframe id="marinersMeterFrame" src="https://jeremyperonto.github.io/MarinersMeter/" title="MarinersMeter" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" style="width:100%;height:600px;border:none;border-radius:8px;background:#0a0f1a;"></iframe>
-    </div>
-    <div class="mm-controls">
-      <button class="mm-btn" onclick="document.getElementById('marinersMeterFrame').style.height=document.getElementById('marinersMeterFrame').style.height==='600px'?'900px':'600px';this.textContent=document.getElementById('marinersMeterFrame').style.height==='900px'?'COLLAPSE':'EXPAND'">EXPAND</button>
-      <button class="mm-btn" onclick="window.open('https://jeremyperonto.github.io/MarinersMeter/','_blank')">OPEN FULL SCREEN &#8599;</button>
     </div>
   </div>
 
@@ -3946,8 +3894,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="world-card space">
       <div class="world-card-icon">&#128640;</div>
       <div class="world-card-title">SPACE & EXPLORATION</div>
-      <div class="world-card-value" id="spaceHeadline">ARTEMIS II COMPLETE</div>
-      <div class="world-card-detail" id="spaceDetail">&#128640; Artemis II splashed down Apr 10 near San Diego. All 4 crew safe. New distance record: 252,756 miles from Earth. First crewed lunar mission since 1972.</div>
+      <div class="world-card-value" id="spaceHeadline">SPACE</div>
+      <div class="world-card-detail" id="spaceDetail">Loading latest space news...</div>
     </div>
   </div>
 
@@ -5162,234 +5110,6 @@ async function fetchWorldCards() {
 })();
 
 
-// ===== AMIGOS PRICE IS RIGHT GAME =====
-(function initPriceGame(){
-  var PLAYERS = ['PEDERSEN','KADING','JOHNSON','BORREGO','GIBSON','YASUTAKE'];
-  var PINS = {'PEDERSEN':'1111','KADING':'2222','JOHNSON':'3333','BORREGO':'4444','GIBSON':'5555','YASUTAKE':'6666'};
-  var CATEGORIES = [
-    {id:'gas', label:'Seattle Gas Price', unit:'$/gal', icon:'&#9981;', liveId:'energyGasPrice', prefix:'$'},
-    {id:'wti', label:'WTI Crude Oil', unit:'$/barrel', icon:'&#128738;', liveId:'wtiPrice', prefix:'$'},
-    {id:'sp500', label:'S&P 500', unit:'points', icon:'&#128200;', liveId:'spPrice', prefix:''},
-    {id:'btc', label:'Bitcoin', unit:'USD', icon:'&#128176;', liveId:'btcPrice', prefix:'$'},
-    {id:'gold', label:'Gold', unit:'$/oz', icon:'&#129689;', liveId:'goldPrice', prefix:'$'},
-    {id:'fnko', label:'FNKO Stock', unit:'$/share', icon:'&#128128;', liveId:'fnkoPrice', prefix:'$'}
-  ];
-
-  var STORE_KEY = 'amigos_price_picks_v2';
-  var FIREBASE_DB = 'https://amigos-world-monitor-default-rtdb.firebaseio.com';
-  var currentPlayer = null;
-  var picksCache = {};
-  var firebaseReady = false;
-
-  // Firebase REST API — shared state across all devices
-  function loadPicksFromFirebase(cb){
-    fetch(FIREBASE_DB + '/picks.json').then(function(r){ return r.json(); }).then(function(data){
-      picksCache = data || {};
-      firebaseReady = true;
-      if(cb) cb(picksCache);
-    }).catch(function(e){
-      console.warn('Firebase read failed, falling back to localStorage', e);
-      picksCache = loadPicksLocal();
-      if(cb) cb(picksCache);
-    });
-  }
-  function savePicksToFirebase(data, cb){
-    picksCache = data;
-    fetch(FIREBASE_DB + '/picks.json', {
-      method: 'PUT',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(data)
-    }).then(function(){ if(cb) cb(); }).catch(function(e){
-      console.warn('Firebase write failed, saving to localStorage', e);
-      savePicksLocal(data);
-    });
-  }
-  // localStorage fallback
-  function loadPicksLocal(){ try{ return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }catch(e){ return {}; } }
-  function savePicksLocal(data){ localStorage.setItem(STORE_KEY, JSON.stringify(data)); }
-  // Unified interface
-  function loadPicks(){ return picksCache; }
-  function savePicks(data){ savePicksToFirebase(data); savePicksLocal(data); }
-
-  // Initial load from Firebase (migrate localStorage data if Firebase is empty)
-  loadPicksFromFirebase(function(data){
-    var localData = loadPicksLocal();
-    var localHasData = Object.keys(localData).length > 0;
-    var firebaseEmpty = Object.keys(data).length === 0;
-    if(firebaseEmpty && localHasData){
-      console.log('Migrating localStorage picks to Firebase...');
-      savePicksToFirebase(localData);
-      picksCache = localData;
-    }
-    if(currentPlayer) { renderGame(); }
-    updateLeaderboard();
-  });
-  // Auto-sync from Firebase every 15 seconds
-  setInterval(function(){
-    loadPicksFromFirebase(function(){
-      if(currentPlayer) renderGame();
-      updateLeaderboard();
-    });
-  }, 15000);
-
-  // Build player buttons
-  var btnContainer = document.getElementById('playerBtns');
-  if(!btnContainer) return;
-  PLAYERS.forEach(function(p){
-    var btn = document.createElement('button');
-    btn.textContent = p;
-    btn.style.cssText = 'background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:8px;font-weight:900;letter-spacing:1px;color:var(--text-muted);cursor:pointer;transition:all 0.2s;font-family:inherit;';
-    btn.onclick = function(){
-      var pin = prompt(p + ' — Enter your 4-digit PIN:');
-      if(pin === PINS[p]){
-        currentPlayer = p;
-        document.querySelectorAll('#playerBtns button').forEach(function(b){ b.style.background='rgba(255,255,255,0.06)'; b.style.color='var(--text-muted)'; b.style.borderColor='var(--border)'; });
-        btn.style.background='rgba(0,230,138,0.15)'; btn.style.color='var(--green)'; btn.style.borderColor='rgba(0,230,138,0.4)';
-        renderGame();
-      } else if(pin !== null) {
-        alert('Wrong PIN! Ask Trevor for your PIN.');
-      }
-    };
-    btnContainer.appendChild(btn);
-  });
-
-  // Build game grid
-  function renderGame(){
-    var grid = document.getElementById('priceGameGrid');
-    if(!grid) return;
-    grid.innerHTML = '';
-    var picks = loadPicks();
-
-    CATEGORIES.forEach(function(cat){
-      var card = document.createElement('div');
-      card.style.cssText = 'background:rgba(0,0,0,0.1);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:12px;';
-
-      var myPick = picks[currentPlayer] && picks[currentPlayer][cat.id];
-      var liveEl = document.getElementById(cat.liveId);
-      var liveVal = liveEl ? liveEl.textContent.replace(/[^0-9.,-]/g,'').replace(/,/g,'') : null;
-
-      var html = '<div style="font-size:16px;margin-bottom:4px;">'+cat.icon+'</div>';
-      html += '<div style="font-size:9px;font-weight:900;letter-spacing:1px;color:var(--text);margin-bottom:2px;">'+cat.label+'</div>';
-      html += '<div style="font-size:7px;color:var(--text-muted);margin-bottom:8px;">'+cat.unit+'</div>';
-
-      if(liveVal && !isNaN(parseFloat(liveVal))){
-        html += '<div style="font-size:7px;color:var(--text-muted);">CURRENT</div>';
-        html += '<div style="font-family:\'JetBrains Mono\',monospace;font-size:14px;font-weight:900;color:var(--green);margin-bottom:6px;">'+cat.prefix+parseFloat(liveVal).toLocaleString()+'</div>';
-      }
-
-      if(myPick){
-        html += '<div style="font-size:7px;color:var(--amber);font-weight:700;">YOUR PICK</div>';
-        html += '<div style="font-family:\'JetBrains Mono\',monospace;font-size:12px;font-weight:900;color:var(--amber);">'+cat.prefix+parseFloat(myPick).toLocaleString()+'</div>';
-        html += '<button data-cat="'+cat.id+'" class="price-change-btn" style="margin-top:6px;background:rgba(255,184,0,0.1);border:1px solid rgba(255,184,0,0.3);border-radius:4px;padding:3px 8px;font-size:7px;color:var(--amber);cursor:pointer;font-family:inherit;">CHANGE PICK</button>';
-      } else if(currentPlayer) {
-        html += '<button data-cat="'+cat.id+'" class="price-pick-btn" style="margin-top:4px;background:rgba(0,230,138,0.12);border:1px solid rgba(0,230,138,0.3);border-radius:4px;padding:5px 10px;font-size:8px;font-weight:700;color:var(--green);cursor:pointer;font-family:inherit;width:100%;">LOCK IN PICK</button>';
-      }
-
-      // Show all picks for this category
-      var allPicks = [];
-      PLAYERS.forEach(function(pl){
-        if(picks[pl] && picks[pl][cat.id]){
-          allPicks.push({name:pl, val:parseFloat(picks[pl][cat.id])});
-        }
-      });
-      if(allPicks.length > 0){
-        html += '<div style="margin-top:8px;border-top:1px solid rgba(255,255,255,0.04);padding-top:6px;">';
-        html += '<div style="font-size:6px;letter-spacing:1px;color:var(--text-muted);font-weight:700;margin-bottom:3px;">ALL PICKS</div>';
-        allPicks.forEach(function(ap){
-          var isMe = ap.name === currentPlayer;
-          html += '<div style="display:flex;justify-content:space-between;font-size:7px;padding:1px 0;'+(isMe?'color:var(--green);font-weight:900;':'color:var(--text-muted);')+'"><span>'+ap.name+'</span><span>'+cat.prefix+ap.val.toLocaleString()+'</span></div>';
-        });
-        html += '</div>';
-      }
-
-      card.innerHTML = html;
-      grid.appendChild(card);
-    });
-
-    // Wire up buttons
-    grid.querySelectorAll('.price-pick-btn, .price-change-btn').forEach(function(btn){
-      btn.onclick = function(){
-        var catId = this.dataset.cat;
-        var cat = CATEGORIES.find(function(c){ return c.id === catId; });
-        var val = prompt('Enter your ' + cat.label + ' prediction (' + cat.unit + '):');
-        if(val && !isNaN(parseFloat(val))){
-          var picks = loadPicks();
-          if(!picks[currentPlayer]) picks[currentPlayer] = {};
-          picks[currentPlayer][catId] = parseFloat(val);
-          savePicksToFirebase(picks, function(){
-            renderGame();
-            updateLeaderboard();
-          });
-          savePicksLocal(picks);
-          renderGame();
-          updateLeaderboard();
-        }
-      };
-    });
-
-    updateLeaderboard();
-  }
-
-  function updateLeaderboard(){
-    var lb = document.getElementById('priceLeaderboard');
-    if(!lb) return;
-    var picks = loadPicks();
-    var scores = {};
-
-    PLAYERS.forEach(function(pl){ scores[pl] = {total:0, count:0, name:pl}; });
-
-    CATEGORIES.forEach(function(cat){
-      var liveEl = document.getElementById(cat.liveId);
-      var liveVal = liveEl ? parseFloat(liveEl.textContent.replace(/[^0-9.,-]/g,'').replace(/,/g,'')) : NaN;
-      if(isNaN(liveVal)) return;
-
-      PLAYERS.forEach(function(pl){
-        if(picks[pl] && picks[pl][cat.id]){
-          var pickVal = parseFloat(picks[pl][cat.id]);
-          var pctOff = Math.abs((pickVal - liveVal) / liveVal) * 100;
-          scores[pl].total += pctOff;
-          scores[pl].count++;
-        }
-      });
-    });
-
-    var ranked = PLAYERS.filter(function(pl){ return scores[pl].count > 0; })
-      .map(function(pl){ return scores[pl]; })
-      .sort(function(a,b){ return (a.total/a.count) - (b.total/b.count); });
-
-    if(ranked.length === 0){
-      lb.innerHTML = '<div style="color:var(--text-muted);font-style:italic;">No picks yet. Select your name above and lock in predictions!</div>';
-      return;
-    }
-
-    var html = '<div style="display:grid;grid-template-columns:30px 80px 1fr 60px;gap:4px;font-size:8px;">';
-    html += '<div style="font-weight:900;color:var(--text-muted);">#</div><div style="font-weight:900;color:var(--text-muted);">PLAYER</div><div style="font-weight:900;color:var(--text-muted);">AVG % OFF</div><div style="font-weight:900;color:var(--text-muted);">PICKS</div>';
-    var medals = ['&#129351;','&#129352;','&#129353;','4','5','6'];
-    ranked.forEach(function(r,i){
-      var avgOff = (r.total / r.count).toFixed(1);
-      var color = i===0 ? 'var(--green)' : i===1 ? 'var(--amber)' : 'var(--text)';
-      html += '<div style="color:'+color+';font-weight:900;">'+medals[i]+'</div>';
-      html += '<div style="color:'+color+';font-weight:900;">'+r.name+'</div>';
-      html += '<div style="font-family:\'JetBrains Mono\',monospace;color:'+color+';">'+avgOff+'%</div>';
-      html += '<div style="color:var(--text-muted);">'+r.count+'/6</div>';
-    });
-    html += '</div>';
-    lb.innerHTML = html;
-  }
-
-  // Auto-refresh leaderboard when prices update
-  setInterval(function(){
-    if(currentPlayer) updateLeaderboard();
-  }, 30000);
-
-  // Initial render (no player selected)
-  var grid = document.getElementById('priceGameGrid');
-  if(grid){
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--text-muted);font-size:9px;">&#128072; Select your name above to make predictions and see everyone\'s picks</div>';
-  }
-  var lb = document.getElementById('priceLeaderboard');
-  if(lb) lb.innerHTML = '<div style="color:var(--text-muted);font-style:italic;">Select your name to see the leaderboard</div>';
-})();
 
 // ===== DAILY QUOTE ROTATOR =====
 (function initDailyQuote() {
@@ -5563,8 +5283,6 @@ async function fetchWorldCards() {
     }, 8000);
   }
 })();
-
-// Artemis 2 tracker removed — mission complete Apr 10
 
 // ===== ENERGY MONITOR =====
 (async function initEnergy() {
