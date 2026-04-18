@@ -4747,9 +4747,9 @@ async function fetchWorldCards() {
   var suffixes = ['','','','','','%',''];
   try {
     var joined = symbols.join(',');
-    var url = 'https://corsproxy.io/?' + encodeURIComponent('https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + joined + '&fields=regularMarketPrice,regularMarketChangePercent');
-    var resp = await fetch(url);
-    if (!resp.ok) throw new Error('Yahoo blocked');
+    var yahooUrl = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + encodeURIComponent(joined) + '&fields=regularMarketPrice,regularMarketChangePercent';
+    var resp = await fetchViaProxy(yahooUrl);
+    if (!resp) throw new Error('All proxies failed');
     var data = await resp.json();
     var results = data.quoteResponse.result;
     results.forEach(function(q) {
@@ -4818,9 +4818,9 @@ async function fetchWorldCards() {
   }
   try {
     var symbols = 'CL=F,BZ=F,NG=F';
-    var url = 'https://corsproxy.io/?' + encodeURIComponent('https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + symbols + '&fields=regularMarketPrice,regularMarketChangePercent');
-    var resp = await fetch(url);
-    if (!resp.ok) throw new Error('Yahoo blocked');
+    var yahooUrl = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + encodeURIComponent(symbols) + '&fields=regularMarketPrice,regularMarketChangePercent';
+    var resp = await fetchViaProxy(yahooUrl);
+    if (!resp) throw new Error('All proxies failed');
     var data = await resp.json();
     var results = data.quoteResponse.result;
     results.forEach(function(q) {
