@@ -608,318 +608,6 @@
     height: 100%;
   }
 
-  /* &#9472;&#9472; Golf Section &#9472;&#9472; */
-  .countdown-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px;
-    text-align: center;
-  }
-
-  .countdown-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 8px;
-    color: var(--text-dim);
-    letter-spacing: 2px;
-    margin-bottom: 6px;
-  }
-
-  .countdown-value {
-    font-size: 36px;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1;
-  }
-
-  .countdown-unit {
-    font-size: 10px;
-    color: var(--text-dim);
-    margin-top: 2px;
-  }
-
-  .countdown-sub {
-    font-size: 9px;
-    color: var(--green);
-    margin-top: 4px;
-    font-weight: 500;
-  }
-
-  .leaderboard-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-  }
-
-  .leaderboard-title {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--text-dim);
-    margin-bottom: 6px;
-  }
-
-  .lb-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 11px;
-  }
-
-  .lb-row:last-child { border-bottom: none; }
-
-  .lb-pos {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-    width: 24px;
-  }
-
-  .lb-name {
-    flex: 1;
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  .lb-score {
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 600;
-  }
-
-  .lb-score.under { color: var(--red); }
-  .lb-score.over { color: var(--text-dim); }
-  .lb-score.even { color: var(--text); }
-
-  /* &#9472;&#9472; News Feed &#9472;&#9472; */
-  .news-feed {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .news-item {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    transition: all 0.3s ease;
-    cursor: default;
-    text-decoration: none;
-    color: inherit;
-  }
-  a.news-item { cursor: pointer; }
-  a.news-item:hover .news-headline { color: var(--accent); }
-
-  .news-item:hover {
-    border-color: var(--border-glow);
-    background: var(--surface-hover);
-  }
-
-  .news-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-    margin-top: 2px;
-  }
-
-  .news-tag.policy { background: rgba(0, 212, 255, 0.1); color: var(--accent); }
-  .news-tag.economy { background: rgba(0, 230, 138, 0.1); color: var(--green); }
-  .news-tag.world { background: rgba(255, 184, 0, 0.1); color: var(--amber); }
-  .news-tag.tech { background: rgba(138, 100, 255, 0.1); color: #8a64ff; }
-
-  .news-content { flex: 1; }
-
-  .news-headline {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.4;
-    margin-bottom: 4px;
-  }
-
-  .news-meta {
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  /* &#9472;&#9472; Footer &#9472;&#9472; */
-  .footer {
-    text-align: center;
-    padding: 40px 0 20px;
-    border-top: 1px solid var(--border);
-    margin-top: 40px;
-  }
-
-  .footer-text {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 1px;
-  }
-
-  .footer-text .highlight {
-    color: var(--accent);
-  }
-
-  .footer-quip {
-    font-size: 11px;
-    color: var(--text-muted);
-    font-style: italic;
-    margin-top: 6px;
-    opacity: 0.6;
-  }
-
-  /* &#9472;&#9472; Refresh Timestamp &#9472;&#9472; */
-  .last-refresh {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    color: var(--text-muted);
-    text-align: right;
-    margin-top: 8px;
-  }
-
-  /* &#9472;&#9472; Personal Finance Row &#9472;&#9472; */
-  .fin-insight {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 20px;
-  }
-
-  .fin-insight-title {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--text-dim);
-    margin-bottom: 10px;
-  }
-
-  .fin-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    font-size: 13px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .fin-row:last-child { border-bottom: none; }
-
-  .fin-label { color: var(--text-dim); }
-  .fin-value { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--text); }
-
-  /* &#9472;&#9472; Animations &#9472;&#9472; */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(12px);
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .fade-in:nth-child(1) { animation-delay: 0.1s; }
-  .fade-in:nth-child(2) { animation-delay: 0.2s; }
-  .fade-in:nth-child(3) { animation-delay: 0.3s; }
-  .fade-in:nth-child(4) { animation-delay: 0.4s; }
-
-  /* &#9472;&#9472; Responsive &#9472;&#9472; */
-  @media (max-width: 900px) {
-    .cards-row { grid-template-columns: repeat(2, 1fr); }
-    .golf-grid { grid-template-columns: repeat(3, 1fr); }
-    .cards-row-3 { grid-template-columns: 1fr 1fr; }
-  }
-
-  @media (max-width: 600px) {
-    .cards-row { grid-template-columns: 1fr; }
-    .cards-row-2 { grid-template-columns: 1fr; }
-    .cards-row-3 { grid-template-columns: 1fr; }
-    .header { flex-direction: column; gap: 12px; text-align: center; }
-    .header-right { justify-content: center; }
-    .birthday-top { flex-direction: column; gap: 12px; }
-    .birthday-right { text-align: left; }
-  }
-
-
-
-  /* Weather Strip */
-  .weather-strip { display:flex; gap:0; margin-bottom:16px; border-radius:10px; overflow:hidden; border:1px solid var(--border); background:var(--surface); }
-  .weather-city { flex:1; text-align:center; padding:10px 6px; border-right:1px solid var(--border); transition:background 0.3s; }
-  .weather-city:last-child { border-right:none; }
-  .weather-city:hover { background:rgba(0,212,255,0.05); }
-  .weather-city-name { font-size:9px; font-weight:700; letter-spacing:2px; color:var(--text-dim); margin-bottom:4px; }
-  .weather-icon { font-size:24px; line-height:1; margin:4px 0; }
-  .weather-temp { font-family:"JetBrains Mono",monospace; font-size:16px; font-weight:700; color:var(--accent); }
-  .weather-desc { font-size:8px; color:var(--text-muted); margin-top:2px; letter-spacing:1px; }
-  .weather-boise { background:rgba(255,107,53,0.06); border-left:2px solid rgba(255,107,53,0.3) !important; }
-  .weather-boise .weather-city-name { color:#ff6b35; }
-  .weather-distance { font-size:7px; color:var(--text-muted); margin-top:3px; font-style:italic; }
-  .weather-label { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; padding:0 4px; }
-  .weather-label-left { font-size:9px; font-weight:700; letter-spacing:3px; color:var(--text-dim); }
-  .weather-label-right { font-size:8px; color:var(--text-muted); font-style:italic; }
-
-  
-
-  /* Top Row + Curtis Mini */
-  .top-row { display:flex; gap:12px; margin-bottom:12px; align-items:stretch; }
-  .top-row .birthday-banner { flex:1; margin-bottom:0; }
-  .curtis-mini {
-    width:160px; min-width:160px;
-    background:var(--surface);
-    border:1px solid rgba(0,230,138,0.2);
-    border-radius:8px;
-    padding:10px 8px;
-    text-align:center;
-    display:flex; flex-direction:column; justify-content:center; align-items:center;
-    position:relative; overflow:hidden;
-  }
-  .curtis-mini::before {
-    content:""; position:absolute; top:0; left:0; width:100%; height:2px;
-    background:linear-gradient(90deg,var(--green),var(--amber));
-  }
-  .curtis-mini-label { font-size:7px; letter-spacing:2px; color:var(--green); font-weight:700; margin-bottom:2px; }
-  .curtis-mini-counter { font-family:"JetBrains Mono",monospace; font-size:32px; font-weight:900; color:var(--green); line-height:1; }
-  .curtis-mini-sublabel { font-family:"JetBrains Mono",monospace; font-size:8px; color:var(--text-dim); letter-spacing:1px; margin-top:2px; line-height:1.3; }
-  .curtis-mini-title { font-size:7px; color:var(--amber); font-weight:700; letter-spacing:1px; margin-top:6px; }
-  .curtis-mini-quip { font-size:7px; color:var(--text-muted); font-style:italic; margin-top:2px; }
-  @media(max-width:600px){ .top-row{flex-direction:column;} .curtis-mini{width:100%;min-width:100%;} }
-
-  
-/* Golf Info Row (Next Major + Leaderboard) */
-.golf-info-row { display:grid; grid-template-columns:120px 1fr 1fr; gap:12px; margin-bottom:16px; align-items:start; }
-@media(max-width:700px){ .golf-info-row{grid-template-columns:1fr;} }
-
-/* Golf Handicap Grid */
-.golf-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:0; border-radius:10px; overflow:hidden; border:1px solid var(--border); background:var(--surface); margin-bottom:16px; }
-.golf-cell { text-align:center; padding:8px 4px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); transition:background 0.3s; }
-.golf-cell:nth-child(6n) { border-right:none; }
-.golf-cell:nth-last-child(-n+6) { border-bottom:none; }
-.golf-cell:hover { background:rgba(0,212,255,0.05); }
-.golf-name { font-size:9px; font-weight:700; letter-spacing:2px; color:var(--text-dim); margin-bottom:4px; }
-.golf-hi { font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:900; color:var(--accent); line-height:1; }
-.golf-club { font-size:7px; color:var(--text-muted); margin-top:3px; letter-spacing:1px; }
-.golf-low { font-size:7px; color:var(--text-muted); margin-top:2px; font-style:italic; }
-.golf-pedersen { background:rgba(255,215,0,0.06); }
-.golf-pedersen .golf-hi { color:#ffd700; font-size:22px; }
-.golf-pedersen .golf-name { color:#ffd700; }
-.golf-curtis { background:rgba(0,230,138,0.04); }
-.golf-curtis .golf-hi { color:var(--green); font-size:14px; font-weight:400; font-style:italic; }
-.golf-label { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; padding:0 4px; }
-.golf-label-left { font-size:9px; font-weight:700; letter-spacing:3px; color:var(--text-dim); }
-.golf-label-right { font-size:8px; color:var(--text-muted); font-style:italic; }
-@media(max-width:600px){ .golf-grid{grid-template-columns:repeat(3,1fr);} }
 
 /* ===== GAME DAY WAR ROOM ===== */
 .gameday-banner{background:linear-gradient(135deg,rgba(0,44,89,0.3),rgba(0,91,50,0.2));border:2px solid rgba(0,91,50,0.5);border-radius:12px;padding:16px 20px;margin-bottom:16px;position:relative;overflow:hidden}
@@ -1154,8 +842,6 @@ body.light-mode .er-event { background: rgba(0,0,0,0.02); border-color: rgba(0,0
 body.light-mode .er-event:hover { background: rgba(0,0,0,0.04); }
 body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .ticker-wrap { background: var(--surface); border-color: var(--border); }
-body.light-mode .golf-cell { background: var(--surface); }
-body.light-mode .golf-pedersen { background: rgba(181,114,10,0.08); }
 body.light-mode .weather-city { background: var(--surface); }
 body.light-mode .weather-boise { background: rgba(204,80,30,0.06); }
 body.light-mode .birthday-banner { background: linear-gradient(135deg, rgba(204,119,0,0.08), rgba(204,34,68,0.08), rgba(0,100,190,0.08)); }
@@ -1163,11 +849,6 @@ body.light-mode .curtis-mini { background: var(--surface); border-color: var(--b
 body.light-mode .ms-hype-card { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
 body.light-mode .ms-hype-stat { color: #0c2c56; }
 body.light-mode .ms-hype-name { color: #3c3c3c; }
-body.light-mode .countdown-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
-body.light-mode .countdown-value { color: #0c2c56; }
-body.light-mode .countdown-label { color: #121212; }
-body.light-mode .countdown-unit { color: #3c3c3c; }
-body.light-mode .countdown-sub { color: #121212; }
 body.light-mode .leaderboard-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .leaderboard-title { color: #121212; }
 body.light-mode .lb-name { color: #121212; }
@@ -1176,12 +857,6 @@ body.light-mode .lb-score { color: #121212; }
 body.light-mode .lb-score.under { color: #c0392b; }
 body.light-mode .lb-score.over { color: #3c3c3c; }
 body.light-mode .section-quip { color: #6b6b6b; }
-body.light-mode .golf-name { color: #121212; }
-body.light-mode .golf-hi { color: #0c2c56; }
-body.light-mode .golf-club { color: #3c3c3c; }
-body.light-mode .golf-low { color: #6b6b6b; }
-body.light-mode .golf-pedersen .golf-hi { color: #b5720a; }
-body.light-mode .golf-pedersen .golf-name { color: #b5720a; }
 body.light-mode .card-header { color: #121212; }
 body.light-mode .card { background: var(--surface); border-color: var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
 body.light-mode .section-subtitle { color: #3c3c3c; }
@@ -1267,7 +942,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 <!-- &#9552;&#9552;&#9552; CHYRON TICKER &#9552;&#9552;&#9552; -->
 <div class="chyron" id="chyronBar">
   <div class="chyron-track" id="chyronTrack">
-    <span class="chyron-item"><span class="chyron-label">&#9888;&#65039; IRAN WAR</span>Day 52 &bull; Trump Sun late-AM Truth Social: Iran &ldquo;decided to fire bullets yesterday in the Strait of Hormuz &mdash; A Total Violation of our Ceasefire Agreement&rdquo; &bull; Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war &bull; Pezeshkian Sun (first Sun line from the presidency): &ldquo;who is he to deprive a nation of its rights?&rdquo; &bull; Ghalibaf Sun: strait status &ldquo;determined by the field, not by social media&rdquo; &bull; Trump Sun Truth Social: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; if deal fails, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; names Vance, Witkoff, Kushner for Round 2; Mon evening arrival, Tue sit-down penciled; claims Sat Hormuz shots &ldquo;aimed at a French Ship, and a Freighter from the United Kingdom&rdquo; &bull; Trump Sun AM: dispatching US reps to Pakistan for Round 2; Iran committed &ldquo;serious violation&rdquo; of ceasefire but deal &ldquo;will happen one way or another, the nice way or the hard way&rdquo; &bull; Ghalibaf Sun: Iran &ldquo;victorious in the field,&rdquo; accepted truce &ldquo;because they accepted our demands&rdquo;; parties still &ldquo;far from the final discussion&rdquo; &bull; Iran Dep FM Khatibzadeh Sun: no date for Round 2 until framework locked; slams US &ldquo;maximalist&rdquo; demands &bull; IRGC BG Naqdi video Sun: Iran &ldquo;willing to shut down 15M bpd&rdquo;; approaching Hormuz &ldquo;cooperation with the enemy&rdquo; &bull; Ghalibaf discloses Islamabad anecdote: told US delegation if a US minesweeper &ldquo;moved even slightly forward&rdquo; Iran would fire &bull; CENTCOM overnight: port blockade &ldquo;fully implemented,&rdquo; economic trade &ldquo;completely halted&rdquo; by sea; 23 vessels turned back still the standing tally &bull; IRGC Sun: any vessel approaching Hormuz &ldquo;a ceasefire violation, met with severe force&rdquo; &bull; no-movement zone from anchorage into Day 3 &bull; Mojtaba Khamenei Army Day Sat: navy &ldquo;ready to inflict new bitter defeats on its enemies&rdquo; &mdash; first public line from the new SL on the Hormuz standoff &bull; Trump Oval Office Sat: Iran &ldquo;got a little cute,&rdquo; &ldquo;can&rsquo;t blackmail us,&rdquo; talks &ldquo;working out really well&rdquo; &bull; IDF Sat formalizes &ldquo;Yellow Line&rdquo; inside south Lebanon &mdash; Gaza-style demarcation, first use here; IDF says it has already struck Hezbollah fighters approaching troops along the line &bull; Israeli artillery Sat hits Beit Leif, Qantara, Touline; framed as self-defense &ldquo;not restricted by the ceasefire&rdquo; &bull; Qassem Sat evening: &ldquo;we do not trust this enemy; the resistance fighters will remain in the field with their hands on the trigger, and they will respond to violations accordingly&rdquo;; demands full IDF withdrawal &bull; Iranian VP Aref Sat: Trump&rsquo;s policies &ldquo;a blend of delusion and contradictory rhetoric&rdquo; &bull; NetBlocks: Iran internet shutdown reaches &ldquo;unprecedented&rdquo; Day 52 &bull; IRGC navy Sat evening widens zone: &ldquo;no vessel should make any movement from its anchorage in the Persian Gulf and the Sea of Oman,&rdquo; approaching strait &ldquo;considered cooperation with the enemy&rdquo; and targeted &bull; US officials Sat: Navy preparing to board Iran-linked tankers and seize commercial ships in international waters in coming days &bull; Iran FM studying fresh US proposals, calls blockade a &ldquo;ceasefire violation&rdquo; &bull; CENTCOM Sat midday: 23 vessels turned back (up from 21 overnight) &bull; SNSC formalizes Hormuz regime: transit certificates, vessel-data collection, &ldquo;security&rdquo; fees (Rezaei: not transit fees) &bull; IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship (Jag Arnav) also fired on and turned back; unknown projectile hit a container vessel damaging cargo; no injuries &bull; New Delhi MEA summons Iran envoy Fathali Sat evening &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio killed by small-arms fire in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges &ldquo;caution&rdquo;; Aoun + Berri + Salam condemn, open probes; Lebanese Military Tribunal parallel probe; UNSC to meet &bull; Trump convened WH Situation Room Sat morning on Hormuz + Iran track (Vance, Rubio, Hegseth, Bessent) &bull; Trump to AFP: no &ldquo;sticking points,&rdquo; blockade stays until transaction &ldquo;100% complete&rdquo; &bull; Ghalibaf earlier Sat: Trump&rsquo;s latest claims &ldquo;false&rdquo;; Iran rejects Trump line on 440kg HEU surrender &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked &bull; Fri close (still reference): S&amp;P 7,126 (3rd record), Dow +850 to 49,447, Nasdaq 13-day streak &bull; WTI $83.85 (&minus;11.45%), Brent $90.38 &bull; Lebanon truce Day 4 &bull; 3 DAYS TO CEASEFIRE EXPIRY (Apr 22)</span>
+    <span class="chyron-item"><span class="chyron-label">&#9888;&#65039; IRAN WAR</span>Day 50 &bull; CENTCOM Sat midday: 23 vessels turned back (up from 21 overnight) &bull; Iran SNSC formalizes Hormuz regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees required &bull; IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship also fired on and turned back &bull; US official: at least 3 commercial ships attacked Sat; UKMTO logs 2; at least one hit with damage, no injuries &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio killed by small-arms fire in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges &ldquo;caution&rdquo; in attribution; Aoun + Salam open investigations; Lebanese Military Tribunal probes; UNSC to meet &bull; Trump to AFP: no &ldquo;sticking points,&rdquo; blockade stays until transaction &ldquo;100% complete&rdquo; &bull; Ghalibaf earlier Sat: Trump&rsquo;s latest claims &ldquo;false&rdquo;; Iran rejects Trump line on 440kg HEU surrender &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked &bull; Fri close (still reference): S&amp;P 7,126 (3rd record), Dow +850 to 49,447, Nasdaq 13-day streak &bull; WTI $83.85 (&minus;11.45%), Brent $90.38 &bull; Lebanon truce Day 3 &bull; 4 DAYS TO CEASEFIRE EXPIRY (Apr 22)</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">MLB</span><span class="chyronMLB">Mariners 9-10 &bull; Dropped series opener in San Diego 4-1 Tue &mdash; snapped 5-game win streak &bull; Woo: 7 IP, 3 R in a tough-luck loss &bull; Vedder Cup opener gone &bull; Game 2 tonight at Petco (6:40 PT) &bull; Still ahead of Astros in AL West &bull; Cali road swing rolls on</span></span>
     <span class="chyron-sep">&#9670;</span>
@@ -1281,13 +956,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128176; POLYMARKET</span>$200M+ traded on Iran war markets &bull; 50+ accounts under insider probe &bull; Congress demanding investigation &bull; Bets placed hours before ceasefire</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#128308; HORMUZ</span>IRGC BG Naqdi video Sun: Iran &ldquo;willing to shut down 15 million barrels a day&rdquo;; approaching the strait &ldquo;considered cooperation with the enemy&rdquo; &bull; IRGC navy Sat evening widens the zone: &ldquo;no vessel should make any movement from its anchorage in the Persian Gulf and the Sea of Oman&rdquo; &bull; strait stays closed until US blockade lifts &bull; US officials: Navy preparing to board Iran-linked tankers and seize commercial ships in international waters in coming days &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC fast boats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; vessel unharmed, investigation open &bull; Second Indian-flagged ship (Jag Arnav, IMO 9705354) also fired on and turned back; audio captures shots &bull; New Delhi MEA summons Iran envoy Mohammad Fathali Sat evening, lodges formal protest via Foreign Secretary Misri &bull; Unknown projectile also struck a container vessel damaging cargo &bull; US official: at least 3 commercial ships attacked Sat; UKMTO logs 2; no injuries &bull; SNSC regime: transit certificates, vessel-data collection, &ldquo;security&rdquo; fees (Rezaei: not transit fees) &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; Reverses the 3-day post-ceasefire reopening &bull; WTI $83.85 (&minus;11.45%) / Brent $90.38 (&minus;9.07%) Fri settles still the reference; weekend tape picks up Mon &bull; Trump: blockade stays &ldquo;100% complete&rdquo; &bull; Caine frame: ports &amp; coastline, not the Strait itself &bull; Paris FON Initiative sets Northwood follow-up next week &bull; MCM Sqn 5 still clearing mines</span>
+    <span class="chyron-item"><span class="chyron-label">&#128308; HORMUZ</span>Iran SNSC formalizes the regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC fast boats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; vessel unharmed, investigation open &bull; Second Indian-flagged ship also fired on and turned back; audio captures shots &bull; US official: at least 3 commercial ships attacked Sat; UKMTO logs 2; at least one hit with damage, no injuries &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; Reverses the 3-day post-ceasefire reopening &bull; WTI $83.85 (&minus;11.45%) / Brent $90.38 (&minus;9.07%) Fri settles still the reference; weekend tape picks up Mon &bull; Trump: blockade stays &ldquo;100% complete&rdquo; &bull; Caine frame: ports &amp; coastline, not the Strait itself &bull; Paris FON Initiative sets Northwood follow-up next week &bull; MCM Sqn 5 still clearing mines</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128483; EPSTEIN</span>ACTING AG BLANCHE: DOJ &ldquo;has released everything the law requires&rdquo; &mdash; file drop is &ldquo;finished&rdquo; &bull; Congress disagrees; Epstein Files Transparency Act (HR-4405) still live in House &bull; Fed judge TOSSED Trump&rsquo;s WSJ defamation suit over 50th-birthday letter Mon (Trump &ldquo;nowhere close&rdquo; to &ldquo;actual malice&rdquo;) &bull; Bondi blew off her Mon deposition &mdash; Dem Rep. Garcia moving to contempt &bull; Melania rare address denying ties &bull; ZERO new US arrests despite 3.5M+ pages &bull; 43 victim names EXPOSED in DOJ redaction fail &bull; Gates June testimony still on calendar</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#127936; NBA</span>PLAY-IN DONE &bull; 76ers 109, Magic 97 &mdash; Maxey 31 pts, Philly takes #7 East vs Celtics &bull; Warriors 126, Clippers 121 &mdash; Curry 35 pts, erased 13-pt deficit; Warriors face Suns Fri for #8 West &bull; OKC #1 West &bull; Pistons #1 East &bull; Round 1 tips Apr 18</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#128483; TRUMP</span>Sun late-AM Truth Social: Iran &ldquo;decided to fire bullets yesterday in the Strait of Hormuz &mdash; A Total Violation of our Ceasefire Agreement&rdquo; &bull; Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war &bull; Sun Truth Social escalates: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; if no deal, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; &ldquo;it&rsquo;s time for the Iran killing machine to end&rdquo; &bull; Names Round 2 US delegation: Vance, Witkoff, Kushner; Mon evening arrival, Tue sit-down penciled &bull; Claims Sat Hormuz shots were &ldquo;aimed at a French Ship, and a Freighter from the United Kingdom&rdquo; &bull; Earlier Sun: dispatching US reps to Pakistan for Round 2; Iran committed &ldquo;serious violation&rdquo; of ceasefire but deal &ldquo;will happen one way or another, the nice way or the hard way&rdquo; &bull; Oval Office EO signing Sat afternoon: Iran &ldquo;got a little cute&rdquo; by closing the strait again, &ldquo;they can&rsquo;t blackmail us,&rdquo; talks &ldquo;working out really well&rdquo; &bull; Convened WH Situation Room Sat morning with Vance, Rubio, Hegseth, Bessent on Hormuz + Iran track &bull; To AFP Sat: no &ldquo;sticking points&rdquo; remain with Iran, but US Navy blockade stays &ldquo;in full force&rdquo; until the transaction is &ldquo;100% complete&rdquo; &bull; Tehran joint military command later Sat: Hormuz control &ldquo;returned to its previous state&rdquo; while blockade holds &bull; Ghalibaf earlier Sat: Trump claims &ldquo;were false&rdquo; &bull; Iran VP Aref Sat: US posture &ldquo;a blend of delusion and contradictory rhetoric&rdquo; &bull; AF1 Fri: talks &ldquo;likely&rdquo; this weekend, &ldquo;most of the main points&rdquo; finalized &bull; Truth Social Fri: Israel &ldquo;PROHIBITED&rdquo; from further Lebanon strikes &mdash; &ldquo;Enough is enough!!!&rdquo; &bull; IDF Sat announces &ldquo;Yellow Line&rdquo; inside south Lebanon; strikes framed as self-defense &ldquo;not restricted by the ceasefire&rdquo; &bull; On Round 2: US &ldquo;will get all Nuclear &lsquo;Dust,&rsquo;&rdquo; &ldquo;no money will exchange hands&rdquo; &bull; Iranian sources converge on Mon evening arrival, Tue sit-down in Islamabad &bull; Vance to lead &bull; House war-powers resolution failed 213-214 by ONE vote earlier this week</span>
+    <span class="chyron-item"><span class="chyron-label">&#128483; TRUMP</span>To AFP Sat: no &ldquo;sticking points&rdquo; remain with Iran, but US Navy blockade stays &ldquo;in full force&rdquo; until the transaction is &ldquo;100% complete&rdquo; &bull; Tehran joint military command later Sat: Hormuz control &ldquo;returned to its previous state&rdquo; while blockade holds &bull; Ghalibaf earlier Sat: Trump claims &ldquo;were false&rdquo; &bull; AF1 Fri: talks &ldquo;likely&rdquo; this weekend, &ldquo;most of the main points&rdquo; finalized &bull; Truth Social Fri: Israel &ldquo;PROHIBITED&rdquo; from further Lebanon strikes &mdash; &ldquo;Enough is enough!!!&rdquo; &bull; On Round 2: US &ldquo;will get all Nuclear &lsquo;Dust,&rsquo;&rdquo; &ldquo;no money will exchange hands&rdquo; &bull; Iranian sources: Sun arrivals, Mon sit-down in Islamabad &bull; Vance to lead &bull; House war-powers resolution failed 213-214 by ONE vote earlier this week</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#127777; CLIMATE</span>March 2026 hottest on record for Lower 48 &bull; Emperor penguins declared ENDANGERED &bull; Antarctic ice at record low &bull; Colorado St forecasts 13 named storms, 6 hurricanes for 2026 &bull; This is fine</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1301,7 +976,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128760; UAP</span>Rep. Luna&rsquo;s Apr 14 deadline for 46 military UAP videos came and went &mdash; Pentagon still dragging feet &bull; FAA authorizes military lasers to shoot down drones in US airspace &bull; Trump EO ordered full release &bull; 2,000+ AARO cases open &bull; Disclosure delayed indefinitely, again</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#9943;&#65039; TRUTH</span>Trump Sun late-AM Truth Social: Iran &ldquo;decided to fire bullets yesterday in the Strait of Hormuz &mdash; A Total Violation of our Ceasefire Agreement&rdquo; &bull; Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war &bull; Pezeshkian Sun: &ldquo;who is he to deprive a nation of its rights?&rdquo; &bull; Ghalibaf Sun: strait status &ldquo;determined by the field, not by social media&rdquo; &bull; Trump Sun Truth Social: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; if no deal, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; &ldquo;time for the Iran killing machine to end&rdquo; &bull; Trump names Round 2 US delegation: Vance, Witkoff, Kushner &bull; Trump claims Sat Hormuz shots were &ldquo;aimed at a French Ship, and a Freighter from the United Kingdom&rdquo; (UKMTO record: Indian-flagged Sanmar Herald + Jag Arnav) &bull; Ghalibaf Sun: Iran &ldquo;victorious in the field,&rdquo; accepted truce &ldquo;because they accepted our demands&rdquo;; parties still &ldquo;far from the final discussion&rdquo; &bull; Mojtaba Khamenei Army Day Sat (Apr 18): Iran navy &ldquo;ready to inflict new bitter defeats on its enemies&rdquo; &mdash; first public Hormuz line from the new SL &bull; Trump Oval Office Sat: Iran &ldquo;got a little cute,&rdquo; &ldquo;can&rsquo;t blackmail us,&rdquo; talks &ldquo;working out really well&rdquo; &bull; US officials Sat: Navy preparing to board Iran-linked tankers and seize commercial ships in international waters in coming days &bull; IRGC: strait closed until blockade lifts, approaching vessels &ldquo;will be treated as enemies&rdquo; &bull; Iran FM: fresh US proposals under review; blockade framed as a &ldquo;ceasefire violation&rdquo; &bull; SNSC Hormuz regime: transit certificates, vessel-data collection, &ldquo;security&rdquo; fees (Rezaei: not transit fees) &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship (Jag Arnav, IMO 9705354) also fired on and turned back; unknown projectile hit a container vessel damaging cargo &bull; US official puts Sat commercial-ship incidents at 3; UKMTO logs 2; no injuries &bull; New Delhi summons Iran envoy Fathali Sat evening, lodges formal protest &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio KIA in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges caution in attribution; Lebanese Military Tribunal opens parallel probe with army intel; UNSC meeting called &bull; Ghalibaf Sat: Trump&rsquo;s claim on the 440kg HEU handover is false &bull; Reverses Araghchi&rsquo;s 3-day coordinated-route reopening &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled; Pakistan FO not publicly confirming &bull; Munir carrying Washington message to Tehran &bull; Interim 60-day memo path emerging &bull; Enrichment freeze gap: US 20yr vs Iran 3-5yr &bull; IAEA + four-country monitoring framework on table &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked; Moscow monitoring talks &bull; Hegseth: blockade &ldquo;as long as takes&rdquo;; bombs queued if Iran &ldquo;chooses poorly&rdquo; &bull; Vance tapped to lead Round 2 &bull; Caine: ports &amp; coastline, not Hormuz itself</span>
+    <span class="chyron-item"><span class="chyron-label">&#9943;&#65039; TRUTH</span>Iran SNSC formalizes Hormuz regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship also fired on and turned back &bull; US official puts Sat commercial-ship incidents at 3; UKMTO logs 2; at least one hit with damage, no injuries &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio KIA in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges caution in attribution; Lebanese Military Tribunal opens parallel probe with army intel; UNSC meeting called &bull; Ghalibaf Sat: Trump&rsquo;s claim on the 440kg HEU handover is false &bull; Reverses Araghchi&rsquo;s 3-day coordinated-route reopening &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled; Pakistan FO not publicly confirming &bull; Munir carrying Washington message to Tehran &bull; Interim 60-day memo path emerging &bull; Enrichment freeze gap: US 20yr vs Iran 3-5yr &bull; IAEA + four-country monitoring framework on table &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked; Moscow monitoring talks &bull; Hegseth: blockade &ldquo;as long as takes&rdquo;; bombs queued if Iran &ldquo;chooses poorly&rdquo; &bull; Vance tapped to lead Round 2 &bull; Caine: ports &amp; coastline, not Hormuz itself</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128138; HEALTH</span>73% of Americans say insurer delays/denials are major problem &bull; Sheer Health launching to fight insurance battles &bull; AbbVie + Genentech joining White House discount drug site</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1309,7 +984,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas1">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#9888;&#65039; IRAN WAR</span>Day 52 &bull; Trump Sun late-AM Truth Social: Iran &ldquo;decided to fire bullets yesterday in the Strait of Hormuz &mdash; A Total Violation of our Ceasefire Agreement&rdquo; &bull; Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war &bull; Pezeshkian Sun (first Sun line from the presidency): &ldquo;who is he to deprive a nation of its rights?&rdquo; &bull; Ghalibaf Sun: strait status &ldquo;determined by the field, not by social media&rdquo; &bull; Trump Sun Truth Social: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; if deal fails, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; names Vance, Witkoff, Kushner for Round 2; Mon evening arrival, Tue sit-down penciled; claims Sat Hormuz shots &ldquo;aimed at a French Ship, and a Freighter from the United Kingdom&rdquo; &bull; Trump Sun AM: dispatching US reps to Pakistan for Round 2; Iran committed &ldquo;serious violation&rdquo; of ceasefire but deal &ldquo;will happen one way or another, the nice way or the hard way&rdquo; &bull; Ghalibaf Sun: Iran &ldquo;victorious in the field,&rdquo; accepted truce &ldquo;because they accepted our demands&rdquo;; parties still &ldquo;far from the final discussion&rdquo; &bull; Iran Dep FM Khatibzadeh Sun: no date for Round 2 until framework locked; slams US &ldquo;maximalist&rdquo; demands &bull; IRGC BG Naqdi video Sun: Iran &ldquo;willing to shut down 15M bpd&rdquo;; approaching Hormuz &ldquo;cooperation with the enemy&rdquo; &bull; Ghalibaf discloses Islamabad anecdote: told US delegation if a US minesweeper &ldquo;moved even slightly forward&rdquo; Iran would fire &bull; CENTCOM overnight: port blockade &ldquo;fully implemented,&rdquo; economic trade &ldquo;completely halted&rdquo; by sea; 23 vessels turned back still the standing tally &bull; IRGC Sun: any vessel approaching Hormuz &ldquo;a ceasefire violation, met with severe force&rdquo; &bull; no-movement zone from anchorage into Day 3 &bull; Mojtaba Khamenei Army Day Sat: navy &ldquo;ready to inflict new bitter defeats on its enemies&rdquo; &mdash; first public line from the new SL on the Hormuz standoff &bull; Trump Oval Office Sat: Iran &ldquo;got a little cute,&rdquo; &ldquo;can&rsquo;t blackmail us,&rdquo; talks &ldquo;working out really well&rdquo; &bull; IDF Sat formalizes &ldquo;Yellow Line&rdquo; inside south Lebanon &mdash; Gaza-style demarcation, first use here; IDF says it has already struck Hezbollah fighters approaching troops along the line &bull; Israeli artillery Sat hits Beit Leif, Qantara, Touline; framed as self-defense &ldquo;not restricted by the ceasefire&rdquo; &bull; Qassem Sat evening: &ldquo;we do not trust this enemy; the resistance fighters will remain in the field with their hands on the trigger, and they will respond to violations accordingly&rdquo;; demands full IDF withdrawal &bull; Iranian VP Aref Sat: Trump&rsquo;s policies &ldquo;a blend of delusion and contradictory rhetoric&rdquo; &bull; NetBlocks: Iran internet shutdown reaches &ldquo;unprecedented&rdquo; Day 52 &bull; IRGC navy Sat evening widens zone: &ldquo;no vessel should make any movement from its anchorage in the Persian Gulf and the Sea of Oman,&rdquo; approaching strait &ldquo;considered cooperation with the enemy&rdquo; and targeted &bull; US officials Sat: Navy preparing to board Iran-linked tankers and seize commercial ships in international waters in coming days &bull; Iran FM studying fresh US proposals, calls blockade a &ldquo;ceasefire violation&rdquo; &bull; CENTCOM Sat midday: 23 vessels turned back (up from 21 overnight) &bull; SNSC formalizes Hormuz regime: transit certificates, vessel-data collection, &ldquo;security&rdquo; fees (Rezaei: not transit fees) &bull; IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship (Jag Arnav) also fired on and turned back; unknown projectile hit a container vessel damaging cargo; no injuries &bull; New Delhi MEA summons Iran envoy Fathali Sat evening &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio killed by small-arms fire in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges &ldquo;caution&rdquo;; Aoun + Berri + Salam condemn, open probes; Lebanese Military Tribunal parallel probe; UNSC to meet &bull; Trump convened WH Situation Room Sat morning on Hormuz + Iran track (Vance, Rubio, Hegseth, Bessent) &bull; Trump to AFP: no &ldquo;sticking points,&rdquo; blockade stays until transaction &ldquo;100% complete&rdquo; &bull; Ghalibaf earlier Sat: Trump&rsquo;s latest claims &ldquo;false&rdquo;; Iran rejects Trump line on 440kg HEU surrender &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked &bull; Fri close (still reference): S&amp;P 7,126 (3rd record), Dow +850 to 49,447, Nasdaq 13-day streak &bull; WTI $83.85 (&minus;11.45%), Brent $90.38 &bull; Lebanon truce Day 4 &bull; 3 DAYS TO CEASEFIRE EXPIRY (Apr 22)</span>
+    <span class="chyron-item"><span class="chyron-label">&#9888;&#65039; IRAN WAR</span>Day 50 &bull; CENTCOM Sat midday: 23 vessels turned back (up from 21 overnight) &bull; Iran SNSC formalizes Hormuz regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees required &bull; IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship also fired on and turned back &bull; US official: at least 3 commercial ships attacked Sat; UKMTO logs 2; at least one hit with damage, no injuries &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio killed by small-arms fire in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges &ldquo;caution&rdquo; in attribution; Aoun + Salam open investigations; Lebanese Military Tribunal probes; UNSC to meet &bull; Trump to AFP: no &ldquo;sticking points,&rdquo; blockade stays until transaction &ldquo;100% complete&rdquo; &bull; Ghalibaf earlier Sat: Trump&rsquo;s latest claims &ldquo;false&rdquo;; Iran rejects Trump line on 440kg HEU surrender &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked &bull; Fri close (still reference): S&amp;P 7,126 (3rd record), Dow +850 to 49,447, Nasdaq 13-day streak &bull; WTI $83.85 (&minus;11.45%), Brent $90.38 &bull; Lebanon truce Day 3 &bull; 4 DAYS TO CEASEFIRE EXPIRY (Apr 22)</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">MLB</span><span class="chyronMLB">Mariners 9-10 &bull; Dropped series opener in San Diego 4-1 Tue &mdash; snapped 5-game win streak &bull; Woo: 7 IP, 3 R in a tough-luck loss &bull; Vedder Cup opener gone &bull; Game 2 tonight at Petco (6:40 PT) &bull; Still ahead of Astros in AL West &bull; Cali road swing rolls on</span></span>
     <span class="chyron-sep">&#9670;</span>
@@ -1323,13 +998,13 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128176; POLYMARKET</span>$200M+ traded on Iran war markets &bull; 50+ accounts under insider probe &bull; Congress demanding investigation &bull; Bets placed hours before ceasefire</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#128308; HORMUZ</span>IRGC BG Naqdi video Sun: Iran &ldquo;willing to shut down 15 million barrels a day&rdquo;; approaching the strait &ldquo;considered cooperation with the enemy&rdquo; &bull; IRGC navy Sat evening widens the zone: &ldquo;no vessel should make any movement from its anchorage in the Persian Gulf and the Sea of Oman&rdquo; &bull; strait stays closed until US blockade lifts &bull; US officials: Navy preparing to board Iran-linked tankers and seize commercial ships in international waters in coming days &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC fast boats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; vessel unharmed, investigation open &bull; Second Indian-flagged ship (Jag Arnav, IMO 9705354) also fired on and turned back; audio captures shots &bull; New Delhi MEA summons Iran envoy Mohammad Fathali Sat evening, lodges formal protest via Foreign Secretary Misri &bull; Unknown projectile also struck a container vessel damaging cargo &bull; US official: at least 3 commercial ships attacked Sat; UKMTO logs 2; no injuries &bull; SNSC regime: transit certificates, vessel-data collection, &ldquo;security&rdquo; fees (Rezaei: not transit fees) &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; Reverses the 3-day post-ceasefire reopening &bull; WTI $83.85 (&minus;11.45%) / Brent $90.38 (&minus;9.07%) Fri settles still the reference; weekend tape picks up Mon &bull; Trump: blockade stays &ldquo;100% complete&rdquo; &bull; Caine frame: ports &amp; coastline, not the Strait itself &bull; Paris FON Initiative sets Northwood follow-up next week &bull; MCM Sqn 5 still clearing mines</span>
+    <span class="chyron-item"><span class="chyron-label">&#128308; HORMUZ</span>Iran SNSC formalizes the regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC fast boats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; vessel unharmed, investigation open &bull; Second Indian-flagged ship also fired on and turned back; audio captures shots &bull; US official: at least 3 commercial ships attacked Sat; UKMTO logs 2; at least one hit with damage, no injuries &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; Reverses the 3-day post-ceasefire reopening &bull; WTI $83.85 (&minus;11.45%) / Brent $90.38 (&minus;9.07%) Fri settles still the reference; weekend tape picks up Mon &bull; Trump: blockade stays &ldquo;100% complete&rdquo; &bull; Caine frame: ports &amp; coastline, not the Strait itself &bull; Paris FON Initiative sets Northwood follow-up next week &bull; MCM Sqn 5 still clearing mines</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128483; EPSTEIN</span>ACTING AG BLANCHE: DOJ &ldquo;has released everything the law requires&rdquo; &mdash; file drop is &ldquo;finished&rdquo; &bull; Congress disagrees; Epstein Files Transparency Act (HR-4405) still live in House &bull; Fed judge TOSSED Trump&rsquo;s WSJ defamation suit over 50th-birthday letter Mon (Trump &ldquo;nowhere close&rdquo; to &ldquo;actual malice&rdquo;) &bull; Bondi blew off her Mon deposition &mdash; Dem Rep. Garcia moving to contempt &bull; Melania rare address denying ties &bull; ZERO new US arrests despite 3.5M+ pages &bull; 43 victim names EXPOSED in DOJ redaction fail &bull; Gates June testimony still on calendar</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#127936; NBA</span>PLAY-IN DONE &bull; 76ers 109, Magic 97 &mdash; Maxey 31 pts, Philly takes #7 East vs Celtics &bull; Warriors 126, Clippers 121 &mdash; Curry 35 pts, erased 13-pt deficit; Warriors face Suns Fri for #8 West &bull; OKC #1 West &bull; Pistons #1 East &bull; Round 1 tips Apr 18</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#128483; TRUMP</span>Sun late-AM Truth Social: Iran &ldquo;decided to fire bullets yesterday in the Strait of Hormuz &mdash; A Total Violation of our Ceasefire Agreement&rdquo; &bull; Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war &bull; Sun Truth Social escalates: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; if no deal, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; &ldquo;it&rsquo;s time for the Iran killing machine to end&rdquo; &bull; Names Round 2 US delegation: Vance, Witkoff, Kushner; Mon evening arrival, Tue sit-down penciled &bull; Claims Sat Hormuz shots were &ldquo;aimed at a French Ship, and a Freighter from the United Kingdom&rdquo; &bull; Earlier Sun: dispatching US reps to Pakistan for Round 2; Iran committed &ldquo;serious violation&rdquo; of ceasefire but deal &ldquo;will happen one way or another, the nice way or the hard way&rdquo; &bull; Oval Office EO signing Sat afternoon: Iran &ldquo;got a little cute&rdquo; by closing the strait again, &ldquo;they can&rsquo;t blackmail us,&rdquo; talks &ldquo;working out really well&rdquo; &bull; Convened WH Situation Room Sat morning with Vance, Rubio, Hegseth, Bessent on Hormuz + Iran track &bull; To AFP Sat: no &ldquo;sticking points&rdquo; remain with Iran, but US Navy blockade stays &ldquo;in full force&rdquo; until the transaction is &ldquo;100% complete&rdquo; &bull; Tehran joint military command later Sat: Hormuz control &ldquo;returned to its previous state&rdquo; while blockade holds &bull; Ghalibaf earlier Sat: Trump claims &ldquo;were false&rdquo; &bull; Iran VP Aref Sat: US posture &ldquo;a blend of delusion and contradictory rhetoric&rdquo; &bull; AF1 Fri: talks &ldquo;likely&rdquo; this weekend, &ldquo;most of the main points&rdquo; finalized &bull; Truth Social Fri: Israel &ldquo;PROHIBITED&rdquo; from further Lebanon strikes &mdash; &ldquo;Enough is enough!!!&rdquo; &bull; IDF Sat announces &ldquo;Yellow Line&rdquo; inside south Lebanon; strikes framed as self-defense &ldquo;not restricted by the ceasefire&rdquo; &bull; On Round 2: US &ldquo;will get all Nuclear &lsquo;Dust,&rsquo;&rdquo; &ldquo;no money will exchange hands&rdquo; &bull; Iranian sources converge on Mon evening arrival, Tue sit-down in Islamabad &bull; Vance to lead &bull; House war-powers resolution failed 213-214 by ONE vote earlier this week</span>
+    <span class="chyron-item"><span class="chyron-label">&#128483; TRUMP</span>To AFP Sat: no &ldquo;sticking points&rdquo; remain with Iran, but US Navy blockade stays &ldquo;in full force&rdquo; until the transaction is &ldquo;100% complete&rdquo; &bull; Tehran joint military command later Sat: Hormuz control &ldquo;returned to its previous state&rdquo; while blockade holds &bull; Ghalibaf earlier Sat: Trump claims &ldquo;were false&rdquo; &bull; AF1 Fri: talks &ldquo;likely&rdquo; this weekend, &ldquo;most of the main points&rdquo; finalized &bull; Truth Social Fri: Israel &ldquo;PROHIBITED&rdquo; from further Lebanon strikes &mdash; &ldquo;Enough is enough!!!&rdquo; &bull; On Round 2: US &ldquo;will get all Nuclear &lsquo;Dust,&rsquo;&rdquo; &ldquo;no money will exchange hands&rdquo; &bull; Iranian sources: Sun arrivals, Mon sit-down in Islamabad &bull; Vance to lead &bull; House war-powers resolution failed 213-214 by ONE vote earlier this week</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#127777; CLIMATE</span>March 2026 hottest on record for Lower 48 &bull; Emperor penguins declared ENDANGERED &bull; Antarctic ice at record low &bull; Colorado St forecasts 13 named storms, 6 hurricanes for 2026 &bull; This is fine</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1343,7 +1018,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128760; UAP</span>Rep. Luna&rsquo;s Apr 14 deadline for 46 military UAP videos came and went &mdash; Pentagon still dragging feet &bull; FAA authorizes military lasers to shoot down drones in US airspace &bull; Trump EO ordered full release &bull; 2,000+ AARO cases open &bull; Disclosure delayed indefinitely, again</span>
     <span class="chyron-sep">&#9670;</span>
-    <span class="chyron-item"><span class="chyron-label">&#9943;&#65039; TRUTH</span>Trump Sun late-AM Truth Social: Iran &ldquo;decided to fire bullets yesterday in the Strait of Hormuz &mdash; A Total Violation of our Ceasefire Agreement&rdquo; &bull; Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war &bull; Pezeshkian Sun: &ldquo;who is he to deprive a nation of its rights?&rdquo; &bull; Ghalibaf Sun: strait status &ldquo;determined by the field, not by social media&rdquo; &bull; Trump Sun Truth Social: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; if no deal, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; &ldquo;time for the Iran killing machine to end&rdquo; &bull; Trump names Round 2 US delegation: Vance, Witkoff, Kushner &bull; Trump claims Sat Hormuz shots were &ldquo;aimed at a French Ship, and a Freighter from the United Kingdom&rdquo; (UKMTO record: Indian-flagged Sanmar Herald + Jag Arnav) &bull; Ghalibaf Sun: Iran &ldquo;victorious in the field,&rdquo; accepted truce &ldquo;because they accepted our demands&rdquo;; parties still &ldquo;far from the final discussion&rdquo; &bull; Mojtaba Khamenei Army Day Sat (Apr 18): Iran navy &ldquo;ready to inflict new bitter defeats on its enemies&rdquo; &mdash; first public Hormuz line from the new SL &bull; Trump Oval Office Sat: Iran &ldquo;got a little cute,&rdquo; &ldquo;can&rsquo;t blackmail us,&rdquo; talks &ldquo;working out really well&rdquo; &bull; US officials Sat: Navy preparing to board Iran-linked tankers and seize commercial ships in international waters in coming days &bull; IRGC: strait closed until blockade lifts, approaching vessels &ldquo;will be treated as enemies&rdquo; &bull; Iran FM: fresh US proposals under review; blockade framed as a &ldquo;ceasefire violation&rdquo; &bull; SNSC Hormuz regime: transit certificates, vessel-data collection, &ldquo;security&rdquo; fees (Rezaei: not transit fees) &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship (Jag Arnav, IMO 9705354) also fired on and turned back; unknown projectile hit a container vessel damaging cargo &bull; US official puts Sat commercial-ship incidents at 3; UKMTO logs 2; no injuries &bull; New Delhi summons Iran envoy Fathali Sat evening, lodges formal protest &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio KIA in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges caution in attribution; Lebanese Military Tribunal opens parallel probe with army intel; UNSC meeting called &bull; Ghalibaf Sat: Trump&rsquo;s claim on the 440kg HEU handover is false &bull; Reverses Araghchi&rsquo;s 3-day coordinated-route reopening &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled; Pakistan FO not publicly confirming &bull; Munir carrying Washington message to Tehran &bull; Interim 60-day memo path emerging &bull; Enrichment freeze gap: US 20yr vs Iran 3-5yr &bull; IAEA + four-country monitoring framework on table &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked; Moscow monitoring talks &bull; Hegseth: blockade &ldquo;as long as takes&rdquo;; bombs queued if Iran &ldquo;chooses poorly&rdquo; &bull; Vance tapped to lead Round 2 &bull; Caine: ports &amp; coastline, not Hormuz itself</span>
+    <span class="chyron-item"><span class="chyron-label">&#9943;&#65039; TRUTH</span>Iran SNSC formalizes Hormuz regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees &bull; CENTCOM Sat midday: 23 vessels turned back (21 overnight) &bull; UKMTO: two IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship also fired on and turned back &bull; US official puts Sat commercial-ship incidents at 3; UKMTO logs 2; at least one hit with damage, no injuries &bull; Iran navy: &ldquo;any breach of commitments by America will receive an appropriate response&rdquo; &bull; IRGC calls US blockade &ldquo;piracy&rdquo; &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio KIA in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges caution in attribution; Lebanese Military Tribunal opens parallel probe with army intel; UNSC meeting called &bull; Ghalibaf Sat: Trump&rsquo;s claim on the 440kg HEU handover is false &bull; Reverses Araghchi&rsquo;s 3-day coordinated-route reopening &bull; Iran dep FM: no date for Round 2 until framework locked; Mon Islamabad still penciled; Pakistan FO not publicly confirming &bull; Munir carrying Washington message to Tehran &bull; Interim 60-day memo path emerging &bull; Enrichment freeze gap: US 20yr vs Iran 3-5yr &bull; IAEA + four-country monitoring framework on table &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked; Moscow monitoring talks &bull; Hegseth: blockade &ldquo;as long as takes&rdquo;; bombs queued if Iran &ldquo;chooses poorly&rdquo; &bull; Vance tapped to lead Round 2 &bull; Caine: ports &amp; coastline, not Hormuz itself</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#128138; HEALTH</span>73% of Americans say insurer delays/denials are major problem &bull; Sheer Health launching to fight insurance battles &bull; AbbVie + Genentech joining White House discount drug site</span>
     <span class="chyron-sep">&#9670;</span>
@@ -1515,82 +1190,78 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="rd-masthead">
       <div>
         <div class="rd-title">The Run Down</div>
-        <div class="rd-sub">&ldquo;All the news that's fit to pour&rdquo;</div>
+        <div class="rd-sub">&ldquo;All the news that matters, on one page&rdquo;</div>
       </div>
-      <div class="rd-dateline">Updated: <span id="runDownUpdated">Sun Apr 19 &middot; 7:30 AM PDT</span></div>
+      <div class="rd-dateline">Updated: <span id="runDownUpdated">Sat Apr 18 &middot; 7:15 AM PDT</span></div>
     </div>
     <div id="runDownList">
       <article class="lead">
-        <span class="rd-kicker urgent">IRAN &middot; DAY 51</span>
-        <h3 class="rd-head">Hormuz Stays Shut Into Sunday; Round 2 Without A Date, Ceasefire Runs Dry Wednesday</h3>
-        <p class="rd-dek">Iran enters Sunday with the Strait of Hormuz under full IRGC control and no date set for a return to Islamabad, three days before the Apr 8 ceasefire expires. Iran&rsquo;s chief negotiator says the two sides have made progress but remain &ldquo;a long way from a deal&rdquo;; President Trump told reporters the ceasefire &ldquo;will happen one way or another &mdash; the nice way or the hard way,&rdquo; accusing Tehran of a &ldquo;serious violation.&rdquo; U.S. Central Command says 23 ships have been turned around since the American blockade of Iranian ports began Apr 13, and Pakistan &mdash; which brokered the deal and hosted the Apr 11-12 first round &mdash; is still trying to get both delegations back in the same city.</p>
+        <span class="rd-kicker urgent">IRAN &middot; DAY 50</span>
+        <h3 class="rd-head">Hormuz Snaps Shut Again; Iranian Gunboats Fire On Tanker Hours After Trump Keeps U.S. Blockade Running</h3>
+        <p class="rd-dek">Iran reimposed strict control of the Strait of Hormuz early Saturday, less than 24 hours after Foreign Minister Abbas Araghchi declared the waterway &ldquo;completely open&rdquo; for the remainder of the ceasefire. Tehran framed the reversal as a response to President Trump&rsquo;s statement that the U.S. blockade of Iranian ports will stay &ldquo;in full force&rdquo; until a peace deal &mdash; a condition parliament speaker Mohammad Bagher Ghalibaf called a set of &ldquo;seven false claims in one hour.&rdquo; British maritime authorities say Revolutionary Guard gunboats fired on a tanker transiting the strait; two Indian-flagged vessels, including a supertanker carrying roughly 2 million barrels of Iraqi crude, reversed course. Pakistan still expects to host Round 2 of U.S.-Iran talks in Islamabad early next week, ahead of the Apr 22 ceasefire expiry.</p>
         <div class="rd-factbox">
           <div class="rd-factbox-title">BY THE NUMBERS</div>
           <ul>
-            <li><b>Day 51</b> of the war</li>
-            <li><b>Day 7</b> of U.S. blockade</li>
-            <li><b>Apr 22:</b> ceasefire expires</li>
-            <li><b>23 ships:</b> turned by CENTCOM</li>
-            <li><b>Brent:</b> ~$97/bbl</li>
-            <li><b>Round 2:</b> no date set</li>
+            <li><b>Day 50</b> of the war</li>
+            <li><b>Day 6</b> of U.S. blockade</li>
+            <li><b>Apr 22:</b> ceasefire expiry</li>
+            <li><b>~2M bbl</b> supertanker turned back</li>
+            <li><b>24 hrs:</b> &ldquo;open&rdquo; to shut</li>
+            <li><b>Round 2:</b> Islamabad, early week</li>
           </ul>
         </div>
-        <div class="rd-pullquote">&ldquo;It&rsquo;s going to happen one way or another &mdash; the nice way, or the hard way.&rdquo;
-          <cite>President Trump, Apr 19</cite>
-        </div>
         <div class="rd-src">
-          <a href="https://www.aljazeera.com/news/liveblog/2026/4/19/iran-war-live-tehran-says-no-date-set-for-us-talks-hormuz-strait-closed" target="_blank" rel="noopener">Al Jazeera</a>
-          <a href="https://www.npr.org/2026/04/19/nx-s1-5790378/iran-us-hormuz-closed-impossible" target="_blank" rel="noopener">NPR</a>
           <a href="https://www.cbsnews.com/live-updates/iran-war-trump-israel-lebanon-ceasefire-hezbollah-strait-hormuz/" target="_blank" rel="noopener">CBS</a>
-          <a href="https://www.cnn.com/2026/04/18/world/live-news/iran-war-trump-israel" target="_blank" rel="noopener">CNN</a>
+          <a href="https://www.aljazeera.com/news/liveblog/2026/4/18/iran-war-live-tehran-says-president-trump-made-false-claims-amid-talks" target="_blank" rel="noopener">Al Jazeera</a>
+          <a href="https://www.newsweek.com/iran-shuts-strait-hormuz-strict-control-donald-trump-blockade-iran-war-latest-11848653" target="_blank" rel="noopener">Newsweek</a>
+          <a href="https://www.adn.com/nation-world/2026/04/18/iran-reimposes-restrictions-on-strait-of-hormuz-ship-traffic-accuses-us-of-violating-deal/" target="_blank" rel="noopener">ADN</a>
+          <a href="https://www.nbcnews.com/world/iran/live-blog/live-updates-israel-lebanon-ceasefire-trump-iran-talks-hormuz-summit-rcna332294" target="_blank" rel="noopener">NBC</a>
         </div>
       </article>
       <article>
         <span class="rd-kicker">MARKETS</span>
-        <h3 class="rd-head">Monday Re-Prices The Weekend: Brent Near $98, WTI Testing $94</h3>
-        <p class="rd-dek">Friday closed with the S&amp;P 500 at a record 7,126.06 and WTI off 9.8% on Araghchi&rsquo;s &ldquo;open strait&rdquo; line. Saturday&rsquo;s IRGC reversal leaves futures opening Sunday evening into a different story than the one that rallied Friday&rsquo;s tape.</p>
+        <h3 class="rd-head">S&amp;P Punches Through 7,100; Crude Drops 10% On The Hormuz Opening That Lasted A Day</h3>
+        <p class="rd-dek">Friday&rsquo;s tape caught Araghchi&rsquo;s announcement and ran with it: S&amp;P 500 closed at a record 7,126.06 (+1.3%), Nasdaq and Russell 2000 at fresh highs, Dow up 1,005 points on the week. WTI fell 9.8% to $85.37, Brent 9.1% to $90.38. Monday now re-prices the Saturday reversal.</p>
         <div class="rd-src">
-          <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener">Trading Econ</a>
-          <a href="https://fortune.com/article/price-of-oil-04-17-2026/" target="_blank" rel="noopener">Fortune</a>
+          <a href="https://www.washingtontimes.com/news/2026/apr/17/oil-prices-fall-10-us-stocks-soar-iran-reopens-strait-hormuz/" target="_blank" rel="noopener">WaTimes</a>
           <a href="https://www.cnbc.com/2026/04/16/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a>
+          <a href="https://fortune.com/article/price-of-oil-04-17-2026/" target="_blank" rel="noopener">Fortune</a>
         </div>
       </article>
       <article>
-        <span class="rd-kicker">KYIV</span>
-        <h3 class="rd-head">Gunman Kills Six At A Kyiv Supermarket Before Police End The Standoff</h3>
-        <p class="rd-dek">A 58-year-old with a valid weapons permit shot four people on the street, then a fifth inside a shop before taking hostages; a sixth victim died of her wounds overnight. Zelenskyy said the shooter was born in Russia; the SBU is treating the attack as terrorism.</p>
+        <span class="rd-kicker">SCOTUS</span>
+        <h3 class="rd-head">Unanimous Chevron Win Puts $745M Louisiana Wetlands Verdict In Jeopardy</h3>
+        <p class="rd-dek">An 8-0 court (Alito not participating) moved the Plaquemines Parish case to federal court, citing WWII-era federal oil-refining contracts. The procedural ruling also threatens roughly a dozen similar state-court judgments against oil and gas companies over coastal land loss.</p>
         <div class="rd-src">
-          <a href="https://www.npr.org/2026/04/18/nx-s1-5789903/mass-shooting-kyiv-ukraine" target="_blank" rel="noopener">NPR</a>
-          <a href="https://www.cbsnews.com/news/ukraine-mass-shooting-deaths-injuries-kyiv-gunman-hostage/" target="_blank" rel="noopener">CBS</a>
+          <a href="https://www.upi.com/Top_News/US/2026/04/17/supreme-court-chevron-louisiana-gas-wetlands-damage/3621776470887/" target="_blank" rel="noopener">UPI</a>
+          <a href="https://news.bloomberglaw.com/us-law-week/supreme-court-sides-with-chevron-in-fight-over-wetlands-suits" target="_blank" rel="noopener">Bloomberg Law</a>
         </div>
       </article>
       <article>
-        <span class="rd-kicker">MIDWEST</span>
-        <h3 class="rd-head">Cleanup Underway Across Five States After Friday&rsquo;s Tornado Outbreak</h3>
-        <p class="rd-dek">Preliminary NWS surveys confirm an EF-3 in Buffalo County, Wisconsin and an EF-2 in Rochester, Minnesota; NWS La Crosse logged its highest single-day warning total since 1995. No deaths reported, but more than 70,000 customers across Wisconsin, Minnesota, Iowa, Illinois and Missouri were still without power Saturday morning.</p>
+        <span class="rd-kicker">TICKETING</span>
+        <h3 class="rd-head">Manhattan Jury Finds Live Nation-Ticketmaster An Illegal Monopoly; Breakup Now In The Judge&rsquo;s Hands</h3>
+        <p class="rd-dek">Jurors put Ticketmaster&rsquo;s share at 86% of major-venue ticketing and set the overcharge at $1.72 a ticket. Remedies &mdash; including a forced unwinding of the 2010 Live Nation-Ticketmaster merger &mdash; now move to the judge. Live Nation says it will appeal.</p>
         <div class="rd-src">
-          <a href="https://www.foxweather.com/extreme-weather/damage-reported-multiple-states-tornado-outbreak-hammers-midwest" target="_blank" rel="noopener">Fox Wx</a>
-          <a href="https://www.cbsnews.com/news/midwest-great-lakes-weather-storms-tornadoes/" target="_blank" rel="noopener">CBS</a>
+          <a href="https://www.cnn.com/2026/04/15/politics/ticketmaster-live-nation-monopoly-verdict" target="_blank" rel="noopener">CNN</a>
+          <a href="https://www.npr.org/2026/04/16/nx-s1-5787491/ticketmaster-live-nation-verdict-monopoly-remedies" target="_blank" rel="noopener">NPR</a>
         </div>
       </article>
       <article>
-        <span class="rd-kicker">SOFIA</span>
-        <h3 class="rd-head">Bulgarians Vote For The Eighth Time In Five Years; Radev&rsquo;s New Bloc Leads The Field</h3>
-        <p class="rd-dek">Polls open Sunday for all 240 seats of the National Assembly. Pre-election surveys put former president Rumen Radev&rsquo;s Progressive Bulgaria around 32-35%, ahead of Borissov&rsquo;s GERB-UDF near 20%; coalition math, not any one party, decides who governs.</p>
+        <span class="rd-kicker">UKRAINE</span>
+        <h3 class="rd-head">Russia Opens New Eastern Offensive As Orthodox Easter Truce Collapses Inside 32 Hours</h3>
+        <p class="rd-dek">Moscow pushed fresh operations in Donetsk and Luhansk this weekend after a Putin-declared ceasefire Kyiv says Russia violated nearly 7,700 times. Diplomatic channels remain frozen; no new round of talks on the calendar.</p>
         <div class="rd-src">
-          <a href="https://www.aljazeera.com/news/2026/4/19/bulgarians-head-to-polls-to-elect-parliament-for-eighth-time-in-5-years" target="_blank" rel="noopener">Al Jazeera</a>
-          <a href="https://www.cnbc.com/2026/04/19/bulgaria-votes-as-pro-russian-former-president-leads-the-polls.html" target="_blank" rel="noopener">CNBC</a>
-          <a href="https://www.euronews.com/my-europe/2026/04/19/bulgaria-votes-in-eighth-election-in-five-years" target="_blank" rel="noopener">Euronews</a>
+          <a href="https://www.aljazeera.com/news/2026/4/12/ukraine-and-russia-accuse-each-other-of-breaching-easter-ceasefire" target="_blank" rel="noopener">Al Jazeera</a>
+          <a href="https://www.france24.com/en/europe/20260413-russia%E2%80%93ukraine-easter-truce-expires-amid-mutual-accusations-of-violations" target="_blank" rel="noopener">France 24</a>
         </div>
       </article>
       <article>
         <span class="rd-kicker">NORTHWEST</span>
-        <h3 class="rd-head">Mariners 7, Rangers 3: Kirby Snaps The Skid; Kraken Close The Book And Part With Francis</h3>
-        <p class="rd-dek">George Kirby carried the night at T-Mobile Park, flipping a five-game slide against Texas. Across town, captain Jordan Eberle and coach Lane Lambert called the Kraken season a &ldquo;failure&rdquo; at exit interviews; GM Ron Francis is out, with a hockey-operations audit on the way.</p>
+        <h3 class="rd-head">Rangers 5, Mariners 0: deGrom Carves Seattle; Road Slide Now Five Straight</h3>
+        <p class="rd-dek">Jacob deGrom threw four shutout innings, Brandon Nimmo led off with a home run, and rookie Gavin Collyer earned his first career win. Seattle heads home with the road trip in tatters.</p>
         <div class="rd-src">
-          <a href="https://www.espn.com/mlb/matchup?gameId=401814999" target="_blank" rel="noopener">ESPN</a>
-          <a href="https://www.spokesman.com/stories/2026/apr/18/seattle-kraken-players-reflect-on-another-lost-sea/" target="_blank" rel="noopener">Spokesman</a>
-          <a href="https://www.lookoutlanding.com/seattle-mariners-scores-standings" target="_blank" rel="noopener">Lookout</a>
+          <a href="https://www.espn.com/mlb/game/_/gameId/401814984/rangers-mariners" target="_blank" rel="noopener">ESPN</a>
+          <a href="https://www.lookoutlanding.com/seattle-mariners-scores-standings" target="_blank" rel="noopener">Lookout Landing</a>
         </div>
       </article>
     </div>
@@ -1671,7 +1342,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         <div class="tt-title">ðºð¸ TRACK THE TROOPS</div>
         <div class="tt-subtitle">What the receipts say vs. what the politicians say &middot; CENTCOM AOR</div>
       </div>
-      <div class="tt-dateline">OSINT AS OF: <span id="trackTroopsUpdated">Sun Apr 19 &middot; 08:15 PT</span></div>
+      <div class="tt-dateline">OSINT AS OF: <span id="trackTroopsUpdated">Sat Apr 18 &middot; 18:10 PT</span></div>
     </div>
     <table>
       <thead>
@@ -1690,7 +1361,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <td class="tt-pers">~7,500</td>
           <td class="tt-loc">E. Med &middot; SW of Cyprus</td>
           <td class="tt-status active">ON STATION</td>
-          <td class="tt-obs">Apr 19 (301 days &middot; 6 past record)</td>
+          <td class="tt-obs">Apr 18 (300 days &middot; 5 past record)</td>
           <td class="tt-src"><a href="https://news.usni.org/2026/04/15/uss-gerald-r-ford-breaks-post-cold-war-deployment-record" target="_blank">USNI 4/15</a></td>
         </tr>
         <tr>
@@ -1698,15 +1369,15 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <td class="tt-pers">~7,500</td>
           <td class="tt-loc">Arabian Sea &middot; CVW-9 embarked &middot; DDG-112 Murphy on patrol</td>
           <td class="tt-status active">ON STATION</td>
-          <td class="tt-obs">Apr 19 (blockade ops lead &middot; 23 ships turned back)</td>
+          <td class="tt-obs">Apr 17 (blockade ops lead &middot; 21 ships turned back)</td>
           <td class="tt-src"><a href="https://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/4457255/us-to-blockade-ships-entering-or-exiting-iranian-ports/" target="_blank">CENTCOM 4/17</a></td>
         </tr>
         <tr>
           <td class="tt-unit"><span class="tt-branch navy">NAVY</span>CVN-77 GHW Bush / CSG-10</td>
           <td class="tt-pers">~7,500</td>
-          <td class="tt-loc">S. Atlantic &middot; off Namibia &middot; rounding Cape of Good Hope &middot; DDG-75/87/71 + TAOE-8</td>
+          <td class="tt-loc">S. Atlantic &middot; rounding Cape of Good Hope &middot; DDG-75/87/71 + TAOE-8</td>
           <td class="tt-status enroute">EN ROUTE</td>
-          <td class="tt-obs">Apr 18 (Suez bypassed, weeks out)</td>
+          <td class="tt-obs">Apr 15 (Suez bypassed, weeks out)</td>
           <td class="tt-src"><a href="https://news.usni.org/2026/04/13/carrier-uss-george-h-w-bush-operating-off-southern-africa-as-iranian-blockade-begins" target="_blank">USNI 4/13</a></td>
         </tr>
         <tr class="ground">
@@ -1714,7 +1385,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <td class="tt-pers">~4,500</td>
           <td class="tt-loc">CENTCOM AOR &middot; LHA-7 + LPD-18 + LSD-47 Rushmore</td>
           <td class="tt-status station">ON STATION</td>
-          <td class="tt-obs">Apr 19 (CENTCOM confirms in-AOR)</td>
+          <td class="tt-obs">Apr 18 (CENTCOM confirms in-AOR)</td>
           <td class="tt-src"><a href="https://news.usni.org/2026/04/13/usni-news-fleet-and-marine-tracker-april-13-2026" target="_blank">USNI 4/13</a></td>
         </tr>
         <tr class="ground">
@@ -1730,7 +1401,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <td class="tt-pers">~2,000</td>
           <td class="tt-loc">Undisclosed fwd base &middot; CENTCOM AOR</td>
           <td class="tt-status station">DEPLOYED</td>
-          <td class="tt-obs">Apr 18 (since late Mar)</td>
+          <td class="tt-obs">Apr 17 (since late Mar)</td>
           <td class="tt-src"><a href="https://www.stripes.com/branches/army/2026-03-25/82nd-airborne-iran-deployment-21175729.html" target="_blank">Stripes</a></td>
         </tr>
         <tr>
@@ -1778,7 +1449,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <td class="tt-pers">~500</td>
           <td class="tt-loc">Strait of Hormuz &middot; Chief + Pioneer transiting from Singapore</td>
           <td class="tt-status active">CLEARING</td>
-          <td class="tt-obs">Apr 18</td>
+          <td class="tt-obs">Apr 17</td>
           <td class="tt-src"><a href="https://www.stripes.com/theaters/asia_pacific/2026-04-16/navy-japan-minesweepers-hormuz-strait-21393177.html" target="_blank">Stripes 4/16</a></td>
         </tr>
         <tr style="border-top:2px solid #121212;background:#f5f5f5;">
@@ -1789,7 +1460,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </tbody>
     </table>
     <div id="trackTroopsNotes" class="tt-notes">
-      <b>SAY vs. DO:</b> Tehran slammed Hormuz shut Saturday night and IRGC gunboats opened fire on two Indian-flagged tankers and a container ship without VHF challenge; Washington says the cordon stays lit until a deal is signed, and the White House floats Iranian power plants and bridges as targets if talks fail. Receipt: CENTCOM Sunday logs 23 vessels turned back since Monday&rsquo;s 10 a.m. start, zero breakthroughs; US officials still flag tanker boardings and at-sea seizures of Iran-linked commercial ships as the next rung. Ford holds E. Med at Day 301, six past the post-Vietnam record. Lincoln leads Arabian Sea blockade ops. Bush off Namibia, rounding the Cape. Ten bombers on Diego Garcia. Witkoff and Kushner fly Islamabad Tuesday; Apr 22 expiry three days out. <b style="color:#b32424;">GROUND TRIPWIRE: TRIPPED.</b> Tripoli ARG in-AOR, 82nd IRF forward since late March, Boxer mid-Pacific. No fresh infantry BCT order, additional MEU surge, or hospital-ship sortie today.
+      <b>SAY vs. DO:</b> Tehran says the strait is &ldquo;returning to previous state&rdquo; and calls Hormuz open; Washington keeps the blockade in place until a deal, not a statement. Receipt: CENTCOM logs 21 vessels turned back since Monday&rsquo;s 10 a.m. start, zero breakthroughs, no ship testing the cordon today. Oil still off ~11%; the metal hasn&rsquo;t flinched. Enforcement tally: 12+ warships, 100+ aircraft, 10,000+ personnel &mdash; USS Michael Murphy now on Arabian Sea patrol. Ford holds E. Med at Day 300, five past the post-Vietnam record. Lincoln leads Arabian Sea blockade ops. Bush rounding the Cape past Namibia. 10 bombers on Diego Garcia. Round 2 penciled for Islamabad Monday; Apr 22 ceasefire expiry four days out. <b style="color:#b32424;">GROUND TRIPWIRE: TRIPPED.</b> Tripoli ARG confirmed in-AOR, 82nd IRF forward since late March, Boxer mid-Pacific. No fresh infantry BCT order, additional MEU surge, or hospital-ship sortie today.
     </div>
     <div class="tt-footer">
       <div>SOURCES:
@@ -1805,15 +1476,18 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
   <!-- IRAN WAR â NO DEAL BANNER -->
   <div class="gameday-banner" id="iranWarBanner" style="background:#ffffff;border:1px solid var(--border);border-left:3px solid var(--red);position:relative;overflow:hidden;">
-    <!-- animated stripe removed — newsprint mode -->
+    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0505,#e94560,#ff4444,#ffa500,#e94560,#1a0505);background-size:200% 100%;animation:iranStripe 3s linear infinite;"></div>
     <style>
-      
+      @keyframes iranStripe{0%{background-position:0% 0}100%{background-position:200% 0}}
+      100%{background-position:200% 0}}
+      @keyframes iranPulse{0%,100%{opacity:1}50%{opacity:0.6}}
+      @keyframes noDeakFlash{0%,100%{text-shadow:0 0 10px rgba(255,60,60,0.4)}50%{text-shadow:0 0 30px rgba(255,60,60,0.8),0 0 60px rgba(255,165,0,0.3)}}
       .iran-flash{/* flash disabled â newsprint mode */}
       .iran-pulse{/* pulse disabled â newsprint mode */}
     </style>
     <style>
       #iranWarBanner .iw-title{letter-spacing:4px;color:var(--red);font-size:11px;font-weight:900;text-align:center;margin-bottom:6px;}
-      #iranWarBanner .iw-headline{font-size:13px;color:var(--text);font-weight:500;letter-spacing:0;text-align:left;line-height:1.6;margin-bottom:14px;}
+      #iranWarBanner .iw-headline{font-size:22px;color:var(--red);font-weight:900;letter-spacing:0.5px;text-align:center;line-height:1.2;margin-bottom:14px;}
       #iranWarBanner .iw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
       #iranWarBanner .iw-stat{background:#f5f5f5;border:1px solid var(--border);border-top:2px solid var(--red);border-radius:2px;padding:10px 6px;text-align:center;}
       #iranWarBanner .iw-stat-icon{font-size:20px;line-height:1;margin-bottom:4px;}
@@ -1829,12 +1503,12 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       #iranWarBanner .iw-del-val{font-size:10px;font-weight:700;color:var(--text);}
       @media (max-width:600px){#iranWarBanner .iw-stats{grid-template-columns:repeat(2,1fr);}}
     </style>
-    <div class="iw-title">&#9888;&#65039; DAY <span class="iran-day-count">52</span> &middot; US-IRAN WAR &#9888;&#65039;</div>
-    <div class="iw-headline iran-flash">DAY 52 &mdash; TRUMP SUN TRUTH SOCIAL LATE-AM: IRAN &ldquo;DECIDED TO FIRE BULLETS YESTERDAY IN THE STRAIT OF HORMUZ &mdash; A TOTAL VIOLATION OF OUR CEASEFIRE AGREEMENT&rdquo; &mdash; HARDER THAN THE EARLIER &ldquo;SERIOUS VIOLATION&rdquo; LINE &mdash; TRUMP SUN AM ESCALATES FURTHER TO REPORTERS: IF NO DEAL, US &ldquo;MAY HAVE TO BLOW UP THE WHOLE COUNTRY&rdquo; &mdash; HARDEST PUBLIC LINE OF THE WAR &mdash; PEZESHKIAN SUN (FIRST SUN LINE FROM THE PRESIDENCY): &ldquo;WHO IS HE TO DEPRIVE A NATION OF ITS RIGHTS?&rdquo; &mdash; FOR &ldquo;WHAT CRIME&rdquo; IS IRAN TO LOSE ITS NUCLEAR RIGHTS &mdash; GHALIBAF SUN ADDS: STRAIT OPEN OR CLOSED &ldquo;DETERMINED BY THE FIELD, NOT BY SOCIAL MEDIA&rdquo; &mdash; TRUMP SUN TRUTH SOCIAL ESCALATES: &ldquo;NO MORE MR. NICE GUY&rdquo; &mdash; IF DEAL FAILS, US &ldquo;GOING TO KNOCK OUT EVERY SINGLE POWER PLANT, AND EVERY SINGLE BRIDGE, IN IRAN&rdquo;; &ldquo;IT&rsquo;S TIME FOR THE IRAN KILLING MACHINE TO END&rdquo; &mdash; TRUMP NAMES ROUND 2 US DELEGATION: VANCE &middot; WITKOFF &middot; KUSHNER; MON EVENING ARRIVAL IN ISLAMABAD, TUE SIT-DOWN PENCILED &mdash; BLOOMBERG: US AND IRAN GAVE &ldquo;IN PRINCIPLE&rdquo; NOD TO A TWO-WEEK CEASEFIRE EXTENSION PAST APR 22; EXTENSION NOT FORMALLY REQUESTED YET &mdash; TRUMP CLAIMS SAT HORMUZ SHOTS &ldquo;AIMED AT A FRENCH SHIP, AND A FREIGHTER FROM THE UNITED KINGDOM&rdquo; (UKMTO RECORD STILL SHOWS INDIAN-FLAGGED VLCC SANMAR HERALD + JAG ARNAV) &mdash; GHALIBAF SUN: IRAN &ldquo;VICTORIOUS IN THE FIELD,&rdquo; ACCEPTED TRUCE &ldquo;BECAUSE THEY ACCEPTED OUR DEMANDS&rdquo;; PARTIES STILL &ldquo;FAR FROM THE FINAL DISCUSSION&rdquo; &mdash; ANKARA FM SUN SIGNALS OPTIMISM ON CEASEFIRE EXTENSION &mdash; ISLAMABAD ELEVATES SECURITY (CHECKPOINTS, HOTEL BARRICADES) AHEAD OF ROUND 2 &mdash; TRUMP SUN AM TRUTH SOCIAL: DISPATCHING US REPS TO PAKISTAN FOR ROUND 2; IRAN HAS COMMITTED &ldquo;SERIOUS VIOLATION&rdquo; OF CEASEFIRE, BUT DEAL &ldquo;WILL HAPPEN ONE WAY OR ANOTHER, THE NICE WAY OR THE HARD WAY&rdquo; &mdash; GHALIBAF SUN: &ldquo;PROGRESS MADE&rdquo; WITH US BUT PARTIES STILL &ldquo;A LONG WAY FROM A DEAL&rdquo; &mdash; DEP FM KHATIBZADEH SUN: NO DATE SET FOR ROUND 2 UNTIL FRAMEWORK LOCKED; SLAMS WASHINGTON&rsquo;S &ldquo;MAXIMALIST&rdquo; DEMANDS &mdash; IRGC BG NAQDI VIDEO SUN: IRAN &ldquo;WILLING TO SHUT DOWN 15M BPD&rdquo;; APPROACHING HORMUZ &ldquo;COOPERATION WITH THE ENEMY&rdquo; &mdash; GHALIBAF REVEALS ISLAMABAD ANECDOTE: TOLD US DELEGATION IF A US MINESWEEPER &ldquo;MOVED EVEN SLIGHTLY FORWARD&rdquo; IRAN WOULD FIRE &mdash; CENTCOM OVERNIGHT: PORT BLOCKADE &ldquo;FULLY IMPLEMENTED,&rdquo; ECONOMIC TRADE &ldquo;COMPLETELY HALTED&rdquo; BY SEA; 23 VESSELS TURNED BACK STILL THE STANDING TALLY &mdash; IRGC SUN: ANY VESSEL APPROACHING HORMUZ &ldquo;A CEASEFIRE VIOLATION, MET WITH SEVERE FORCE&rdquo; &mdash; NO-MOVEMENT ZONE FROM ANCHORAGE INTO DAY 3 &mdash; IRAN STILL STUDYING FRESH US PROPOSALS; ROUND 2 DATE UNCONFIRMED, MON ISLAMABAD STILL PENCILED &mdash; MOJTABA KHAMENEI ARMY DAY MESSAGE SAT: IRAN NAVY &ldquo;READY TO INFLICT NEW BITTER DEFEATS ON ITS ENEMIES&rdquo; &mdash; FIRST PUBLIC LINE FROM THE NEW SUPREME LEADER ON THE HORMUZ STANDOFF &mdash; TRUMP OVAL OFFICE SAT: IRAN &ldquo;GOT A LITTLE CUTE&rdquo; ON HORMUZ; &ldquo;THEY CAN&rsquo;T BLACKMAIL US&rdquo;; TALKS &ldquo;WORKING OUT REALLY WELL&rdquo; &mdash; IRGC NAVY SAT NIGHT WIDENS NO-MOVEMENT ZONE FROM STRAIT TO ANCHORAGE; APPROACHING STRAIT NOW &ldquo;COOPERATION WITH THE ENEMY&rdquo; AND TARGETED &mdash; IDF ANNOUNCES &ldquo;YELLOW LINE&rdquo; IN SOUTH LEBANON ON TRUCE DAY 3 (SAT), ARTILLERY SAT HITS BEIT LEIF, QANTARA, TOULINE; SELF-DEFENSE FRAME: &ldquo;NOT RESTRICTED BY THE CEASEFIRE&rdquo; &mdash; QASSEM SAT EVE: &ldquo;WE DO NOT TRUST THIS ENEMY, FIGHTERS REMAIN IN THE FIELD WITH HANDS ON THE TRIGGER&rdquo;; DEMANDS FULL IDF WITHDRAWAL &mdash; US NAVY PREPARING TO BOARD IRAN-LINKED TANKERS AND SEIZE COMMERCIAL SHIPS IN INTERNATIONAL WATERS IN COMING DAYS, PER US OFFICIALS &mdash; IRAN STUDYING FRESH US PROPOSALS, FM CALLS BLOCKADE A &ldquo;CEASEFIRE VIOLATION&rdquo; &mdash; IRANIAN VP AREF SAT: TRUMP&rsquo;S POLICIES &ldquo;A BLEND OF DELUSION AND CONTRADICTORY RHETORIC&rdquo; &mdash; SNSC HORMUZ REGIME: &ldquo;STRICT MANAGEMENT AND CONTROL&rdquo; UNTIL &ldquo;DEFINITIVE END OF THE WAR,&rdquo; TRANSIT CERTIFICATES, VESSEL DATA COLLECTION, &ldquo;SECURITY&rdquo; FEES (REZAEI: NOT TRANSIT FEES) &mdash; CENTCOM SAT MIDDAY: 23 VESSELS TURNED BACK (21 OVERNIGHT) &mdash; IRGC GUNBOATS FIRED ON INDIAN-FLAGGED VLCC SANMAR HERALD ~20NM NE OF OMAN DESPITE PRIOR CLEARANCE; SECOND INDIAN-FLAGGED SHIP (JAG ARNAV) ALSO FIRED ON AND TURNED BACK; UNKNOWN PROJECTILE HIT A CONTAINER VESSEL DAMAGING CARGO &mdash; US OFFICIAL: AT LEAST THREE COMMERCIAL SHIPS ATTACKED SAT; UKMTO LOGS TWO; NO INJURIES &mdash; NEW DELHI SUMMONS IRAN ENVOY FATHALI SAT EVENING; FOREIGN SECRETARY MISRI DELIVERS FORMAL PROTEST &mdash; IRAN NAVY: &ldquo;ANY BREACH OF COMMITMENTS BY AMERICA WILL RECEIVE AN APPROPRIATE RESPONSE&rdquo; &mdash; TRUMP CONVENED WH SITUATION ROOM SAT MORNING ON HORMUZ + IRAN TRACK (VANCE, RUBIO, HEGSETH, BESSENT) &mdash; TRUMP TO AFP: NO &ldquo;STICKING POINTS&rdquo; LEFT, BUT BLOCKADE STAYS UNTIL TRANSACTION &ldquo;100% COMPLETE&rdquo; &mdash; GHALIBAF EARLIER SAT: TRUMP&rsquo;S CLAIMS ON TALKS &ldquo;FALSE&rdquo;; TEHRAN REJECTS TRUMP LINE ON HEU STOCKPILE &mdash; IRAN DEP FM: NO DATE FOR ROUND 2 UNTIL FRAMEWORK LOCKED; MONDAY ISLAMABAD STILL PENCILED &mdash; ROSATOM: READY TO TAKE 440KG HEU OFF IRAN&rsquo;S HANDS IF ASKED; MOSCOW MONITORING &mdash; LEBANON TRUCE DAY 4; SAT UNIFIL ATTACK: FRENCH PARATROOPER CHIEF SGT FLORIAN MONTORIO KIA IN GHANDOURIYEH, THREE WOUNDED; MACRON BLAMES HEZBOLLAH; HEZBOLLAH DENIES; AOUN + BERRI + SALAM CONDEMN, OPEN PROBES; LEBANESE MILITARY TRIBUNAL PARALLEL PROBE; UNSC TO MEET &mdash; NETBLOCKS: IRAN INTERNET SHUTDOWN HITS &ldquo;UNPRECEDENTED&rdquo; DAY 52 &mdash; FRI CLOSE STILL THE REFERENCE: S&amp;P 7,126 (+1.2%, 3RD RECORD), DOW +850 TO 49,447, NASDAQ 13-DAY STREAK; WTI $83.85 (&minus;11.45%), BRENT $90.38 &mdash; 3 DAYS TO CEASEFIRE EXPIRY</div>
+    <div class="iw-title">&#9888;&#65039; DAY <span class="iran-day-count">50</span> &middot; US-IRAN WAR &#9888;&#65039;</div>
+    <div class="iw-headline iran-flash">DAY 50 &mdash; IRAN SNSC FORMALIZES HORMUZ REGIME: &ldquo;STRICT MANAGEMENT AND CONTROL&rdquo; UNTIL &ldquo;DEFINITIVE END OF THE WAR&rdquo; &mdash; TRANSIT CERTIFICATES, VESSEL DATA COLLECTION, SERVICE FEES REQUIRED &mdash; CENTCOM SAT MIDDAY: 23 VESSELS TURNED BACK (21 OVERNIGHT) &mdash; IRGC GUNBOATS FIRED ON INDIAN-FLAGGED VLCC SANMAR HERALD ~20NM NE OF OMAN DESPITE PRIOR CLEARANCE; SECOND INDIAN-FLAGGED SHIP ALSO FIRED ON AND TURNED BACK &mdash; US OFFICIAL: AT LEAST THREE COMMERCIAL SHIPS ATTACKED SAT; UKMTO LOGS TWO; AT LEAST ONE HIT WITH DAMAGE, NO INJURIES &mdash; IRGC BRANDS US BLOCKADE &ldquo;PIRACY&rdquo;; IRAN NAVY: &ldquo;ANY BREACH OF COMMITMENTS BY AMERICA WILL RECEIVE AN APPROPRIATE RESPONSE&rdquo; &mdash; TRUMP TO AFP: NO &ldquo;STICKING POINTS&rdquo; LEFT, BUT BLOCKADE STAYS UNTIL TRANSACTION &ldquo;100% COMPLETE&rdquo; &mdash; GHALIBAF EARLIER SAT: TRUMP&rsquo;S CLAIMS ON TALKS &ldquo;FALSE&rdquo;; TEHRAN REJECTS TRUMP LINE ON HEU STOCKPILE &mdash; IRAN DEP FM: NO DATE FOR ROUND 2 UNTIL FRAMEWORK LOCKED; MONDAY ISLAMABAD STILL PENCILED &mdash; ROSATOM: READY TO TAKE 440KG HEU OFF IRAN&rsquo;S HANDS IF ASKED; MOSCOW MONITORING &mdash; LEBANON TRUCE DAY 3 RATTLED: FRENCH UNIFIL PARATROOPER CHIEF SGT FLORIAN MONTORIO KIA IN GHANDOURIYEH, THREE WOUNDED (TWO SERIOUSLY); MACRON: HEZBOLLAH LIKELY RESPONSIBLE, DEMANDS ARRESTS; HEZBOLLAH DENIES, URGES &ldquo;CAUTION&rdquo; IN ATTRIBUTION; AOUN + SALAM OPEN INVESTIGATIONS; LEBANESE MILITARY TRIBUNAL PROBES; UNSC TO MEET &mdash; FRI CLOSE STILL THE REFERENCE: S&amp;P 7,126 (+1.2%, 3RD RECORD), DOW +850 TO 49,447, NASDAQ 13-DAY STREAK; WTI $83.85 (&minus;11.45%), BRENT $90.38 &mdash; 4 DAYS TO CEASEFIRE EXPIRY</div>
     <div class="iw-stats">
       <div class="iw-stat">
         <div class="iw-stat-icon">&#128165;</div>
-        <div class="iw-stat-val" style="color:var(--red);" id="iranDayCount">52</div>
+        <div class="iw-stat-val" style="color:var(--red);" id="iranDayCount">50</div>
         <div class="iw-stat-lbl">DAYS OF WAR</div>
       </div>
       <div class="iw-stat">
@@ -1844,7 +1518,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
       <div class="iw-stat">
         <div class="iw-stat-icon">&#9203;</div>
-        <div class="iw-stat-val" style="color:var(--amber);">3d</div>
+        <div class="iw-stat-val" style="color:var(--amber);">4d</div>
         <div class="iw-stat-lbl">CEASEFIRE LEFT</div>
       </div>
       <div class="iw-stat">
@@ -1854,10 +1528,10 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
     <ul class="iw-bullets">
-      <li data-icon="&#128172;"><b>Trump Sun late-AM Truth Social reframes Saturday&rsquo;s Hormuz gunfire as &ldquo;A Total Violation of our Ceasefire Agreement&rdquo; &mdash; notch above his earlier &ldquo;serious violation&rdquo; framing. Earlier Sun to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &mdash; hardest public line of the war. Same morning&rsquo;s Truth Social thread had already run the &ldquo;NO MORE MR. NICE GUY&rdquo; line: if no deal, US &ldquo;going to knock out every single Power Plant, and every single Bridge, in Iran&rdquo;; &ldquo;time for the Iran killing machine to end.&rdquo; Thread also names the Round 2 US delegation &mdash; Vance, Witkoff, Kushner &mdash; with arrival now scheduled for Mon evening in Islamabad, sit-down Tue. Tehran answers on two rails Sun: President Pezeshkian &mdash; first public Sun line from the presidency &mdash; asks &ldquo;who is he to deprive a nation of its rights?&rdquo;, presses the question of &ldquo;what crime&rdquo; Iran is being punished for on the nuclear file. Ghalibaf Sun: Iran &ldquo;victorious in the field,&rdquo; truce accepted &ldquo;because they accepted our demands,&rdquo; parties still &ldquo;far from the final discussion&rdquo;; strait status &ldquo;will be determined by the field, not by social media.&rdquo;</b> Later Sun post repeats the &ldquo;serious violation&rdquo; framing and the &ldquo;one way or another, the nice way or the hard way&rdquo; line. White House had not named the delegation before this post; Trump&rsquo;s own thread now does. Tehran&rsquo;s lead negotiator Mohammad Bagher Ghalibaf Sun allows that the Islamabad track has moved off zero but pushes back on the Oval Office read &mdash; no breakthrough imminent. Deputy Foreign Minister Saeed Khatibzadeh Sun: no date for a next face-to-face until a framework is agreed; slams Washington&rsquo;s &ldquo;maximalist&rdquo; demands. Ghalibaf Sun also discloses a hair-trigger moment from the Islamabad room: he told the US delegation that if a US minesweeper &ldquo;moved even slightly forward from its position, we would definitely fire at it&rdquo; &mdash; first public read-out of the near-miss at sea referenced in WSJ&rsquo;s US-destroyers-transit item. Iran FM Sat afternoon: a fresh US package is in front of the negotiating team, no public response yet; same statement frames the US Navy port blockade as a &ldquo;violation&rdquo; of the Apr 7&ndash;8 ceasefire. Ghalibaf Sat: Trump&rsquo;s recent claims on the state of talks &ldquo;were false&rdquo;; Iran rejects the read that it agreed to surrender its 440kg HEU stockpile. Tehran&rsquo;s joint military command followed with the strait-control reversal; IRGC calls the US port blockade &ldquo;piracy.&rdquo; Iranian First VP Mohammad Reza Aref Sat dismisses Washington&rsquo;s posture as &ldquo;a blend of delusion and contradictory rhetoric&rdquo; &mdash; hardened Tehran posture ahead of the expiry. Supreme Leader Mojtaba Khamenei&rsquo;s Army Day message Sat (Apr 18 is the Iranian army holiday) puts the navy &ldquo;ready to inflict new bitter defeats on its enemies&rdquo; &mdash; his first public framing on the Hormuz reversal since taking office, read at ceremonies and carried on state media. Trump to AFP Sat: no &ldquo;sticking points&rdquo; remain, but US Navy blockade stays &ldquo;in full force&rdquo; until the transaction is &ldquo;100% complete.&rdquo; Reporting now converges on a Mon evening arrival for a Tue sit-down in Islamabad; Pakistan FO had not publicly confirmed dates into Sat. Bloomberg Sat: both sides gave an &ldquo;in principle&rdquo; nod to a two-week ceasefire extension past Apr 22; no formal request yet. Vance expected to lead on the US side; 60-day interim-memo path with IAEA + four-country monitoring still on the table. Enrichment-duration gap unmoved (US 20y / Iran ~5y). On the HEU knot, Russia&rsquo;s Rosatom said Sat it&rsquo;s ready to take the 440kg out of Iran if both sides agree and that Moscow is monitoring the talks &mdash; the first named third-country volunteer; down-blending to 3% / natural uranium still the other live option. Apr 22 expiry now three days out.</li>
-      <li data-icon="&#128674;"><b>Hegseth: blockade stays &ldquo;as long as it takes&rdquo;; US officials flag tanker-boarding and at-sea seizures next.</b> Pentagon briefing Thu: &ldquo;If Iran chooses poorly, they will have a blockade and bombs dropping on infrastructure, power, and energy.&rdquo; US officials tell Reuters / Bloomberg Sat the Navy is preparing to board Iran-linked oil tankers and seize commercial ships in international waters in coming days &mdash; a next rung aimed at forcing Tehran to reopen the strait and move on the nuclear track. Caine reframes the action as a blockade of Iran&rsquo;s ports and coastline, not Hormuz itself. CENTCOM tally Sat midday: 23 vessels turned back (up from 21 overnight); $400&ndash;435M/day in forgone revenue for Tehran by US estimates. Trump convened a WH Situation Room Sat morning with Vance, Rubio, Hegseth, Bessent on Hormuz and the Iran track; no readout. At an Oval Office EO signing Sat afternoon, Trump said Iran &ldquo;got a little cute&rdquo; by closing the strait again, added &ldquo;they can&rsquo;t blackmail us,&rdquo; and insisted the talks are &ldquo;working out really well&rdquo; &mdash; softer tone than the AFP line, same policy floor.</li>
-      <li data-icon="&#127758;"><b>IRGC Sat night widens the zone: no movement from anchorage; Saturday attack tally at three ships; Araghchi&rsquo;s reopening dead.</b> IRGC navy Sat evening: &ldquo;No vessel should make any movement from its anchorage in the Persian Gulf and the Sea of Oman,&rdquo; and approaching the strait &ldquo;will be considered as cooperation with the enemy&rdquo; and targeted &mdash; a step up from the afternoon &ldquo;treated as enemies&rdquo; line; the no-movement zone now extends to the anchorage, not just the strait. SNSC frames the regime as &ldquo;strict management and control&rdquo; until the &ldquo;definitive end of the war,&rdquo; standing up a transit-certificate system: vessel-data collection, licensing, and &ldquo;security, safety, and environmental&rdquo; fees; security spokesman Ebrahim Rezaei adds Iran is charging for &ldquo;securing the strait,&rdquo; not imposing traditional transit tolls. US official puts Sat&rsquo;s commercial-ship incidents at three; UKMTO logs two; an unknown projectile also struck a container vessel damaging cargo, no injuries. UKMTO: two IRGC fast boats opened on a tanker ~20nm NE of Oman Sat morning; shipping monitors identify the Indian-flagged VLCC Sanmar Herald as the tanker fired on despite prior clearance; audio captures shots. A second Indian-flagged vessel &mdash; Jag Arnav (IMO 9705354) &mdash; also reported gunfire and turned back. New Delhi summons Iranian ambassador Mohammad Fathali Sat evening; Foreign Secretary Vikram Misri delivers formal protest, conveys &ldquo;deep concern&rdquo; over shipping safety. Sanmar Herald was laden with ~2M bbl Iraqi crude. Iran navy: &ldquo;Any breach of commitments by America will receive an appropriate response.&rdquo; IRGC calls the US blockade &ldquo;piracy.&rdquo; Reverses the three-day coordinated-route reopening Araghchi announced post-ceasefire. Fri settles still the crude reference: WTI $83.85 (&minus;11.45%), Brent $90.38 (&minus;9.07%); weekend tape picks up Mon. Washington&rsquo;s counter-blockade unchanged &mdash; Trump: stays &ldquo;100% complete.&rdquo; Paris FON Initiative (~30 states) Northwood session still set for next week; UK floats RFA Lyme Bay mine-hunters; France&rsquo;s nuclear carrier on station. Munir shuttle Islamabad-Tehran continues.</li>
-      <li data-icon="&#127973;"><b>IDF announces &ldquo;Yellow Line&rdquo; on truce Day 3; Qassem says fighters stay &ldquo;hands on the trigger&rdquo;; French UNIFIL paratrooper killed in Ghandouriyeh.</b> IDF Sat formalizes a &ldquo;Yellow Line&rdquo; inside south Lebanon &mdash; first use of the Gaza-style demarcation here; Israeli forces operate inside the line to dismantle Hezbollah infrastructure and say they&rsquo;ve already struck fighters who approached troops along it. Israeli artillery Sat hits Beit Leif, Qantara, and Touline; IDF frames the strikes as self-defense, &ldquo;not restricted by the ceasefire.&rdquo; Hezbollah SG Naim Qassem Sat evening: &ldquo;We do not trust this enemy; the resistance fighters will remain in the field with their hands on the trigger, and they will respond to violations accordingly&rdquo; &mdash; demands full IDF withdrawal. On the Ghandouriyeh attack: Chief Sgt. Florian Montorio (17th Parachute Engineer Regiment, Montauban) killed when a UNIFIL patrol took small-arms fire; three wounded, two seriously. Macron calls the attack deliberate, urges Aoun to arrest those responsible; UNSC set to convene. Hezbollah denies responsibility, &ldquo;urges caution&rdquo; in attribution; Lebanon&rsquo;s Military Tribunal opens a parallel probe with army intel. Aoun and PM Nawaf Salam condemn, open investigations. UNIFIL assessment: patrol was clearing explosive ordnance to re-establish links with isolated positions when fired on; attributed to non-state actors. Truce Day 3 otherwise still moving &mdash; displaced heading south toward Tyre and the Litani, cars stacked at the damaged Qasmiyeh bridge. Lebanese army still logging IDF breaches across the south. Trump&rsquo;s &ldquo;PROHIBITED&rdquo; line to Israel stays US posture; Katz says truce &ldquo;respected,&rdquo; calls Hezbollah disarmament &ldquo;not yet complete,&rdquo; IDF holds the 10-km buffer. Aoun and Netanyahu still invited to WH. Mar 2 health-min. war total: 2,294 dead, 7,544 wounded.</li>
+      <li data-icon="&#128172;"><b>Tehran pushes back on Trump&rsquo;s &ldquo;no sticking points&rdquo; line and reverses Hormuz to &ldquo;previous state&rdquo;; Round 2 still penciled Monday in Islamabad.</b> Ghalibaf Sat: Trump&rsquo;s recent claims on the state of talks &ldquo;were false&rdquo;; Iran rejects the read that it agreed to surrender its 440kg HEU stockpile. Tehran&rsquo;s joint military command followed with the strait-control reversal; IRGC calls the US port blockade &ldquo;piracy.&rdquo; Trump to AFP Sat: no &ldquo;sticking points&rdquo; remain, but US Navy blockade stays &ldquo;in full force&rdquo; until the transaction is &ldquo;100% complete.&rdquo; Iranian sources still point to Sunday arrivals and a Monday sit-down in Islamabad; Pakistan FO had not publicly confirmed dates into Sat. Vance expected to lead on the US side; 60-day interim-memo path with IAEA + four-country monitoring still on the table. Enrichment-duration gap unmoved (US 20y / Iran ~5y). On the HEU knot, Russia&rsquo;s Rosatom said Sat it&rsquo;s ready to take the 440kg out of Iran if both sides agree and that Moscow is monitoring the talks &mdash; the first named third-country volunteer; down-blending to 3% / natural uranium still the other live option. Apr 22 expiry now four days out.</li>
+      <li data-icon="&#128674;"><b>Hegseth: blockade stays &ldquo;as long as it takes.&rdquo;</b> Pentagon briefing Thu: &ldquo;If Iran chooses poorly, they will have a blockade and bombs dropping on infrastructure, power, and energy.&rdquo; Caine reframed the action as a blockade of Iran&rsquo;s ports and coastline, not Hormuz itself. CENTCOM tally Sat midday: 23 vessels turned back (up from 21 overnight); ~$435M/day cost to Tehran.</li>
+      <li data-icon="&#127758;"><b>Tehran formalizes Hormuz regime; Saturday attack tally rises; Araghchi&rsquo;s reopening dead.</b> Iran&rsquo;s Supreme National Security Council says the strait stays under &ldquo;strict management and control&rdquo; until the &ldquo;definitive end of the war,&rdquo; standing up a transit-certificate system: vessel-data collection, licensing, service fees for &ldquo;security, safety, and environmental protection.&rdquo; A US official puts Sat&rsquo;s commercial-ship incidents at three; UKMTO logs two; at least one vessel hit with damage, no injuries. UKMTO: two IRGC fast boats opened on a tanker ~20nm NE of Oman Sat morning, vessel unharmed, investigation open. Shipping monitors identify the Indian-flagged VLCC Sanmar Herald as the tanker fired on despite prior clearance to transit; audio captures shots. A second Indian-flagged vessel also reported gunfire and turned back. Iran navy: &ldquo;Any breach of commitments by America will receive an appropriate response.&rdquo; IRGC calls the US blockade &ldquo;piracy.&rdquo; Reverses the three-day coordinated-route reopening Araghchi announced post-ceasefire. Fri settles still the crude reference: WTI $83.85 (&minus;11.45%), Brent $90.38 (&minus;9.07%); weekend tape picks up Mon. Washington&rsquo;s counter-blockade unchanged &mdash; Trump: stays &ldquo;100% complete.&rdquo; Paris FON Initiative (~30 states) Northwood session still set for next week; UK floats RFA Lyme Bay mine-hunters; France&rsquo;s nuclear carrier on station. Munir shuttle Islamabad-Tehran continues.</li>
+      <li data-icon="&#127973;"><b>French UNIFIL paratrooper killed in Ghandouriyeh; Macron blames Hezbollah.</b> Chief Sgt. Florian Montorio (17th Parachute Engineer Regiment, Montauban) killed Sat morning when a UNIFIL patrol took small-arms fire in southern Lebanon; three wounded, two seriously. Macron calls the attack deliberate, urges Aoun to arrest those responsible; UN Security Council set to convene. Hezbollah denies responsibility and &ldquo;urges caution&rdquo; in attribution; Lebanon&rsquo;s Military Tribunal opens a parallel probe with army intel. Aoun and PM Nawaf Salam condemn, open investigations. UNIFIL assessment: patrol was clearing explosive ordnance to re-establish links with isolated positions when fired on; attributed to non-state actors. Truce Day 3 otherwise still moving &mdash; displaced heading south toward Tyre and the Litani, cars stacked at the damaged Qasmiyeh bridge. Lebanese army still logging IDF breaches across the south. Trump&rsquo;s &ldquo;PROHIBITED&rdquo; line to Israel stays US posture; Katz says truce &ldquo;respected,&rdquo; calls Hezbollah disarmament &ldquo;not yet complete,&rdquo; IDF holds the 10-km buffer. Aoun and Netanyahu still invited to WH. Mar 2 health-min. war total: 2,294 dead, 7,544 wounded.</li>
       <li data-icon="&#128200;"><b>Third straight record close; Nasdaq logs 13-day win streak, longest since 1992.</b> S&amp;P 7,126.06 (+1.2%); Dow +850 to 49,447.43 (+1.8%); Nasdaq +0.95% to fresh record. WTI settles $83.85 (&minus;11.45%); Brent $90.38 (&minus;9.07%) &mdash; biggest one-day crude drop of the war. BTC rallies back near $78K (highest since early Feb); gold up ~1.5%. Thu close reference: S&amp;P 7,041.28, Nasdaq 24,102.70, Dow 48,578.72. Spot-vs-futures tanker premium still compressing; Day 2 Hormuz flow above Thu&rsquo;s floor after Shalamar clears.</li>
       <li data-icon="&#128680;"><b>US casualties:</b> 13 KIA &middot; 373+ WIA. Iranian/Lebanese dead: 5,000+.</li>
     </ul>
@@ -1872,29 +1546,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
   </div>
-
-    <!-- IRAN WAR COST TRACKER -->
-    <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,60,60,0.2);">
-      <div style="font-size:7px;letter-spacing:3px;color:var(--text-muted);text-align:center;margin-bottom:8px;font-weight:700;">&#128176; ESTIMATED WAR COST TRACKER</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-        <div class="iw-stat">
-          <div class="iw-stat-icon">&#127482;&#127480;</div>
-          <div class="iw-stat-val" style="color:var(--red);font-size:16px;" id="usCostCounter">--</div>
-          <div class="iw-stat-lbl">US COST (EST.)</div>
-        </div>
-        <div class="iw-stat">
-          <div class="iw-stat-icon">&#127470;&#127479;</div>
-          <div class="iw-stat-val" style="color:var(--amber);font-size:16px;" id="iranCostCounter">--</div>
-          <div class="iw-stat-lbl">IRAN COST (EST.)</div>
-        </div>
-        <div class="iw-stat">
-          <div class="iw-stat-icon">&#127758;</div>
-          <div class="iw-stat-val" style="color:var(--text);font-size:16px;" id="globalCostCounter">--</div>
-          <div class="iw-stat-lbl">GLOBAL ECON IMPACT</div>
-        </div>
-      </div>
-      <div style="font-size:7px;color:var(--text-muted);text-align:center;margin-top:6px;font-style:italic;">Estimates based on published defense-spend rates, blockade losses &amp; oil-market disruption. Not official figures.</div>
-    </div>
 
   <style>
     /* ââ Dual-grid: flow all children into a 2-column magazine layout ââ
@@ -2435,7 +2086,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
 
     <!-- Two columns: Recent Drops + Conspiracy Board -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;align-items:start;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
       <!-- Recent Drops -->
       <div style="background:rgba(0,0,0,0.15);border:1px solid rgba(139,0,0,0.15);border-radius:8px;padding:12px;">
         <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:8px;">&#128196; LATEST DEVELOPMENTS (Apr 15, 2026)</div>
@@ -2734,7 +2385,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </style>
 
   <div id="aiSection">
-    <div class="ai-dateline">AS OF: <span id="aiUpdated">Sun Apr 19 &middot; 09:00 PT</span></div>
+    <div class="ai-dateline">AS OF: <span id="aiUpdated">Sat Apr 18 &middot; 09:00 PT</span></div>
 
     <!-- ââ PANEL 1: US LAB SCORECARD ââ -->
     <div class="ai-panel">
@@ -2754,9 +2405,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <tr>
             <td class="ai-lab"><span class="ai-badge us">US</span>Anthropic</td>
             <td>Claude Opus 4.7 <span style="font-size:9px;color:var(--text-muted);">(Apr 16)</span></td>
-            <td class="ai-val">~$800B val (VC offers Apr 18) &middot; $30B raised</td>
+            <td class="ai-val">$380B val &middot; $30B raised</td>
             <td class="ai-val">~1,500</td>
-            <td>Mythos Preview (Apr 7) withheld; Project Glasswing partners only. OMB wiring federal-agency access channels to Mythos after Amodei &harr; WH meeting (Apr 18). Nature paper (Apr 15) on &ldquo;subliminal learning&rdquo;: hidden signals in synthetic data transmit traits, including misalignment, past standard filtering.</td>
+            <td>Mythos Preview (Apr 7) withheld; Project Glasswing partners (AWS, Apple, MSFT, GOOG, NVIDIA + 6) only. Co-authored Nature paper (Apr 15) on &ldquo;subliminal learning&rdquo; &mdash; LLMs transmit traits, including misalignment, via hidden signals in synthetic data that standard filtering cannot strip.</td>
           </tr>
           <tr>
             <td class="ai-lab"><span class="ai-badge us">US</span>OpenAI</td>
@@ -2791,9 +2442,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="ai-src">
         <a href="https://www.nature.com/articles/s41586-026-10319-8" target="_blank">Nature</a>
         <a href="https://www.anthropic.com/glasswing" target="_blank">Anthropic Glasswing</a>
-        <a href="https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/" target="_blank">TechCrunch</a>
         <a href="https://www.theinformation.com/articles/openai-spend-20-billion-cerebras-chips-receive-equity-stake" target="_blank">The Information</a>
-        <a href="https://www.euronews.com/business/2026/04/18/the-rapid-ascent-of-anthropic-inside-the-strategy-behind-an-800-billion-valuation" target="_blank">Euronews</a>
+        <a href="https://247wallst.com/investing/2026/04/09/deepmind-ceo-called-it-wartime-when-chatgpt-hit-100-million-users-and-google-went-all-in/" target="_blank">247WallSt</a>
         <a href="https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html" target="_blank">CNBC</a>
       </div>
     </div>
@@ -2899,29 +2549,28 @@ body.light-mode .mountain-banner { opacity: 0.75; }
           <div class="ai-panel-title">Model Releases</div>
           <div class="ai-panel-sub">LAST 30 DAYS &middot; 255 MODELS SHIPPED Q1 2026</div>
           <ul class="ai-feed" id="aiReleasesFeed">
-            <li><span class="ai-feed-date">APR 16</span><span class="ai-feed-tag release">NEW</span><b>GPT-Rosalind</b> &mdash; OpenAI&rsquo;s first domain-specific model; life sciences reasoning preview for Amgen, Moderna, Allen Institute, Thermo Fisher. Life Sciences Codex plugin ships with 50+ research tools.</li>
             <li><span class="ai-feed-date">APR 16</span><span class="ai-feed-tag release">NEW</span><b>Claude Opus 4.7</b> &mdash; Anthropic flagship refresh; engineering, vision, long-horizon task reliability.</li>
             <li><span class="ai-feed-date">APR 16</span><span class="ai-feed-tag release">NEW</span><b>Perplexity Personal Computer (Mac)</b> &mdash; agentic assistant reads/writes local files, iMessage, Mail, Calendar; 24/7 on a Mac mini. Max tier, $200/mo.</li>
-            <li><span class="ai-feed-date">APR 16</span><span class="ai-feed-tag release">NEW</span><b>Claude Design</b> &mdash; conversational prompts to prototypes, slide decks, marketing collateral. Anthropic&rsquo;s first application-layer product.</li>
             <li><span class="ai-feed-date">APR 15</span><span class="ai-feed-tag release">NEW</span><b>Gemini for Mac</b> &mdash; native macOS app, Option+Space anywhere, free; macOS 15+ Apple Silicon only.</li>
             <li><span class="ai-feed-date">APR 14</span><span class="ai-feed-tag release">NEW</span><b>OpenAI GPT-5.4-Cyber</b> &mdash; cybersecurity variant, tiered access for vetted defensive users.</li>
             <li><span class="ai-feed-date">APR 14</span><span class="ai-feed-tag release">NEW</span><b>Gemini Robotics-ER 1.6</b> &mdash; embodied reasoning for industrial robots.</li>
             <li><span class="ai-feed-date">APR 8</span><span class="ai-feed-tag release">NEW</span><b>Meta Muse Spark</b> &mdash; Meta&rsquo;s first proprietary model. From Superintelligence Labs under Alexandr Wang.</li>
             <li><span class="ai-feed-date">APR 7</span><span class="ai-feed-tag release">NEW</span><b>Claude Mythos Preview</b> &mdash; found thousands of zero-days incl. 27-yr OpenBSD overflow, 17-yr FreeBSD RCE. Withheld; Glasswing partners only.</li>
             <li><span class="ai-feed-date">APR 2</span><span class="ai-feed-tag release">NEW</span><b>Google Gemma 4</b> &mdash; 4 open variants (2.3B&ndash;31B), natively multimodal, Apache 2.0.</li>
+            <li><span class="ai-feed-date">MAR 30</span><span class="ai-feed-tag china">CN</span><b>Qwen 3.6 Plus Preview</b> &mdash; 1M context, #1 OmniDocBench, free on OpenRouter.</li>
+            <li><span class="ai-feed-date">MAR 16</span><span class="ai-feed-tag release">NEW</span><b>Mistral Small 4</b> &mdash; 119B MoE, unified reasoning + multimodal + coding.</li>
           </ul>
         </div>
         <div>
           <div class="ai-panel-title">Policy Watch</div>
           <div class="ai-panel-sub">US FEDERAL &middot; STATE &middot; EU &middot; CHINA</div>
           <ul class="ai-feed" id="aiPolicyFeed">
-            <li><span class="ai-feed-date">APR 18</span><span class="ai-feed-tag policy">US</span><b>WH &harr; Anthropic thaw</b> &mdash; OMB building federal-agency access channel for Mythos after a Dario Amodei / White House meeting. First substantive contact since the earlier rift.</li>
             <li><span class="ai-feed-date">APR 17</span><span class="ai-feed-tag policy">US</span><b>OpenAI &harr; Cerebras lifted to $20B+</b> &mdash; doubles the Jan $10B commitment; OpenAI takes warrants for a minority stake and contributes ~$1B to Cerebras DC build. Cerebras IPO targeting Q2.</li>
             <li><span class="ai-feed-date">APR 16</span><span class="ai-feed-tag policy">UK</span><b>&pound;500M Sovereign AI fund launched</b> &mdash; gov VC unit investing in UK AI cos + state compute access.</li>
             <li><span class="ai-feed-date">APR 15</span><span class="ai-feed-tag policy">US</span><b>&ldquo;Subliminal learning&rdquo; in Nature</b> &mdash; Anthropic + Owain Evans: LLMs transmit traits incl. misalignment via hidden signals in synthetic data; filtering doesn&rsquo;t strip them. Distillation-safety rethink implied.</li>
-            <li><span class="ai-feed-date">APR 13</span><span class="ai-feed-tag policy">US</span><b>Stanford AI Index 2026</b> &mdash; US&ndash;CN frontier gap at 2.7pp; industry now produces 90%+ of notable frontier models; Foundation Model Transparency Index avg down to 40 from 58.</li>
             <li><span class="ai-feed-date">APR 10</span><span class="ai-feed-tag china">CN</span><b>Anthropomorphic AI rules issued</b> &mdash; 5 agencies. Bans AI &ldquo;virtual partners&rdquo; for minors. Effective Jul 15.</li>
             <li><span class="ai-feed-date">MAR 20</span><span class="ai-feed-tag policy">US</span><b>WH national AI framework to Congress</b> &mdash; seeks federal preemption of state AI laws. Child safety, IP, energy, defense.</li>
+            <li><span class="ai-feed-date">JAN 1</span><span class="ai-feed-tag policy">US</span><b>CA, TX AI laws take effect</b> &mdash; CA: transparency + training-data disclosure. TX RAIGA: intent-based liability.</li>
             <li><span class="ai-feed-date">APR 28</span><span class="ai-feed-tag policy">EU</span><b>Digital Omnibus trilogue target (upcoming)</b> &mdash; political agreement sought to push AI Act high-risk obligations 16 months to Dec 2027.</li>
             <li><span class="ai-feed-date">JUN 30</span><span class="ai-feed-tag policy">US</span><b>CO AI Act activates (upcoming)</b> &mdash; &ldquo;reasonable care&rdquo; for high-risk AI. Replacement bill in draft.</li>
             <li><span class="ai-feed-date">AUG 2</span><span class="ai-feed-tag policy">EU</span><b>EU AI Act major provisions (upcoming)</b> &mdash; high-risk rules, transparency, content labeling, national sandboxes.</li>
@@ -2931,8 +2580,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="ai-src">
         <a href="https://www.wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20260323-white-house-releases-national-policy-framework-for-artificial-intelligence" target="_blank">WilmerHale</a>
         <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act" target="_blank">EU AI Act</a>
-        <a href="https://openai.com/index/introducing-gpt-rosalind/" target="_blank">OpenAI</a>
-        <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank">Stanford HAI</a>
+        <a href="https://www.nature.com/articles/s41586-026-10319-8" target="_blank">Nature</a>
         <a href="https://www.mayerbrown.com/en/insights/publications/2026/04/china-issues-draft-rules-on-interactive-ai-services" target="_blank">Mayer Brown</a>
       </div>
     </div>
@@ -2941,7 +2589,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="ai-panel">
       <div class="ai-panel-title">SAY vs. DO &mdash; The AI Race This Week</div>
       <div class="ai-narrative" id="aiNarrative">
-        <b>SAY:</b> Labs describe their most capable models as too dangerous to hand out broadly &mdash; partner-only previews, tiered cyber access, safety frameworks in the way. <b>DO:</b> OMB this week is wiring channels for federal agencies to run Anthropic&rsquo;s Mythos internally, days after VC term sheets pulled Anthropic&rsquo;s valuation to roughly $800B &mdash; more than double where it sat a week ago. OpenAI&rsquo;s Cerebras commitment climbed past $20B with a minority warrant stake on the chipmaker; Beijing has placed hundreds of thousands of Ascend 950PR orders ahead of DeepSeek V4. The capital, the chips, and the government access are moving in the same direction. <b>WATCH:</b> DeepSeek V4&rsquo;s formal late-April launch on Huawei silicon, and the EU Digital Omnibus trilogue (Apr 28) on whether high-risk AI Act obligations slip to Dec 2027.
+        <b>SAY:</b> Labs frame safety as disclosure, distillation, and guardrail discipline. <b>DO:</b> Anthropic and Owain Evans put it in Nature this week that language models transmit traits &mdash; including misalignment &mdash; via hidden signals in synthetic data that standard filtering cannot strip, undercutting the distillation-safety assumption industry-wide. Same stretch: OpenAI doubled its Cerebras commitment to $20B+ over three years and took warrants for a minority stake, pulling its marginal inference dollar off CUDA. Huawei&rsquo;s answer is on the docks &mdash; 750K Ascend 950PR units slated for 2026, ByteDance alone in for $5.6B. <b>WATCH:</b> DeepSeek V4&rsquo;s formal late-April launch on Ascend silicon, and the EU Digital Omnibus trilogue target (Apr 28) on whether high-risk AI Act obligations slip to Dec 2027.
       </div>
     </div>
 
@@ -3028,7 +2676,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE SCOREBOARDS</span>
     <span style="font-size:7px;letter-spacing:2px;color:var(--text-muted)">MLB STATSAPI &middot; NHL API &middot; AUTO-REFRESH 60s</span>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;align-items:start;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
     <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
       <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--accent);padding:8px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;">
         <span>&#9918; MLB SCORES &mdash; TODAY</span>
@@ -3190,14 +2838,14 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--red), var(--amber)); border-radius: 12px 12px 0 0;"></div>
       <div class="card-team-name" style="color: var(--red);">IRAN WAR &mdash; SITUATION REPORT</div>
       <div id="iranStatus" style="font-size: 13px; color: var(--text); line-height: 1.7; margin-bottom: 12px;">
-        <div style="font-weight:700;margin-bottom:8px;">WAR DAY 47 / BLOCKADE DAY 3 &mdash; US &amp; IRAN WEIGH 2-WEEK CEASEFIRE EXTENSION &bull; CENTCOM: NO SHIPS TRANSITING HORMUZ &bull; ITALY SUSPENDS DEFENSE PACT WITH ISRAEL (Apr 15 PM)</div>
-        <div style="margin-bottom:6px;"><strong>WHERE IT STANDS:</strong> Trump overnight on Truth Social said war with Iran is &ldquo;very close to over,&rdquo; between posts attacking NATO for not backing the campaign. The working fix on the table in Washington and Tehran is a <strong>two-week extension of the Apr 21 ceasefire</strong> to keep a Round 2 sit-down alive; Pakistan&rsquo;s FM Dar is still the shuttle. Tehran has countered Trump&rsquo;s 20-year enrichment pause with <strong>5 years</strong>; the US has rejected it. Iran&rsquo;s army has now threatened to close the <strong>Red Sea and Sea of Oman</strong> too if the Hormuz blockade keeps holding &mdash; three choke points instead of one.</div>
-        <div style="margin-bottom:6px;"><strong>BLOCKADE STATUS:</strong> CENTCOM now says <strong>no ships have transited Hormuz</strong> since the blockade locked down Monday 10am ET &mdash; the pre-blockade transit window has closed; Iranian export economy &ldquo;completely&rdquo; halted (Al Jazeera/AP). MCM Sqn 5 clearing mines. Iran calls it &ldquo;piracy&rdquo;; thousands rally in Tehran; China calls it &ldquo;dangerous and irresponsible&rdquo;; VP Vance accuses Iran of &ldquo;economic terrorism.&rdquo;</div>
-        <div style="margin-bottom:6px;">Iran&rsquo;s demands unchanged: release of frozen assets, full sanctions lifting, enrichment rights, and an end to Israeli strikes on Lebanon. <strong>Lebanon is still NOT in the ceasefire</strong> per Israel &mdash; strikes continue. <strong>Documented toll: 3,636+ deaths</strong> (1,701 civilians, 1,221 military), 13 US KIA, 373+ US wounded.</div>
-        <div style="margin-bottom:6px;"><strong>&#127464;&#127475; CHINA WILDCARD:</strong> US intel still says Beijing is prepping shoulder-mounted anti-aircraft missiles for delivery to Iran. <strong>Trump&rsquo;s 50% tariff threat</strong> if caught delivering weapons is live. Iran retains thousands of ballistic missiles in underground storage per US intelligence.</div>
-        <div style="margin-bottom:6px;"><strong>&#127470;&#127481; ITALY BREAK:</strong> PM Meloni announced Tuesday that Italy is <strong>suspending the automatic renewal of its 2003 defense cooperation pact with Israel</strong>, triggered by the IDF firing warning shots at an Italian UN peacekeeping convoy in Lebanon. Same day, Trump trashed her in Italian daily Corriere della Sera: <em>&ldquo;I thought she had courage, but I was wrong.&rdquo;</em> Meloni had already called Trump&rsquo;s attacks on Pope Leo XIV &ldquo;unacceptable.&rdquo; That&rsquo;s two center-right European allies visibly peeling off the Trump war in one news cycle.</div>
-        <div style="margin-bottom:6px;"><strong>&#128483; MAGA FRACTURE:</strong> Trump is still feuding with Tucker Carlson, Megyn Kelly, Candace Owens, Alex Jones, Pope Leo XIV, NATO, religious conservatives &mdash; and now add Italian PM Meloni to the list. Per his Truth Social overnight, he&rsquo;s also blasting NATO allies for not putting skin in his war. His own replies are increasingly brutal.</div>
-        <div><strong>MARKETS:</strong> The tape is pricing in a deal. S&amp;P 500 <strong>CLOSED above 7,000 for the first time ever Wednesday &mdash; 7,022.95 (+0.4%).</strong> Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%). Morgan Stanley crushed Q1 ($3.43 EPS vs $3.02 est, rev $20.6B +16% YoY); BofA beat ($1.11 vs $1.01, rev $30.3B +7%). ASML delivered on AI demand. WTI holding ~$91/bbl, Brent ~$95. March CPI still 3.3% (up from 2.4% Feb) &mdash; war-driven energy costs are the story. Moody&rsquo;s still flags an oil-driven recession if prices re-spike. IRS workforce down 27% via DOGE. 6 days until the ceasefire expires &mdash; unless they extend it.</div>
+        <div style="color:var(--red);font-weight:700;margin-bottom:8px;">&#128680; WAR DAY 47 / BLOCKADE DAY 3 &mdash; US &amp; IRAN WEIGH 2-WEEK CEASEFIRE EXTENSION &bull; CENTCOM: NO SHIPS TRANSITING HORMUZ &bull; ITALY SUSPENDS DEFENSE PACT WITH ISRAEL (Apr 15 PM)</div>
+        <div style="margin-bottom:6px;"><strong style="color:var(--red);">WHERE IT STANDS:</strong> Trump overnight on Truth Social said war with Iran is &ldquo;very close to over,&rdquo; between posts attacking NATO for not backing the campaign. The working fix on the table in Washington and Tehran is a <strong>two-week extension of the Apr 21 ceasefire</strong> to keep a Round 2 sit-down alive; Pakistan&rsquo;s FM Dar is still the shuttle. Tehran has countered Trump&rsquo;s 20-year enrichment pause with <strong>5 years</strong>; the US has rejected it. Iran&rsquo;s army has now threatened to close the <strong>Red Sea and Sea of Oman</strong> too if the Hormuz blockade keeps holding &mdash; three choke points instead of one.</div>
+        <div style="margin-bottom:6px;"><strong style="color:var(--red);">BLOCKADE STATUS:</strong> CENTCOM now says <strong>no ships have transited Hormuz</strong> since the blockade locked down Monday 10am ET &mdash; the pre-blockade transit window has closed; Iranian export economy &ldquo;completely&rdquo; halted (Al Jazeera/AP). MCM Sqn 5 clearing mines. Iran calls it &ldquo;piracy&rdquo;; thousands rally in Tehran; China calls it &ldquo;dangerous and irresponsible&rdquo;; VP Vance accuses Iran of &ldquo;economic terrorism.&rdquo;</div>
+        <div style="margin-bottom:6px;">Iran&rsquo;s demands unchanged: release of frozen assets, full sanctions lifting, enrichment rights, and an end to Israeli strikes on Lebanon. <strong style="color:var(--red);">Lebanon is still NOT in the ceasefire</strong> per Israel &mdash; strikes continue. <strong>Documented toll: 3,636+ deaths</strong> (1,701 civilians, 1,221 military), 13 US KIA, 373+ US wounded.</div>
+        <div style="margin-bottom:6px;"><strong style="color:var(--red);">&#127464;&#127475; CHINA WILDCARD:</strong> US intel still says Beijing is prepping shoulder-mounted anti-aircraft missiles for delivery to Iran. <strong>Trump&rsquo;s 50% tariff threat</strong> if caught delivering weapons is live. Iran retains thousands of ballistic missiles in underground storage per US intelligence.</div>
+        <div style="margin-bottom:6px;"><strong style="color:var(--red);">&#127470;&#127481; ITALY BREAK:</strong> PM Meloni announced Tuesday that Italy is <strong>suspending the automatic renewal of its 2003 defense cooperation pact with Israel</strong>, triggered by the IDF firing warning shots at an Italian UN peacekeeping convoy in Lebanon. Same day, Trump trashed her in Italian daily Corriere della Sera: <em>&ldquo;I thought she had courage, but I was wrong.&rdquo;</em> Meloni had already called Trump&rsquo;s attacks on Pope Leo XIV &ldquo;unacceptable.&rdquo; That&rsquo;s two center-right European allies visibly peeling off the Trump war in one news cycle.</div>
+        <div style="margin-bottom:6px;"><strong style="color:var(--red);">&#128483; MAGA FRACTURE:</strong> Trump is still feuding with Tucker Carlson, Megyn Kelly, Candace Owens, Alex Jones, Pope Leo XIV, NATO, religious conservatives &mdash; and now add Italian PM Meloni to the list. Per his Truth Social overnight, he&rsquo;s also blasting NATO allies for not putting skin in his war. His own replies are increasingly brutal.</div>
+        <div><strong style="color:var(--green);">MARKETS:</strong> The tape is pricing in a deal. S&amp;P 500 <strong>CLOSED above 7,000 for the first time ever Wednesday &mdash; 7,022.95 (+0.4%).</strong> Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%). Morgan Stanley crushed Q1 ($3.43 EPS vs $3.02 est, rev $20.6B +16% YoY); BofA beat ($1.11 vs $1.01, rev $30.3B +7%). ASML delivered on AI demand. WTI holding ~$91/bbl, Brent ~$95. March CPI still 3.3% (up from 2.4% Feb) &mdash; war-driven energy costs are the story. Moody&rsquo;s still flags an oil-driven recession if prices re-spike. IRS workforce down 27% via DOGE. 6 days until the ceasefire expires &mdash; unless they extend it.</div>
       </div>
       <div id="iranTimeline" style="font-size: 11px; color: var(--text-dim); line-height: 1.9;">
         <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);font-weight:700;margin-bottom:6px;">TIMELINE</div>
@@ -3209,9 +2857,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         <div>&#9654; <strong style="color:var(--amber);">Apr 10&ndash;11</strong> &mdash; Pakistan Round 1 begins &bull; Vance leads 21-hr marathon in Islamabad &bull; No deal &bull; Nuclear enrichment the wall</div>
         <div>&#9654; <strong style="color:var(--amber);">Apr 11</strong> &mdash; Vance: Iran &ldquo;chose not to accept&rdquo; &bull; Ghalibaf blames US &ldquo;excessive demands&rdquo; &bull; China prepping air defense delivery to Iran</div>
         <div>&#9654; <strong style="color:var(--red);">Apr 12 (Easter)</strong> &mdash; Trump orders Hormuz BLOCKADE &ldquo;effective immediately&rdquo; &bull; US Navy intercepting vessels &bull; Claims Iran mined the Strait &bull; Attacks Tucker, Kelly, Owens &amp; Jones &bull; Pakistan FM Dar urges both sides to hold ceasefire &bull; Oil spikes 8% &bull; No Round 2 scheduled</div>
-        <div>&#9654; <strong style="color:var(--amber);">Apr 13 (PM)</strong> &mdash; <strong>Trump says ceasefire &ldquo;holding well&rdquo; but &ldquo;I don&rsquo;t care&rdquo; if Iran returns to talks</strong> &bull; Earlier morning: claimed Iran &ldquo;called this morning&rdquo; wanting a deal &ldquo;very badly&rdquo; &mdash; Tehran NEVER confirmed &bull; <strong>Threatens to SINK Iranian ships</strong>: &ldquo;immediately ELIMINATED&rdquo; if they approach blockade &bull; <strong>Iran armed forces on &ldquo;maximum combat alert&rdquo;</strong>, prepared for &ldquo;any scenario&rdquo; (acting defense minister) &bull; Iran vows to target all Gulf ports if its shipping is threatened &bull; Hormuz blockade Day 2 &bull; CENTCOM intercepting Iranian-linked vessels since Sun 10 AM ET; allowing non-Iranian transit &bull; <strong>UN FAO warns of global food crisis</strong> &mdash; fertilizer, urea, oil, natural gas all bottlenecked in Hormuz &bull; Iran calls blockade &ldquo;piracy&rdquo; &bull; Iran-Saudi FM call re: talks collapse &bull; <strong>Trump threatens 50% tariffs on China</strong> over report of shoulder-mounted anti-aircraft missile shipment to Iran (CNBC) &bull; Goldman Sachs Q1: FICC miss, stock -3% &bull; <strong>Wall St rallied on deal hopes:</strong> Dow +302, S&amp;P 500 +1.02% to 6,886, Nasdaq +1.23% &bull; WTI settled ~$103.30/bbl after spiking near $105 &bull; Gas $4.13+ nat&rsquo;l (WA $5.36) &bull; Trump tells press he doesn&rsquo;t owe Pope Leo XIV an apology &bull; Pope responds: &ldquo;I have no fear&rdquo; &bull; Bondi Epstein deposition tomorrow &mdash; she won&rsquo;t appear &bull; NBA Play-In tips off tomorrow (Heat at Hornets 7:30 ET, Trail Blazers at Suns 10 ET, Prime Video) &bull; Mariners beat Astros 6-2 at T-Mobile (4-game win streak) &bull; FAA authorizes military lasers vs drones in US airspace &bull; No Round 2 scheduled &bull; 8 days until ceasefire expires</div>
+        <div>&#9654; <strong style="color:var(--amber);">Apr 13 (PM)</strong> &mdash; <strong>Trump says ceasefire &ldquo;holding well&rdquo; but &ldquo;I don&rsquo;t care&rdquo; if Iran returns to talks</strong> &bull; Earlier morning: claimed Iran &ldquo;called this morning&rdquo; wanting a deal &ldquo;very badly&rdquo; &mdash; Tehran NEVER confirmed &bull; <strong>Threatens to SINK Iranian ships</strong>: &ldquo;immediately ELIMINATED&rdquo; if they approach blockade &bull; <strong>Iran armed forces on &ldquo;maximum combat alert&rdquo;</strong>, prepared for &ldquo;any scenario&rdquo; (acting defense minister) &bull; Iran vows to target all Gulf ports if its shipping is threatened &bull; Hormuz blockade Day 2 &bull; CENTCOM intercepting Iranian-linked vessels since Sun 10 AM ET; allowing non-Iranian transit &bull; <strong style="color:var(--red);">UN FAO warns of global food crisis</strong> &mdash; fertilizer, urea, oil, natural gas all bottlenecked in Hormuz &bull; Iran calls blockade &ldquo;piracy&rdquo; &bull; Iran-Saudi FM call re: talks collapse &bull; <strong>Trump threatens 50% tariffs on China</strong> over report of shoulder-mounted anti-aircraft missile shipment to Iran (CNBC) &bull; Goldman Sachs Q1: FICC miss, stock -3% &bull; <strong style="color:var(--green);">Wall St rallied on deal hopes:</strong> Dow +302, S&amp;P 500 +1.02% to 6,886, Nasdaq +1.23% &bull; WTI settled ~$103.30/bbl after spiking near $105 &bull; Gas $4.13+ nat&rsquo;l (WA $5.36) &bull; Trump tells press he doesn&rsquo;t owe Pope Leo XIV an apology &bull; Pope responds: &ldquo;I have no fear&rdquo; &bull; Bondi Epstein deposition tomorrow &mdash; she won&rsquo;t appear &bull; NBA Play-In tips off tomorrow (Heat at Hornets 7:30 ET, Trail Blazers at Suns 10 ET, Prime Video) &bull; Mariners beat Astros 6-2 at T-Mobile (4-game win streak) &bull; FAA authorizes military lasers vs drones in US airspace &bull; No Round 2 scheduled &bull; 8 days until ceasefire expires</div>
         <div>&#9654; <strong style="color:var(--amber);">Apr 14</strong> &mdash; <strong>Blockade Day 2 / War Day 46.</strong> Ship-tracking data showed 14 vessels had crossed Hormuz since the blockade order (pre-lockdown window) &bull; Rubio hosted Israel &amp; Lebanon direct peace talks at State Dept &bull; WTI settled ~$91/bbl (&darr;~8%) &mdash; first close below $92 since the blockade order &bull; Bondi blew off her Epstein deposition; Dems threaten contempt &bull; Federal judge tossed Trump&rsquo;s WSJ defamation suit over the 50th-birthday Epstein letter &bull; NBA Play-In: Hornets 127, Heat 126 (OT); Blazers 114, Suns 110 &bull; Mariners dropped Vedder Cup opener to Padres 4-1 &mdash; Woo 7 IP, 3 R &mdash; snapping 5-game streak</div>
-        <div>&#9654; <strong style="color:var(--red);">Apr 15 (TODAY &middot; WAR DAY 47 / BLOCKADE DAY 3)</strong> &mdash; <strong>CENTCOM: no ships have transited Hormuz since blockade locked down Mon 10am ET &mdash; Iranian export economy &ldquo;completely&rdquo; halted</strong> (Al Jazeera) &bull; <strong>US &amp; Iran weighing 2-WEEK CEASEFIRE EXTENSION</strong> to keep Round 2 alive (Bloomberg) &bull; Trump to Fox Biz (Bartiromo): war &ldquo;very close to over&rdquo; &bull; Hints Round 2 talks land in Pakistan in next 2 days &mdash; <strong>Vance to lead</strong> if scheduled &bull; Pakistani army chief now in Tehran pushing to restart talks &bull; <strong>Italy SUSPENDS defense cooperation pact with Israel</strong> (Meloni, announced Tue at Verona event) after IDF fired warning shots at Italian UN peacekeeping convoy in Lebanon &bull; Trump trashes Meloni in Corriere della Sera: &ldquo;I thought she had courage, but I was wrong&rdquo; &bull; Iran Army threatens to close Red Sea and Sea of Oman next &bull; Pakistan FM Dar still mediating &bull; 20 vs 5 yr enrichment gap still the wall &bull; <strong>S&amp;P 500 CLOSES above 7,000 for first time ever &mdash; record 7,022.95 (+0.4%)</strong>; Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%) &bull; Morgan Stanley $3.43 EPS crush; BofA $1.11 beat; ASML strong on AI demand &bull; WTI ~$91 &bull; <strong>Reps. Gonzales (R-TX) &amp; Swalwell (D-CA) officially resigned</strong> Tue &bull; House voting today on 18-month FISA Sec 702 renewal (expires Apr 20) &bull; Sudan enters Year 4 of war &bull; NBA Play-In elimination games tonight: 76ers at Magic 7:30 ET, Warriors at Clippers 10 ET &bull; Mariners (9-10) at Padres Game 2 (6:40 PT) &bull; Pope Leo XIV in Algeria Day 3 &bull; 6 days until ceasefire expires</div>
+        <div>&#9654; <strong style="color:var(--red);">Apr 15 (TODAY &middot; WAR DAY 47 / BLOCKADE DAY 3)</strong> &mdash; <strong>CENTCOM: no ships have transited Hormuz since blockade locked down Mon 10am ET &mdash; Iranian export economy &ldquo;completely&rdquo; halted</strong> (Al Jazeera) &bull; <strong style="color:var(--amber);">US &amp; Iran weighing 2-WEEK CEASEFIRE EXTENSION</strong> to keep Round 2 alive (Bloomberg) &bull; Trump to Fox Biz (Bartiromo): war &ldquo;very close to over&rdquo; &bull; Hints Round 2 talks land in Pakistan in next 2 days &mdash; <strong>Vance to lead</strong> if scheduled &bull; Pakistani army chief now in Tehran pushing to restart talks &bull; <strong style="color:var(--red);">Italy SUSPENDS defense cooperation pact with Israel</strong> (Meloni, announced Tue at Verona event) after IDF fired warning shots at Italian UN peacekeeping convoy in Lebanon &bull; Trump trashes Meloni in Corriere della Sera: &ldquo;I thought she had courage, but I was wrong&rdquo; &bull; Iran Army threatens to close Red Sea and Sea of Oman next &bull; Pakistan FM Dar still mediating &bull; 20 vs 5 yr enrichment gap still the wall &bull; <strong style="color:var(--green);">S&amp;P 500 CLOSES above 7,000 for first time ever &mdash; record 7,022.95 (+0.4%)</strong>; Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%) &bull; Morgan Stanley $3.43 EPS crush; BofA $1.11 beat; ASML strong on AI demand &bull; WTI ~$91 &bull; <strong>Reps. Gonzales (R-TX) &amp; Swalwell (D-CA) officially resigned</strong> Tue &bull; House voting today on 18-month FISA Sec 702 renewal (expires Apr 20) &bull; Sudan enters Year 4 of war &bull; NBA Play-In elimination games tonight: 76ers at Magic 7:30 ET, Warriors at Clippers 10 ET &bull; Mariners (9-10) at Padres Game 2 (6:40 PT) &bull; Pope Leo XIV in Algeria Day 3 &bull; 6 days until ceasefire expires</div>
       </div>
       <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);">
         <div style="font-size: 10px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;">SOURCES: CNN, AL JAZEERA, AP, REUTERS, DOD</div>
@@ -3230,6 +2878,42 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div id="iranHeadlines" style="border-top: 1px solid var(--border); padding-top: 12px;">
         <div class="card-team-name" style="color: var(--red);">LATEST HEADLINES</div>
         <div id="iranNewsItems" style="font-size: 12px; color: var(--text-dim); line-height: 1.8;">Loading...</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- IRAN WAR COST TRACKER -->
+  <div class="section-header">
+    <span class="section-tag" style="border-color: rgba(255, 77, 106, 0.3); color: var(--red); background: rgba(255, 77, 106, 0.06);">IRAN WAR COSTS</span>
+    <span class="section-quip">Where the money goes. Updated from public DoD &amp; CBO reporting.</span>
+  </div>
+
+  <div class="cards-row-2">
+    <div class="card fade-in" style="border-color: rgba(255, 77, 106, 0.2);">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--red), var(--amber));"></div>
+      <div class="card-team-name" style="color: var(--red);">SPENDING ESTIMATES</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 14px;">
+        <div style="text-align: center; padding: 12px 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
+          <div style="font-size: 20px; font-weight: 900; color: var(--red);" id="iranTotalCost">$38B</div>
+          <div style="font-size: 8px; letter-spacing: 2px; color: var(--text-muted); font-weight: 700; margin-top: 4px;">TOTAL EST. COST</div>
+        </div>
+        <div style="text-align: center; padding: 12px 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
+          <div style="font-size: 20px; font-weight: 900; color: var(--amber);" id="iranDailyBurn">$810M</div>
+          <div style="font-size: 8px; letter-spacing: 2px; color: var(--text-muted); font-weight: 700; margin-top: 4px;">DAILY BURN RATE</div>
+        </div>
+        <div style="text-align: center; padding: 12px 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
+          <div style="font-size: 20px; font-weight: 900; color: var(--text);" id="iranPerTaxpayer">$250</div>
+          <div style="font-size: 8px; letter-spacing: 2px; color: var(--text-muted); font-weight: 700; margin-top: 4px;">COST PER TAXPAYER</div>
+        </div>
+      </div>
+      <div class="fin-row"><span class="fin-label">Munitions expended (est.)</span><span class="fin-value" id="iranMunitions">$12.4B</span></div>
+      <div class="fin-row"><span class="fin-label">Naval operations (CSG + ESG)</span><span class="fin-value" id="iranNaval">$8.7B</span></div>
+      <div class="fin-row"><span class="fin-label">Air sorties &amp; ISR</span><span class="fin-value" id="iranAir">$6.2B</span></div>
+      <div class="fin-row"><span class="fin-label">Cyber &amp; EW operations</span><span class="fin-value" id="iranCyber">$2.1B</span></div>
+      <div class="fin-row"><span class="fin-label">Personnel &amp; logistics surge</span><span class="fin-value" id="iranPersonnel">$8.6B</span></div>
+      <div style="margin-top: 12px; padding: 8px 10px; background: rgba(255,255,255,0.03); border-radius: 4px; border-left: 2px solid var(--text-muted);">
+        <div style="font-size: 9px; color: var(--text-muted); line-height: 1.6;">Figures are estimates compiled from public DoD budget documents, CBO cost projections, and historical per-unit expenditure rates. Actual costs are classified and likely higher. Taxpayer figure based on ~152M federal income tax filers.</div>
       </div>
     </div>
   </div>
@@ -3258,8 +2942,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="fin-row"><span class="fin-label">Fed Funds Rate</span><span class="fin-value" id="fedRate">--</span></div>
     </div>
   </div>
-
-
   <!-- &#9552;&#9552;&#9552; POLITICS & NEWS &#9552;&#9552;&#9552; -->
   <div class="section-header">
     <span class="section-tag">POLITICS & NEWS</span>
@@ -3304,7 +2986,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <span class="highlight">FOUR FINGERS NEWS</span> &#8212; <a href="https://fourfingersnews.com/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;">fourfingersnews.com</a> &#8212; BUILT BY AI &#8212; TRUSTED BY NOBODY &#8212; SERVED NEAT
     </div>
     <div class="footer-quip">"If you're reading this at work, we won't tell."</div>
-    <div class="last-refresh">Last refresh: <span id="lastRefresh">Sun Apr 19 &middot; 11:05 PT</span></div>
+    <div class="last-refresh">Last refresh: <span id="lastRefresh">Sat Apr 18 &middot; 10:05 PT</span></div>
   </div>
 
 </div>
@@ -3690,7 +3372,6 @@ function renderTicker() {
   const tickerQuips = [
     '&#9749; Coffee futures looking strong',
     '&#127956;&#65039; Mt. Rainier still there (checked)',
-    '&#128240; Four fingers of news, served neat',
     '&#127783;&#65039; Seattle weather: yes',
     '&#128202; Stonks only go... well...',
   ];
@@ -3892,116 +3573,6 @@ async function fetchSportsData() {
   document.getElementById('uwNext').innerHTML = 'SEASON STARTS: AUG 2026';
 }
 
-// &#9552;&#9552;&#9552; NEWS &#9552;&#9552;&#9552;
-async function fetchNews() {
-  const feed = document.getElementById('newsFeed');
-
-  // Try multiple free news sources
-  let headlines = [];
-
-  // Try NewsData.io free tier (no key needed for some endpoints)
-  // Fallback to curated headlines approach
-  try {
-    // Try to fetch top US headlines via RSS proxy
-    var rssUrl = 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml?_=' + Date.now();
-    var resp = await fetchViaProxy(rssUrl);
-    if (resp.ok) {
-      const text = await resp.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, 'text/xml');
-      const items = xml.querySelectorAll('item');
-      items.forEach((item, i) => {
-        if (i >= 8) return;
-        const title = item.querySelector('title')?.textContent || '';
-        const pubDate = item.querySelector('pubDate')?.textContent || '';
-        const category = item.querySelector('category')?.textContent || '';
-        const link = item.querySelector('link')?.textContent || '';
-
-        let tag = 'world';
-        let tagLabel = 'WORLD';
-        const titleLower = title.toLowerCase();
-        if (titleLower.includes('congress') || titleLower.includes('senate') || titleLower.includes('house') || titleLower.includes('president') || titleLower.includes('republican') || titleLower.includes('democrat') || titleLower.includes('bill') || titleLower.includes('law') || titleLower.includes('vote') || titleLower.includes('politic')) {
-          tag = 'policy'; tagLabel = 'POLICY';
-        } else if (titleLower.includes('economy') || titleLower.includes('fed') || titleLower.includes('inflation') || titleLower.includes('market') || titleLower.includes('rate') || titleLower.includes('gdp') || titleLower.includes('job') || titleLower.includes('trade') || titleLower.includes('bank') || titleLower.includes('tax')) {
-          tag = 'economy'; tagLabel = 'ECONOMY';
-        } else if (titleLower.includes('tech') || titleLower.includes('ai') || titleLower.includes('data') || titleLower.includes('cyber') || titleLower.includes('silicon') || titleLower.includes('google') || titleLower.includes('apple') || titleLower.includes('microsoft') || titleLower.includes('openai') || titleLower.includes('anthropic') || titleLower.includes('robot')) {
-          tag = 'tech'; tagLabel = 'TECH';
-        }
-
-        const timeAgo = pubDate ? getTimeAgo(new Date(pubDate)) : '';
-        headlines.push({ title, tag, tagLabel, timeAgo, link });
-      });
-    }
-  } catch (e) {
-    console.log('RSS fetch failed', e);
-  }
-
-  // Also try AP News
-  try {
-    var rssUrl2 = 'https://rsshub.app/apnews/topics/apf-topnews?_=' + Date.now();
-    var resp2 = await fetchViaProxy(rssUrl2);
-    if (resp2.ok) {
-      const text = await resp2.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, 'text/xml');
-      const items = xml.querySelectorAll('item');
-      items.forEach((item, i) => {
-        if (i >= 4) return;
-        const title = item.querySelector('title')?.textContent || '';
-        const pubDate = item.querySelector('pubDate')?.textContent || '';
-        const link = item.querySelector('link')?.textContent || '';
-        if (title && !headlines.find(h => h.title === title)) {
-          const titleLower = title.toLowerCase();
-          let tag = 'world', tagLabel = 'WORLD';
-          if (titleLower.match(/congress|senate|president|politic|democrat|republican|vote|bill/)) { tag = 'policy'; tagLabel = 'POLICY'; }
-          else if (titleLower.match(/economy|market|fed|inflation|trade|bank|tax|gdp/)) { tag = 'economy'; tagLabel = 'ECONOMY'; }
-          else if (titleLower.match(/tech|ai|data|cyber|robot|openai|google|apple|microsoft/)) { tag = 'tech'; tagLabel = 'TECH'; }
-          headlines.push({ title, tag, tagLabel, timeAgo: pubDate ? getTimeAgo(new Date(pubDate)) : '', link });
-        }
-      });
-    }
-  } catch (e) {}
-
-  if (headlines.length > 0) {
-    feed.innerHTML = headlines.slice(0, 10).map(h => h.link ? `
-      <a class="news-item" href="${h.link}" target="_blank" rel="noopener">
-        <span class="news-tag ${h.tag}">${h.tagLabel}</span>
-        <div class="news-content">
-          <div class="news-headline">${h.title}</div>
-          <div class="news-meta">${h.timeAgo}</div>
-        </div>
-      </a>
-    ` : `
-      <div class="news-item">
-        <span class="news-tag ${h.tag}">${h.tagLabel}</span>
-        <div class="news-content">
-          <div class="news-headline">${h.title}</div>
-          <div class="news-meta">${h.timeAgo}</div>
-        </div>
-      </div>
-    `).join('');
-  } else {
-    // Fallback
-    feed.innerHTML = `
-      <div class="news-item">
-        <span class="news-tag tech">NOTE</span>
-        <div class="news-content">
-          <div class="news-headline">News feeds temporarily unavailable. The world continues anyway.</div>
-          <div class="news-meta">Try refreshing &#8212; or don't. Ignorance is bliss.</div>
-        </div>
-      </div>
-    `;
-  }
-}
-
-function getTimeAgo(date) {
-  const now = new Date();
-  const diff = Math.floor((now - date) / 1000);
-  if (diff < 60) return 'just now';
-  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
-  return Math.floor(diff / 86400) + 'd ago';
-}
 
 // &#9552;&#9552;&#9552; PRACTICAL FINANCE DATA &#9552;&#9552;&#9552;
 function initPracticalFinance() {
@@ -4698,33 +4269,6 @@ async function fetchWorldCards() {
   }
   update();
   setInterval(update, 60000);
-})();
-
-// ===== IRAN WAR COST TRACKER =====
-(function initWarCostTracker() {
-  var warStart = new Date(2026, 1, 28);
-  var usDailyM = 500;
-  var iranDailyM = 635;
-  var globalDailyM = 1200;
-  function fmt(billions) {
-    if (billions >= 1) return '$' + billions.toFixed(1) + 'B';
-    return '$' + (billions * 1000).toFixed(0) + 'M';
-  }
-  function updateCosts() {
-    var now = new Date();
-    var days = (now - warStart) / 86400000;
-    var usB = (days * usDailyM) / 1000;
-    var iranB = (days * iranDailyM) / 1000;
-    var globalB = (days * globalDailyM) / 1000;
-    var el1 = document.getElementById('usCostCounter');
-    var el2 = document.getElementById('iranCostCounter');
-    var el3 = document.getElementById('globalCostCounter');
-    if (el1) el1.innerHTML = fmt(usB);
-    if (el2) el2.innerHTML = fmt(iranB);
-    if (el3) el3.innerHTML = fmt(globalB);
-  }
-  updateCosts();
-  setInterval(updateCosts, 60000);
 })();
 
 // ===== TRUMP GREATEST HITS ROTATOR =====
