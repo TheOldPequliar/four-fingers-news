@@ -24,7 +24,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    /* ═══ FOUR FINGERS NEWS — WSJ/NYT NEWSPRINT PALETTE ═══
+    /* âââ FOUR FINGERS NEWS â WSJ/NYT NEWSPRINT PALETTE âââ
        White page, black ink, red nameplate. Structure from rules
        and typography, not from color. Atmosphere through accent
        sparingly, never through ground. */
@@ -40,11 +40,11 @@
     --accent-glow: rgba(139, 69, 19, 0.12);
     --green: #2d7a3e;           /* readable market green */
     --red: #a42020;             /* nameplate red / market down */
-    --amber: #b8860b;           /* dark goldenrod — readable */
+    --amber: #b8860b;           /* dark goldenrod â readable */
     --copper: #8b4513;          /* same as accent, for compatibility */
     --brass: #8a6d3b;           /* muted brass for rules */
-    --forest-dark: #121212;     /* neutralized — legacy alias for ink */
-    --forest-light: #121212;    /* neutralized — legacy alias for ink */
+    --forest-dark: #121212;     /* neutralized â legacy alias for ink */
+    --forest-light: #121212;    /* neutralized â legacy alias for ink */
     --mountain-blue: #34495e;
     --mountain-slate: #566573;
     --seahawks-green: #69BE28;
@@ -65,7 +65,7 @@
     min-height: 100vh;
   }
 
-  /* ── Newsprint Background — quiet warm page ── */
+  /* ââ Newsprint Background â quiet warm page ââ */
   .bg-grid {
     position: fixed;
     top: 0; left: 0;
@@ -230,7 +230,7 @@
     font-style: italic;
   }
 
-  /* ── Suggestion Box ── */
+  /* ââ Suggestion Box ââ */
   .suggest-box {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -1104,7 +1104,7 @@
 @keyframes pulse-live{0%,100%{opacity:1}50%{opacity:0.3}}
 
 /* ===== NEWSPRINT MODE (always on) =====
-   body.light-mode inherits the :root palette — no variable overrides.
+   body.light-mode inherits the :root palette â no variable overrides.
    Class-specific color overrides below match WSJ/NYT neutral tone. */
 body.light-mode { background: var(--bg); color: var(--text); }
 body.light-mode .main { background: var(--bg); }
@@ -1189,7 +1189,7 @@ body.light-mode .card-score { color: #0c2c56; }
 body.light-mode .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 /* Theme toggle */
 
-/* ── Chyron Ticker — newsprint rule ── */
+/* ââ Chyron Ticker â newsprint rule ââ */
 .chyron {
   position: relative;
   z-index: 10;
@@ -1231,7 +1231,7 @@ body.light-mode .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 }
 body.light-mode .chyron { background: #0a0a0a; color: #ffffff; }
 
-/* ── PNW Mountain Banner ── */
+/* ââ PNW Mountain Banner ââ */
 .mountain-banner {
   width: 100%;
   height: auto;
@@ -1242,7 +1242,7 @@ body.light-mode .chyron { background: #0a0a0a; color: #ffffff; }
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
 
-/* ═══ NEWSPRINT SECTION NAV + MASTHEADS ═══ */
+/* âââ NEWSPRINT SECTION NAV + MASTHEADS âââ */
 .section-nav{position:sticky;top:0;z-index:100;background:#ffffff;border-top:2px solid #1a1611;border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04);margin:0 0 20px 0;font-family:Georgia,'Playfair Display',serif;}
 .section-nav-inner{display:flex;justify-content:center;align-items:stretch;max-width:1400px;margin:0 auto;flex-wrap:wrap;position:relative;}
 .section-nav a{display:block;padding:14px 24px 12px 24px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#1a1611;text-decoration:none;border-right:1px solid var(--border);transition:all 0.18s ease;position:relative;font-variant:small-caps;}
@@ -1251,7 +1251,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 .section-nav a.active{color:var(--red);background:#f5f5f5;}
 .section-nav a.active::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--red);}
 @media (max-width:700px){.section-nav a{padding:10px 12px;font-size:9px;letter-spacing:1.5px;}}
-/* ═══ Newsprint section masthead — full-width rule + kicker + hed + deck ═══ */
+/* âââ Newsprint section masthead â full-width rule + kicker + hed + deck âââ */
 .lan-masthead{margin:56px 0 18px 0;padding:14px 4px 14px 4px;position:relative;background:transparent;border:none;border-top:6px solid #121212;border-bottom:1px solid #121212;border-radius:0;font-family:Georgia,'Playfair Display',serif;}
 .lan-masthead .lm-tag{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:6px;font-family:'JetBrains Mono',monospace;font-variant:small-caps;display:flex;align-items:center;gap:6px;}
 .lan-masthead .lm-tag::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);}
@@ -1359,7 +1359,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
 <div class="main">
 
-  <!-- ═══ FROM THE EDITOR — daily personal note ═══ -->
+  <!-- âââ FROM THE EDITOR â daily personal note âââ -->
   <style>
     .editor-note{margin:0 0 16px 0;padding:14px 20px 14px 22px;position:relative;background:#ffffff;border:1px solid var(--border);border-left:3px solid var(--red);border-radius:2px;font-family:Georgia,'Playfair Display',serif;overflow:hidden;}
     .editor-note::before{content:none;}
@@ -1395,7 +1395,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <!-- &#9552;&#9552;&#9552; HEADER &#9552;&#9552;&#9552; -->
   <header class="header">
     <div class="header-left">
-      <!-- whiskey-glass mark — distillery palette -->
+      <!-- whiskey-glass mark â distillery palette -->
       <svg width="52" height="52" viewBox="0 0 64 64" style="flex-shrink:0;margin-right:14px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.5)) drop-shadow(0 0 10px rgba(212,160,23,0.35));" aria-hidden="true">
         <defs>
           <linearGradient id="whiskey" x1="0" y1="0" x2="0" y2="1">
@@ -1421,7 +1421,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
     <script>
-      // Tagline rotator — keeps all the contenders in circulation
+      // Tagline rotator â keeps all the contenders in circulation
       (function(){
         var taglines = [
           'THE NEWS, NEAT.',
@@ -1460,7 +1460,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </header>
 
-  <!-- ═══ THE RUN DOWN — DAILY MORNING BRIEFING ═══ -->
+  <!-- âââ THE RUN DOWN â DAILY MORNING BRIEFING âââ -->
   <!-- AUTO-UPDATED BY: the-run-down scheduled task (daily 7am local) -->
   <!-- EDIT TARGETS: #runDownUpdated, #runDownList (<article> items) -->
   <style>
@@ -1508,7 +1508,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <style>
     .top-split{margin-bottom:18px;}
     .top-split > #theRunDown{margin-bottom:0;}
-    /* grid split disabled — Run Down is now full-width above section nav; Iran War moved into World section */
+    /* grid split disabled â Run Down is now full-width above section nav; Iran War moved into World section */
   </style>
     <div class="top-split">
   <div id="theRunDown">
@@ -1593,7 +1593,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
   </div><!-- /top-split -->
 
-  <!-- ═══ LAN PARTY SECTION NAV ═══ -->
+  <!-- âââ LAN PARTY SECTION NAV âââ -->
   <nav class="section-nav">
     <div class="section-nav-inner">
       <a href="#section-world">World &amp; Geo</a>
@@ -1612,7 +1612,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="lm-kicker">The Empire Strikes Hot &mdash; carrier strike groups, ceasefire vibes, and whatever Trump Truthed at 3am.</div>
   </div>
 
-  <!-- ═══ TRACK THE TROOPS — OSINT SITREP ═══ -->
+  <!-- âââ TRACK THE TROOPS â OSINT SITREP âââ -->
   <!-- AUTO-UPDATED BY: daily-sitch-refresh (hourly) -->
   <!-- EDIT TARGETS: #trackTroopsUpdated, #trackTroopsRows, #trackTroopsNotes -->
   <style>
@@ -1664,7 +1664,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="tt-classbar">&#9888; UNCLASSIFIED &middot; OSINT ONLY &middot; OPEN SOURCES &middot; NOT FOR TARGETING &#9888;</div>
     <div class="tt-header">
       <div>
-        <div class="tt-title">🇺🇸 TRACK THE TROOPS</div>
+        <div class="tt-title">ðºð¸ TRACK THE TROOPS</div>
         <div class="tt-subtitle">What the receipts say vs. what the politicians say &middot; CENTCOM AOR</div>
       </div>
       <div class="tt-dateline">OSINT AS OF: <span id="trackTroopsUpdated">Sat Apr 18 &middot; 18:15 PT</span></div>
@@ -1799,20 +1799,17 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- IRAN WAR — NO DEAL BANNER -->
+  <!-- IRAN WAR â NO DEAL BANNER -->
   <div class="gameday-banner" id="iranWarBanner" style="background:#ffffff;border:1px solid var(--border);border-left:3px solid var(--red);position:relative;overflow:hidden;">
-    <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0505,#e94560,#ff4444,#ffa500,#e94560,#1a0505);background-size:200% 100%;animation:iranStripe 3s linear infinite;"></div>
+    <!-- animated stripe removed — newsprint mode -->
     <style>
-      @keyframes iranStripe{0%{background-position:0% 0}100%{background-position:200% 0}}
-      100%{background-position:200% 0}}
-      @keyframes iranPulse{0%,100%{opacity:1}50%{opacity:0.6}}
-      @keyframes noDeakFlash{0%,100%{text-shadow:0 0 10px rgba(255,60,60,0.4)}50%{text-shadow:0 0 30px rgba(255,60,60,0.8),0 0 60px rgba(255,165,0,0.3)}}
-      .iran-flash{/* flash disabled — newsprint mode */}
-      .iran-pulse{/* pulse disabled — newsprint mode */}
+      
+      .iran-flash{/* flash disabled â newsprint mode */}
+      .iran-pulse{/* pulse disabled â newsprint mode */}
     </style>
     <style>
       #iranWarBanner .iw-title{letter-spacing:4px;color:var(--red);font-size:11px;font-weight:900;text-align:center;margin-bottom:6px;}
-      #iranWarBanner .iw-headline{font-size:22px;color:var(--red);font-weight:900;letter-spacing:0.5px;text-align:center;line-height:1.2;margin-bottom:14px;}
+      #iranWarBanner .iw-headline{font-size:13px;color:var(--text);font-weight:500;letter-spacing:0;text-align:left;line-height:1.6;margin-bottom:14px;}
       #iranWarBanner .iw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
       #iranWarBanner .iw-stat{background:#f5f5f5;border:1px solid var(--border);border-top:2px solid var(--red);border-radius:2px;padding:10px 6px;text-align:center;}
       #iranWarBanner .iw-stat-icon{font-size:20px;line-height:1;margin-bottom:4px;}
@@ -1839,7 +1836,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="iw-stat">
         <div class="iw-stat-icon">&#9981;&#65039;</div>
         <div class="iw-stat-val" style="color:#2d7a3e;">$83.85</div>
-        <div class="iw-stat-lbl">WTI SETTLE · -11.45%</div>
+        <div class="iw-stat-lbl">WTI SETTLE Â· -11.45%</div>
       </div>
       <div class="iw-stat">
         <div class="iw-stat-icon">&#9203;</div>
@@ -1896,7 +1893,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
 
   <style>
-    /* ── Dual-grid: flow all children into a 2-column magazine layout ──
+    /* ââ Dual-grid: flow all children into a 2-column magazine layout ââ
        Uses CSS multi-column so each panel stays intact (break-inside:avoid)
        and little label strips stay glued to their following content panel
        (break-after:avoid on the label selectors). */
@@ -1915,7 +1912,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     @media (max-width:900px){.dual-grid{column-count:1;}}
   </style>
   <div class="dual-grid">
-  <!-- ═══ LIVE NEWS & VIDEO + LIVE WORLD MAP ═══ -->
+  <!-- âââ LIVE NEWS & VIDEO + LIVE WORLD MAP âââ -->
   <div class="news-map-split" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;align-items:stretch;">
     <div>
       <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE NEWS &amp; VIDEO</span></div>
@@ -2337,7 +2334,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- ═══ LIVE MARKET CHARTS (FINVIZ, NO ACCOUNT) ═══ -->
+  <!-- âââ LIVE MARKET CHARTS (FINVIZ, NO ACCOUNT) âââ -->
   <style>
     .fv-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
     .fv-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;}
@@ -2680,7 +2677,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
   </div><!-- /dual-grid (pre-Seattle Sports) -->
 
-  <!-- ═══ AI & THE MACHINE ═══ -->
+  <!-- âââ AI & THE MACHINE âââ -->
   <!-- AUTO-UPDATED BY: ai-beat (daily) -->
   <!-- EDIT TARGETS: #aiUpdated, #aiLabRows, #aiIntlRows, #aiCapexCards, #aiReleasesFeed, #aiPolicyFeed, #aiNarrative -->
   <div class="section-anchor" id="section-ai"></div>
@@ -2735,7 +2732,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div id="aiSection">
     <div class="ai-dateline">AS OF: <span id="aiUpdated">Sat Apr 18 &middot; 09:00 PT</span></div>
 
-    <!-- ── PANEL 1: US LAB SCORECARD ── -->
+    <!-- ââ PANEL 1: US LAB SCORECARD ââ -->
     <div class="ai-panel">
       <div class="ai-panel-title">Lab Scorecard &mdash; Domestic</div>
       <div class="ai-panel-sub">FRONTIER LABS &middot; FLAGSHIP MODELS &middot; CAPITAL &middot; HEADCOUNT &middot; SAFETY POSTURE</div>
@@ -2796,7 +2793,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ── PANEL 2: CHINA + INTERNATIONAL WATCH ── -->
+    <!-- ââ PANEL 2: CHINA + INTERNATIONAL WATCH ââ -->
     <div class="ai-panel">
       <div class="ai-panel-title">China &amp; International Watch</div>
       <div class="ai-panel-sub">FRONTIER LABS &middot; CHIP ACCESS &middot; BENCHMARKS &middot; GOVERNMENT SUPPORT</div>
@@ -2856,7 +2853,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ── PANEL 3: COMPUTE & CAPEX TRACKER ── -->
+    <!-- ââ PANEL 3: COMPUTE & CAPEX TRACKER ââ -->
     <div class="ai-panel">
       <div class="ai-panel-title">Compute &amp; Capex Tracker</div>
       <div class="ai-panel-sub">HYPERSCALER SPEND &middot; GPU ALLOCATIONS &middot; POWER DEALS &middot; SOVEREIGN FUNDS</div>
@@ -2890,7 +2887,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ── PANEL 4: MODEL RELEASES + POLICY ── -->
+    <!-- ââ PANEL 4: MODEL RELEASES + POLICY ââ -->
     <div class="ai-panel">
       <div class="ai-dual">
         <div>
@@ -2933,7 +2930,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ── NARRATIVE STRIP ── -->
+    <!-- ââ NARRATIVE STRIP ââ -->
     <div class="ai-panel">
       <div class="ai-panel-title">SAY vs. DO &mdash; The AI Race This Week</div>
       <div class="ai-narrative" id="aiNarrative">
@@ -2950,7 +2947,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="lm-kicker">Scoreboards, weather, post-Masters Rory hangover.</div>
   </div>
 
-  <!-- ═══ SEATTLE TEAMS &mdash; the four horsemen of mild disappointment ═══ -->
+  <!-- âââ SEATTLE TEAMS &mdash; the four horsemen of mild disappointment âââ -->
   <style>
     .sports-compact{margin-bottom:14px;}
     .sports-compact .section-header{margin-bottom:6px;}
@@ -3019,7 +3016,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
 
-  <!-- ═══ LIVE SCOREBOARDS (MLB + NHL via official APIs) ═══ -->
+  <!-- âââ LIVE SCOREBOARDS (MLB + NHL via official APIs) âââ -->
   <div style="margin-bottom:6px;padding:0 4px;display:flex;justify-content:space-between;align-items:center;">
     <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE SCOREBOARDS</span>
     <span style="font-size:7px;letter-spacing:2px;color:var(--text-muted)">MLB STATSAPI &middot; NHL API &middot; AUTO-REFRESH 60s</span>
@@ -3114,7 +3111,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   })();
   </script>
 
-  <!-- ═══ THE MASTERS 2026 ═══ -->
+  <!-- âââ THE MASTERS 2026 âââ -->
   <div style="background:linear-gradient(135deg,rgba(0,100,0,0.1),rgba(255,215,0,0.06));border:1px solid rgba(0,100,0,0.3);border-left:3px solid #006400;border-radius:10px;padding:16px 18px;margin-bottom:16px;position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#006400,#ffd700,#006400);"></div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
@@ -3175,7 +3172,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
   <div class="dual-grid">
-  <!-- ═══ GEOPOLITICAL: IRAN ═══ -->
+  <!-- âââ GEOPOLITICAL: IRAN âââ -->
   <div class="section-header">
     <span class="section-tag" style="border-color: rgba(255, 77, 106, 0.3); color: var(--red); background: rgba(255, 77, 106, 0.05);">GEOPOLITICAL MONITOR</span>
     <span class="section-quip">The part of the dashboard nobody wanted to need.</span>
@@ -3186,14 +3183,14 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--red), var(--amber)); border-radius: 12px 12px 0 0;"></div>
       <div class="card-team-name" style="color: var(--red);">IRAN WAR &mdash; SITUATION REPORT</div>
       <div id="iranStatus" style="font-size: 13px; color: var(--text); line-height: 1.7; margin-bottom: 12px;">
-        <div style="color:var(--red);font-weight:700;margin-bottom:8px;">&#128680; WAR DAY 47 / BLOCKADE DAY 3 &mdash; US &amp; IRAN WEIGH 2-WEEK CEASEFIRE EXTENSION &bull; CENTCOM: NO SHIPS TRANSITING HORMUZ &bull; ITALY SUSPENDS DEFENSE PACT WITH ISRAEL (Apr 15 PM)</div>
-        <div style="margin-bottom:6px;"><strong style="color:var(--red);">WHERE IT STANDS:</strong> Trump overnight on Truth Social said war with Iran is &ldquo;very close to over,&rdquo; between posts attacking NATO for not backing the campaign. The working fix on the table in Washington and Tehran is a <strong>two-week extension of the Apr 21 ceasefire</strong> to keep a Round 2 sit-down alive; Pakistan&rsquo;s FM Dar is still the shuttle. Tehran has countered Trump&rsquo;s 20-year enrichment pause with <strong>5 years</strong>; the US has rejected it. Iran&rsquo;s army has now threatened to close the <strong>Red Sea and Sea of Oman</strong> too if the Hormuz blockade keeps holding &mdash; three choke points instead of one.</div>
-        <div style="margin-bottom:6px;"><strong style="color:var(--red);">BLOCKADE STATUS:</strong> CENTCOM now says <strong>no ships have transited Hormuz</strong> since the blockade locked down Monday 10am ET &mdash; the pre-blockade transit window has closed; Iranian export economy &ldquo;completely&rdquo; halted (Al Jazeera/AP). MCM Sqn 5 clearing mines. Iran calls it &ldquo;piracy&rdquo;; thousands rally in Tehran; China calls it &ldquo;dangerous and irresponsible&rdquo;; VP Vance accuses Iran of &ldquo;economic terrorism.&rdquo;</div>
-        <div style="margin-bottom:6px;">Iran&rsquo;s demands unchanged: release of frozen assets, full sanctions lifting, enrichment rights, and an end to Israeli strikes on Lebanon. <strong style="color:var(--red);">Lebanon is still NOT in the ceasefire</strong> per Israel &mdash; strikes continue. <strong>Documented toll: 3,636+ deaths</strong> (1,701 civilians, 1,221 military), 13 US KIA, 373+ US wounded.</div>
-        <div style="margin-bottom:6px;"><strong style="color:var(--red);">&#127464;&#127475; CHINA WILDCARD:</strong> US intel still says Beijing is prepping shoulder-mounted anti-aircraft missiles for delivery to Iran. <strong>Trump&rsquo;s 50% tariff threat</strong> if caught delivering weapons is live. Iran retains thousands of ballistic missiles in underground storage per US intelligence.</div>
-        <div style="margin-bottom:6px;"><strong style="color:var(--red);">&#127470;&#127481; ITALY BREAK:</strong> PM Meloni announced Tuesday that Italy is <strong>suspending the automatic renewal of its 2003 defense cooperation pact with Israel</strong>, triggered by the IDF firing warning shots at an Italian UN peacekeeping convoy in Lebanon. Same day, Trump trashed her in Italian daily Corriere della Sera: <em>&ldquo;I thought she had courage, but I was wrong.&rdquo;</em> Meloni had already called Trump&rsquo;s attacks on Pope Leo XIV &ldquo;unacceptable.&rdquo; That&rsquo;s two center-right European allies visibly peeling off the Trump war in one news cycle.</div>
-        <div style="margin-bottom:6px;"><strong style="color:var(--red);">&#128483; MAGA FRACTURE:</strong> Trump is still feuding with Tucker Carlson, Megyn Kelly, Candace Owens, Alex Jones, Pope Leo XIV, NATO, religious conservatives &mdash; and now add Italian PM Meloni to the list. Per his Truth Social overnight, he&rsquo;s also blasting NATO allies for not putting skin in his war. His own replies are increasingly brutal.</div>
-        <div><strong style="color:var(--green);">MARKETS:</strong> The tape is pricing in a deal. S&amp;P 500 <strong>CLOSED above 7,000 for the first time ever Wednesday &mdash; 7,022.95 (+0.4%).</strong> Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%). Morgan Stanley crushed Q1 ($3.43 EPS vs $3.02 est, rev $20.6B +16% YoY); BofA beat ($1.11 vs $1.01, rev $30.3B +7%). ASML delivered on AI demand. WTI holding ~$91/bbl, Brent ~$95. March CPI still 3.3% (up from 2.4% Feb) &mdash; war-driven energy costs are the story. Moody&rsquo;s still flags an oil-driven recession if prices re-spike. IRS workforce down 27% via DOGE. 6 days until the ceasefire expires &mdash; unless they extend it.</div>
+        <div style="font-weight:700;margin-bottom:8px;">WAR DAY 47 / BLOCKADE DAY 3 &mdash; US &amp; IRAN WEIGH 2-WEEK CEASEFIRE EXTENSION &bull; CENTCOM: NO SHIPS TRANSITING HORMUZ &bull; ITALY SUSPENDS DEFENSE PACT WITH ISRAEL (Apr 15 PM)</div>
+        <div style="margin-bottom:6px;"><strong>WHERE IT STANDS:</strong> Trump overnight on Truth Social said war with Iran is &ldquo;very close to over,&rdquo; between posts attacking NATO for not backing the campaign. The working fix on the table in Washington and Tehran is a <strong>two-week extension of the Apr 21 ceasefire</strong> to keep a Round 2 sit-down alive; Pakistan&rsquo;s FM Dar is still the shuttle. Tehran has countered Trump&rsquo;s 20-year enrichment pause with <strong>5 years</strong>; the US has rejected it. Iran&rsquo;s army has now threatened to close the <strong>Red Sea and Sea of Oman</strong> too if the Hormuz blockade keeps holding &mdash; three choke points instead of one.</div>
+        <div style="margin-bottom:6px;"><strong>BLOCKADE STATUS:</strong> CENTCOM now says <strong>no ships have transited Hormuz</strong> since the blockade locked down Monday 10am ET &mdash; the pre-blockade transit window has closed; Iranian export economy &ldquo;completely&rdquo; halted (Al Jazeera/AP). MCM Sqn 5 clearing mines. Iran calls it &ldquo;piracy&rdquo;; thousands rally in Tehran; China calls it &ldquo;dangerous and irresponsible&rdquo;; VP Vance accuses Iran of &ldquo;economic terrorism.&rdquo;</div>
+        <div style="margin-bottom:6px;">Iran&rsquo;s demands unchanged: release of frozen assets, full sanctions lifting, enrichment rights, and an end to Israeli strikes on Lebanon. <strong>Lebanon is still NOT in the ceasefire</strong> per Israel &mdash; strikes continue. <strong>Documented toll: 3,636+ deaths</strong> (1,701 civilians, 1,221 military), 13 US KIA, 373+ US wounded.</div>
+        <div style="margin-bottom:6px;"><strong>&#127464;&#127475; CHINA WILDCARD:</strong> US intel still says Beijing is prepping shoulder-mounted anti-aircraft missiles for delivery to Iran. <strong>Trump&rsquo;s 50% tariff threat</strong> if caught delivering weapons is live. Iran retains thousands of ballistic missiles in underground storage per US intelligence.</div>
+        <div style="margin-bottom:6px;"><strong>&#127470;&#127481; ITALY BREAK:</strong> PM Meloni announced Tuesday that Italy is <strong>suspending the automatic renewal of its 2003 defense cooperation pact with Israel</strong>, triggered by the IDF firing warning shots at an Italian UN peacekeeping convoy in Lebanon. Same day, Trump trashed her in Italian daily Corriere della Sera: <em>&ldquo;I thought she had courage, but I was wrong.&rdquo;</em> Meloni had already called Trump&rsquo;s attacks on Pope Leo XIV &ldquo;unacceptable.&rdquo; That&rsquo;s two center-right European allies visibly peeling off the Trump war in one news cycle.</div>
+        <div style="margin-bottom:6px;"><strong>&#128483; MAGA FRACTURE:</strong> Trump is still feuding with Tucker Carlson, Megyn Kelly, Candace Owens, Alex Jones, Pope Leo XIV, NATO, religious conservatives &mdash; and now add Italian PM Meloni to the list. Per his Truth Social overnight, he&rsquo;s also blasting NATO allies for not putting skin in his war. His own replies are increasingly brutal.</div>
+        <div><strong>MARKETS:</strong> The tape is pricing in a deal. S&amp;P 500 <strong>CLOSED above 7,000 for the first time ever Wednesday &mdash; 7,022.95 (+0.4%).</strong> Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%). Morgan Stanley crushed Q1 ($3.43 EPS vs $3.02 est, rev $20.6B +16% YoY); BofA beat ($1.11 vs $1.01, rev $30.3B +7%). ASML delivered on AI demand. WTI holding ~$91/bbl, Brent ~$95. March CPI still 3.3% (up from 2.4% Feb) &mdash; war-driven energy costs are the story. Moody&rsquo;s still flags an oil-driven recession if prices re-spike. IRS workforce down 27% via DOGE. 6 days until the ceasefire expires &mdash; unless they extend it.</div>
       </div>
       <div id="iranTimeline" style="font-size: 11px; color: var(--text-dim); line-height: 1.9;">
         <div style="font-size:8px;letter-spacing:2px;color:var(--text-muted);font-weight:700;margin-bottom:6px;">TIMELINE</div>
@@ -3205,9 +3202,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         <div>&#9654; <strong style="color:var(--amber);">Apr 10&ndash;11</strong> &mdash; Pakistan Round 1 begins &bull; Vance leads 21-hr marathon in Islamabad &bull; No deal &bull; Nuclear enrichment the wall</div>
         <div>&#9654; <strong style="color:var(--amber);">Apr 11</strong> &mdash; Vance: Iran &ldquo;chose not to accept&rdquo; &bull; Ghalibaf blames US &ldquo;excessive demands&rdquo; &bull; China prepping air defense delivery to Iran</div>
         <div>&#9654; <strong style="color:var(--red);">Apr 12 (Easter)</strong> &mdash; Trump orders Hormuz BLOCKADE &ldquo;effective immediately&rdquo; &bull; US Navy intercepting vessels &bull; Claims Iran mined the Strait &bull; Attacks Tucker, Kelly, Owens &amp; Jones &bull; Pakistan FM Dar urges both sides to hold ceasefire &bull; Oil spikes 8% &bull; No Round 2 scheduled</div>
-        <div>&#9654; <strong style="color:var(--amber);">Apr 13 (PM)</strong> &mdash; <strong>Trump says ceasefire &ldquo;holding well&rdquo; but &ldquo;I don&rsquo;t care&rdquo; if Iran returns to talks</strong> &bull; Earlier morning: claimed Iran &ldquo;called this morning&rdquo; wanting a deal &ldquo;very badly&rdquo; &mdash; Tehran NEVER confirmed &bull; <strong>Threatens to SINK Iranian ships</strong>: &ldquo;immediately ELIMINATED&rdquo; if they approach blockade &bull; <strong>Iran armed forces on &ldquo;maximum combat alert&rdquo;</strong>, prepared for &ldquo;any scenario&rdquo; (acting defense minister) &bull; Iran vows to target all Gulf ports if its shipping is threatened &bull; Hormuz blockade Day 2 &bull; CENTCOM intercepting Iranian-linked vessels since Sun 10 AM ET; allowing non-Iranian transit &bull; <strong style="color:var(--red);">UN FAO warns of global food crisis</strong> &mdash; fertilizer, urea, oil, natural gas all bottlenecked in Hormuz &bull; Iran calls blockade &ldquo;piracy&rdquo; &bull; Iran-Saudi FM call re: talks collapse &bull; <strong>Trump threatens 50% tariffs on China</strong> over report of shoulder-mounted anti-aircraft missile shipment to Iran (CNBC) &bull; Goldman Sachs Q1: FICC miss, stock -3% &bull; <strong style="color:var(--green);">Wall St rallied on deal hopes:</strong> Dow +302, S&amp;P 500 +1.02% to 6,886, Nasdaq +1.23% &bull; WTI settled ~$103.30/bbl after spiking near $105 &bull; Gas $4.13+ nat&rsquo;l (WA $5.36) &bull; Trump tells press he doesn&rsquo;t owe Pope Leo XIV an apology &bull; Pope responds: &ldquo;I have no fear&rdquo; &bull; Bondi Epstein deposition tomorrow &mdash; she won&rsquo;t appear &bull; NBA Play-In tips off tomorrow (Heat at Hornets 7:30 ET, Trail Blazers at Suns 10 ET, Prime Video) &bull; Mariners beat Astros 6-2 at T-Mobile (4-game win streak) &bull; FAA authorizes military lasers vs drones in US airspace &bull; No Round 2 scheduled &bull; 8 days until ceasefire expires</div>
+        <div>&#9654; <strong style="color:var(--amber);">Apr 13 (PM)</strong> &mdash; <strong>Trump says ceasefire &ldquo;holding well&rdquo; but &ldquo;I don&rsquo;t care&rdquo; if Iran returns to talks</strong> &bull; Earlier morning: claimed Iran &ldquo;called this morning&rdquo; wanting a deal &ldquo;very badly&rdquo; &mdash; Tehran NEVER confirmed &bull; <strong>Threatens to SINK Iranian ships</strong>: &ldquo;immediately ELIMINATED&rdquo; if they approach blockade &bull; <strong>Iran armed forces on &ldquo;maximum combat alert&rdquo;</strong>, prepared for &ldquo;any scenario&rdquo; (acting defense minister) &bull; Iran vows to target all Gulf ports if its shipping is threatened &bull; Hormuz blockade Day 2 &bull; CENTCOM intercepting Iranian-linked vessels since Sun 10 AM ET; allowing non-Iranian transit &bull; <strong>UN FAO warns of global food crisis</strong> &mdash; fertilizer, urea, oil, natural gas all bottlenecked in Hormuz &bull; Iran calls blockade &ldquo;piracy&rdquo; &bull; Iran-Saudi FM call re: talks collapse &bull; <strong>Trump threatens 50% tariffs on China</strong> over report of shoulder-mounted anti-aircraft missile shipment to Iran (CNBC) &bull; Goldman Sachs Q1: FICC miss, stock -3% &bull; <strong>Wall St rallied on deal hopes:</strong> Dow +302, S&amp;P 500 +1.02% to 6,886, Nasdaq +1.23% &bull; WTI settled ~$103.30/bbl after spiking near $105 &bull; Gas $4.13+ nat&rsquo;l (WA $5.36) &bull; Trump tells press he doesn&rsquo;t owe Pope Leo XIV an apology &bull; Pope responds: &ldquo;I have no fear&rdquo; &bull; Bondi Epstein deposition tomorrow &mdash; she won&rsquo;t appear &bull; NBA Play-In tips off tomorrow (Heat at Hornets 7:30 ET, Trail Blazers at Suns 10 ET, Prime Video) &bull; Mariners beat Astros 6-2 at T-Mobile (4-game win streak) &bull; FAA authorizes military lasers vs drones in US airspace &bull; No Round 2 scheduled &bull; 8 days until ceasefire expires</div>
         <div>&#9654; <strong style="color:var(--amber);">Apr 14</strong> &mdash; <strong>Blockade Day 2 / War Day 46.</strong> Ship-tracking data showed 14 vessels had crossed Hormuz since the blockade order (pre-lockdown window) &bull; Rubio hosted Israel &amp; Lebanon direct peace talks at State Dept &bull; WTI settled ~$91/bbl (&darr;~8%) &mdash; first close below $92 since the blockade order &bull; Bondi blew off her Epstein deposition; Dems threaten contempt &bull; Federal judge tossed Trump&rsquo;s WSJ defamation suit over the 50th-birthday Epstein letter &bull; NBA Play-In: Hornets 127, Heat 126 (OT); Blazers 114, Suns 110 &bull; Mariners dropped Vedder Cup opener to Padres 4-1 &mdash; Woo 7 IP, 3 R &mdash; snapping 5-game streak</div>
-        <div>&#9654; <strong style="color:var(--red);">Apr 15 (TODAY &middot; WAR DAY 47 / BLOCKADE DAY 3)</strong> &mdash; <strong>CENTCOM: no ships have transited Hormuz since blockade locked down Mon 10am ET &mdash; Iranian export economy &ldquo;completely&rdquo; halted</strong> (Al Jazeera) &bull; <strong style="color:var(--amber);">US &amp; Iran weighing 2-WEEK CEASEFIRE EXTENSION</strong> to keep Round 2 alive (Bloomberg) &bull; Trump to Fox Biz (Bartiromo): war &ldquo;very close to over&rdquo; &bull; Hints Round 2 talks land in Pakistan in next 2 days &mdash; <strong>Vance to lead</strong> if scheduled &bull; Pakistani army chief now in Tehran pushing to restart talks &bull; <strong style="color:var(--red);">Italy SUSPENDS defense cooperation pact with Israel</strong> (Meloni, announced Tue at Verona event) after IDF fired warning shots at Italian UN peacekeeping convoy in Lebanon &bull; Trump trashes Meloni in Corriere della Sera: &ldquo;I thought she had courage, but I was wrong&rdquo; &bull; Iran Army threatens to close Red Sea and Sea of Oman next &bull; Pakistan FM Dar still mediating &bull; 20 vs 5 yr enrichment gap still the wall &bull; <strong style="color:var(--green);">S&amp;P 500 CLOSES above 7,000 for first time ever &mdash; record 7,022.95 (+0.4%)</strong>; Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%) &bull; Morgan Stanley $3.43 EPS crush; BofA $1.11 beat; ASML strong on AI demand &bull; WTI ~$91 &bull; <strong>Reps. Gonzales (R-TX) &amp; Swalwell (D-CA) officially resigned</strong> Tue &bull; House voting today on 18-month FISA Sec 702 renewal (expires Apr 20) &bull; Sudan enters Year 4 of war &bull; NBA Play-In elimination games tonight: 76ers at Magic 7:30 ET, Warriors at Clippers 10 ET &bull; Mariners (9-10) at Padres Game 2 (6:40 PT) &bull; Pope Leo XIV in Algeria Day 3 &bull; 6 days until ceasefire expires</div>
+        <div>&#9654; <strong style="color:var(--red);">Apr 15 (TODAY &middot; WAR DAY 47 / BLOCKADE DAY 3)</strong> &mdash; <strong>CENTCOM: no ships have transited Hormuz since blockade locked down Mon 10am ET &mdash; Iranian export economy &ldquo;completely&rdquo; halted</strong> (Al Jazeera) &bull; <strong>US &amp; Iran weighing 2-WEEK CEASEFIRE EXTENSION</strong> to keep Round 2 alive (Bloomberg) &bull; Trump to Fox Biz (Bartiromo): war &ldquo;very close to over&rdquo; &bull; Hints Round 2 talks land in Pakistan in next 2 days &mdash; <strong>Vance to lead</strong> if scheduled &bull; Pakistani army chief now in Tehran pushing to restart talks &bull; <strong>Italy SUSPENDS defense cooperation pact with Israel</strong> (Meloni, announced Tue at Verona event) after IDF fired warning shots at Italian UN peacekeeping convoy in Lebanon &bull; Trump trashes Meloni in Corriere della Sera: &ldquo;I thought she had courage, but I was wrong&rdquo; &bull; Iran Army threatens to close Red Sea and Sea of Oman next &bull; Pakistan FM Dar still mediating &bull; 20 vs 5 yr enrichment gap still the wall &bull; <strong>S&amp;P 500 CLOSES above 7,000 for first time ever &mdash; record 7,022.95 (+0.4%)</strong>; Nasdaq record 24,016.02 (+1.6%); Dow 48,463.72 (&minus;0.1%) &bull; Morgan Stanley $3.43 EPS crush; BofA $1.11 beat; ASML strong on AI demand &bull; WTI ~$91 &bull; <strong>Reps. Gonzales (R-TX) &amp; Swalwell (D-CA) officially resigned</strong> Tue &bull; House voting today on 18-month FISA Sec 702 renewal (expires Apr 20) &bull; Sudan enters Year 4 of war &bull; NBA Play-In elimination games tonight: 76ers at Magic 7:30 ET, Warriors at Clippers 10 ET &bull; Mariners (9-10) at Padres Game 2 (6:40 PT) &bull; Pope Leo XIV in Algeria Day 3 &bull; 6 days until ceasefire expires</div>
       </div>
       <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);">
         <div style="font-size: 10px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;">SOURCES: CNN, AL JAZEERA, AP, REUTERS, DOD</div>
@@ -3272,7 +3269,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-<!-- ═══ SUGGESTION BOX ═══ -->
+<!-- âââ SUGGESTION BOX âââ -->
   <div class="section-header">
     <span class="section-tag" style="border-color: rgba(0, 0, 0, 0.12); color: var(--forest-light); background: rgba(0, 0, 0, 0.03);">SUGGESTION BOX</span>
     <span class="section-quip">Ideas, complaints, feature requests, and bad takes welcome.</span>
@@ -3289,12 +3286,12 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         SUBMIT SUGGESTION
       </a>
     </div>
-    <div class="suggest-note">Form coming soon — Trevor is still setting up the Google Form.</div>
+    <div class="suggest-note">Form coming soon â Trevor is still setting up the Google Form.</div>
   </div>
 
   </div><!-- /dual-grid (post-Seattle Sports) -->
 
-<!-- ═══ FOOTER ═══ -->
+<!-- âââ FOOTER âââ -->
   <div class="footer">
     <div class="footer-text">
       <span class="highlight">FOUR FINGERS NEWS</span> &#8212; <a href="https://fourfingersnews.com/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;">fourfingersnews.com</a> &#8212; BUILT BY AI &#8212; TRUSTED BY NOBODY &#8212; SERVED NEAT
@@ -4010,7 +4007,7 @@ function initPracticalFinance() {
   document.getElementById('fedRate').innerHTML = '4.25 - 4.50%';
 }
 
-// ═══ IRAN / GEOPOLITICAL ═══
+// âââ IRAN / GEOPOLITICAL âââ
 async function fetchIranData() {
   // Fetch Iran-related news via RSS
   let iranHeadlines = [];
@@ -4184,7 +4181,7 @@ async function fetchWeather(){
   }catch(e){console.log("Weather fetch error",e);}
 }
 
-// ═══ MARINERS ODDS FALLBACK ═══
+// âââ MARINERS ODDS FALLBACK âââ
 async function fetchMarinersOdds() {
   // If odds weren't populated by scoreboard, try the-odds-api (free tier)
   var mlEl = document.getElementById('mlOdds');
@@ -4235,7 +4232,7 @@ async function fetchMarinersOdds() {
   } catch(e) { console.log('Odds fallback failed', e); }
 }
 
-// ═══ WORLD MONITOR CARD UPDATERS ═══
+// âââ WORLD MONITOR CARD UPDATERS âââ
 async function fetchWorldCards() {
   var topics = [
     { query: 'artificial+intelligence+AI+technology', headlineEl: 'aiHeadline', detailEl: 'aiDetail', fallbackHeadline: 'FRONTIER MODELS', keywords: ['AI','GPT','Claude','Gemini','robot','chip','neural','LLM','OpenAI','Anthropic','Google','Apple','Microsoft','Meta'] },
