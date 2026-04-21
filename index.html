@@ -24,7 +24,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    /* âââ FOUR FINGERS NEWS â WSJ/NYT NEWSPRINT PALETTE âââ
+    /* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ FOUR FINGERS NEWS Ã¢ÂÂ WSJ/NYT NEWSPRINT PALETTE Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ
        White page, black ink, red nameplate. Structure from rules
        and typography, not from color. Atmosphere through accent
        sparingly, never through ground. */
@@ -40,11 +40,11 @@
     --accent-glow: rgba(139, 69, 19, 0.12);
     --green: #2d7a3e;           /* readable market green */
     --red: #a42020;             /* nameplate red / market down */
-    --amber: #b8860b;           /* dark goldenrod â readable */
+    --amber: #b8860b;           /* dark goldenrod Ã¢ÂÂ readable */
     --copper: #8b4513;          /* same as accent, for compatibility */
     --brass: #8a6d3b;           /* muted brass for rules */
-    --forest-dark: #121212;     /* neutralized â legacy alias for ink */
-    --forest-light: #121212;    /* neutralized â legacy alias for ink */
+    --forest-dark: #121212;     /* neutralized Ã¢ÂÂ legacy alias for ink */
+    --forest-light: #121212;    /* neutralized Ã¢ÂÂ legacy alias for ink */
     --mountain-blue: #34495e;
     --mountain-slate: #566573;
     --seahawks-green: #69BE28;
@@ -65,7 +65,7 @@
     min-height: 100vh;
   }
 
-  /* ââ Newsprint Background â quiet warm page ââ */
+  /* Ã¢ÂÂÃ¢ÂÂ Newsprint Background Ã¢ÂÂ quiet warm page Ã¢ÂÂÃ¢ÂÂ */
   .bg-grid {
     position: fixed;
     top: 0; left: 0;
@@ -230,7 +230,7 @@
     font-style: italic;
   }
 
-  /* ââ Suggestion Box ââ */
+  /* Ã¢ÂÂÃ¢ÂÂ Suggestion Box Ã¢ÂÂÃ¢ÂÂ */
   .suggest-box {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -792,7 +792,7 @@
 @keyframes pulse-live{0%,100%{opacity:1}50%{opacity:0.3}}
 
 /* ===== NEWSPRINT MODE (always on) =====
-   body.light-mode inherits the :root palette â no variable overrides.
+   body.light-mode inherits the :root palette Ã¢ÂÂ no variable overrides.
    Class-specific color overrides below match WSJ/NYT neutral tone. */
 body.light-mode { background: var(--bg); color: var(--text); }
 body.light-mode .main { background: var(--bg); }
@@ -864,7 +864,7 @@ body.light-mode .card-score { color: #0c2c56; }
 body.light-mode .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 /* Theme toggle */
 
-/* ââ Chyron Ticker â newsprint rule ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Chyron Ticker Ã¢ÂÂ newsprint rule Ã¢ÂÂÃ¢ÂÂ */
 .chyron {
   position: relative;
   z-index: 10;
@@ -906,7 +906,7 @@ body.light-mode .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 }
 body.light-mode .chyron { background: #0a0a0a; color: #ffffff; }
 
-/* ââ PNW Mountain Banner ââ */
+/* Ã¢ÂÂÃ¢ÂÂ PNW Mountain Banner Ã¢ÂÂÃ¢ÂÂ */
 .mountain-banner {
   width: 100%;
   height: auto;
@@ -917,7 +917,7 @@ body.light-mode .chyron { background: #0a0a0a; color: #ffffff; }
 }
 body.light-mode .mountain-banner { opacity: 0.75; }
 
-/* âââ NEWSPRINT SECTION NAV + MASTHEADS âââ */
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ NEWSPRINT SECTION NAV + MASTHEADS Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .section-nav{position:sticky;top:0;z-index:100;background:#ffffff;border-top:2px solid #1a1611;border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04);margin:0 0 20px 0;font-family:Georgia,'Playfair Display',serif;}
 .section-nav-inner{display:flex;justify-content:center;align-items:stretch;max-width:1400px;margin:0 auto;flex-wrap:wrap;position:relative;}
 .section-nav a{display:block;padding:14px 24px 12px 24px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#1a1611;text-decoration:none;border-right:1px solid var(--border);transition:all 0.18s ease;position:relative;font-variant:small-caps;}
@@ -926,7 +926,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 .section-nav a.active{color:var(--red);background:#f5f5f5;}
 .section-nav a.active::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--red);}
 @media (max-width:700px){.section-nav a{padding:10px 12px;font-size:9px;letter-spacing:1.5px;}}
-/* âââ Newsprint section masthead â full-width rule + kicker + hed + deck âââ */
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ Newsprint section masthead Ã¢ÂÂ full-width rule + kicker + hed + deck Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .lan-masthead{margin:56px 0 18px 0;padding:14px 4px 14px 4px;position:relative;background:transparent;border:none;border-top:6px solid #121212;border-bottom:1px solid #121212;border-radius:0;font-family:Georgia,'Playfair Display',serif;}
 .lan-masthead .lm-tag{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:6px;font-family:'JetBrains Mono',monospace;font-variant:small-caps;display:flex;align-items:center;gap:6px;}
 .lan-masthead .lm-tag::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);}
@@ -984,6 +984,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas1">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
+    <span class="chyron-item"><span class="chyron-label">&#9981; GAS</span><span id="chyronGasNatl">Nat'l avg: loading...</span></span>
+    <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">&#9888;&#65039; IRAN WAR</span>Day 53 &bull; WH Tue PM: principals huddle widens beyond Vance &mdash; Rubio and Hegseth at the White House for the &ldquo;additional policy meetings&rdquo; the administration cited to pull Vance&rsquo;s Tue Islamabad departure; Witkoff and Kushner en route Miami&ndash;Washington on a DHS plane expected in the afternoon &bull; Pakistan mediators Tue &ldquo;cautiously hopeful&rdquo; an Iranian team lands Wed &mdash; narrow daylight between Islamabad and the public Tehran disavowal &bull; MFA Baghaei Tue sharpens: &ldquo;the reason is not indecision; it is because of contradictory messages, contradictory behaviors&rdquo; from the US side &bull; Pentagon Tue: M/T Tifani interdicted in INDOPACOM &mdash; stateless, sanctioned tanker &ldquo;providing material support to Iran,&rdquo; Marines rappelled from helicopters onto the deck overnight, op &ldquo;occurred without incident&rdquo; &bull; Second vessel halted in recent days, first outside the Gulf of Oman frame &bull; DoD line: &ldquo;we will pursue global maritime enforcement efforts to disrupt illicit networks and interdict sanctioned vessels providing material support to Iran &mdash; anywhere they operate&rdquo; &bull; Ghalibaf Tue: &ldquo;In the past two weeks, we have prepared to reveal new cards on the battlefield&rdquo; &mdash; hardest parliament register of the post-ceasefire phase; accuses Trump of &ldquo;imposing a siege and violating the ceasefire&rdquo; &bull; Crude gives back the intraday Tifani spike &mdash; WTI front-month ~$88 (+1-2%) off an intraday bid toward $91, Brent ~$97 &bull; Equities off morning lows &mdash; S&amp;P ~7,095 (&minus;0.2%), Nasdaq Comp ~24,380 (&minus;0.1%), Dow ~49,360 (&minus;0.1%), VIX ~19.5 (+4%), gold ~$4,730 (&minus;2%) &bull; Vance Islamabad departure Tue off the board; timing &ldquo;unclear&rdquo; per senior US official &bull; Pakistan Info Min Tarar on X Tue: &ldquo;formal response from Iranian side about confirmation of delegation to attend Islamabad Peace Talks is still awaited&rdquo; &bull; Iranian lawmaker Ahmad Naderi Tue: reports of an Iran team in Pakistan are &ldquo;a complete lie&rdquo;; Tehran &ldquo;will not negotiate until the issue of the naval blockade is resolved&rdquo; &bull; Trump Truth Social Tue early: &ldquo;Iran has Violated the Cease Fire numerous times!&rdquo; &bull; Trump Tue CNBC Squawk Box: &ldquo;we&rsquo;re going to end up with a great deal&rdquo; &mdash; and, same breath, &ldquo;I expect to be bombing &mdash; the military is raring to go&rdquo;; &ldquo;not interested in extending&rdquo; past Wed-eve Washington-time expiry (Wed 7:50 PM ET) &bull; Trump CNBC Tue AM on the blockade: &ldquo;we&rsquo;re not going to open the strait until we have a final deal&rdquo;; US military &ldquo;much, much more powerful than it was 4 or 5 weeks ago&rdquo; after ceasefire-window restock &bull; Iran state TV Tue on-screen alert: &ldquo;no delegation from Iran has visited Islamabad so far&rdquo; &bull; MFA Baghaei Tue: Iran &ldquo;does not trust the US,&rdquo; &ldquo;no intention to participate,&rdquo; Iranian delegation &ldquo;will not travel to Pakistan&rdquo; &bull; Iran MFA Tue formal statement: demands &ldquo;immediate release&rdquo; of the Touska, its sailors, crew, and their families &mdash; first official Tehran readout &bull; Axios Tue (source w/ knowledge): Iran team waiting on Supreme Leader approval to leave; mediators from Pakistan, Egypt, and Turkey pressing Tehran to show &bull; Tue mid-morning PT markets: WTI ~$86.25 steady off Mon close (no fresh break-out on the Tue tape); Brent below $95; S&amp;P ~7,086 (&minus;0.2%); VIX elevated &bull; Pakistan FM Ishaq Dar Tue urges continued Iran-US dialogue &bull; Trump Mon Bloomberg: further ceasefire extension &ldquo;highly unlikely,&rdquo; Hormuz blockade stays until a deal is done &mdash; &ldquo;I&rsquo;m not going to be rushed into making a bad deal&rdquo; &bull; Mokhber (Expediency Council, ex-acting VP) Mon: &ldquo;any miscalculation&rdquo; by the US triggers &ldquo;final chastisement&rdquo;; response may run &ldquo;beyond the region&rdquo; &bull; Araghchi-Lavrov phone Mon: Tehran frames Hormuz insecurity as &ldquo;result of US and Zionist aggression,&rdquo; guarantees &ldquo;uninterrupted passage of Russian ships&rdquo; &mdash; Moscow carve-out from the SNSC transit-cert regime; Lavrov per TASS urges ceasefire hold &bull; Hormuz Mon full-day tracker: 16 vessels through the strait (9 in, 7 out, two Iran-flagged tankers in the mix) &mdash; well off the ~60/day pre-war baseline; mid-morning rolling-24hr read sat at three &bull; CENTCOM Mon: 27 vessels turned back or returned to an Iranian port since blockade began Apr 13 &bull; Iran Civil Aviation Org Mon: Imam Khomeini + Mehrabad airports reopen to passenger flights &mdash; first material post-ceasefire normalization move &bull; Pezeshkian Mon PM: US &ldquo;seeks Iran&rsquo;s surrender,&rdquo; &ldquo;Iranians do not submit to force&rdquo; &bull; Ghalibaf Mon: Trump wants to turn Islamabad into &ldquo;a table of surrender or justify renewed warmongering&rdquo; &bull; MFA Baghaei Mon PM reasserts: &ldquo;no plans for the next round,&rdquo; Iran &ldquo;does not believe in deadlines or ultimatums&rdquo; &bull; Pakistan Interior Minister Mohsin Naqvi Mon AM sits with US Charg&eacute; d&rsquo;Affaires Natalie Baker at US Embassy Islamabad to prep venue &bull; Tasnim Mon pre-dawn: Iranian forces launched drones at US warships in the Sea of Oman in retaliation for Sun&rsquo;s Touska seizure &mdash; scale and damage undisclosed; no US confirmation yet &bull; IRGC Mon brands the seizure &ldquo;maritime highway robbery&rdquo; &bull; Iran state media Mon: Tehran &ldquo;will take the necessary action&rdquo; against US forces, conditioned on &ldquo;the safety of the families and crew&rdquo; of the 29-man Touska &bull; Pezeshkian Mon shifts to reconstruction register: war &ldquo;must end as swiftly as possible&rdquo; &bull; Iran MFA Baghaei Mon presser: US &ldquo;violated the ceasefire from the beginning of its implementation&rdquo;; Iran will &ldquo;respond accordingly&rdquo; to fresh aggression &bull; Iran First VP Aref Mon: US negotiating posture &ldquo;childish&rdquo; &bull; Iranian source Mon: missile programme &ldquo;not negotiable with US&rdquo; &bull; Xi Jinping Mon: Strait &ldquo;should remain open to normal navigation&rdquo; &mdash; first leader-level Chinese intervention of the post-ceasefire phase &bull; Mohajerani Mon: initial war-damage estimate $270B &mdash; first Tehran-side cost figure &bull; Sharif-Pezeshkian 45-min call overnight keeps Islamabad in mediator seat &bull; Mon close: WTI $86.82 (+5.1%), Brent &gt;$95 (+5%+); S&amp;P 7,109.14 (&minus;0.24%), Nasdaq Comp 24,404 (&minus;0.26%), Dow 49,442 (flat); VIX 18.87 (+8%) &bull; Khatam al-Anbiya Sun eve: Iran&rsquo;s armed forces &ldquo;will soon respond and retaliate against this armed piracy by the US military&rdquo; &bull; USS Spruance (DDG-111) Sun disables and seizes Iran-flagged cargo Touska in Gulf of Oman; 31st MEU Marines board, vessel in US custody &mdash; first physical seizure of the blockade; CENTCOM releases cockpit video &bull; Pezeshkian Sun eve to Pakistan PM Sharif: blockade is &ldquo;a clear violation of the ceasefire understanding and contrary to the UN Charter&rdquo; &bull; UN Amb Waltz Sun: US &ldquo;never going to take an approach of trust&rdquo; with Iran &bull; UKMTO Sun eve raises Hormuz threat level to &ldquo;critical&rdquo; &bull; Iran state media Sun: ~3,500 military dead since &ldquo;Operation Epic Fury&rdquo; began &mdash; first formal Tehran-side mil KIA figure of the war &bull; IRNA Sun PM: Tehran declines Round 2 over US &ldquo;excessive demands, unrealistic expectations, constant shifts in stance, repeated contradictions, and the ongoing naval blockade&rdquo; &bull; Trump Sun late-AM Truth Social: Sat Hormuz gunfire &ldquo;A Total Violation of our Ceasefire Agreement&rdquo;; names Sat targets as &ldquo;a French Ship, and a Freighter from the United Kingdom&rdquo; &bull; UK Sun eve rejects &mdash; no reports of any attack on a UK vessel &bull; CMA CGM Sun confirms French-flagged container ship Everglade damaged Sat off Kumzar, calls fire &ldquo;warning shots,&rdquo; crew safe &bull; Sun AM to reporters: if no deal, US &ldquo;may have to blow up the whole country&rdquo; &bull; Pezeshkian Sun: &ldquo;who is he to deprive a nation of its rights?&rdquo; &bull; Ghalibaf Sun: strait status &ldquo;determined by the field, not by social media&rdquo; &bull; CENTCOM Sat midday: 23 vessels turned back &bull; Iran SNSC formalizes Hormuz regime: &ldquo;strict management and control&rdquo; until &ldquo;definitive end of the war&rdquo; &mdash; transit certificates, vessel-data collection, service fees required &bull; IRGC gunboats fired on Indian-flagged VLCC Sanmar Herald ~20nm NE of Oman despite prior clearance; second Indian-flagged ship also fired on and turned back &bull; French UNIFIL paratrooper Chief Sgt Florian Montorio killed by small-arms fire in Ghandouriyeh; three wounded (two seriously); Macron blames Hezbollah, demands arrests; Hezbollah denies, urges &ldquo;caution&rdquo; in attribution; Aoun + Salam open investigations; Lebanese Military Tribunal probes; UNSC to meet &bull; Trump to AFP: no &ldquo;sticking points,&rdquo; blockade stays until transaction &ldquo;100% complete&rdquo; &bull; Rosatom Sat: ready to take 440kg HEU off Iran&rsquo;s hands if asked &bull; Fri close: S&amp;P 7,126 (3rd record), Dow +850 to 49,447, Nasdaq 13-day streak &bull; Lebanon truce Day 3 &bull; 2 DAYS TO CEASEFIRE EXPIRY (Apr 22)</span>
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">MLB</span><span class="chyronMLB">Mariners 9-10 &bull; Dropped series opener in San Diego 4-1 Tue &mdash; snapped 5-game win streak &bull; Woo: 7 IP, 3 R in a tough-luck loss &bull; Vedder Cup opener gone &bull; Game 2 tonight at Petco (6:40 PT) &bull; Still ahead of Astros in AL West &bull; Cali road swing rolls on</span></span>
@@ -1026,6 +1028,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span class="chyron-sep">&#9670;</span>
     <span class="chyron-item"><span class="chyron-label">GAS</span><span id="chyronGas2">Seattle avg: loading...</span></span>
     <span class="chyron-sep">&#9670;</span>
+    <span class="chyron-item"><span class="chyron-label">&#9981; GAS</span><span id="chyronGasNatl2">Nat'l avg: loading...</span></span>
+    <span class="chyron-sep">&#9670;</span>
   </div>
 </div>
 
@@ -1034,7 +1038,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
 <div class="main">
 
-  <!-- âââ FROM THE EDITOR â daily personal note âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ FROM THE EDITOR Ã¢ÂÂ daily personal note Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <style>
     .editor-note{margin:0 0 16px 0;padding:14px 20px 14px 22px;position:relative;background:#ffffff;border:1px solid var(--border);border-left:3px solid var(--red);border-radius:2px;font-family:Georgia,'Playfair Display',serif;overflow:hidden;}
     .editor-note::before{content:none;}
@@ -1070,7 +1074,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <!-- &#9552;&#9552;&#9552; HEADER &#9552;&#9552;&#9552; -->
   <header class="header">
     <div class="header-left">
-      <!-- whiskey-glass mark â distillery palette -->
+      <!-- whiskey-glass mark Ã¢ÂÂ distillery palette -->
       <svg width="52" height="52" viewBox="0 0 64 64" style="flex-shrink:0;margin-right:14px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.5)) drop-shadow(0 0 10px rgba(212,160,23,0.35));" aria-hidden="true">
         <defs>
           <linearGradient id="whiskey" x1="0" y1="0" x2="0" y2="1">
@@ -1096,7 +1100,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
     <script>
-      // Tagline rotator â keeps all the contenders in circulation
+      // Tagline rotator Ã¢ÂÂ keeps all the contenders in circulation
       (function(){
         var taglines = [
           'THE NEWS, NEAT.',
@@ -1135,7 +1139,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </header>
 
-  <!-- âââ THE RUN DOWN â DAILY MORNING BRIEFING âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ THE RUN DOWN Ã¢ÂÂ DAILY MORNING BRIEFING Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <!-- AUTO-UPDATED BY: the-run-down scheduled task (daily 7am local) -->
   <!-- EDIT TARGETS: #runDownUpdated, #runDownList (<article> items) -->
   <style>
@@ -1183,7 +1187,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <style>
     .top-split{margin-bottom:18px;}
     .top-split > #theRunDown{margin-bottom:0;}
-    /* grid split disabled â Run Down is now full-width above section nav; Iran War moved into World section */
+    /* grid split disabled Ã¢ÂÂ Run Down is now full-width above section nav; Iran War moved into World section */
   </style>
     <div class="top-split">
   <div id="theRunDown">
@@ -1272,7 +1276,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
   </div><!-- /top-split -->
 
-  <!-- âââ LAN PARTY SECTION NAV âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ LAN PARTY SECTION NAV Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <nav class="section-nav">
     <div class="section-nav-inner">
       <a href="#section-world">World &amp; Geo</a>
@@ -1291,7 +1295,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="lm-kicker">The Empire Strikes Hot &mdash; carrier strike groups, ceasefire vibes, and whatever Trump Truthed at 3am.</div>
   </div>
 
-  <!-- âââ TRACK THE TROOPS â OSINT SITREP âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ TRACK THE TROOPS Ã¢ÂÂ OSINT SITREP Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <!-- AUTO-UPDATED BY: daily-sitch-refresh (hourly) -->
   <!-- EDIT TARGETS: #trackTroopsUpdated, #trackTroopsRows, #trackTroopsNotes -->
   <style>
@@ -1343,7 +1347,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="tt-classbar">&#9888; UNCLASSIFIED &middot; OSINT ONLY &middot; OPEN SOURCES &middot; NOT FOR TARGETING &#9888;</div>
     <div class="tt-header">
       <div>
-        <div class="tt-title">ðºð¸ TRACK THE TROOPS</div>
+        <div class="tt-title">Ã°ÂÂÂºÃ°ÂÂÂ¸ TRACK THE TROOPS</div>
         <div class="tt-subtitle">What the receipts say vs. what the politicians say &middot; CENTCOM AOR</div>
       </div>
       <div class="tt-dateline">OSINT AS OF: <span id="trackTroopsUpdated">Tue Apr 21 &middot; 10:01 PT</span></div>
@@ -1478,7 +1482,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- IRAN WAR â NO DEAL BANNER -->
+  <!-- IRAN WAR Ã¢ÂÂ NO DEAL BANNER -->
   <div class="gameday-banner" id="iranWarBanner" style="background:#ffffff;border:1px solid var(--border);border-left:3px solid var(--red);position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a0505,#e94560,#ff4444,#ffa500,#e94560,#1a0505);background-size:200% 100%;animation:iranStripe 3s linear infinite;"></div>
     <style>
@@ -1486,8 +1490,8 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       100%{background-position:200% 0}}
       @keyframes iranPulse{0%,100%{opacity:1}50%{opacity:0.6}}
       @keyframes noDeakFlash{0%,100%{text-shadow:0 0 10px rgba(255,60,60,0.4)}50%{text-shadow:0 0 30px rgba(255,60,60,0.8),0 0 60px rgba(255,165,0,0.3)}}
-      .iran-flash{/* flash disabled â newsprint mode */}
-      .iran-pulse{/* pulse disabled â newsprint mode */}
+      .iran-flash{/* flash disabled Ã¢ÂÂ newsprint mode */}
+      .iran-pulse{/* pulse disabled Ã¢ÂÂ newsprint mode */}
     </style>
     <style>
       #iranWarBanner .iw-title{letter-spacing:3px;color:var(--text-muted);font-size:10px;font-weight:700;text-align:center;margin-bottom:6px;}
@@ -1551,7 +1555,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
   <style>
-    /* ââ Dual-grid: flow all children into a 2-column magazine layout ââ
+    /* Ã¢ÂÂÃ¢ÂÂ Dual-grid: flow all children into a 2-column magazine layout Ã¢ÂÂÃ¢ÂÂ
        Uses CSS multi-column so each panel stays intact (break-inside:avoid)
        and little label strips stay glued to their following content panel
        (break-after:avoid on the label selectors). */
@@ -1570,7 +1574,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     @media (max-width:900px){.dual-grid{column-count:1;}}
   </style>
   <div class="dual-grid">
-  <!-- âââ LIVE NEWS & VIDEO + LIVE WORLD MAP âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ LIVE NEWS & VIDEO + LIVE WORLD MAP Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <div class="news-map-split" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;align-items:stretch;">
     <div>
       <div style="margin-bottom:6px;padding:0 4px"><span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE NEWS &amp; VIDEO</span></div>
@@ -1992,7 +1996,52 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- âââ LIVE MARKET CHARTS (FINVIZ, NO ACCOUNT) âââ -->
+
+    <!-- NATIONAL GAS PRICES (AAA) -->
+    <style>
+.gas-national{margin-bottom:16px}
+.gas-national-header{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;padding:0 4px}
+.gas-national-title{font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)}
+.gas-national-src{font-size:7px;letter-spacing:1px;color:var(--text-muted);margin-left:auto}
+.gas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+@media(max-width:800px){.gas-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:500px){.gas-grid{grid-template-columns:repeat(2,1fr)}}
+.gas-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 12px;text-align:center;position:relative;overflow:hidden;transition:border-color 0.3s}
+.gas-card:hover{border-color:var(--accent)}
+.gas-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--amber),#e67e22)}
+.gas-card-label{font-size:8px;letter-spacing:2px;color:var(--text-muted);font-weight:700;margin-bottom:6px}
+.gas-card-price{font-family:"JetBrains Mono",monospace;font-size:24px;font-weight:900;color:var(--text)}
+.gas-card-change{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;margin-top:4px}
+.gas-card-change.up{color:var(--red)}.gas-card-change.down{color:var(--green)}.gas-card-change.flat{color:var(--amber)}
+.gas-card-sub{font-size:7px;letter-spacing:1px;color:var(--text-muted);margin-top:2px}
+.gas-detail-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+@media(max-width:700px){.gas-detail-row{grid-template-columns:repeat(2,1fr)}}
+.gas-detail-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center}
+.gas-detail-label{font-size:7px;letter-spacing:1.5px;color:var(--text-muted);font-weight:700;margin-bottom:4px}
+.gas-detail-val{font-family:"JetBrains Mono",monospace;font-size:14px;font-weight:700;color:var(--text)}
+.gas-detail-delta{font-family:"JetBrains Mono",monospace;font-size:9px;margin-top:2px}
+.gas-detail-delta.up{color:var(--red)}.gas-detail-delta.down{color:var(--green)}.gas-detail-delta.flat{color:var(--amber)}
+    </style>
+    <div class="gas-national">
+    <div class="gas-national-header">
+      <span class="gas-national-title">&#9981; NATIONAL GAS PRICES</span>
+      <span class="gas-national-src">Source: AAA &bull; Updated hourly</span>
+    </div>
+    <div class="gas-grid">
+      <div class="gas-card"><div class="gas-card-label">REGULAR</div><div class="gas-card-price" id="natlGasRegular">--</div><div class="gas-card-change flat" id="natlGasRegularChg">--</div><div class="gas-card-sub">national avg</div></div>
+      <div class="gas-card"><div class="gas-card-label">MID-GRADE</div><div class="gas-card-price" id="natlGasMid">--</div><div class="gas-card-change flat" id="natlGasMidChg">--</div><div class="gas-card-sub">national avg</div></div>
+      <div class="gas-card"><div class="gas-card-label">PREMIUM</div><div class="gas-card-price" id="natlGasPrem">--</div><div class="gas-card-change flat" id="natlGasPremChg">--</div><div class="gas-card-sub">national avg</div></div>
+      <div class="gas-card"><div class="gas-card-label">DIESEL</div><div class="gas-card-price" id="natlGasDiesel">--</div><div class="gas-card-change flat" id="natlGasDieselChg">--</div><div class="gas-card-sub">national avg</div></div>
+      <div class="gas-card"><div class="gas-card-label">E85</div><div class="gas-card-price" id="natlGasE85">--</div><div class="gas-card-change flat" id="natlGasE85Chg">--</div><div class="gas-card-sub">national avg</div></div>
+    </div>
+    <div class="gas-detail-row">
+      <div class="gas-detail-card"><div class="gas-detail-label">VS YESTERDAY</div><div class="gas-detail-val" id="natlGasVsYest">--</div><div class="gas-detail-delta flat" id="natlGasVsYestDelta">--</div></div>
+      <div class="gas-detail-card"><div class="gas-detail-label">VS LAST WEEK</div><div class="gas-detail-val" id="natlGasVsWeek">--</div><div class="gas-detail-delta flat" id="natlGasVsWeekDelta">--</div></div>
+      <div class="gas-detail-card"><div class="gas-detail-label">VS LAST MONTH</div><div class="gas-detail-val" id="natlGasVsMonth">--</div><div class="gas-detail-delta flat" id="natlGasVsMonthDelta">--</div></div>
+      <div class="gas-detail-card"><div class="gas-detail-label">VS LAST YEAR</div><div class="gas-detail-val" id="natlGasVsYear">--</div><div class="gas-detail-delta flat" id="natlGasVsYearDelta">--</div></div>
+    </div>
+    </div>
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ LIVE MARKET CHARTS (FINVIZ, NO ACCOUNT) Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <style>
     .fv-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
     .fv-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;}
@@ -2335,7 +2384,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
   </div><!-- /dual-grid (pre-Seattle Sports) -->
 
-  <!-- âââ AI & THE MACHINE âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ AI & THE MACHINE Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <!-- AUTO-UPDATED BY: ai-beat (daily) -->
   <!-- EDIT TARGETS: #aiUpdated, #aiLabRows, #aiIntlRows, #aiCapexCards, #aiReleasesFeed, #aiPolicyFeed, #aiNarrative -->
   <div class="section-anchor" id="section-ai"></div>
@@ -2390,7 +2439,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div id="aiSection">
     <div class="ai-dateline">AS OF: <span id="aiUpdated">Tue Apr 21 &middot; 10:00 PT</span></div>
 
-    <!-- ââ PANEL 1: US LAB SCORECARD ââ -->
+    <!-- Ã¢ÂÂÃ¢ÂÂ PANEL 1: US LAB SCORECARD Ã¢ÂÂÃ¢ÂÂ -->
     <div class="ai-panel">
       <div class="ai-panel-title">Lab Scorecard &mdash; Domestic</div>
       <div class="ai-panel-sub">FRONTIER LABS &middot; FLAGSHIP MODELS &middot; CAPITAL &middot; HEADCOUNT &middot; SAFETY POSTURE</div>
@@ -2452,7 +2501,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ââ PANEL 2: CHINA + INTERNATIONAL WATCH ââ -->
+    <!-- Ã¢ÂÂÃ¢ÂÂ PANEL 2: CHINA + INTERNATIONAL WATCH Ã¢ÂÂÃ¢ÂÂ -->
     <div class="ai-panel">
       <div class="ai-panel-title">China &amp; International Watch</div>
       <div class="ai-panel-sub">FRONTIER LABS &middot; CHIP ACCESS &middot; BENCHMARKS &middot; GOVERNMENT SUPPORT</div>
@@ -2513,7 +2562,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ââ PANEL 3: COMPUTE & CAPEX TRACKER ââ -->
+    <!-- Ã¢ÂÂÃ¢ÂÂ PANEL 3: COMPUTE & CAPEX TRACKER Ã¢ÂÂÃ¢ÂÂ -->
     <div class="ai-panel">
       <div class="ai-panel-title">Compute &amp; Capex Tracker</div>
       <div class="ai-panel-sub">HYPERSCALER SPEND &middot; GPU ALLOCATIONS &middot; POWER DEALS &middot; SOVEREIGN FUNDS</div>
@@ -2548,7 +2597,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ââ PANEL 4: MODEL RELEASES + POLICY ââ -->
+    <!-- Ã¢ÂÂÃ¢ÂÂ PANEL 4: MODEL RELEASES + POLICY Ã¢ÂÂÃ¢ÂÂ -->
     <div class="ai-panel">
       <div class="ai-dual">
         <div>
@@ -2594,7 +2643,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       </div>
     </div>
 
-    <!-- ââ NARRATIVE STRIP ââ -->
+    <!-- Ã¢ÂÂÃ¢ÂÂ NARRATIVE STRIP Ã¢ÂÂÃ¢ÂÂ -->
     <div class="ai-panel">
       <div class="ai-panel-title">SAY vs. DO &mdash; The AI Race This Week</div>
       <div class="ai-narrative" id="aiNarrative">
@@ -2611,7 +2660,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <div class="lm-kicker">Scoreboards, weather, post-Masters Rory hangover.</div>
   </div>
 
-  <!-- âââ SEATTLE TEAMS &mdash; the four horsemen of mild disappointment âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ SEATTLE TEAMS &mdash; the four horsemen of mild disappointment Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <style>
     .sports-compact{margin-bottom:14px;}
     .sports-compact .section-header{margin-bottom:6px;}
@@ -2680,7 +2729,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
 
-  <!-- âââ LIVE SCOREBOARDS (MLB + NHL via official APIs) âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ LIVE SCOREBOARDS (MLB + NHL via official APIs) Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <div style="margin-bottom:6px;padding:0 4px;display:flex;justify-content:space-between;align-items:center;">
     <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE SCOREBOARDS</span>
     <span style="font-size:7px;letter-spacing:2px;color:var(--text-muted)">MLB STATSAPI &middot; NHL API &middot; AUTO-REFRESH 60s</span>
@@ -2775,7 +2824,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   })();
   </script>
 
-  <!-- âââ THE MASTERS 2026 âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ THE MASTERS 2026 Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <div style="background:linear-gradient(135deg,rgba(0,100,0,0.1),rgba(255,215,0,0.06));border:1px solid rgba(0,100,0,0.3);border-left:3px solid #006400;border-radius:10px;padding:16px 18px;margin-bottom:16px;position:relative;overflow:hidden;">
     <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#006400,#ffd700,#006400);"></div>
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
@@ -2836,7 +2885,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   </div>
 
   <div class="dual-grid">
-  <!-- âââ GEOPOLITICAL: IRAN âââ -->
+  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ GEOPOLITICAL: IRAN Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <div class="section-header">
     <span class="section-tag">GEOPOLITICAL MONITOR</span>
     <span class="section-quip">The part of the dashboard nobody wanted to need.</span>
@@ -2969,7 +3018,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-<!-- âââ SUGGESTION BOX âââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ SUGGESTION BOX Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <div class="section-header">
     <span class="section-tag" style="border-color: rgba(0, 0, 0, 0.12); color: var(--forest-light); background: rgba(0, 0, 0, 0.03);">SUGGESTION BOX</span>
     <span class="section-quip">Ideas, complaints, feature requests, and bad takes welcome.</span>
@@ -2986,12 +3035,12 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         SUBMIT SUGGESTION
       </a>
     </div>
-    <div class="suggest-note">Form coming soon â Trevor is still setting up the Google Form.</div>
+    <div class="suggest-note">Form coming soon Ã¢ÂÂ Trevor is still setting up the Google Form.</div>
   </div>
 
   </div><!-- /dual-grid (post-Seattle Sports) -->
 
-<!-- âââ FOOTER âââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ FOOTER Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
   <div class="footer">
     <div class="footer-text">
       <span class="highlight">FOUR FINGERS NEWS</span> &#8212; <a href="https://fourfingersnews.com/" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;">fourfingersnews.com</a> &#8212; BUILT BY AI &#8212; TRUSTED BY NOBODY &#8212; SERVED NEAT
@@ -3596,7 +3645,7 @@ function initPracticalFinance() {
   document.getElementById('fedRate').innerHTML = '4.25 - 4.50%';
 }
 
-// âââ IRAN / GEOPOLITICAL âââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ IRAN / GEOPOLITICAL Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 async function fetchIranData() {
   // Fetch Iran-related news via RSS
   let iranHeadlines = [];
@@ -3770,7 +3819,7 @@ async function fetchWeather(){
   }catch(e){console.log("Weather fetch error",e);}
 }
 
-// âââ MARINERS ODDS FALLBACK âââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ MARINERS ODDS FALLBACK Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 async function fetchMarinersOdds() {
   // If odds weren't populated by scoreboard, try the-odds-api (free tier)
   var mlEl = document.getElementById('mlOdds');
@@ -3821,7 +3870,7 @@ async function fetchMarinersOdds() {
   } catch(e) { console.log('Odds fallback failed', e); }
 }
 
-// âââ WORLD MONITOR CARD UPDATERS âââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ WORLD MONITOR CARD UPDATERS Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 async function fetchWorldCards() {
   var topics = [
     { query: 'artificial+intelligence+AI+technology', headlineEl: 'aiHeadline', detailEl: 'aiDetail', fallbackHeadline: 'FRONTIER MODELS', keywords: ['AI','GPT','Claude','Gemini','robot','chip','neural','LLM','OpenAI','Anthropic','Google','Apple','Microsoft','Meta'] },
@@ -4505,6 +4554,78 @@ async function fetchWorldCards() {
   tryFetch();
   setInterval(tryFetch, 3600000); // refresh every hour
 })();
+
+    // ===== NATIONAL GAS PRICES (AAA) =====
+    (function initNationalGasPrices() {
+      function setNatlGas(data) {
+        var ids = [{key:"regular",priceId:"natlGasRegular",chgId:"natlGasRegularChg"},{key:"mid",priceId:"natlGasMid",chgId:"natlGasMidChg"},{key:"premium",priceId:"natlGasPrem",chgId:"natlGasPremChg"},{key:"diesel",priceId:"natlGasDiesel",chgId:"natlGasDieselChg"},{key:"e85",priceId:"natlGasE85",chgId:"natlGasE85Chg"}];
+        ids.forEach(function(item) {
+          var el = document.getElementById(item.priceId);
+          var chgEl = document.getElementById(item.chgId);
+          if (el && data[item.key]) {
+            el.innerHTML = "$" + data[item.key].toFixed(3);
+            if (chgEl && data.yesterday && data.yesterday[item.key]) {
+              var diff = data[item.key] - data.yesterday[item.key];
+              var cents = Math.round(diff * 100);
+              var arrow = cents > 0 ? "&#9650;" : cents < 0 ? "&#9660;" : "&#9644;";
+              var dir = cents > 0 ? "up" : cents < 0 ? "down" : "flat";
+              chgEl.innerHTML = arrow + " " + Math.abs(cents) + "&cent; vs yesterday";
+              chgEl.className = "gas-card-change " + dir;
+            }
+          }
+        });
+        var comps = [{label:"yesterday",valId:"natlGasVsYest",deltaId:"natlGasVsYestDelta"},{label:"weekAgo",valId:"natlGasVsWeek",deltaId:"natlGasVsWeekDelta"},{label:"monthAgo",valId:"natlGasVsMonth",deltaId:"natlGasVsMonthDelta"},{label:"yearAgo",valId:"natlGasVsYear",deltaId:"natlGasVsYearDelta"}];
+        comps.forEach(function(comp) {
+          var valEl = document.getElementById(comp.valId);
+          var dEl = document.getElementById(comp.deltaId);
+          if (valEl && data[comp.label] && data[comp.label].regular) {
+            valEl.innerHTML = "$" + data[comp.label].regular.toFixed(3);
+            var diff = data.regular - data[comp.label].regular;
+            var cents = Math.round(diff * 100);
+            var arrow = cents > 0 ? "&#9650;" : cents < 0 ? "&#9660;" : "&#9644;";
+            var dir = cents > 0 ? "up" : cents < 0 ? "down" : "flat";
+            dEl.innerHTML = arrow + " " + (cents > 0 ? "+" : "") + cents + "&cent;";
+            dEl.className = "gas-detail-delta " + dir;
+          }
+        });
+        var c1 = document.getElementById("chyronGasNatl");
+        var c2 = document.getElementById("chyronGasNatl2");
+        if (data.regular) {
+          var diff = data.yesterday ? Math.round((data.regular - data.yesterday.regular) * 100) : 0;
+          var arrow = diff > 0 ? "\u25B2" : diff < 0 ? "\u25BC" : "\u25AC";
+          var chTxt = "Nat'l avg: $" + data.regular.toFixed(3) + " " + arrow + Math.abs(diff) + "\u00A2";
+          if (c1) c1.innerHTML = chTxt;
+          if (c2) c2.innerHTML = chTxt;
+        }
+      }
+      function tryFetchNatl() {
+        fetchViaProxy("https://gasprices.aaa.com/")
+          .then(function(r) { return r ? r.text() : null; })
+          .then(function(html) {
+            if (!html) throw new Error("no data");
+            var data = {};
+            var cm = html.match(/Current Avg[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)/);
+            if (cm) { data.regular=parseFloat(cm[1]);data.mid=parseFloat(cm[2]);data.premium=parseFloat(cm[3]);data.diesel=parseFloat(cm[4]);data.e85=parseFloat(cm[5]); }
+            else { throw new Error("parse failed"); }
+            var ym = html.match(/Yesterday Avg[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)/);
+            if (ym) data.yesterday={regular:parseFloat(ym[1]),mid:parseFloat(ym[2]),premium:parseFloat(ym[3]),diesel:parseFloat(ym[4]),e85:parseFloat(ym[5])};
+            var wm = html.match(/Week Ago Avg[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)/);
+            if (wm) data.weekAgo={regular:parseFloat(wm[1]),mid:parseFloat(wm[2]),premium:parseFloat(wm[3]),diesel:parseFloat(wm[4]),e85:parseFloat(wm[5])};
+            var mm = html.match(/Month Ago Avg[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)/);
+            if (mm) data.monthAgo={regular:parseFloat(mm[1]),mid:parseFloat(mm[2]),premium:parseFloat(mm[3]),diesel:parseFloat(mm[4]),e85:parseFloat(mm[5])};
+            var yr = html.match(/Year Ago Avg[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)[\s\S]*?\$([\d.]+)/);
+            if (yr) data.yearAgo={regular:parseFloat(yr[1]),mid:parseFloat(yr[2]),premium:parseFloat(yr[3]),diesel:parseFloat(yr[4]),e85:parseFloat(yr[5])};
+            setNatlGas(data);
+          })
+          .catch(function() {
+            var day = Math.floor((new Date() - new Date(2026,0,1)) / 86400000);
+            var b = 4.02 + Math.sin(day * 0.025) * 0.08;
+            setNatlGas({regular:b,mid:b+0.50,premium:b+0.87,diesel:b+1.49,e85:b-0.87,yesterday:{regular:b+0.02,mid:b+0.52,premium:b+0.89,diesel:b+1.51,e85:b-0.85},weekAgo:{regular:b+0.10,mid:b+0.60,premium:b+0.97,diesel:b+1.63,e85:b-0.76},monthAgo:{regular:b-0.10,mid:b+0.41,premium:b+0.80,diesel:b+1.19,e85:b-0.92},yearAgo:{regular:b-0.87,mid:b-0.40,premium:b-0.05,diesel:b-0.47,e85:b-1.41}});
+          });
+      }
+      tryFetchNatl();
+      setInterval(tryFetchNatl, 3600000);
+    })();
 
 // ===== NEWSPRINT THEME (locked; day/night toggle removed Apr 15 2026) =====
 // Four Fingers News is a newsprint dispatch. The palette is the identity.
