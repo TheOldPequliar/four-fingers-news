@@ -651,6 +651,9 @@
 .fg-extreme-fear{color:#e74c3c}.fg-fear{color:#e67e22}.fg-neutral{color:#f1c40f}.fg-greed{color:#2ecc71}.fg-extreme-greed{color:#27ae60}
 .ticker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:700px){.ticker-grid{grid-template-columns:repeat(2,1fr)}}
+/* Fill trailing blanks: last ticker-card stretches to row end when it would leave empty cells */
+.ticker-grid .ticker-card:last-child:nth-child(3n+1):not(:first-child){grid-column:1 / -1}
+.ticker-grid .ticker-card:last-child:nth-child(3n+2):not(:nth-child(2)){grid-column:2 / -1}
 .ticker-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;position:relative;overflow:hidden;transition:border-color 0.3s}
 .ticker-card:hover{border-color:var(--accent)}
 .ticker-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px}
