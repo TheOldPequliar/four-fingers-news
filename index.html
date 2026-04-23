@@ -4298,8 +4298,8 @@ async function fetchWorldCards() {
 
 // ===== IRAN WAR LIVE COUNTER =====
 (function initIranCounter() {
-  // Operation Epic Fury began Feb 28, 2026
-  var warStart = new Date(2026, 1, 28); // Feb 28, 2026
+  // War began Feb 27, 2026 (Day 1). Formula: floor(diff_days) + 1 = current war day.
+  var warStart = new Date(2026, 1, 27); // Feb 27, 2026
   function update() {
     var now = new Date();
     var dayNum = Math.floor((now - warStart) / 86400000) + 1;
