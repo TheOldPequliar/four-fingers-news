@@ -2904,9 +2904,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="card-team-name" style="color: var(--text);">IMPACT DASHBOARD</div>
       <div style="margin-bottom: 14px;">
         <div class="fin-row"><span class="fin-label">Oil (WTI Crude)</span><span class="fin-value" id="oilPrice" style="color: var(--red);">--</span></div>
-        <div class="fin-row"><span class="fin-label">Brent Crude</span><span class="fin-value" id="brentPrice" style="color: var(--red);">--</span></div>
+        <div class="fin-row"><span class="fin-label">Brent Crude</span><span class="fin-value" id="iwBrentPrice" style="color: var(--red);">--</span></div>
         <div class="fin-row"><span class="fin-label">Defense Sector (ITA ETF)</span><span class="fin-value" id="defenseETF" style="color: var(--green);">--</span></div>
-        <div class="fin-row"><span class="fin-label">Gold (Safe Haven)</span><span class="fin-value" id="goldPrice" style="color: var(--amber);">--</span></div>
+        <div class="fin-row"><span class="fin-label">Gold (Safe Haven)</span><span class="fin-value" id="iwGoldPrice" style="color: var(--amber);">--</span></div>
         <div class="fin-row"><span class="fin-label">USD/EUR</span><span class="fin-value" id="usdEur">--</span></div>
       </div>
       <div id="iranHeadlines" style="border-top: 1px solid var(--border); padding-top: 12px;">
@@ -2972,7 +2972,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="fin-insight-title">MARKET VIBES</div>
       <div class="fin-row"><span class="fin-label">Fear & Greed Index</span><span class="fin-value" id="fearGreed" style="color: var(--amber);">--</span></div>
       <div class="fin-row"><span class="fin-label">VIX (Volatility)</span><span class="fin-value" id="vixValue">--</span></div>
-      <div class="fin-row"><span class="fin-label">BTC</span><span class="fin-value" id="btcPrice">--</span></div>
+      <div class="fin-row"><span class="fin-label">BTC</span><span class="fin-value" id="finBtcPrice">--</span></div>
       <div class="fin-row"><span class="fin-label">Fed Funds Rate</span><span class="fin-value" id="fedRate">--</span></div>
     </div>
   </div>
@@ -3720,11 +3720,13 @@ async function fetchIranData() {
   `;
 
   // Conflict-sensitive commodity data
-  document.getElementById('oilPrice').innerHTML = '$78.42 &#9650;';
-  document.getElementById('brentPrice').innerHTML = '$82.15 &#9650;';
+  document.getElementById('oilPrice').innerHTML = '$94 &#9650;';
+  var iwBrent = document.getElementById('iwBrentPrice');
+  if (iwBrent) iwBrent.innerHTML = '$103 &#9650;';
   document.getElementById('defenseETF').innerHTML = '$142.80 &#9650; 2.3%';
-  document.getElementById('goldPrice').innerHTML = '$2,945 &#9650;';
-  document.getElementById('usdEur').innerHTML = '0.917';
+  var iwGold = document.getElementById('iwGoldPrice');
+  if (iwGold) iwGold.innerHTML = '$3,340 &#9650;';
+  document.getElementById('usdEur').innerHTML = '0.880';
 }
 
 // &#9552;&#9552;&#9552; REFRESH TIMESTAMP &#9552;&#9552;&#9552;
@@ -4144,8 +4146,8 @@ async function fetchWorldCards() {
   var prefixes = ['','','','$','$','','$'];
   var suffixes = ['','','','','','%',''];
   try {
-    var joined = symbols.join(',');
     // Fetch each symbol via v8 chart API (v7 is deprecated)
+    var populated = 0;
     var fetches = symbols.map(function(sym, idx) {
       return fetchViaProxy('https://query1.finance.yahoo.com/v8/finance/chart/' + encodeURIComponent(sym) + '?interval=1d&range=2d')
         .then(function(resp) { return resp ? resp.json() : null; })
@@ -4157,10 +4159,11 @@ async function fetchWorldCards() {
           var pct = prev ? ((price - prev) / prev) * 100 : 0;
           var display = price > 10000 ? Math.round(price).toLocaleString() : price > 100 ? price.toFixed(1) : price.toFixed(2);
           setTicker(names[idx], changes[idx], cards[idx], display, pct, prefixes[idx], suffixes[idx]);
+          populated++;
         }).catch(function() {});
     });
     await Promise.all(fetches);
-    if (fetches.length === 0) throw new Error('No data');
+    if (populated === 0) throw new Error('No data');
   } catch(e) {
     // Fallback: try Alpha Vantage-free or just simulate from day seed
     console.log('Market ticker fetch failed, using simulated data:', e);
@@ -4220,6 +4223,7 @@ async function fetchWorldCards() {
   try {
     // Fetch energy via v8 chart API (v7 deprecated)
     var energySyms = [{sym:'CL=F',pId:'wtiPrice',cId:'wtiChange'},{sym:'BZ=F',pId:'brentPrice',cId:'brentChange'},{sym:'NG=F',pId:'natgasPrice',cId:'natgasChange'}];
+    var ePop = 0;
     var eFetches = energySyms.map(function(e) {
       return fetchViaProxy('https://query1.finance.yahoo.com/v8/finance/chart/' + encodeURIComponent(e.sym) + '?interval=1d&range=2d')
         .then(function(resp) { return resp ? resp.json() : null; })
@@ -4230,9 +4234,11 @@ async function fetchWorldCards() {
           var prev = meta.chartPreviousClose || meta.previousClose || price;
           var pct = prev ? ((price - prev) / prev) * 100 : 0;
           setEnergy(e.pId, e.cId, price.toFixed(2), pct);
+          ePop++;
         }).catch(function() {});
     });
     await Promise.all(eFetches);
+    if (ePop === 0) throw new Error('No energy data');
   } catch(e) {
     console.log('Energy fetch failed, using simulated data:', e);
     var day = Math.floor((new Date() - new Date(2026,0,1))/86400000);
