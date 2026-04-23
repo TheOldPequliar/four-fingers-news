@@ -842,8 +842,6 @@ body.light-mode .er-event { background: rgba(0,0,0,0.02); border-color: rgba(0,0
 body.light-mode .er-event:hover { background: rgba(0,0,0,0.04); }
 body.light-mode .seattle-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .ticker-wrap { background: var(--surface); border-color: var(--border); }
-body.light-mode .weather-city { background: var(--surface); }
-body.light-mode .weather-boise { background: rgba(204,80,30,0.06); }
 body.light-mode .birthday-banner { background: linear-gradient(135deg, rgba(204,119,0,0.08), rgba(204,34,68,0.08), rgba(0,100,190,0.08)); }
 body.light-mode .curtis-mini { background: var(--surface); border-color: var(--border); }
 body.light-mode .ms-hype-card { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
@@ -2691,7 +2689,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   <div class="lan-masthead">
     <div class="lm-tag">&#9632; SPORTS &amp; SEATTLE</div>
     <div class="lm-name">SPORTS</div>
-    <div class="lm-kicker">Scoreboards, weather, NFL draft tonight.</div>
+    <div class="lm-kicker">Scoreboards, standings, NFL draft tonight.</div>
   </div>
 
   <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ SEATTLE TEAMS &mdash; the four horsemen of mild disappointment Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
@@ -2749,18 +2747,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- WEATHER STRIP -->
-  <div class="weather-label">
-    <span class="weather-label-left">&#9729; CURRENT CONDITIONS</span>
-    <span class="weather-label-right">4 cities within 15mi... and then there&#39;s Boise</span>
-  </div>
-  <div class="weather-strip" id="weatherStrip">
-    <div class="weather-city" id="weather-seattle"><div class="weather-city-name">SEATTLE</div><div class="weather-icon">&#9748;</div><div class="weather-temp">--&#176;</div><div class="weather-desc">LOADING</div><div class="weather-distance">HQ</div></div>
-    <div class="weather-city" id="weather-bellevue"><div class="weather-city-name">BELLEVUE</div><div class="weather-icon">&#9748;</div><div class="weather-temp">--&#176;</div><div class="weather-desc">LOADING</div><div class="weather-distance">10mi east</div></div>
-    <div class="weather-city" id="weather-renton"><div class="weather-city-name">RENTON</div><div class="weather-icon">&#9748;</div><div class="weather-temp">--&#176;</div><div class="weather-desc">LOADING</div><div class="weather-distance">12mi SE</div></div>
-    <div class="weather-city" id="weather-redmond"><div class="weather-city-name">REDMOND</div><div class="weather-icon">&#9748;</div><div class="weather-temp">--&#176;</div><div class="weather-desc">LOADING</div><div class="weather-distance">15mi NE</div></div>
-    <div class="weather-city weather-boise" id="weather-boise"><div class="weather-city-name">BOISE &#128640;</div><div class="weather-icon">&#9748;</div><div class="weather-temp">--&#176;</div><div class="weather-desc">LOADING</div><div class="weather-distance">467mi away (why?)</div></div>
-  </div>
 
 
   <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ LIVE SCOREBOARDS (MLB + NHL via official APIs) Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
@@ -3430,7 +3416,6 @@ function renderTicker() {
   const tickerQuips = [
     '&#9749; Coffee futures looking strong',
     '&#127956;&#65039; Mt. Rainier still there (checked)',
-    '&#127783;&#65039; Seattle weather: yes',
     '&#128202; Stonks only go... well...',
   ];
   STOCKS.forEach(s => {
@@ -3753,71 +3738,6 @@ function updateRefreshTime() {
 
 // &#9552;&#9552;&#9552; INIT &#9552;&#9552;&#9552;
 
-// ===== WEATHER =====
-var WEATHER_CITIES = [
-  {id:"seattle",name:"Seattle",lat:47.6062,lon:-122.3321},
-  {id:"bellevue",name:"Bellevue",lat:47.6101,lon:-122.2015},
-  {id:"renton",name:"Renton",lat:47.4829,lon:-122.2171},
-  {id:"redmond",name:"Redmond",lat:47.6740,lon:-122.1215},
-  {id:"boise",name:"Boise",lat:43.6150,lon:-116.2023}
-];
-function weatherCodeToIcon(code){
-  if(code===0) return "&#9728;&#65039;";
-  if(code===1) return "&#127780;&#65039;";
-  if(code===2) return "&#9925;";
-  if(code===3) return "&#9729;&#65039;";
-  if(code>=45&&code<=48) return "&#127787;&#65039;";
-  if(code>=51&&code<=55) return "&#127782;&#65039;";
-  if(code>=56&&code<=57) return "&#10052;&#127782;&#65039;";
-  if(code>=61&&code<=65) return "&#127783;&#65039;";
-  if(code>=66&&code<=67) return "&#10052;&#127783;&#65039;";
-  if(code>=71&&code<=77) return "&#10052;&#65039;";
-  if(code>=80&&code<=82) return "&#127783;&#65039;";
-  if(code>=85&&code<=86) return "&#10052;&#65039;";
-  if(code>=95&&code<=99) return "&#9889;";
-  return "&#9729;&#65039;";
-}
-function weatherCodeToDesc(code){
-  if(code===0) return "CLEAR SKY";
-  if(code===1) return "MOSTLY CLEAR";
-  if(code===2) return "PARTLY CLOUDY";
-  if(code===3) return "OVERCAST";
-  if(code>=45&&code<=48) return "FOGGY";
-  if(code>=51&&code<=55) return "DRIZZLE";
-  if(code>=56&&code<=57) return "FREEZING DRIZZLE";
-  if(code>=61&&code<=63) return "RAIN";
-  if(code>=64&&code<=65) return "HEAVY RAIN";
-  if(code>=66&&code<=67) return "FREEZING RAIN";
-  if(code>=71&&code<=75) return "SNOW";
-  if(code>=76&&code<=77) return "SNOW GRAINS";
-  if(code>=80&&code<=82) return "SHOWERS";
-  if(code>=85&&code<=86) return "SNOW SHOWERS";
-  if(code>=95&&code<=99) return "THUNDERSTORM";
-  return "UNKNOWN";
-}
-async function fetchWeather(){
-  var lats=WEATHER_CITIES.map(function(c){return c.lat;}).join(",");
-  var lons=WEATHER_CITIES.map(function(c){return c.lon;}).join(",");
-  var url="https://api.open-meteo.com/v1/forecast?latitude="+lats+"&longitude="+lons+"&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America/Los_Angeles";
-  try{
-    var resp=await fetch(url);
-    if(!resp.ok) return;
-    var data=await resp.json();
-    var results=Array.isArray(data)?data:[data];
-    for(var i=0;i<WEATHER_CITIES.length;i++){
-      var city=WEATHER_CITIES[i];
-      var d=results[i];
-      if(!d||!d.current) continue;
-      var el=document.getElementById("weather-"+city.id);
-      if(!el) continue;
-      var temp=Math.round(d.current.temperature_2m);
-      var code=d.current.weather_code;
-      el.querySelector(".weather-icon").innerHTML=weatherCodeToIcon(code);
-      el.querySelector(".weather-temp").innerHTML=temp+"&#176;F";
-      el.querySelector(".weather-desc").innerHTML =weatherCodeToDesc(code);
-    }
-  }catch(e){console.log("Weather fetch error",e);}
-}
 
 // Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ MARINERS ODDS FALLBACK Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 async function fetchMarinersOdds() {
@@ -3929,9 +3849,6 @@ async function fetchWorldCards() {
 }
 
 (async function init() {
-    fetchWeather();
-    setInterval(fetchWeather, 600000); // refresh weather every 10 min
-
   initPracticalFinance();
   updateRefreshTime();
   await Promise.all([
