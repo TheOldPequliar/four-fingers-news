@@ -2528,7 +2528,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     .sports-compact .section-header{margin-bottom:6px;}
     .sports-compact .section-tag{font-size:9px;padding:3px 8px;}
     .sports-compact .section-quip{font-size:9px;}
-    .sports-compact .cards-row{gap:8px;}
+    .sports-compact .cards-row{gap:8px;grid-template-columns:repeat(5,1fr);}
     .sports-compact .card{padding:10px 12px;min-height:0;}
     .sports-compact .card-team-name{font-size:11px;letter-spacing:2px;margin-bottom:3px;}
     .sports-compact .card-score{font-size:16px;margin-bottom:2px;}
@@ -2597,27 +2597,29 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128250; LIVE SCOREBOARDS</span>
     <span style="font-size:7px;letter-spacing:2px;color:var(--text-muted)">MLB STATSAPI &middot; NHL API &middot; NBA API &middot; AUTO-REFRESH 60s</span>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
     <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
       <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--accent);padding:8px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;">
         <span>&#9918; MLB SCORES &mdash; TODAY</span>
         <a href="https://www.espn.com/mlb/scoreboard" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:7px;">ESPN &#8599;</a>
       </div>
-      <div id="mlbScoreboard" style="padding:8px 10px;max-height:360px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">Loading...</div>
+      <div id="mlbScoreboard" style="padding:8px 10px;max-height:460px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">Loading...</div>
     </div>
-    <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
-      <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--accent);padding:8px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;">
-        <span>&#127954; NHL SCORES &mdash; STANLEY CUP PLAYOFFS</span>
-        <a href="https://www.espn.com/nhl/scoreboard" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:7px;">ESPN &#8599;</a>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);flex:1;">
+        <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--accent);padding:8px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;">
+          <span>&#127936; NBA SCORES &mdash; PLAYOFFS R1</span>
+          <a href="https://www.espn.com/nba/scoreboard" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:7px;">ESPN &#8599;</a>
+        </div>
+        <div id="nbaScoreboard" style="padding:8px 10px;max-height:220px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">Loading...</div>
       </div>
-      <div id="nhlScoreboard" style="padding:8px 10px;max-height:360px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">Loading...</div>
-    </div>
-    <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
-      <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--accent);padding:8px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;">
-        <span>&#127936; NBA SCORES &mdash; PLAYOFFS R1</span>
-        <a href="https://www.espn.com/nba/scoreboard" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:7px;">ESPN &#8599;</a>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);flex:1;">
+        <div style="font-size:8px;font-weight:900;letter-spacing:2px;color:var(--accent);padding:8px 12px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;">
+          <span>&#127954; NHL SCORES &mdash; STANLEY CUP PLAYOFFS</span>
+          <a href="https://www.espn.com/nhl/scoreboard" target="_blank" style="color:var(--text-muted);text-decoration:none;font-size:7px;">ESPN &#8599;</a>
+        </div>
+        <div id="nhlScoreboard" style="padding:8px 10px;max-height:220px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">Loading...</div>
       </div>
-      <div id="nbaScoreboard" style="padding:8px 10px;max-height:360px;overflow-y:auto;font-family:'JetBrains Mono',monospace;font-size:10px;">Loading...</div>
     </div>
   </div>
   <script>
