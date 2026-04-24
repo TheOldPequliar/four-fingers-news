@@ -759,21 +759,56 @@
 .trump-quote-meta{font-size:8px;color:var(--text-muted);margin-top:6px;letter-spacing:1px}
 .daily-source{font-size:8px;color:var(--text-muted);margin-top:4px;text-align:right}
 
-/* ===== TRUTH SOCIAL LIVE FEED ===== */
-.truth-feed-panel{background:linear-gradient(135deg,rgba(100,30,30,0.1),rgba(180,40,40,0.06));border:1px solid rgba(180,40,40,0.2);border-left:3px solid rgba(180,40,40,0.5);border-radius:10px;padding:14px 18px;margin-bottom:16px;position:relative}
-.truth-feed-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.truth-feed-title{font-size:7px;letter-spacing:3px;color:var(--text-dim);font-weight:700}
-.truth-feed-list{max-height:400px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(180,40,40,0.3) transparent}
-.truth-feed-list::-webkit-scrollbar{width:4px}
-.truth-feed-list::-webkit-scrollbar-thumb{background:rgba(180,40,40,0.3);border-radius:4px}
-.truth-item{border-bottom:1px solid var(--border);padding:10px 0;position:relative}
+/* ===== TRUTH SOCIAL LIVE FEED — TS-style re-skin ===== */
+:root{
+  --ts-navy: #1d2b4a;
+  --ts-navy-dim: #4a5a7f;
+  --ts-red: #ef3a42;
+  --ts-red-dim: #b12931;
+  --ts-page: #f3f4f6;
+  --ts-card: #ffffff;
+  --ts-border: #e5e7eb;
+  --ts-text: #0f172a;
+  --ts-muted: #6b7280;
+  --ts-link: #1d4ed8;
+}
+.truth-feed-panel{background:var(--ts-page);border:1px solid var(--ts-border);border-radius:12px;padding:0;margin-bottom:16px;position:relative;overflow:hidden;font-family:'Inter','Helvetica Neue',-apple-system,sans-serif}
+.truth-feed-panel .truth-feed-chrome{background:var(--ts-navy);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--ts-red)}
+.truth-feed-panel .truth-feed-brand{display:flex;align-items:center;gap:10px}
+.truth-feed-panel .truth-feed-mark{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ts-red);color:#fff;font-family:Georgia,'Times New Roman',serif;font-weight:900;font-size:18px;line-height:1;font-style:italic}
+.truth-feed-panel .truth-feed-wordmark{color:#fff;font-size:15px;font-weight:900;letter-spacing:-0.2px;line-height:1}
+.truth-feed-panel .truth-feed-wordmark small{display:block;font-weight:500;font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.6);margin-top:2px;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
+.truth-feed-header{display:flex;justify-content:space-between;align-items:center;margin:0;padding:8px 16px;background:#fff;border-bottom:1px solid var(--ts-border)}
+.truth-feed-title{font-size:11px;font-weight:700;letter-spacing:0.3px;color:var(--ts-navy)}
+.truth-feed-status span{font-size:9px !important;letter-spacing:1px !important;color:var(--ts-muted) !important;font-weight:600 !important}
+.truth-feed-list{max-height:520px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--ts-border) transparent;background:var(--ts-card)}
+.truth-feed-list::-webkit-scrollbar{width:8px}
+.truth-feed-list::-webkit-scrollbar-thumb{background:var(--ts-border);border-radius:8px}
+.truth-feed-list::-webkit-scrollbar-thumb:hover{background:var(--ts-navy-dim)}
+.truth-item{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:14px 16px;border-bottom:1px solid var(--ts-border);background:var(--ts-card);transition:background 0.15s}
+.truth-item:hover{background:#fafbff}
 .truth-item:last-child{border-bottom:none}
-.truth-item-time{font-size:8px;letter-spacing:1px;color:var(--text-dim);font-weight:600;margin-bottom:4px}
-.truth-item-text{font-size:14px;color:var(--text);line-height:1.6}
-.truth-item-time{font-size:10px !important;}
-.truth-item-text a{color:var(--accent);text-decoration:none}
-.truth-item-engagement{font-size:8px;color:var(--text-muted);margin-top:5px;display:flex;gap:12px}
-.truth-item-engagement span{display:inline-flex;align-items:center;gap:3px}
+.truth-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--ts-red),var(--ts-red-dim));display:flex;align-items:center;justify-content:center;color:#fff;font-family:Georgia,'Times New Roman',serif;font-weight:900;font-style:italic;font-size:22px;line-height:1;border:2px solid var(--ts-card);box-shadow:0 0 0 1px var(--ts-border);flex-shrink:0}
+.truth-body{min-width:0}
+.truth-item-head{display:flex;align-items:baseline;gap:6px;margin-bottom:3px;flex-wrap:wrap}
+.truth-item-name{font-size:15px;font-weight:800;color:var(--ts-text);letter-spacing:-0.1px}
+.truth-item-handle{font-size:13px;color:var(--ts-muted);font-weight:500}
+.truth-item-dot{font-size:13px;color:var(--ts-muted);font-weight:500}
+.truth-item-time{font-size:13px;color:var(--ts-muted);font-weight:500}
+.truth-item-text{font-size:14px;color:var(--ts-text);line-height:1.5;word-wrap:break-word}
+.truth-item-text a{color:var(--ts-link);text-decoration:none}
+.truth-item-text a:hover{text-decoration:underline}
+.truth-item-engagement{display:flex;gap:0;margin-top:10px;margin-left:-6px;max-width:420px;justify-content:space-between}
+.truth-item-engagement .eng{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;font-size:12px;color:var(--ts-muted);font-weight:500;transition:all 0.15s;cursor:default}
+.truth-item-engagement .eng-reply:hover{color:var(--ts-link);background:rgba(29,78,216,0.08)}
+.truth-item-engagement .eng-retruth:hover{color:#16a34a;background:rgba(22,163,74,0.08)}
+.truth-item-engagement .eng-like:hover{color:var(--ts-red);background:rgba(239,58,66,0.08)}
+.truth-item-engagement .eng-view:hover{color:var(--ts-navy);background:rgba(29,43,74,0.08)}
+.truth-item-engagement .eng-icon{font-family:-apple-system,sans-serif;font-size:14px;line-height:1;opacity:0.85}
+.truth-feed-foot{background:#fff;border-top:1px solid var(--ts-border);padding:8px 16px;text-align:center;font-size:10px;color:var(--ts-muted);letter-spacing:0.3px}
+.truth-feed-foot a{color:var(--ts-link);text-decoration:none;font-weight:600}
+.truth-feed-foot a:hover{text-decoration:underline}
+.truth-feed-aside{padding:8px 16px;background:var(--ts-page);font-size:10px;color:var(--ts-muted);text-align:center;font-style:italic;border-top:1px solid var(--ts-border)}
 
 /* ===== SEATTLE LIFE ===== */
 .seattle-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
@@ -1689,18 +1724,24 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 
   <!-- LATEST TRUTHS - LIVE FEED -->
   <div class="truth-feed-panel" id="truthFeedPanel">
+    <div class="truth-feed-chrome">
+      <div class="truth-feed-brand">
+        <span class="truth-feed-mark">T</span>
+        <div class="truth-feed-wordmark">Latest Truths<small>from @realDonaldTrump</small></div>
+      </div>
+      <div class="truth-feed-status"><span id="truthFeedStatus">LOADING...</span></div>
+    </div>
     <div class="truth-feed-header">
-      <div class="truth-feed-title">&#128225; LATEST TRUTHS &mdash; LIVE FROM TRUTH SOCIAL</div>
-      <div class="truth-feed-status"><span id="truthFeedStatus" style="font-size:8px;letter-spacing:2px;color:var(--text-dim);">LOADING...</span></div>
+      <div class="truth-feed-title">Recent posts</div>
+      <span style="font-size:10px;color:var(--ts-muted);font-weight:600;letter-spacing:0.3px;">Auto-refresh &middot; 5 min</span>
     </div>
     <div class="truth-feed-list" id="truthFeedList">
-      <div style="text-align:center;padding:20px;color:var(--text-dim);font-size:11px;">Fetching latest posts from Truth Social...</div>
+      <div style="text-align:center;padding:28px 20px;color:var(--ts-muted);font-size:13px;">Fetching latest posts&hellip;</div>
     </div>
-    <div style="text-align:center;margin-top:8px;">
-      <span style="font-size:8px;letter-spacing:2px;color:var(--text-dim);">SOURCE: <a href="https://github.com/stiles/trump-truth-social-archive" target="_blank" style="color:var(--accent);text-decoration:none;">CNN/STILES ARCHIVE</a> &bull; AUTO-REFRESHES EVERY 5 MIN</span>
+    <div class="truth-feed-foot">
+      SOURCE: <a href="https://github.com/stiles/trump-truth-social-archive" target="_blank" rel="noopener">CNN / Stiles archive</a>
     </div>
-
-    <div style="text-align:center;font-size:7px;color:var(--text-muted);margin-top:10px;letter-spacing:1px;font-style:italic;">This section exists because your uncle posted something on Facebook again</div>
+    <div class="truth-feed-aside">This section exists because your uncle posted something on Facebook again.</div>
   </div>
 
   <!-- THE OBJECTIVES ARE CLEAR -->
@@ -4070,37 +4111,47 @@ async function fetchWorldCards() {
     posts.sort(function(a,b) { return new Date(b.created_at) - new Date(a.created_at); });
     var latest = posts.slice(0, 15);
     if (latest.length === 0) {
-      listEl.innerHTML = '<div style="text-align:center;padding:20px;color:var(--text-dim);font-size:11px;">No posts found.</div>';
+      listEl.innerHTML = '<div style="text-align:center;padding:28px 20px;color:var(--ts-muted);font-size:13px;">No posts found.</div>';
       return;
     }
     // Check for new posts
     if (lastPostId && latest[0].id !== lastPostId) {
       // Flash notification
       var panel = document.getElementById('truthFeedPanel');
-      if (panel) { panel.style.borderColor = 'rgba(255,50,50,0.6)'; setTimeout(function(){ panel.style.borderColor = ''; }, 3000); }
+      if (panel) { panel.style.borderColor = 'var(--ts-red)'; setTimeout(function(){ panel.style.borderColor = ''; }, 3000); }
     }
     lastPostId = latest[0].id;
     var html = '';
     latest.forEach(function(post) {
       var content = stripHtml(post.content || '');
       if (!content) return; // skip empty
-      // Truncate very long posts
       var truncated = content.length > 500 ? content.substring(0, 500) + '...' : content;
-      var reblogsLabel = post.reblogs_count !== undefined ? '&#128260; ' + (post.reblogs_count || 0).toLocaleString() : '';
-      var favesLabel = post.favourites_count !== undefined ? '&#10084;&#65039; ' + (post.favourites_count || 0).toLocaleString() : '';
-      var repliesLabel = post.replies_count !== undefined ? '&#128172; ' + (post.replies_count || 0).toLocaleString() : '';
+      var reblogs = (post.reblogs_count !== undefined ? (post.reblogs_count || 0) : '').toLocaleString();
+      var faves = (post.favourites_count !== undefined ? (post.favourites_count || 0) : '').toLocaleString();
+      var replies = (post.replies_count !== undefined ? (post.replies_count || 0) : '').toLocaleString();
       html += '<div class="truth-item">';
-      html += '<div class="truth-item-time">' + formatDate(post.created_at) + ' &bull; ' + timeAgo(post.created_at) + '</div>';
+      html += '<div class="truth-avatar" aria-hidden="true">DJT</div>';
+      html += '<div class="truth-body">';
+      html += '<div class="truth-item-head">';
+      html += '<span class="truth-item-name">Donald J. Trump</span>';
+      html += '<span class="truth-item-handle">@realDonaldTrump</span>';
+      html += '<span class="truth-item-dot">&middot;</span>';
+      html += '<span class="truth-item-time" title="' + formatDate(post.created_at) + '">' + timeAgo(post.created_at) + '</span>';
+      html += '</div>';
       html += '<div class="truth-item-text">' + truncated.replace(/\n/g, '<br>') + '</div>';
       html += '<div class="truth-item-engagement">';
-      if (reblogsLabel) html += '<span>' + reblogsLabel + '</span>';
-      if (favesLabel) html += '<span>' + favesLabel + '</span>';
-      if (repliesLabel) html += '<span>' + repliesLabel + '</span>';
-      if (post.url) html += '<span><a href="' + post.url + '" target="_blank" style="color:var(--accent);text-decoration:none;font-size:8px;">VIEW ON TRUTH SOCIAL</a></span>';
-      html += '</div></div>';
+      html += '<span class="eng eng-reply"><span class="eng-icon">&#128172;</span>' + replies + '</span>';
+      html += '<span class="eng eng-retruth"><span class="eng-icon">&#8634;</span>' + reblogs + '</span>';
+      html += '<span class="eng eng-like"><span class="eng-icon">&hearts;</span>' + faves + '</span>';
+      if (post.url) {
+        html += '<a class="eng eng-view" href="' + post.url + '" target="_blank" rel="noopener" title="Open source"><span class="eng-icon">&#8599;</span></a>';
+      }
+      html += '</div>';
+      html += '</div>'; // /truth-body
+      html += '</div>'; // /truth-item
     });
     listEl.innerHTML = html;
-    if (statusEl) statusEl.textContent = 'LIVE \u2022 ' + latest.length + ' LATEST POSTS \u2022 UPDATED ' + new Date().toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'});
+    if (statusEl) statusEl.textContent = 'LIVE \u2022 ' + latest.length + ' POSTS \u2022 ' + new Date().toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'});
   }
 
   function fetchTruths(url, fallback) {
