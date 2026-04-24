@@ -2666,27 +2666,23 @@ body.light-mode .mountain-banner { opacity: 0.75; }
         .catch(function(e){ document.getElementById('mlbScoreboard').innerHTML = '<div style="color:var(--red);padding:10px;">MLB API error. <a href="https://www.espn.com/mlb/scoreboard" target="_blank" style="color:var(--accent);">Open ESPN &#8599;</a></div>'; });
     }
     function loadNHL(){
-      fetch('https://api-web.nhle.com/v1/schedule/now')
+      var today = new Date().toISOString().slice(0,10).replace(/-/g,'');
+      fetch('https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates='+today)
         .then(function(r){return r.json();})
         .then(function(d){
-          var today = (d.gameWeek && d.gameWeek[0] && d.gameWeek[0].games) || [];
-          if(!today.length){ document.getElementById('nhlScoreboard').innerHTML = '<div style="color:var(--text-muted);padding:20px;text-align:center;">No games scheduled today.</div>'; return; }
-          var html = today.map(function(g){
-            var away = g.awayTeam.abbrev;
-            var home = g.homeTeam.abbrev;
-            var as = g.awayTeam.score!=null ? g.awayTeam.score : null;
-            var hs = g.homeTeam.score!=null ? g.homeTeam.score : null;
-            var status = g.gameState;
-            if(g.gameState==='LIVE' || g.gameState==='CRIT'){
-              var per = g.periodDescriptor ? g.periodDescriptor.number : '';
-              status = 'P'+per+(g.clock?' '+g.clock.timeRemaining:'');
-            } else if(g.gameState==='FUT' || g.gameState==='PRE'){
-              var t = new Date(g.startTimeUTC).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/Los_Angeles'});
-              status = t+' PT';
-            } else if(g.gameState==='OFF' || g.gameState==='FINAL'){
-              status = 'FINAL';
-            }
-            return row(away, home, as, hs, status, '');
+          var games = (d.events) || [];
+          if(!games.length){ document.getElementById('nhlScoreboard').innerHTML = '<div style="color:var(--text-muted);padding:20px;text-align:center;">No games scheduled today.</div>'; return; }
+          var html = games.map(function(g){
+            var comp = g.competitions[0];
+            var awayTeam = comp.competitors.find(function(c){return c.homeAway==='away';});
+            var homeTeam = comp.competitors.find(function(c){return c.homeAway==='home';});
+            var away = awayTeam.team.abbreviation;
+            var home = homeTeam.team.abbreviation;
+            var as = awayTeam.score!=null ? parseInt(awayTeam.score) : null;
+            var hs = homeTeam.score!=null ? parseInt(homeTeam.score) : null;
+            var status = comp.status.type.shortDetail || comp.status.type.description;
+            var seriesNote = comp.series ? comp.series.summary : '';
+            return row(away, home, as, hs, status, seriesNote);
           }).join('');
           document.getElementById('nhlScoreboard').innerHTML = html;
         })
