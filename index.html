@@ -1659,8 +1659,7 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     .dual-grid > .section-anchor,
     .dual-grid > .dg-full,
     .dual-grid > .news-map-split,
-    .dual-grid > .objectives-panel,
-    .dual-grid > .fv-row { column-span: all; }
+    .dual-grid > .objectives-panel { column-span: all; }
     @media (max-width:900px){.dual-grid{column-count:1;}}
   </style>
   <div class="dual-grid">
@@ -2136,66 +2135,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
       <div class="gas-detail-card"><div class="gas-detail-label">VS LAST YEAR</div><div class="gas-detail-val" id="natlGasVsYear">--</div><div class="gas-detail-delta flat" id="natlGasVsYearDelta">--</div></div>
     </div>
     </div>
-  <!-- Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ LIVE MARKET CHARTS (FINVIZ, NO ACCOUNT) Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ -->
-  <style>
-    .fv-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
-    .fv-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;}
-    .fv-card-head{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid var(--border);background:rgba(0,0,0,0.25);}
-    .fv-card-title{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--text);}
-    .fv-card-sub{font-size:8px;letter-spacing:1px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;}
-    .fv-card-img{background:#ffffff;flex:1;display:flex;align-items:center;justify-content:center;padding:4px;}
-    .fv-card-img img{width:100%;height:auto;display:block;filter:invert(0.92) hue-rotate(180deg) saturate(1.1);}
-    .fv-card-foot{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;border-top:1px solid var(--border);font-size:8px;font-family:'JetBrains Mono',monospace;letter-spacing:1px;color:var(--text-muted);}
-    .fv-card-foot a{color:var(--text-muted);text-decoration:none;border-bottom:1px dotted var(--border);}
-    .fv-card-foot a:hover{color:#ffd700;}
-    @media (max-width:800px){.fv-row{grid-template-columns:1fr;}}
-  </style>
-  <div style="margin-bottom:6px;padding:0 4px;display:flex;justify-content:space-between;align-items:center;">
-    <span style="font-size:9px;font-weight:700;letter-spacing:3px;color:var(--text-dim)">&#128200; LIVE MARKET CHARTS</span>
-    <span style="font-size:8px;color:var(--text-muted);font-style:italic;letter-spacing:1px;">Finviz &middot; no account required &middot; refreshes on page load</span>
-  </div>
-  <div class="fv-row">
-    <div class="fv-card">
-      <div class="fv-card-head">
-        <span class="fv-card-title">&#128293; WTI CRUDE (USO)</span>
-        <span class="fv-card-sub">DAILY</span>
-      </div>
-      <div class="fv-card-img">
-        <img src="https://charts2.finviz.com/chart.ashx?t=USO&ty=c&ta=1&p=d&s=l" alt="USO / WTI daily chart" loading="lazy">
-      </div>
-      <div class="fv-card-foot">
-        <span>WTI proxy ETF</span>
-        <a href="https://finviz.com/quote.ashx?t=USO" target="_blank" rel="noopener">OPEN &#8599;</a>
-      </div>
-    </div>
-    <div class="fv-card">
-      <div class="fv-card-head">
-        <span class="fv-card-title">&#128200; S&amp;P 500 (SPY)</span>
-        <span class="fv-card-sub">DAILY</span>
-      </div>
-      <div class="fv-card-img">
-        <img src="https://charts2.finviz.com/chart.ashx?t=SPY&ty=c&ta=1&p=d&s=l" alt="SPY daily chart" loading="lazy">
-      </div>
-      <div class="fv-card-foot">
-        <span>S&amp;P 500 ETF</span>
-        <a href="https://finviz.com/quote.ashx?t=SPY" target="_blank" rel="noopener">OPEN &#8599;</a>
-      </div>
-    </div>
-    <div class="fv-card">
-      <div class="fv-card-head">
-        <span class="fv-card-title">&#8383; BITCOIN (BTCUSD)</span>
-        <span class="fv-card-sub">DAILY</span>
-      </div>
-      <div class="fv-card-img">
-        <img src="https://charts2.finviz.com/chart.ashx?t=BTCUSD&ty=c&ta=1&p=d&s=l" alt="BTCUSD daily chart" loading="lazy">
-      </div>
-      <div class="fv-card-foot">
-        <span>BTC spot</span>
-        <a href="https://finviz.com/crypto/chart.ashx?t=BTCUSD" target="_blank" rel="noopener">OPEN &#8599;</a>
-      </div>
-    </div>
-  </div>
-
 
   <!-- QUANTUM / COMPUTING & PHYSICS TRACKER -->
   <!-- AUTO-UPDATED BY: daily-sitch-refresh (hourly) -->
