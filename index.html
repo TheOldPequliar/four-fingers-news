@@ -822,10 +822,6 @@
 
 
 /* ===== AGI COUNTER ===== */
-.agi-strip{background:linear-gradient(135deg,rgba(155,89,182,0.08),rgba(0,212,255,0.05));border:1px solid rgba(155,89,182,0.2);border-radius:8px;padding:8px 12px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center}
-.agi-label{font-size:8px;letter-spacing:2px;color:rgba(155,89,182,0.7)}
-.agi-value{font-family:"JetBrains Mono",monospace;font-size:16px;font-weight:900;color:rgba(155,89,182,0.8)}
-.agi-note{font-size:7px;color:var(--text-muted);font-style:italic}
 
 /* ===== BINGO CARD ===== */
 .bingo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:16px;border-radius:8px;overflow:hidden}
@@ -875,7 +871,6 @@ body.light-mode .ticker-card { background: var(--surface); box-shadow: 0 1px 4px
 body.light-mode .ticker-price { color: var(--text); }
 body.light-mode .energy-card { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .energy-price { color: var(--text); }
-body.light-mode .agi-strip { background: linear-gradient(135deg, rgba(120,60,170,0.07), rgba(0,100,190,0.05)); }
 body.light-mode .daily-strip { background: var(--surface); box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 body.light-mode .trump-quotes-strip { background: linear-gradient(135deg, rgba(180,40,40,0.06), rgba(0,40,104,0.06)); border-color: rgba(180,40,40,0.2); box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
 body.light-mode .truth-feed-panel { background: linear-gradient(135deg, rgba(100,30,30,0.05), rgba(180,40,40,0.03)); border-color: rgba(180,40,40,0.15); box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
@@ -2621,12 +2616,6 @@ body.light-mode .mountain-banner { opacity: 0.75; }
     </div>
   </div>
 
-  <!-- AGI COUNTER -->
-  <div class="agi-strip">
-    <div class="agi-label">&#128337; DAYS UNTIL AGI</div>
-    <div class="agi-value" id="agiCounter">--</div>
-    <div class="agi-note">(resets randomly because nobody knows)</div>
-  </div>
 
 
   <!-- &#9552;&#9552;&#9552; STOCK TICKER &#9552;&#9552;&#9552; -->
@@ -4045,22 +4034,6 @@ async function fetchWorldCards() {
   setInterval(update, 100);
 })();
 
-// ===== AGI COUNTER =====
-(function initAGI() {
-  var seed = new Date().getFullYear() * 1000 + Math.floor(new Date().getMonth() / 2);
-  var base = 142 + (seed % 300);
-  var jitter = Math.floor(Math.random() * 50) - 25;
-  var days = base + jitter;
-  var el = document.getElementById('agiCounter');
-  if (el) el.innerHTML = days + ' days';
-  // Randomly "reset" every few hours
-  setInterval(function() {
-    if (Math.random() < 0.15) {
-      days = Math.floor(Math.random() * 500) + 30;
-      if (el) el.innerHTML = days + ' days';
-    }
-  }, 1800000);
-})();
 
 // ===== EPSTEIN DAY COUNTER =====
 (function(){
