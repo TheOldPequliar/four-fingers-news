@@ -1378,4 +1378,14 @@ try { localStorage.removeItem('themeOverride'); } catch(e) {}
   }
   fetchApproval();
   setInterval(fetchApproval,3600000);
+
+// ── Visit Counter ──
+(function initVisitCounter(){
+  var el=document.getElementById('visitCount');
+  if(!el)return;
+  fetch('https://api.counterapi.dev/v1/fourfingersnews/visits/up')
+    .then(function(r){return r.json();})
+    .then(function(d){if(d&&d.count)el.textContent=d.count.toLocaleString();})
+    .catch(function(){el.textContent='—';});
+})();
 })();
