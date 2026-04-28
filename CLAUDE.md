@@ -121,6 +121,8 @@ the shared script works on every page.
 
 ## Sanity check before any push
 
+### Structure check
+
 ```bash
 wc -l *.html        # index.html should be < 600 lines
 ls -la index.html   # < 80 KB
@@ -132,3 +134,24 @@ grep -c 'lebanonTrack' index.html       # should be 0
 
 If `index.html` grew past 100 KB or contains `iranWarBanner`/`lebanonTrack`,
 you've re-monolithized it. Fix before pushing.
+
+### Freshness check
+
+`tools/freshness-check.py` flags stale countdowns, day counts, and
+"Updated:" labels that have drifted past today. Run locally before pushing
+content edits:
+
+```bash
+python3 tools/freshness-check.py             # against local files
+python3 tools/freshness-check.py --live      # against fourfingersnews.com
+```
+
+Exit code is the number of errors (0 = clean). The same script runs daily
+in CI via `.github/workflows/freshness.yml`; if it finds anything, it
+opens (or updates) a `freshness` GitHub issue with the report.
+
+The script knows about: Iran day counter (war started 2026-02-28),
+"X days to <date>" countdowns (numeric or word — "six days to May 1"),
+past-event countdowns, and `Updated: <Day> <Mon> <DayNum>` labels older
+than the configured limit. Add new rules in `check_*` functions when a
+new staleness pattern shows up.
