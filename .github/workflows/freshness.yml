@@ -1,6 +1,6 @@
 name: Freshness check
 
-# Run daily at 14:00 UTC (7am Pacific) and on demand from the Actions tab.
+# Run daily at 14:00 UTC (6am Pacific) and on demand from the Actions tab.
 # Also runs on every push to main so a bad commit gets flagged immediately.
 on:
   schedule:
