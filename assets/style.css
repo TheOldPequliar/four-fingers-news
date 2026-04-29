@@ -1372,3 +1372,127 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 #aiSection td {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
+/* ════════════════════════════════════════════════════════════════
+   WILD CARD page styles. Each .wc-entry is a card with a kicker tag,
+   a date, a serif headline, sans-serif body paragraphs, optional
+   pullquote, and a fact box. Voice is dry-sarcastic; styling stays
+   newsprint-restrained.
+   ════════════════════════════════════════════════════════════════ */
+#wcFeed { display: flex; flex-direction: column; gap: 18px; }
+.wc-entry {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: 2px;
+  padding: 18px 22px;
+  position: relative;
+}
+.wc-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.wc-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--red);
+  text-transform: uppercase;
+}
+.wc-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.wc-headline {
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #1a1611;
+  letter-spacing: -0.3px;
+  margin: 8px 0 12px 0;
+}
+.wc-body p {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 10px 0;
+}
+.wc-body p:last-child { margin-bottom: 0; }
+.wc-pullquote {
+  margin: 14px 0;
+  padding: 8px 16px;
+  border-left: 3px solid var(--red);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  background: #fafafa;
+}
+.wc-pullquote cite {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+.wc-factbox {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: var(--surface-hover);
+  border-left: 3px solid var(--amber);
+  border-radius: 2px;
+}
+.wc-factbox-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--amber);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.wc-factbox ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+}
+.wc-factbox li {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text);
+  padding-left: 12px;
+  position: relative;
+}
+.wc-factbox li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--amber);
+  font-size: 9px;
+}
+.wc-factbox li b { color: #1a1611; font-weight: 700; }
+@media (max-width: 600px) {
+  .wc-factbox ul { grid-template-columns: 1fr; }
+  .wc-headline { font-size: 19px; }
+}
