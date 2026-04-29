@@ -1918,3 +1918,145 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 .pos-src a { color: var(--text-muted); text-decoration: none; margin-right: 10px; border-bottom: 1px dotted var(--border-glow); }
 .pos-src a:hover { color: var(--red); border-bottom-color: var(--red); }
 @media (max-width: 700px) { .pos-grid { grid-template-columns: 1fr; } }
+
+/* CLAIMS LEDGER on politics.html — table of unfulfilled / disputed Truth
+   Social claims with day-since counters and color-coded status cells. */
+.cl-panel {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 2px;
+  padding: 14px 18px 12px 18px;
+  margin: 0 0 16px 0;
+}
+.cl-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.cl-intro {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px 0;
+}
+.cl-table-wrap { overflow-x: auto; margin-bottom: 10px; }
+.cl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 13px;
+}
+.cl-table thead th {
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  padding: 8px 10px;
+  border-bottom: 2px solid #1a1611;
+  background: #fafafa;
+}
+.cl-table tbody td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  line-height: 1.5;
+}
+.cl-table tbody tr:last-child td { border-bottom: none; }
+.cl-cell-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.cl-cell-days {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 900;
+  color: #1a1611;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.cl-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.cl-no-receipts { background: #fff5e6; color: var(--amber); border: 1px solid #f0d699; }
+.cl-denied      { background: #fde7e7; color: var(--red);   border: 1px solid #f0a8a8; }
+.cl-expired     { background: #f5f5f5; color: var(--text-muted); border: 1px solid var(--border); }
+.cl-disputed    { background: #fff5e6; color: var(--amber); border: 1px solid #f0d699; }
+.cl-unverified  { background: #f5f5f5; color: var(--text-muted); border: 1px solid var(--border); }
+.cl-policy      { background: #ebf3ee; color: var(--green); border: 1px solid #c4dfd0; }
+.cl-fulfilled   { background: #ebf3ee; color: var(--green); border: 1px solid #c4dfd0; }
+.cl-frame {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 12px 0 8px 0;
+}
+.cl-aphorism {
+  margin: 8px 0 10px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--red);
+  background: #fafafa;
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+.cl-aphorism cite {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.cl-src {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-top: 6px;
+  border-top: 1px dashed var(--border);
+}
+.cl-src a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-right: 10px;
+  border-bottom: 1px dotted var(--border-glow);
+}
+.cl-src a:hover { color: var(--red); border-bottom-color: var(--red); }
+@media (max-width: 700px) {
+  .cl-table { font-size: 12px; }
+  .cl-table thead th, .cl-table tbody td { padding: 6px; }
+  .cl-cell-days { font-size: 15px; }
+}
+
+/* Carrier Endurance: navy accent (Navy ship, Navy color) */
+#ttCarrierEndurance { border-left-color: var(--seahawks-blue); }
+#ttCarrierEndurance .tt-analyst-tag { color: var(--seahawks-blue); }
