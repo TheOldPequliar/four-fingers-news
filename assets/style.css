@@ -2060,3 +2060,9 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 /* Carrier Endurance: navy accent (Navy ship, Navy color) */
 #ttCarrierEndurance { border-left-color: var(--seahawks-blue); }
 #ttCarrierEndurance .tt-analyst-tag { color: var(--seahawks-blue); }
+
+/* Featured (top-of-ledger) claim row: subtle tint + slightly darker bottom rule. */
+.cl-table tbody tr.cl-featured td {
+  background: #fff8ef;
+  border-bottom: 2px solid #1a1611;
+}
