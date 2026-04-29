@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# rev: 2
 """Freshness lint for fourfingersnews.com.
 
 Catches the kinds of stale content that drift when pages are refreshed
@@ -282,8 +281,19 @@ def main() -> int:
     args = ap.parse_args()
 
     today = (dt.date.fromisoformat(args.date) if args.date
-             else dt.date.today())
+             else _today_pacific())
     return run(today, args.live, Path(args.root))
+
+
+def _today_pacific() -> dt.date:
+    """Return today's date in America/Los_Angeles. The site is PT-based;
+    if we ran with UTC during the late-evening PT hours, the Iran day
+    counter would always be off by one."""
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.datetime.now(tz=ZoneInfo('America/Los_Angeles')).date()
+    except Exception:
+        return dt.date.today()
 
 
 if __name__ == '__main__':
