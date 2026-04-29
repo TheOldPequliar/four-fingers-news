@@ -2652,3 +2652,248 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   .pour-issue-title { font-size: 24px; }
   .pour-section p { font-size: 14px; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   THE WATCH — curated video. Two-surface page: TIMELY + ABIDING.
+   Runtime badges color-coded by commitment (green/amber/red).
+   ════════════════════════════════════════════════════════════════ */
+.watch-about {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 3px solid #1a1611;
+  border-radius: 2px;
+  padding: 14px 18px;
+  margin: 0 0 16px 0;
+}
+.watch-about-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: #1a1611;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.watch-about p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 10px 0;
+}
+.watch-about p:last-child { margin-bottom: 0; }
+.watch-about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.watch-about-list li {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+  padding: 8px 12px;
+  background: var(--surface-hover);
+  border-radius: 2px;
+}
+.watch-about-list em { font-style: italic; color: var(--text-dim); }
+
+/* Pills */
+.watch-tier-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+.watch-tier-timely {
+  background: #fff5e6;
+  color: var(--amber);
+  border: 1px solid #f0d699;
+}
+.watch-tier-abiding {
+  background: #ebf3ee;
+  color: var(--green);
+  border: 1px solid #c4dfd0;
+}
+.watch-rt-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+.watch-rt-short  { background: #ebf3ee; color: var(--green); border: 1px solid #c4dfd0; }
+.watch-rt-mid    { background: #fff5e6; color: var(--amber); border: 1px solid #f0d699; }
+.watch-rt-long   { background: #fde7e7; color: var(--red);   border: 1px solid #f0a8a8; }
+.watch-topic-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--surface-hover);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  margin-right: 6px;
+}
+
+/* Section headers */
+.watch-section-head {
+  margin: 22px 0 10px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1a1611;
+}
+.watch-section-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.watch-section-tag-timely { color: var(--amber); }
+.watch-section-tag-abiding { color: var(--green); }
+.watch-section-sub {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Feed */
+.watch-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.watch-entry {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--amber);
+  border-radius: 2px;
+  padding: 14px 18px 12px 18px;
+}
+.watch-entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.watch-entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.watch-entry-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.watch-entry-title {
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 6px 0 4px 0;
+  letter-spacing: -0.3px;
+}
+.watch-entry-title a {
+  color: #1a1611;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.watch-entry-title a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+.watch-entry-creator {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.watch-entry-take p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 10px 0;
+}
+.watch-entry-take p b { color: #1a1611; font-weight: 700; }
+.watch-entry-take p a { color: var(--red); text-decoration: none; border-bottom: 1px dotted currentColor; }
+.watch-entry-take p a:hover { border-bottom-style: solid; }
+.watch-pull {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-left: 3px solid var(--red);
+  background: #fafafa;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+.watch-pull cite {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.watch-empty {
+  background: var(--surface-hover);
+  border: 1px dashed var(--border);
+  border-radius: 2px;
+  padding: 14px 18px;
+  text-align: center;
+}
+.watch-empty p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 0 6px 0;
+  font-style: italic;
+}
+.watch-empty-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-style: normal !important;
+}
+@media (max-width: 600px) {
+  .watch-entry { padding: 12px 14px; }
+  .watch-entry-title { font-size: 17px; }
+}
