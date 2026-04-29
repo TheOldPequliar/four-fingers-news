@@ -1616,3 +1616,69 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 /* Beyond The Oil panel: dark accent (this one is the gut-punch). */
 #ttBeyondOil { border-left-color: #1a1611; }
 #ttBeyondOil .tt-analyst-tag { color: #1a1611; }
+
+/* Roy Cohn Operating System: editorial framing panel on politics.html.
+   Black left rule (it's the doctrine), tight numbered list, italic
+   aphorism at the bottom. */
+.rc-doctrine {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 3px solid #1a1611;
+  border-radius: 2px;
+  padding: 14px 18px 12px 18px;
+  margin: 0 0 16px 0;
+}
+.rc-doctrine-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: #1a1611;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.rc-doctrine p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 10px 0;
+}
+.rc-rules {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  padding-left: 22px;
+}
+.rc-rules li {
+  margin-bottom: 8px;
+}
+.rc-rules li b {
+  color: #1a1611;
+  font-weight: 800;
+}
+.rc-aphorism {
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-left: 3px solid var(--red);
+  background: #fafafa;
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+.rc-aphorism cite {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
