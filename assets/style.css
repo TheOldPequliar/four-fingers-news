@@ -2173,3 +2173,84 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   .dude-counter-num { font-size: 48px; min-width: auto; text-align: left; }
   .dude-headline { font-size: 24px; }
 }
+
+/* Trump Ballroom post-hoc justification block: GOP quotes + on-the-facts rebuttal. */
+.ballroom-pivot {
+  margin-top: 14px;
+  padding: 14px 18px 12px 18px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 2px;
+}
+.bp-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.ballroom-pivot p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 10px 0;
+}
+.bp-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+}
+.bp-quote {
+  padding: 10px 14px;
+  background: #fafafa;
+  border-left: 3px solid var(--amber);
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.bp-quote cite {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.bp-rebuttal {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: #1a1611;
+  color: #e8dfcf;
+  border-radius: 2px;
+}
+.bp-rebuttal-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #3a342c;
+}
+.bp-rebuttal p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e8dfcf;
+  margin: 0 0 10px 0;
+}
+.bp-rebuttal p:last-child { margin-bottom: 0; }
+.bp-rebuttal b { color: #ffffff; font-weight: 800; }
