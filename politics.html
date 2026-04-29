@@ -230,6 +230,34 @@
     <div class="rc-aphorism">&ldquo;When the truth is ugly, only a lie can be beautiful.&rdquo;<cite>&mdash; The Editor</cite></div>
   </div>
 
+  <!-- ═══ DUDE WATCH — daily counter on the unnamed F-15E aircrew ═══ -->
+  <!-- AUTO-UPDATED BY: inline JS (computes days since Apr 5, 2026 rescue date) -->
+  <!-- EDIT TARGETS: dude44Start in <script> below, dude-headline if framing changes -->
+  <div id="dudeWatch" class="dude-watch">
+    <div class="dude-tag">&#9632; DUDE WATCH &middot; DAY <span class="dude-days-inline" id="dude44Days">&mdash;</span></div>
+    <div class="dude-headline">Dude, Where&rsquo;s Your Name?</div>
+    <div class="dude-counter">
+      <div class="dude-counter-num"><span id="dude44DaysBig">&mdash;</span></div>
+      <div class="dude-counter-lbl">days since DUDE 44 Alpha and Bravo<br>were extracted from Iran &mdash; <b>names still not public</b></div>
+    </div>
+    <p class="dude-body">It has been <span class="dude-days-inline" id="dude44DaysInline">&mdash;</span> days since DUDE 44 Alpha (the F-15E pilot) and DUDE 44 Bravo (the WSO, a colonel injured during ejection) were lifted out of Iran in the largest US Combat Search and Rescue operation in living memory: 155 aircraft committed, 21 in hostile airspace for roughly seven hours in broad daylight, an A-10 lost, an HH-60W damaged, an abandoned agricultural airstrip 23 km north of Shahreza in southern Isfahan pressed into service as a forward operating base.</p>
+    <p class="dude-body">In all that time, the Pentagon has not released either airman&rsquo;s name. Not on a podium. Not in a press release. Not in a citation. Not as a footnote in any Defense Department announcement. Two crewmen, lifted out of Iran in front of the world, and the only thing the public has is a call sign and the Easter-week structure of Hegseth&rsquo;s telling: shot down Friday, on the run Saturday, recovered Sunday. Two days, two miracles, no surnames.</p>
+    <div class="dude-aphorism">&ldquo;Dude, where&rsquo;s your name?&rdquo;<cite>&mdash; The Editor &middot; today&rsquo;s question, every morning, until further notice</cite></div>
+  </div>
+  <script>
+    (function(){
+      // Easter Sunday rescue of DUDE 44 Bravo: April 5, 2026.
+      var start = new Date(2026, 3, 5);
+      var now = new Date();
+      var days = Math.max(0, Math.floor((now - start) / 86400000));
+      document.querySelectorAll('#dude44Days, #dude44DaysInline').forEach(function(el){
+        el.textContent = days;
+      });
+      var big = document.getElementById('dude44DaysBig');
+      if (big) big.textContent = days;
+    })();
+  </script>
+
   <!-- ═══ CLAIMS LEDGER — Truth Social claims, day-counted ═══ -->
   <!-- AUTO-UPDATED BY: manual; new claims and status changes appended weekly -->
   <!-- EDIT TARGETS: #claimsLedger <tbody>; days-since values are static, refresh on edit -->
