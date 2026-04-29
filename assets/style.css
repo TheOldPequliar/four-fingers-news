@@ -1496,3 +1496,31 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   .wc-factbox ul { grid-template-columns: 1fr; }
   .wc-headline { font-size: 19px; }
 }
+
+/* Resolution / update box on a Wild Card entry. Green left border to signal
+   "filed; case closed." Smaller, slightly inset from the main body text. */
+.wc-update {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: #f5faf6;
+  border: 1px solid #d4e8d8;
+  border-left: 3px solid var(--green);
+  border-radius: 2px;
+}
+.wc-update-tag {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--green);
+  text-transform: uppercase;
+}
+.wc-update p {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0;
+}
