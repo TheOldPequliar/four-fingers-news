@@ -1338,3 +1338,37 @@ body.light-mode .mountain-banner { opacity: 0.75; }
 .lan-page-masthead .lpm-kicker{font-family:Georgia,serif;font-size:14px;font-style:italic;color:var(--text-muted);margin-top:6px;}
 .back-home{display:inline-block;margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;font-weight:700;color:var(--accent);text-transform:uppercase;text-decoration:none;border-bottom:1px dotted currentColor;}
 .back-home:hover{color:var(--red);}
+
+/* ════════════════════════════════════════════════════════════════
+   READABILITY: small-print → DM Sans, headlines → keep serif.
+   Headlines (.rd-head, .rd-title, .lpm-name, .lc-title, .lan-masthead
+   .lm-name, section .*-title) keep their explicit Georgia/Playfair
+   declarations. Body text, deks, list items, captions, and kickers
+   switch to DM Sans for easier reading at small sizes.
+   ════════════════════════════════════════════════════════════════ */
+.editor-note .en-text,
+.editor-note .en-sig,
+#theRunDown .rd-sub,
+#runDownList .rd-dek,
+#runDownList article.lead .rd-factbox li,
+#runDownList article.lead .rd-pullquote,
+.landing-card .lc-dek,
+.lan-page-masthead .lpm-kicker,
+.lan-masthead .lm-kicker,
+#trackTroops .tt-notes,
+#trackTroops td, #trackTroops th,
+#lebanonTrack .lt-dek,
+#lebanonTrack .lt-bullets li,
+#lebanonTrack .lt-stat-val,
+#lebanonTrack .lt-stat-lbl,
+#quantumSection p,
+#quantumSection li,
+#quantumSection td,
+#raptureSection p,
+#raptureSection li,
+#raptureSection td,
+#aiSection p,
+#aiSection li,
+#aiSection td {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
