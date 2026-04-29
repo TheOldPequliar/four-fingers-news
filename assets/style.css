@@ -1682,3 +1682,90 @@ body.light-mode .mountain-banner { opacity: 0.75; }
   text-transform: uppercase;
   color: var(--text-muted);
 }
+
+/* PAPER REALITY vs HARD ASSETS panel on markets.html. Two-column split,
+   editorial aphorism top and bottom (top in red, bottom darker). */
+.pvh-panel {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 2px;
+  padding: 14px 18px 12px 18px;
+  margin: 0 0 16px 0;
+}
+.pvh-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.pvh-aphorism {
+  margin: 8px 0 10px 0;
+  padding: 8px 16px;
+  border-left: 3px solid var(--red);
+  background: #fafafa;
+  font-family: Georgia, 'Playfair Display', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+.pvh-aphorism cite {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.pvh-aphorism-bottom { border-left-color: #1a1611; }
+.pvh-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 12px 0;
+}
+.pvh-col {
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 10px 14px;
+}
+.pvh-col-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  color: #1a1611;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed var(--border);
+}
+.pvh-col:first-child .pvh-col-tag { color: var(--green); }
+.pvh-col:last-child .pvh-col-tag { color: var(--red); }
+.pvh-col ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text);
+}
+.pvh-col li { padding: 3px 0; }
+.pvh-frame {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 12px 0 6px 0;
+}
+@media (max-width: 700px) { .pvh-grid { grid-template-columns: 1fr; } }
